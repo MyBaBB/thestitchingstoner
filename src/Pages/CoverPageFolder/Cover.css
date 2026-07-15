@@ -1,0 +1,9 @@
+.underConstruction {
+
+    position: relative;
+    color: white;
+    font-size: clamp(.5rem, 2vw, 1.5rem);
+    font-weight: bold;
+    text-align: center;
+    z-index: 1;
+}
