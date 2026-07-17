@@ -4,7 +4,7 @@ import Weed from "../../Components/Weed.jsx";
 
 export default function LandingPage() {
   return (
-    <main className="bg-neutral-900 text-neutral-100 h-screen overflow-hidden relative">
+    <main className="bg-black text-neutral-100 h-screen overflow-hidden relative">
           
           
           <div className="">< Weed /></div>

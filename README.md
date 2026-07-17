@@ -114,7 +114,10 @@ The Stitching Stoner blends craftsmanship with creativity — embroidered art, c
 Created by **Brett Web Development**  
   High‑Vibe Creative Director
 
- 
+
+  
+## Fonts used
+*   Iceberg-Regular.ttf
 
  
 
