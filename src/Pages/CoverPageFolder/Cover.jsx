@@ -1,7 +1,7 @@
 import "./Cover.css";
 import MermaidOgImage from "../../Images/StitchingStoner.Og1180x517.webp";
-import Weed from "../../Components/Weed.jsx";
-
+import Weed from "../../Components/WeedFolder/Weed.jsx";
+ import ContactMe from "../../Components/ContactMeFolder/ContactMe.jsx";
 export default function LandingPage() {
   return (
     <main className="bg-black text-neutral-100 h-screen overflow-hidden relative">
@@ -48,6 +48,7 @@ export default function LandingPage() {
           Visit the Shop
         </a>
       </div>
+       <div className="absolute bottom-0 right-4  ">< ContactMe /></div>
     </main>
   );
 }

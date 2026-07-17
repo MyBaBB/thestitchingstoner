@@ -1,6 +1,8 @@
-import React from 'react'
-import "./Weed.css"
-import weedGif from "../Images/Weed.gif"   // adjust path as needed
+import React from 'react';
+import "./Weed.css";
+import weedGif from "../../Images/Weed.gif";   // adjust path as needed
+ 
+
 
 const Weed = () => {
   return (
@@ -15,7 +17,10 @@ const Weed = () => {
         />
         <div className="absolute inset-0 bg-black/40 pointer-events-none"></div>
       </div>
- 
+      <div> 
+
+    
+      </div>
     </>
   )
 }

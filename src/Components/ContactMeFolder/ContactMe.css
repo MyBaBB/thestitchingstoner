@@ -1,0 +1,70 @@
+.ContactButtonHide {
+  visibility: hidden;
+  animation: showButton 3s ease-in-out 3s forwards;
+}
+
+@keyframes showButton {
+  to {
+    visibility: visible;
+  }
+}
+.HomePageButtonHide {
+  visibility: hidden;
+  animation: showButton 3s ease-in-out 3s forwards;
+}
+
+@keyframes showButton {
+  to {
+    visibility: visible;
+  }
+}  
+ 
+
+/* Button wrapper */
+.buttonsAllWrapper {
+  text-align: center;
+}
+
+/* ROOTS button */
+.rootsButton {
+  font-size: 0.6rem;
+  background: transparent;
+ 
+ 
+  letter-spacing: 0.15rem;
+}
+
+ 
+ 
+
+/* Green ROOTS text */
+.rootsText, .piTree {
+  color: rgb(4, 180, 4);
+  font-size: 0.8rem;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.rootsLine {
+  border-color: rgba(255, 130, 0, 0.4);
+  display: block;        /* ensures proper centering */
+  margin-left: auto;     /* centers */
+  margin-right: auto;    /* centers */
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+
