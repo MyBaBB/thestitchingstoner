@@ -14,7 +14,7 @@ const ContactMe = () => {
                  ">
          <button
   className="rootsButton w-fit whitespace-nowrap font-extrabold 
-             relative flex flex-col items-center justify-center
+             relative   flex-col items-center justify-center
              hidden sm:flex  "
   title="Contact Me"
 >
@@ -23,9 +23,10 @@ const ContactMe = () => {
   </div>
 
   <span className="rootsText font-Itim-Regular">Roots</span>
+   <hr className="relative flex rootsLine  h-[1px] w-10 bg-transparent border-[.2px] rounded-lg" />
 </button>
 
-          <hr className="relative flex rootsLine  h-[1px] w-10 bg-transparent border-[.2px] rounded-lg" />
+         
           
         </a>
       </div>
