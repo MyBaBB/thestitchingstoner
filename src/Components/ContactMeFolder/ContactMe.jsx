@@ -14,8 +14,7 @@ const ContactMe = () => {
                  ">
          <button
   className="rootsButton w-fit whitespace-nowrap font-extrabold 
-             relative   flex-col items-center justify-center
-             hidden sm:flex  "
+   "
   title="Contact Me"
 >
   <div className="piTree flex items-center justify-center ">
