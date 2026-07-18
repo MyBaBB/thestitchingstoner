@@ -1,6 +1,6 @@
 // eslint-disable-next-line no-unused-vars
 import React from "react";
-import { GiBat } from "react-icons/gi";
+ 
 import BatSignal from "../../Images/BatButton.webp";
 import "./ContactMe.css";
 
@@ -19,7 +19,7 @@ const ContactMe = () => {
 <button
   className="rootsButton w-fit whitespace-nowrap font-extrabold 
    "
-  title="Contact Me"
+  title="Rescue Button"
 >
 
 
