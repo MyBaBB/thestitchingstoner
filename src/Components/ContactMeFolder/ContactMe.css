@@ -38,9 +38,9 @@
  
 
 /* Green ROOTS text */
-.rootsText, .piTree {
-  color: rgb(4, 180, 4);
-  font-size: 0.8rem;
+.piTree {
+  color: rgba(4, 180, 4, 1);
+  font-size: 0.5rem;
   font-weight: 700;
   text-transform: uppercase;
 }
