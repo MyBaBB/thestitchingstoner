@@ -47,8 +47,13 @@ export default function LandingPage() {
         >
           Visit the Shop
         </a>
+        <div className="absolute -bottom-4 right-4  ">
+
+               < ContactMe />
+               
+        </div>
       </div>
-       <div className="absolute bottom-0 right-4  ">< ContactMe /></div>
+       
     </main>
   );
 }
