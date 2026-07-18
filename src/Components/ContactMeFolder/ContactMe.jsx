@@ -1,6 +1,7 @@
 // eslint-disable-next-line no-unused-vars
 import React from "react";
 import { GiBat } from "react-icons/gi";
+import BatSignal from "../../Images/BatButton.webp";
 import "./ContactMe.css";
 
 const ContactMe = () => {
@@ -20,9 +21,17 @@ const ContactMe = () => {
    "
   title="Contact Me"
 >
-  <div className="piTree flex items-center justify-center ">
-   <GiBat size={30} />
-  </div>
+
+
+
+    <div className="batSignal flex items-center justify-center
+                     ">
+              <div className="absolute w-10 h-10 bg-black/30 rounded-full "></div>        
+             <img src={BatSignal} alt="Bat Signal" className="imgBatSignal w-10 h-10" />
+    </div>
+
+
+
 
 </button>
 
