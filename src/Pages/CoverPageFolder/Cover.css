@@ -8,4 +8,44 @@
     z-index: 1;
 }
 /* SMOKE ANIMATION */
+.stoner-cipher {
+  position: relative;
+  display: inline-block;
+  overflow: hidden;
+}
 
+/* Animated overlay text */
+.stoner-cipher::after {
+  content: attr(data-text);
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  color: #E370A8 !important;
+  animation: stonerCenterOut 9.5s linear infinite;
+  opacity: 1;
+}
+
+/* Keyframes: center → outward → pause */
+@keyframes stonerCenterOut {
+  /* Start: fully hidden */
+  0% {
+    clip-path: inset(0 50% 0 50%); /* hide everything except center point */
+  }
+
+  /* Reveal outward over 2.5s */
+  38% {
+    clip-path: inset(0 0 0 0); /* fully revealed */
+  }
+
+  /* Pause for 4 seconds */
+  90% {
+    clip-path: inset(0 0 0 0); /* stay revealed */
+  }
+  90% {
+    clip-path: inset(0 0 0 0); /* stay revealed */
+  }
+  100% {
+    clip-path: inset(0 50% 0 50%); /* hide everything except center point */
+  }
+}

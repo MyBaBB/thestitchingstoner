@@ -15,9 +15,13 @@ export default function LandingPage() {
       <div className="relative z-10 h-full flex flex-col items-center justify-center text-center px-6">
 
         {/* TITLE */}
-        <h1 className="font-Iceberg-Regular text-4xl  md:text-6xl font-extrabold    bg-clip-text text-[#E370A8]">
-          The Stitching Stoner
-        </h1>
+        <h1 className="font-Iceberg-Regular text-4xl md:text-6xl font-extrabold 
+                       bg-clip-text text-[#5bba76]/80">
+            <span className="stoner-cipher" data-text="The Stitching Stoner">
+              The Stitching Stoner
+            </span>
+       </h1>
+
 
         {/* TAGLINE */}
         <p className="font-Iceberg-Regular mt-3 text-lg md:text-xl font-bold   max-w-md z-10   text-white">
