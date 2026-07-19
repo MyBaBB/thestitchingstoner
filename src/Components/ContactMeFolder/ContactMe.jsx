@@ -6,8 +6,7 @@ import "./ContactMe.css";
 
 const ContactMe = () => {
   return (
-    <div className="ContactButtonHide relative z-50 m-auto mb-[.5rem] flex h-full w-full 
-                    items-center justify-center
+    <div className="ContactButtonHide relative z-50 m-auto mb-[.5rem]   h-full w-full items-center justify-center hidden md:flex
                ">
       <div
         id="contact"
