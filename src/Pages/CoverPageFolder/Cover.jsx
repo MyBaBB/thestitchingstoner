@@ -15,7 +15,7 @@ export default function LandingPage() {
       {/* SINGLE SCREEN CONTENT */}
       <div className="relative z-10 flex h-fit flex-col items-center justify-center px-6 text-center">
         {/* TITLE */}
-        <h1 className="bg-clip-text font-Iceberg-Regular text-4xl font-extrabold text-[#5bba76]/80 md:text-6xl">
+        <h1 className="bg-clip-text font-Iceberg-Regular text-4xl font-extrabold md:text-6xl">
           <span className="stoner-cipher" data-text="The Stitching Stoner">
             The Stitching Stoner
           </span>

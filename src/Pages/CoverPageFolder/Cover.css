@@ -11,6 +11,7 @@
   position: relative;
   display: inline-block;
   overflow: hidden;
+  color:rgba(91, 186, 118, .8);
 }
 
 /* Animated overlay text */
