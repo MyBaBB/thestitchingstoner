@@ -67,9 +67,11 @@
     #3f2e24 0%,
     /* top lighter */ #332319 50%,
     /* middle darker */ #3f2e24 100% /* bottom lighter */
+    
   );
   border: 1px solid rgba(46, 90, 44, 0.63); /* Forest Service Green */
   border-radius: 12px;
+  box-shadow: 0px 0px 5px 0px #adff2fbf;
 }
 .buttonWrapper:hover {
   background-color: #6e523a; /* Warm sunlight brown */
@@ -77,4 +79,64 @@
   transform: scale(1.1);
   transition: transform 0.3s ease-in-out;
   transform: translateY(-2px);
+}
+
+.dreamyLanding {
+  position: relative;
+  opacity: 0;
+  transform: translateY(-80px) scale(1.05);
+
+  /* Your landing animation */
+  animation:
+    cloudLanding 2.4s ease-out forwards,
+    cloudFloat 15s ease-in-out 2.4s infinite;
+
+  text-shadow:
+    0 0 10px rgba(255, 255, 255, 0.35),
+    0 0 20px rgba(160, 180, 255, 0.25);
+}
+
+/* YOUR landing stays exactly the same */
+@keyframes cloudLanding {
+  0% {
+    opacity: 0;
+    transform: translateY(-240px) translateX(-90px) scale(1);
+    filter: blur(8px);
+    color: #1c2830;
+  }
+  40% {
+    opacity: 0.7;
+    transform: translateY(0px) scale(1);
+  }
+  70% {
+    opacity: 1;
+    transform: translateY(-2px) scale(1);
+    filter: blur(1px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0px) scale(1.1);
+    filter: blur(0px);
+    color: #6ff2f6;
+    z-index: 50;
+  }
+}
+
+/* NEW: real floating path — up → sideways → down */
+@keyframes cloudFloat {
+  0% {
+    transform: translateY(0px) translateX(0px) rotate(0deg) scale(1.1);
+  }
+  25% {
+    transform: translateY(20px) translateX(0px) rotate(1deg) scale(1.1);
+  }
+  50% {
+    transform: translateY(0px) translateX(0px) rotate(-2deg) scale(1.1);
+  }
+  75% {
+    transform: translateY(0px) translateX(0px) rotate(1deg) scale(1.1);
+  }
+  100% {
+    transform: translateY(0px) translateX(0px) rotate(0deg) scale(1.1);
+  }
 }

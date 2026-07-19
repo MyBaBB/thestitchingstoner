@@ -22,8 +22,11 @@ export default function LandingPage() {
         </h1>
 
         {/* TAGLINE */}
-        <p className="mt-3 max-w-md font-Iceberg-Regular text-lg font-bold text-white md:text-xl">
-          Handcrafted Embroidery for elevated minds.
+
+        <p className="dreamyLanding mt-3 mb-2 max-w-md font-Iceberg-Regular text-lg font-bold md:text-xl">
+          <span className=" ">Handcrafted Embroidery</span>
+          <br className="block xs:hidden" />
+          <span className=" ">&nbsp;for Elevated Minds</span>
         </p>
 
         {/* MINI ABOUT */}
@@ -44,18 +47,23 @@ export default function LandingPage() {
           href="https://thestitchingstoner.square.site"
           target="_blank"
           rel="noopener noreferrer"
-          className="buttonWrapper mt-8 inline-block px-4 py-2 font-Iceberg-Regular font-bold text-[#F8D97A]"
+          className="buttonWrapper mt-8 inline-block px-4 py-2
+         "
         >
           <div className="flex items-center justify-center gap-3 px-1">
-            <span className="inline-block text-[#F8D97A]">
+            <span className="inline-block text-[#eece6c]">
               <PiPersonSimpleHike size={22} />
             </span>
 
-            <span className="inline-block text-[#f8e098]">
-              <u className="decoration-[#332319] shadow-xl">Score Here</u>
+          <span className="inline-block text-white  font-Itim-Regular text-xl">
+             
+                Score Here
+               < hr  className="m-auto border-[.5px] border-[#eece6c] rounded-md 
+                                w-[85%] h-[3px]  
+               "/>
             </span>
 
-            <span className="inline-block scale-x-[-1] text-[#F8D97A]">
+            <span className="inline-block scale-x-[-1] text-[#eece6c]">
               <GiYarn size={20} />
             </span>
           </div>
