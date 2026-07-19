@@ -2,7 +2,7 @@ import "./Cover.css";
 import MermaidOgImage from "../../Images/StitchingStoner.Og1180x517.webp";
 import Weed from "../../Components/WeedFolder/Weed.jsx";
 import ContactMe from "../../Components/ContactMeFolder/ContactMe.jsx";
-import { BsCup } from "react-icons/bs";
+import { GiYarn } from "react-icons/gi";
 import { PiPersonSimpleHike } from "react-icons/pi";
 
 export default function LandingPage() {
@@ -20,7 +20,7 @@ export default function LandingPage() {
         <h1 className="font-Iceberg-Regular text-4xl md:text-6xl font-extrabold 
                        bg-clip-text text-[#5bba76]/80">
           <span className="stoner-cipher" data-text="The Stitching Stoner">
-            The Stitching Stoner
+              The Stitching Stoner
           </span>
         </h1>
 
@@ -47,32 +47,31 @@ export default function LandingPage() {
           href="https://thestitchingstoner.square.site"
           target="_blank"
           rel="noopener noreferrer"
-          className="
+          className="buttonWrapper
             font-Iceberg-Regular mt-8
-            bg-[#5A3E2B]                      /* Forest Sign Brown */
+                              /* Forest Sign Brown */
             text-[#F8D97A]                    /* Brighter Forest Yellow */
-            border-2 border-[#2E5A2C]         /* Forest Service Green */
-            rounded-full font-bold
+         font-bold
             px-4 py-2
-            shadow-md shadow-inner shadow-[#2E5A2C]/40
-            hover:bg-[#6E523A]                /* Warm sunlight brown */
-            hover:shadow-lg
-            hover:-translate-y-0.5
-            transition-all duration-200
+           shadow-inner shadow-[#2E5A2C]/40
+           
             inline-block
+            
           "
         >
-          <div className="flex items-center justify-center gap-3 px-1">
+          <div className="  flex items-center justify-center gap-3 px-1
+     ">
             <span className="inline-block text-[#F8D97A]">
               <PiPersonSimpleHike size={22} />
             </span>
 
-            <span className="inline-block text-[#F8D97A]">
-              Score Here
+            <span className="inline-block text-[#f8e098]">
+              <u className="decoration-[#332319]  shadow-xl">Score Here</u>
             </span>
 
             <span className="inline-block scale-x-[-1] text-[#F8D97A]">
-              <BsCup size={20} />
+              
+              <GiYarn size={20} />
             </span>
           </div>
         </a>
