@@ -59,8 +59,9 @@
 
 @media screen and (max-height: 900px) {
   .mermaidFeaturedImage {
-    width: 700px;
-    height: 320px;
+    width: 650px;
+    height: 300px;
+    
   }
 }
  

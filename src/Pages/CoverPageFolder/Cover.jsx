@@ -4,7 +4,7 @@ import Weed from "../../Components/WeedFolder/Weed.jsx";
  import ContactMe from "../../Components/ContactMeFolder/ContactMe.jsx";
 export default function LandingPage() {
   return (
-    <main className="bg-black text-neutral-100 h-screen overflow-hidden relative">
+    <main className="bg-black text-neutral-100 h-screen relative overflow-auto">
           
           
           <div className="">
@@ -52,7 +52,7 @@ export default function LandingPage() {
           className="font-Iceberg-Regular mt-8 px-8 py-3 rounded-full bg-neutral-100 text-neutral-900 font-bold
                    hover:bg-neutral-300 transition"
         >
-          Visit the Shop
+          Wander
         </a>
         <div className="absolute -bottom-4 right-4  ">
 

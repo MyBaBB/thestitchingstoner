@@ -11,7 +11,7 @@
 }
 
 /* Landscape mode */
-@media screen and (orientation: landscape) and (max-height: 800px) {
+@media screen and (orientation: landscape) and (max-height: 700px) {
   .weed-leaf {
     position: absolute;
     top: 1rem;
