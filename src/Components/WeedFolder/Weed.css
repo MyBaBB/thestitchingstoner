@@ -1,24 +1,26 @@
+/* Base */
 .weed-leaf {
-    width: 100px;
-    height: 100px;
-    position: absolute;
-    background-color: transparent;
-    top: 15%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+  position: relative;
+  display: flex;
+  margin: auto;
+  margin-top: 1rem;
+  background-color: transparent;
+  width: 100px;
+  height: 100px;
+  z-index: 1;
 }
 
-@media screen and ( min-width: 450px ) {
-    .weed-leaf {
-        width: 100px;
-        height: 100px;
-        position: absolute;
-        top: 10%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        background-color: transparent;
-    }
-    
+/* Landscape mode */
+@media screen and (orientation: landscape) and (max-height: 800px) {
+  .weed-leaf {
+    position: absolute;
+    top: 1rem;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100px;
+    height: 100px;
+    z-index: 1;
+  }
 }
 
 .object-contain {

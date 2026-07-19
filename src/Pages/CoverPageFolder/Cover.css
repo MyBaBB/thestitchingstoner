@@ -12,6 +12,7 @@
   position: relative;
   display: inline-block;
   overflow: hidden;
+  
 }
 
 /* Animated overlay text */
@@ -49,3 +50,17 @@
     clip-path: inset(0 50% 0 50%); /* hide everything except center point */
   }
 }
+
+.mermaidFeaturedImage {
+ 
+  width: 945px;
+  height: 415px;
+}
+
+@media screen and (max-height: 900px) {
+  .mermaidFeaturedImage {
+    width: 700px;
+    height: 320px;
+  }
+}
+ 

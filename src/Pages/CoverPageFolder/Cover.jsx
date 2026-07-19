@@ -7,16 +7,19 @@ export default function LandingPage() {
     <main className="bg-black text-neutral-100 h-screen overflow-hidden relative">
           
           
-          <div className="">< Weed /></div>
+          <div className="">
+            < Weed />
+          </div>
       
       
       
       {/* SINGLE SCREEN CONTENT */}
-      <div className="relative z-10 h-full flex flex-col items-center justify-center text-center px-6">
+      <div className="relative z-10 h-fit flex flex-col items-center justify-center text-center px-6 ">
 
         {/* TITLE */}
         <h1 className="font-Iceberg-Regular text-4xl md:text-6xl font-extrabold 
-                       bg-clip-text text-[#5bba76]/80">
+                       bg-clip-text text-[#5bba76]/80
+                       ">
             <span className="stoner-cipher" data-text="The Stitching Stoner">
               The Stitching Stoner
             </span>
@@ -38,7 +41,7 @@ export default function LandingPage() {
         <img
           src={MermaidOgImage}
           alt="Featured embroidered stoner art"
-          className="mt-6 w-[945px] h-[415px] object-cover rounded-xl shadow-lg border border-neutral-700"
+          className="mermaidFeaturedImage mt-6  object-cover rounded-xl shadow-lg border border-neutral-700"
         />
 
         {/* CTA BUTTON */}
