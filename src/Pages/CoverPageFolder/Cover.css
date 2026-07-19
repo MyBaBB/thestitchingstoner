@@ -91,9 +91,7 @@
     cloudLanding 2.4s ease-out forwards,
     cloudFloat 15s ease-in-out 2.4s infinite;
 
-  text-shadow:
-    0 0 10px rgba(255, 255, 255, 0.35),
-    0 0 20px rgba(160, 180, 255, 0.25);
+ 
 }
 
 /* YOUR landing stays exactly the same */
@@ -118,6 +116,7 @@
     transform: translateY(0px) scale(1.1);
     filter: blur(0px);
     color: #6ff2f6;
+    filter: blur(0px);
     z-index: 50;
   }
 }
