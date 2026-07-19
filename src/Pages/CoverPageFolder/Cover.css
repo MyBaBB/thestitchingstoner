@@ -1,18 +1,16 @@
 .underConstruction {
-
-    position: relative;
-    color: white;
-    font-size: clamp(.5rem, 2vw, 1.5rem);
-    font-weight: bold;
-    text-align: center;
-    z-index: 1;
+  position: relative;
+  color: white;
+  font-size: clamp(0.5rem, 2vw, 1.5rem);
+  font-weight: bold;
+  text-align: center;
+  z-index: 1;
 }
 /* SMOKE ANIMATION */
 .stoner-cipher {
   position: relative;
   display: inline-block;
   overflow: hidden;
-  
 }
 
 /* Animated overlay text */
@@ -52,7 +50,6 @@
 }
 
 .mermaidFeaturedImage {
- 
   width: 945px;
   height: 415px;
 }
@@ -61,27 +58,23 @@
   .mermaidFeaturedImage {
     width: 650px;
     height: 300px;
-    
   }
 }
- 
- 
- .buttonWrapper {
+
+.buttonWrapper {
   background: linear-gradient(
     to bottom,
-    #3f2e24 0%,   /* top lighter */
-    #332319 50%,  /* middle darker */
-    #3f2e24 100%  /* bottom lighter */
+    #3f2e24 0%,
+    /* top lighter */ #332319 50%,
+    /* middle darker */ #3f2e24 100% /* bottom lighter */
   );
-    border:1px solid rgba(46, 90, 44, .63);         /* Forest Service Green */
-    border-radius: 12px;      
+  border: 1px solid rgba(46, 90, 44, 0.63); /* Forest Service Green */
+  border-radius: 12px;
 }
-  .buttonWrapper:hover {
-    background-color:#6E523A;                /* Warm sunlight brown */
-    box-shadow: 0px 0px 10px 0px rgba(255, 255, 255, 0.5);          
-    transform: scale(1.1);
-    transition: transform 0.3s ease-in-out;
-    transform: translateY(-5px);
-    
-              
-  }
+.buttonWrapper:hover {
+  background-color: #6e523a; /* Warm sunlight brown */
+  box-shadow: 0px 0px 10px 0px greenyellow;
+  transform: scale(1.1);
+  transition: transform 0.3s ease-in-out;
+  transform: translateY(-2px);
+}
