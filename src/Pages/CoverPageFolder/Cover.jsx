@@ -2,12 +2,16 @@ import "./Cover.css";
 import MermaidOgImage from "../../Images/StitchingStoner.Og1180x517.webp";
 import Weed from "../../Components/WeedFolder/Weed.jsx";
 import ContactMe from "../../Components/ContactMeFolder/ContactMe.jsx";
+import ReverseButton from "../../Components/ReverseButton/ReverseButton.jsx";
 import { GiYarn } from "react-icons/gi";
 import { PiPersonSimpleHike } from "react-icons/pi";
 
 export default function LandingPage() {
   return (
     <main className="relative h-screen overflow-auto bg-black text-neutral-100">
+
+      < ReverseButton />
+
       <div className="">
         <Weed />
       </div>
@@ -69,10 +73,12 @@ export default function LandingPage() {
           </div>
         </a>
 
-        <div className="absolute -bottom-4 right-4">
+         
+      </div>
+
+        <div className="absolute  md:-bottom-2 right-4">
           <ContactMe />
         </div>
-      </div>
     </main>
   );
 }

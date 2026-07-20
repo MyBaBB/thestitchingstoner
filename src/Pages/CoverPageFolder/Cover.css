@@ -12,7 +12,7 @@
   display: inline-block;
   
   color:rgba(91, 186, 118, .8);
-  z-index: 500;
+  z-index: 5;
 }
 
 /* Animated overlay text */
@@ -27,7 +27,7 @@
   animation: stonerCenterOut 9.5s linear infinite;
   opacity: 1;
    
-  z-index: 500;
+  z-index: 5;
 }
 
 /* Keyframes: center → outward → pause */
