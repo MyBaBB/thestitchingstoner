@@ -4,12 +4,15 @@ import React from "react";
 import BatSignal from "../../Images/BatButton.webp";
 import "./ContactMe.css";
 
-const ContactMe = () => { 
+const ContactMe = () => {
   return (
-    <div className="ContactButtonHide relative z-50 m-auto mb-[.5rem] hidden h-full w-full items-center justify-center sm:flex">
+    <div className="ContactButtonHide -mb-5  z-50 m-auto  
+                    hidden h-full w-full items-center justify-center sm:flex
+                    ">
       <div
         id="contact"
-        className="buttonsAllWrapper m-auto mb-4 w-fit cursor-pointer px-1 pb-2 duration-500 ease-in-out hover:scale-[100.8%]"
+        className="buttonsAllWrapper m-auto  w-fit cursor-pointer px-1 pb-2 duration-500 
+                      ease-in-out hover:scale-[100.8%]"
       >
         <a
           href="https://mybabb.com "

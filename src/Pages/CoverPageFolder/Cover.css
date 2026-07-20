@@ -10,8 +10,8 @@
 .stoner-cipher {
   position: relative;
   display: inline-block;
-  
-  color:rgba(91, 186, 118, .8);
+
+  color: rgba(91, 186, 118, 0.8);
   z-index: 5;
 }
 
@@ -26,7 +26,7 @@
   color: #f560a8 !important;
   animation: stonerCenterOut 9.5s linear infinite;
   opacity: 1;
-   
+
   z-index: 5;
 }
 
@@ -72,7 +72,6 @@
     #3f2e24 0%,
     /* top lighter */ #332319 50%,
     /* middle darker */ #3f2e24 100% /* bottom lighter */
-    
   );
   border: 1px solid rgba(46, 90, 44, 0.63); /* Forest Service Green */
   border-radius: 12px;
@@ -95,8 +94,6 @@
   animation:
     cloudLanding 2.4s ease-out forwards,
     cloudFloat 15s ease-in-out 2.4s infinite;
-
- 
 }
 
 /* YOUR landing stays exactly the same */

@@ -8,26 +8,29 @@ import { PiPersonSimpleHike } from "react-icons/pi";
 
 export default function LandingPage() {
   return (
-    <main className="relative h-screen overflow-auto bg-black text-neutral-100">
 
-      < ReverseButton />
+<div className="relative ">
+    <main className="relative h-screen overflow-auto bg-black text-neutral-100
+    ">
+      <ReverseButton />
 
       <div className="">
         <Weed />
       </div>
 
       {/* SINGLE SCREEN CONTENT */}
-      <div className="relative z-10 flex h-fit flex-col items-center justify-center px-6 text-center">
+      <div className="relative z-10 flex h-fit flex-col items-center justify-center px-6 text-center
+      ">
         {/* TITLE */}
         <h1 className="bg-clip-text font-Iceberg-Regular text-4xl font-extrabold md:text-6xl">
-          <span className="stoner-cipher  " data-text="The Stitching Stoner">
+          <span className="stoner-cipher" data-text="The Stitching Stoner">
             The Stitching Stoner
           </span>
         </h1>
 
         {/* TAGLINE */}
 
-        <p className="dreamyLanding mt-3 mb-2 max-w-md font-Iceberg-Regular text-lg font-bold md:text-xl">
+        <p className="dreamyLanding mb-2 mt-3 max-w-md font-Iceberg-Regular text-lg font-bold md:text-xl">
           <span className=" ">Handcrafted Embroidery</span>
           <br className="block xs:hidden" />
           <span className=" ">&nbsp;for Elevated Minds</span>
@@ -47,24 +50,22 @@ export default function LandingPage() {
         />
 
         {/* CTA BUTTON — FULLY UPGRADED */}
+
+        <div className="flex flex-row h-[3rem]  w-full items-center justify-center">
         <a
           href="https://thestitchingstoner.square.site"
           target="_blank"
           rel="noopener noreferrer"
-          className="buttonWrapper mt-8 inline-block px-4 py-2
-         "
+          className="buttonWrapper mt-8 inline-block px-4 py-2"
         >
-          <div className="flex items-center justify-center gap-3 px-1">
+          <div className="flex items-center justify-center gap-3 px-1 ">
             <span className="inline-block text-[#eece6c]">
               <PiPersonSimpleHike size={22} />
             </span>
 
-          <span className="inline-block text-white  font-Itim-Regular text-xl">
-             
-                Score Here
-               < hr  className="m-auto border-[.5px] border-[#eece6c] rounded-md 
-                                w-[85%] h-[3px]  
-               "/>
+            <span className="inline-block font-Itim-Regular text-xl text-white">
+              Score Here
+              <hr className="m-auto h-[3px] w-[85%] rounded-md border-[.5px] border-[#eece6c]" />
             </span>
 
             <span className="inline-block scale-x-[-1] text-[#eece6c]">
@@ -72,13 +73,15 @@ export default function LandingPage() {
             </span>
           </div>
         </a>
-
-         
+        <div className="absolute right-0 bottom-0 ">
+          <ContactMe />
+       </div>
+        </div>
       </div>
 
-        <div className="absolute  md:-bottom-2 right-4">
-          <ContactMe />
-        </div>
+      
     </main>
+        
+  </div>    
   );
 }
