@@ -103,20 +103,17 @@
     opacity: 0;
     transform: translateY(-240px) translateX(-90px) scale(1);
     filter: blur(8px);
-   
+
     color: #1c2830;
   }
   40% {
     opacity: 0.7;
     transform: translateY(0px) scale(1);
-   
-  
   }
   70% {
     opacity: 1;
     transform: translateY(-2px) scale(1.7);
     filter: blur(1px);
- 
   }
   100% {
     opacity: 1;
@@ -124,7 +121,7 @@
     filter: blur(0px);
     color: #a7f3f6;
     filter: blur(none);
-   
+
     z-index: 50;
   }
 }
