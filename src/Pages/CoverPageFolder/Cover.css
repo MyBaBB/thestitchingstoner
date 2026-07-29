@@ -100,10 +100,6 @@
 /* YOUR landing stays exactly the same */
 @keyframes cloudLanding {
   0% {
-    opacity: 0;
-    transform: translateY(-240px) translateX(-90px) scale(1);
-    filter: blur(8px);
-
     color: #1c2830;
   }
   40% {
@@ -122,6 +118,12 @@
     color: #a7f3f6;
     filter: blur(none);
 
+ty: 1;
+    transform: translateY(0px) scale(1.1);
+    filter: blur(0px);
+    color: #a7f3f6;
+    filter: blur(none);
+   
     z-index: 50;
   }
 }
@@ -143,4 +145,26 @@
   100% {
     transform: translateY(0px) translateX(0px) rotate(0deg) scale(1.1);
   }
+}
+.smokeText {
+  display: inline-block;
+  transition:
+    opacity 5s ease,
+    filter 2.5s ease,
+    transform 2.5s ease;
+}
+
+/* ENTER: start centered, scale from 0 → 1, fade in */
+.enterCenter {
+  opacity: 1;
+  filter: blur(0px);
+  transform: translate(0, 0) scale(1);
+  
+}
+
+/* EXIT: drift up and right, fade out, shrink */
+.exitUpRight {
+  opacity: 0;
+  filter: blur(12px);
+  transform: translate(0px, -180px) scale(0.7);
 }

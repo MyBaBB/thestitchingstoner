@@ -1,29 +1,57 @@
 import "./Cover.css";
+import { useState, useEffect } from "react";
+
 import MermaidOgImage from "../../Images/StitchingStoner.Og1180x517.webp";
 import Weed from "../../Components/WeedFolder/Weed.jsx";
 import ContactMe from "../../Components/ContactMeFolder/ContactMe.jsx";
 import ReverseButton from "../../Components/ReverseButton/ReverseButton.jsx";
+
 import { GiYarn } from "react-icons/gi";
 import { PiPersonSimpleHike } from "react-icons/pi";
-import { GiFootprint } from "react-icons/gi";
-import { BiSolidQuoteSingleRight } from "react-icons/bi";
 import { SlDirection } from "react-icons/sl";
 import { PiQuotesThin } from "react-icons/pi";
 
 export default function LandingPage() {
+
+  // ROTATING DREAMY TEXT
+  const messages = [
+    "Handcrafted Crochet for Elevated Minds",
+    "Dreamy Crochet Lessons Available"
+  ];
+
+  const [index, setIndex] = useState(0);
+  const [exiting, setExiting] = useState(false);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+
+      // Start exit animation (up-right)
+      setExiting(true);
+
+      setTimeout(() => {
+        // Switch to next paragraph
+        setIndex((prev) => (prev + 1) % messages.length);
+
+        // Reset to entry animation (centered)
+        setExiting(false);
+      }, 5000); // EXIT DURATION — change this to pause longer
+
+    }, 16000); // FULL CYCLE — do NOT change
+
+    return () => clearInterval(interval);
+  }, []);
+
   return (
     <div className="relative">
       <main className="relative h-screen overflow-auto bg-black text-neutral-100">
         <ReverseButton />
 
-        <div className="">
-          <Weed />
-        </div>
+        <Weed />
 
-        {/* SINGLE SCREEN CONTENT */}
         <div className="relative z-10 flex h-fit flex-col items-center justify-center px-6 text-center">
+
           {/* TITLE */}
-          <h1 className="z-20 overflow-visible bg-clip-text font-EmilysCandy-Regular text-4xl  md:text-6xl">
+          <h1 className="z-20 overflow-visible bg-clip-text font-EmilysCandy-Regular text-4xl md:text-6xl">
             <span
               className="stoner-cipher p-[.6rem]"
               data-text="The Stitching Stoner"
@@ -32,29 +60,10 @@ export default function LandingPage() {
             </span>
           </h1>
 
-          {/* TAGLINE */}
-
-          <p className="dreamyLanding mb-2 mt-3 max-w-md font-Itim-Regular text-lg  md:text-2xl">
-            <span className=" ">Handcrafted Crochet</span>
-            <br className="block xs:hidden" />
-            <span className=" ">&nbsp;for Elevated Minds</span>
-          </p>
-
-          {/* MINI ABOUT */}
-
-          <p className="mt-4 max-w-lg font-Itim-Regular text-sm  text-[#baf9ba] md:text-xl">
-            <span className="inline-block whitespace-nowrap">
-              <span className="inline-block scale-x-[-1]">
-                <PiQuotesThin />
-              </span>
-              &nbsp;Peace, Creativity, and Connection
-            </span>
-              <br />
-            <span className="inline-block whitespace-nowrap">
-              &nbsp;all Woven Together&nbsp;
-              <span className="inline-block">
-                <PiQuotesThin />
-              </span>
+          {/* SMOKE-DISSOLVE TAGLINE */}
+          <p className="dreamyLanding mb-2 mt-3 max-w-md font-Itim-Regular text-lg md:text-2xl">
+            <span className={`smokeText ${exiting ? "exitUpRight" : "enterCenter"}`}>
+              {messages[index]}
             </span>
           </p>
 
@@ -65,8 +74,23 @@ export default function LandingPage() {
             className="mermaidFeaturedImage mt-6 rounded-xl border border-neutral-700 object-cover shadow-lg"
           />
 
-          {/* CTA BUTTON — FULLY UPGRADED */}
+          <p className="mt-4 max-w-lg font-Itim-Regular text-sm text-[#baf9ba] md:text-xl">
+            <span className="inline-block whitespace-nowrap">
+              <span className="inline-block scale-x-[-1]">
+                <PiQuotesThin />
+              </span>
+              &nbsp;Peace, Creativity, and Connection
+            </span>
+            <br />
+            <span className="inline-block whitespace-nowrap">
+              &nbsp;all Woven Together&nbsp;
+              <span className="inline-block">
+                <PiQuotesThin />
+              </span>
+            </span>
+          </p>
 
+          {/* CTA BUTTON */}
           <div className="flex h-[3rem] w-full flex-row items-center justify-center">
             <a
               href="https://thestitchingstoner.square.site"
@@ -91,6 +115,7 @@ export default function LandingPage() {
           </div>
         </div>
       </main>
+
       <div className="absolute bottom-4 right-4">
         <ContactMe />
       </div>
