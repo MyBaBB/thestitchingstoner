@@ -34,15 +34,14 @@ export default function LandingPage() {
         {/* TAGLINE */}
 
         <p className="dreamyLanding mb-2 mt-3 max-w-md font-Iceberg-Regular text-lg font-bold md:text-xl">
-          <span className=" ">Handcrafted Embroidery</span>
+          <span className=" ">Handcrafted Crochet</span>
           <br className="block xs:hidden" />
           <span className=" ">&nbsp;for Elevated Minds</span>
         </p>
 
         {/* MINI ABOUT */}
         <p className="mt-4 max-w-lg font-Iceberg-Regular text-sm font-bold text-white md:text-base">
-          Psychedelic embroidery, custom patches, and handmade textile art —
-          stitched with intention for creators, dreamers, and chill souls.
+          Crochet for the cosmic wanderer — and chill‑vibe classes for elevated makers and free spirits.
         </p>
 
         {/* FEATURED IMAGE */}
