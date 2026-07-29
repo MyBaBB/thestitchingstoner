@@ -7,7 +7,7 @@ import "./ContactMe.css";
 const ContactMe = () => {
   return (
     <div className="ContactButtonHide -mb-5  z-50 m-auto  
-                    hidden h-full w-full items-center justify-center sm:flex
+                    flex h-full w-full items-center justify-center  
                     ">
       <div
         id="contact"

@@ -6,7 +6,7 @@ import ReverseButton from "../../Components/ReverseButton/ReverseButton.jsx";
 import { GiYarn } from "react-icons/gi";
 import { PiPersonSimpleHike } from "react-icons/pi";
 import { GiFootprint } from "react-icons/gi";
-import { LiaMapSignsSolid } from "react-icons/lia";
+
 import { SlDirection } from "react-icons/sl";
 
 export default function LandingPage() {
@@ -76,15 +76,15 @@ export default function LandingPage() {
             </span>
           </div>
         </a>
-        <div className="absolute right-0 bottom-0 ">
-          <ContactMe />
-       </div>
+        
         </div>
       </div>
 
       
     </main>
-        
+        <div className="absolute right-4 bottom-4 ">
+          <ContactMe />
+       </div>
   </div>    
   );
 }
