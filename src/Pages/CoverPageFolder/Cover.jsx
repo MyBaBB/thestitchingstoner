@@ -40,8 +40,10 @@ export default function LandingPage() {
         </p>
 
         {/* MINI ABOUT */}
-        <p className="mt-4 max-w-lg font-Iceberg-Regular text-sm font-bold text-white md:text-base">
-          Crochet for the cosmic wanderer — and chill‑vibe classes for elevated makers and free spirits.
+
+        <p className="mt-4 max-w-lg font-Iceberg-Regular text-sm
+         font-bold text-amber-200 md:text-base">
+            &apos;&apos;Peace, creativity, and connection all woven together&apos;&apos;
         </p>
 
         {/* FEATURED IMAGE */}
