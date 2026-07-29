@@ -27,7 +27,7 @@
   animation: stonerCenterOut 9.5s linear infinite;
   opacity: 1;
 
-  z-index: 20;
+  z-index: 21;
 }
 
 /* Keyframes: center → outward → pause */
