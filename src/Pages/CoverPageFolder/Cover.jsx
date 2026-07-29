@@ -43,7 +43,7 @@ export default function LandingPage() {
         {/* MINI ABOUT */}
 
         <p className="mt-4 max-w-lg font-Itim-Regular text-sm
-                      font-bold text-[#9af89a] md:text-xl">
+                      font-bold text-[#baf9ba] md:text-xl">
         
 
                 <span className="inline-block whitespace-nowrap">
@@ -51,7 +51,8 @@ export default function LandingPage() {
              <PiQuotesThin />
            </span>      
                   &nbsp;Peace, Creativity, and Connection
-                </span>    
+                </span> 
+                   
                 <span className="inline-block whitespace-nowrap ">
                   all Woven Together&nbsp;
            <span className="inline-block">
