@@ -5,6 +5,9 @@ import ContactMe from "../../Components/ContactMeFolder/ContactMe.jsx";
 import ReverseButton from "../../Components/ReverseButton/ReverseButton.jsx";
 import { GiYarn } from "react-icons/gi";
 import { PiPersonSimpleHike } from "react-icons/pi";
+import { GiFootprint } from "react-icons/gi";
+import { LiaMapSignsSolid } from "react-icons/lia";
+import { SlDirection } from "react-icons/sl";
 
 export default function LandingPage() {
   return (
@@ -58,16 +61,16 @@ export default function LandingPage() {
           rel="noopener noreferrer"
           className="buttonWrapper mt-8 inline-block px-4 py-2"
         >
-          <div className="flex items-center justify-center gap-3 px-1 ">
+          <div className="flex items-center justify-center gap-4  px-1 ">
             <span className="inline-block text-[#eece6c]">
               <PiPersonSimpleHike size={22} />
             </span>
 
-            <span className="inline-block font-Itim-Regular text-xl text-white">
-              Score Here
-              <hr className="m-auto h-[3px] w-[85%] rounded-md border-[.5px] border-[#eece6c]" />
+            <span className="inline-block font-Itim-Regular text-xl text-[#eece6c]">
+              <SlDirection   size={18}/>
+           
             </span>
-
+              
             <span className="inline-block scale-x-[-1] text-[#eece6c]">
               <GiYarn size={20} />
             </span>
