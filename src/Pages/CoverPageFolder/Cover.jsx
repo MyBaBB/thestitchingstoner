@@ -6,8 +6,9 @@ import ReverseButton from "../../Components/ReverseButton/ReverseButton.jsx";
 import { GiYarn } from "react-icons/gi";
 import { PiPersonSimpleHike } from "react-icons/pi";
 import { GiFootprint } from "react-icons/gi";
-
+import { BiSolidQuoteSingleRight } from "react-icons/bi";
 import { SlDirection } from "react-icons/sl";
+import { PiQuotesThin } from "react-icons/pi";
 
 export default function LandingPage() {
   return (
@@ -25,7 +26,7 @@ export default function LandingPage() {
       <div className="relative z-10 flex h-fit flex-col items-center justify-center px-6 text-center
       ">
         {/* TITLE */}
-        <h1 className="bg-clip-text font-Iceberg-Regular text-4xl font-extrabold md:text-6xl">
+        <h1 className="bg-clip-text font-EmilysCandy-Regular text-4xl font-extrabold md:text-6xl">
           <span className="stoner-cipher" data-text="The Stitching Stoner">
             The Stitching Stoner
           </span>
@@ -33,7 +34,7 @@ export default function LandingPage() {
 
         {/* TAGLINE */}
 
-        <p className="dreamyLanding mb-2 mt-3 max-w-md font-Iceberg-Regular text-lg font-bold md:text-xl">
+        <p className="dreamyLanding mb-2 mt-3 max-w-md font-Itim-Regular text-lg font-bold md:text-xl">
           <span className=" ">Handcrafted Crochet</span>
           <br className="block xs:hidden" />
           <span className=" ">&nbsp;for Elevated Minds</span>
@@ -41,9 +42,23 @@ export default function LandingPage() {
 
         {/* MINI ABOUT */}
 
-        <p className="mt-4 max-w-lg font-Iceberg-Regular text-sm
-         font-bold text-amber-200 md:text-base">
-            &apos;&apos;Peace, creativity, and connection all woven together&apos;&apos;
+        <p className="mt-4 max-w-lg font-Itim-Regular text-sm
+                      font-bold text-[#9af89a] md:text-xl">
+        
+
+                <span className="inline-block whitespace-nowrap">
+           <span className="inline-block scale-x-[-1] ">
+             <PiQuotesThin />
+           </span>      
+                  &nbsp;Peace, Creativity, and Connection
+                </span>    
+                <span className="inline-block whitespace-nowrap ">
+                  all Woven Together&nbsp;
+           <span className="inline-block">
+             <PiQuotesThin />
+           </span>
+                </span> 
+        
         </p>
 
         {/* FEATURED IMAGE */}

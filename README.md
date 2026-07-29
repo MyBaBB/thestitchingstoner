@@ -119,6 +119,8 @@ Created by **Brett Web Development**
 ## Fonts used
 *   Iceberg-Regular.ttf
 *   Itim-Regular.ttf
+*   NovaCut-Regular
+*   EmilysCandy-Regular
 
  
 
