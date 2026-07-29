@@ -10,7 +10,7 @@
 .stoner-cipher {
   position: relative;
   display: inline-block;
-
+  padding: 0.5rem;
   color: rgba(91, 186, 118, 0.8);
   z-index: 5;
 }
@@ -28,6 +28,7 @@
   opacity: 1;
   overflow: visible;
   z-index: 21;
+  padding: 0.6rem;
 }
 
 /* Keyframes: center → outward → pause */

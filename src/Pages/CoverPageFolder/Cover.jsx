@@ -27,7 +27,7 @@ export default function LandingPage() {
       ">
         {/* TITLE */}
         <h1 className="bg-clip-text font-EmilysCandy-Regular text-4xl font-extrabold md:text-6xl overflow-visible z-20">
-          <span className="stoner-cipher" data-text="The Stitching Stoner">
+          <span className="stoner-cipher p-[.6rem] border-2 border-red-500" data-text="The Stitching Stoner">
             The Stitching Stoner
           </span>
         </h1>
