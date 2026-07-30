@@ -24,7 +24,7 @@
 
 /* NEW — opacity when no history */
 .noHistoryOpacity {
-  opacity: 0.8 !important;
+  opacity: 0.4 !important;
   pointer-events: none;
 }
 
