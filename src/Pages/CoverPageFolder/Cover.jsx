@@ -12,11 +12,10 @@ import { SlDirection } from "react-icons/sl";
 import { PiQuotesThin } from "react-icons/pi";
 
 export default function LandingPage() {
-
   // ROTATING DREAMY TEXT
   const messages = [
     "Handcrafted Crochet for Elevated Minds",
-    "Dreamy Crochet Lessons Available"
+    "Dreamy Crochet Lessons Available",
   ];
 
   const [index, setIndex] = useState(0);
@@ -24,7 +23,6 @@ export default function LandingPage() {
 
   useEffect(() => {
     const interval = setInterval(() => {
-
       // Start exit animation (up-right)
       setExiting(true);
 
@@ -35,7 +33,6 @@ export default function LandingPage() {
         // Reset to entry animation (centered)
         setExiting(false);
       }, 5000); // EXIT DURATION — change this to pause longer
-
     }, 16000); // FULL CYCLE — do NOT change
 
     return () => clearInterval(interval);
@@ -49,7 +46,6 @@ export default function LandingPage() {
         <Weed />
 
         <div className="relative z-10 flex h-fit flex-col items-center justify-center px-6 text-center">
-
           {/* TITLE */}
           <h1 className="z-20 overflow-visible bg-clip-text font-EmilysCandy-Regular text-4xl md:text-6xl">
             <span
@@ -62,7 +58,9 @@ export default function LandingPage() {
 
           {/* SMOKE-DISSOLVE TAGLINE */}
           <p className="dreamyLanding mb-2 mt-3 max-w-md font-Itim-Regular text-lg md:text-2xl">
-            <span className={`smokeText ${exiting ? "exitUpRight" : "enterCenter"}`}>
+            <span
+              className={`smokeText ${exiting ? "exitUpRight" : "enterCenter"}`}
+            >
               {messages[index]}
             </span>
           </p>
@@ -91,12 +89,12 @@ export default function LandingPage() {
           </p>
 
           {/* CTA BUTTON */}
-          <div className="flex h-[3rem] w-full flex-row items-center justify-center">
+          <div className="flex h-[3rem] w-full flex-row items-center justify-center border-2 border-red-500">
             <a
               href="https://thestitchingstoner.square.site"
               target="_blank"
               rel="noopener noreferrer"
-              className="buttonWrapper mt-8 inline-block px-4 py-2"
+              className="buttonWrapper mt-8 inline-block border-2 border-red-500 px-4 py-2"
             >
               <div className="flex items-center justify-center gap-4 px-1">
                 <span className="inline-block text-[#eece6c]">
