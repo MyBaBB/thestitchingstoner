@@ -40,12 +40,13 @@ export default function LandingPage() {
 
   return (
     <div className="relative">
-      <main className="relative h-screen overflow-auto bg-black text-neutral-100">
+      <main className="relative h-screen  bg-black text-neutral-100 overflow-auto ">
         <ReverseButton />
 
         <Weed />
 
-        <div className="relative z-10 flex h-fit flex-col items-center justify-center px-6 text-center">
+        <div className="relative z-10 flex h-fit flex-col items-center justify-center px-6 text-center
+          ">
           {/* TITLE */}
           <h1 className="z-20 overflow-visible bg-clip-text font-EmilysCandy-Regular text-4xl md:text-6xl">
             <span
@@ -89,12 +90,12 @@ export default function LandingPage() {
           </p>
 
           {/* CTA BUTTON */}
-          <div className="flex h-[3rem] w-full flex-row items-center justify-center border-2 border-red-500">
+          <div className="flex h-[3rem] w-fit flex-row items-center justify-center ">
             <a
               href="https://thestitchingstoner.square.site"
               target="_blank"
               rel="noopener noreferrer"
-              className="buttonWrapper mt-8 inline-block border-2 border-red-500 px-4 py-2"
+              className="buttonWrapper mt-8 inline-block px-4 py-2"
             >
               <div className="flex items-center justify-center gap-4 px-1">
                 <span className="inline-block text-[#eece6c]">

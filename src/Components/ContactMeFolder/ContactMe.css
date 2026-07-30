@@ -1,6 +1,8 @@
 .ContactButtonHide {
   visibility: hidden;
   animation: showButton 1.5s ease-in-out 3s forwards;
+  z-index: 11;
+
 }
 
 @keyframes showButton {
