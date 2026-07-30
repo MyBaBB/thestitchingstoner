@@ -13,23 +13,58 @@
   }
 }
 
+/* EXISTING */
 .opacity-0 {
   opacity: 0;
   pointer-events: none;
 }
-
 .opacity-100 {
   opacity: 1;
 }
 
+/* NEW — opacity when no history */
+.noHistoryOpacity {
+  opacity: 0.8 !important;
+  pointer-events: none;
+}
+
+/* BASE BUTTON COLOR */
 .reverseButton {
   color: #6ab7fa;
+
+  /* NEW — slow rotation + breathing zoom */
+  animation: reverseRotate 14s linear infinite,
+             reverseZoom 4s ease-in-out infinite;
 }
+
 .reverseButton:hover {
-  color: #6ab7fa;
   color: #48a8fb;
 }
 
+/* COUNTER-CLOCKWISE ROTATION */
+@keyframes reverseRotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(-360deg);
+  }
+}
+
+/* GENTLE ZOOM IN/OUT */
+@keyframes reverseZoom {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.08);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+/* RESPONSIVE HIDING */
 @media screen and (max-height: 430px) and (orientation: landscape) {
   .reverseButton {
     display: none;
@@ -39,4 +74,14 @@
   .reverseButton {
     display: none;
   }
+}
+/* Independent slow rotation for the spiral icon */
+.spiralRotate {
+  display: inline-block;
+  animation: spiralSpin 18s linear infinite;
+}
+
+@keyframes spiralSpin {
+  from { transform: rotate(0deg); }
+  to   { transform: rotate(-360deg); }
 }

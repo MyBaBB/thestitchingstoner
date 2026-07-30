@@ -41,7 +41,7 @@ export default function LandingPage() {
   return (
     <div className="relative">
       <main className="relative h-screen  bg-black text-neutral-100 overflow-auto ">
-        <ReverseButton />
+        <ReverseButton /> 
 
         <Weed />
 
