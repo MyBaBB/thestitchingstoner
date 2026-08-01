@@ -1,0 +1,29 @@
+.footprint {
+  color: rgba(186, 249, 186, .4);
+  opacity: 0;
+  filter: blur(6px);
+}
+
+/* Fade in → hold → fade out */
+.fade-step {
+  animation: footprintFade 2.5s ease-in-out forwards;
+}
+
+@keyframes footprintFade {
+  0% { opacity: 0; filter: blur(6px); }
+  30% { opacity: 1; filter: blur(0px); }
+  70% { opacity: 1; filter: blur(0px); }
+  100% { opacity: 0; filter: blur(6px); }
+}
+
+/* Left footprint */
+.left-foot {
+  transform: rotate(60deg);
+  transform-origin: center bottom;
+}
+
+/* Right footprint */
+.right-foot {
+  transform: scaleX(-1) rotate(-106deg);
+  transform-origin: center bottom;
+}

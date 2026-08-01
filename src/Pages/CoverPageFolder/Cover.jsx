@@ -10,7 +10,7 @@ import { GiYarn } from "react-icons/gi";
 import { PiPersonSimpleHike } from "react-icons/pi";
 import { SlDirection } from "react-icons/sl";
 import { PiQuotesThin } from "react-icons/pi";
-
+import HippieFootprints from "../../Components/HippieFootprintsFolder/HippieFootprints.jsx";
 export default function LandingPage() {
   // ROTATING DREAMY TEXT
   const messages = [
@@ -43,9 +43,10 @@ export default function LandingPage() {
     <div className="relative">
       <main className="relative h-screen bg-black text-neutral-100 overflow-visible">
 
-        <ReverseButton /> 
+  <HippieFootprints />   {/* ← ADD THIS */}
 
-        <Weed />
+  <ReverseButton />
+  <Weed />
 
       <div className="relative z-10 flex h-fit flex-col items-start justify-center
                       text-center">

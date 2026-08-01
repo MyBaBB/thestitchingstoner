@@ -161,6 +161,7 @@
   opacity: 1;
   filter: blur(0px);
   transform: translate(0, 0) scale(1);
+  
 }
 
 /* EXIT: drift up and right, fade out, shrink */
