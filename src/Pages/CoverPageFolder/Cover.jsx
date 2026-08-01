@@ -14,10 +14,9 @@ import { PiQuotesThin } from "react-icons/pi";
 export default function LandingPage() {
   // ROTATING DREAMY TEXT
   const messages = [
-    "Hook up your Hook at Hookaville",
     "Handcrafted Crochet for Elevated Minds",
-    "Dreamy Crochet Lessons Available",
-    
+    "Hook up your Hook at Hookaville 62",
+    "Dreamy Crochet Lessons Available ",
   ];
 
   const [index, setIndex] = useState(0);
@@ -124,7 +123,7 @@ export default function LandingPage() {
         </div>
       </main>
 
-      <div className="absolute bottom-4 right-4">
+      <div className="absolute bottom-8 right-4">
         <ContactMe />
       </div>
     </div>
