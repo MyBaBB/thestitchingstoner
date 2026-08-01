@@ -76,7 +76,7 @@ export default function LandingPage() {
   <img
     src={MermaidOgImage}
     alt="Featured embroidered stoner art"
-    className="mermaidFeaturedImage"
+    className="mermaidFeaturedImage m-auto"
   />
 </div>
 

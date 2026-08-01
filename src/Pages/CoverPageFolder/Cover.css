@@ -198,12 +198,14 @@
   }
 
   .mermaidFeaturedImage {
-    object-position: left center;
+    object-position:left  center;
   }
 }
 /* Mobile: shift image left by 15rem */
-@media (max-width: 768px) {
+@media (max-width: 382px) {
   .mermaidFeaturedImage {
-    transform: translateX(-8.2rem);
+    object-position: left center;
+    transform: translateX(-5rem);
+    overflow: visible ! important;
   }
 }
