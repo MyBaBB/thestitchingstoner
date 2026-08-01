@@ -1,7 +1,7 @@
 import "./Cover.css";
 import { useState, useEffect } from "react";
 
-import MermaidOgImage from "../../Images/StitchingStoner.Og1180x517.webp";
+import MermaidOgImage from "../../Images/The_Stitching_Stoner/8-01-FaceBook_Banner_National_Forest-Recovered.webp";
 import Weed from "../../Components/WeedFolder/Weed.jsx";
 import ContactMe from "../../Components/ContactMeFolder/ContactMe.jsx";
 import ReverseButton from "../../Components/ReverseButton/ReverseButton.jsx";
@@ -14,8 +14,10 @@ import { PiQuotesThin } from "react-icons/pi";
 export default function LandingPage() {
   // ROTATING DREAMY TEXT
   const messages = [
+    "Hook up your Hook at Hookaville",
     "Handcrafted Crochet for Elevated Minds",
     "Dreamy Crochet Lessons Available",
+    
   ];
 
   const [index, setIndex] = useState(0);
@@ -40,15 +42,18 @@ export default function LandingPage() {
 
   return (
     <div className="relative">
-      <main className="relative h-screen  bg-black text-neutral-100 overflow-auto ">
+      <main className="relative h-screen bg-black text-neutral-100 overflow-visible">
+
         <ReverseButton /> 
 
         <Weed />
 
-        <div className="relative z-10 flex h-fit flex-col items-center justify-center px-6 text-center
-          ">
+      <div className="relative z-10 flex h-fit flex-col items-start justify-center
+                      text-center">
+
           {/* TITLE */}
-          <h1 className="z-20 overflow-visible bg-clip-text font-EmilysCandy-Regular text-4xl md:text-6xl">
+          <h1 className="z-20 overflow-visible -mb-2 font-EmilysCandy-Regular
+                         bg-clip-text  text-4xl md:text-6xl m-auto">
             <span
               className="stoner-cipher p-[.6rem]"
               data-text="The Stitching Stoner"
@@ -58,7 +63,7 @@ export default function LandingPage() {
           </h1>
 
           {/* SMOKE-DISSOLVE TAGLINE */}
-          <p className="dreamyLanding mb-2 mt-3 max-w-md font-Itim-Regular text-lg md:text-2xl">
+          <p className="dreamyLanding mb-4 mt-0 m-auto max-w-md font-Itim-Regular text-lg md:text-2xl">
             <span
               className={`smokeText ${exiting ? "exitUpRight" : "enterCenter"}`}
             >
@@ -67,20 +72,24 @@ export default function LandingPage() {
           </p>
 
           {/* FEATURED IMAGE */}
-          <img
-            src={MermaidOgImage}
-            alt="Featured embroidered stoner art"
-            className="mermaidFeaturedImage mt-6 rounded-xl border border-neutral-700 object-cover shadow-lg"
-          />
+         {/* FEATURED IMAGE */}
+<div className="mermaidImageWrapper mt-0 m-auto">
+  <img
+    src={MermaidOgImage}
+    alt="Featured embroidered stoner art"
+    className="mermaidFeaturedImage"
+  />
+</div>
 
-          <p className="mt-4 max-w-lg font-Itim-Regular text-sm text-[#baf9ba] md:text-xl">
+
+          <p className="mt-4 m-auto max-w-lg font-Itim-Regular text-sm text-[#baf9ba] md:text-xl">
             <span className="inline-block whitespace-nowrap">
               <span className="inline-block scale-x-[-1]">
                 <PiQuotesThin />
               </span>
               &nbsp;Peace, Creativity, and Connection
             </span>
-            <br />
+            <br className="inline-block sm:hidden" />
             <span className="inline-block whitespace-nowrap">
               &nbsp;all Woven Together&nbsp;
               <span className="inline-block">
@@ -90,7 +99,7 @@ export default function LandingPage() {
           </p>
 
           {/* CTA BUTTON */}
-          <div className="flex h-[3rem] w-fit flex-row items-center justify-center ">
+          <div className="flex h-[3rem] w-fit m-auto flex-row items-center justify-center ">
             <a
               href="https://thestitchingstoner.square.site"
               target="_blank"

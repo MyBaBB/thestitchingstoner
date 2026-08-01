@@ -169,3 +169,41 @@
   filter: blur(12px);
   transform: translate(0px, -180px) scale(0.7);
 }
+
+/* Desktop */
+.mermaidImageWrapper {
+  width: 100%;
+  max-width: 800px;      /* desktop width */
+  height: 312px;         /* or whatever your banner height is */
+  overflow: hidden;      /* hide right overflow */
+  border-radius: 0.75rem;
+  border: 1px solid #404040;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.6);
+}
+
+/* the actual image */
+.mermaidFeaturedImage {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: left center; /* anchor left */
+  display: block;
+}
+
+/* Mobile: width shrinks, height stays the same */
+@media (max-width: 768px) {
+  .mermaidImageWrapper {
+    width: 100%;
+    height: 312px;       /* same height */
+  }
+
+  .mermaidFeaturedImage {
+    object-position: left center;
+  }
+}
+/* Mobile: shift image left by 15rem */
+@media (max-width: 768px) {
+  .mermaidFeaturedImage {
+    transform: translateX(-8.2rem);
+  }
+}
