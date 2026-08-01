@@ -1,7 +1,7 @@
 import "./Cover.css";
 import { useState, useEffect } from "react";
 
-import MermaidOgImage from "../../Images/The_Stitching_Stoner/8-01-FaceBook_Banner_National_Forest-Recovered.webp";
+import MermaidOgImage from "../../Images/The_Stitching_Stoner/A8-01-FB-puppets.webp";
 import Weed from "../../Components/WeedFolder/Weed.jsx";
 import ContactMe from "../../Components/ContactMeFolder/ContactMe.jsx";
 import ReverseButton from "../../Components/ReverseButton/ReverseButton.jsx";
