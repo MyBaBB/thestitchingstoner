@@ -15,8 +15,8 @@ export default function HippieFootprints() {
   const isLeft = step % 2 === 0;
 
   // movement: straight across bottom
-  const leftPx = step * 60;   // each step moves 60px to the right
-  const bottomPx = 64;        // 4rem ≈ 64px
+  const leftPx = step * 60; // each step moves 60px to the right
+  const bottomPx = 64; // 4rem ≈ 64px
 
   return (
     <GiFootprint

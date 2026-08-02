@@ -33,8 +33,9 @@
   color: #6ab7fa;
 
   /* NEW — slow rotation + breathing zoom */
-  animation: reverseRotate 14s linear infinite,
-             reverseZoom 4s ease-in-out infinite;
+  animation:
+    reverseRotate 14s linear infinite,
+    reverseZoom 4s ease-in-out infinite;
 }
 
 .reverseButton:hover {
@@ -82,6 +83,10 @@
 }
 
 @keyframes spiralSpin {
-  from { transform: rotate(0deg); }
-  to   { transform: rotate(-360deg); }
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(-360deg);
+  }
 }

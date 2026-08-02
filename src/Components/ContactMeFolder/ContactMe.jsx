@@ -6,14 +6,14 @@ import "./ContactMe.css";
 
 const ContactMe = () => {
   return (
-    <div className="ContactButtonHide m-auto -mb-5 hidden h-full w-full items-center justify-center xs:flex ">
+    <div className="ContactButtonHide m-auto -mb-5 hidden h-full w-full items-center justify-center xs:flex">
       <div
         id="contact"
-        className="buttonsAllWrapper m-auto w-fit cursor-pointer px-1 pb-2 duration-500 ease-in-out hover:scale-[100.8%] z-20"
+        className="buttonsAllWrapper z-20 m-auto w-fit cursor-pointer px-1 pb-2 duration-500 ease-in-out hover:scale-[100.8%]"
       >
         <a
           href="https://mybabb.com "
-          className="relative flex-row justify-center "
+          className="relative flex-row justify-center"
         >
           <button
             className="rootsButton w-fit whitespace-nowrap font-extrabold"
