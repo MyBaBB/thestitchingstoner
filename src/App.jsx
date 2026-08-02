@@ -6,7 +6,7 @@ import Zenith from "./Pages/Zenith";
 
 const App = () => {
   return (
-    <main className="h-screen w-screen overflow-hidden text-white">
+    <main className="">
       <Router>
         <Routes>
           <Route path="/" element={<Zenith />} />

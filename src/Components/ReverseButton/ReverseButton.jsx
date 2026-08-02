@@ -22,10 +22,10 @@ const ReverseButton = () => {
           onClick={() => window.history.back()}
           title="Reverse"
         >
-          <span className='spiralRotate'>
+          <span className="spiralRotate">
             <PiSpiralLight size={50} />
           </span>
-          <span className="absolute right-[-8px] bottom-[-8px]">
+          <span className="absolute bottom-[-8px] right-[-8px]">
             <PiRewindBold />
           </span>
         </button>

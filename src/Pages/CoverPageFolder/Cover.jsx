@@ -1,11 +1,9 @@
 import "./Cover.css";
 import { useState, useEffect } from "react";
-
 import MermaidOgImage from "../../Images/The_Stitching_Stoner/A8-01-FB-puppets.webp";
 import Weed from "../../Components/WeedFolder/Weed.jsx";
 import ContactMe from "../../Components/ContactMeFolder/ContactMe.jsx";
 import ReverseButton from "../../Components/ReverseButton/ReverseButton.jsx";
-
 import { GiYarn } from "react-icons/gi";
 import { PiPersonSimpleHike } from "react-icons/pi";
 import { SlDirection } from "react-icons/sl";
@@ -40,20 +38,14 @@ export default function LandingPage() {
   }, []);
 
   return (
-    <div className="relative">
-      <main className="relative h-screen bg-black text-neutral-100 overflow-visible">
-
-  <HippieFootprints />   {/* ← ADD THIS */}
-
-  <ReverseButton />
-  <Weed />
-
-      <div className="relative z-10 flex h-fit flex-col items-start justify-center
-                      text-center">
-
+    <div className="relative mb-[22rem] flex h-screen items-center justify-center bg-black">
+      <ReverseButton />
+      <main className="relative h-screen overflow-visible bg-black text-neutral-100">
+        <HippieFootprints /> {/* ← ADD THIS */}
+        <Weed />
+        <div className="relative z-10 flex h-fit flex-col items-start justify-center text-center">
           {/* TITLE */}
-          <h1 className="z-20 overflow-visible -mb-2 font-EmilysCandy-Regular
-                         bg-clip-text  text-4xl md:text-6xl m-auto">
+          <h1 className="z-20 m-auto -mb-2 overflow-visible bg-clip-text font-EmilysCandy-Regular text-4xl md:text-6xl">
             <span
               className="stoner-cipher p-[.6rem]"
               data-text="The Stitching Stoner"
@@ -63,7 +55,7 @@ export default function LandingPage() {
           </h1>
 
           {/* SMOKE-DISSOLVE TAGLINE */}
-          <p className="dreamyLanding mb-4 mt-0 m-auto max-w-md font-Itim-Regular text-lg md:text-2xl">
+          <p className="dreamyLanding m-auto mb-4 mt-0 max-w-md font-Itim-Regular text-lg md:text-2xl">
             <span
               className={`smokeText ${exiting ? "exitUpRight" : "enterCenter"}`}
             >
@@ -72,17 +64,16 @@ export default function LandingPage() {
           </p>
 
           {/* FEATURED IMAGE */}
-         {/* FEATURED IMAGE */}
-<div className="mermaidImageWrapper mt-0 m-auto">
-  <img
-    src={MermaidOgImage}
-    alt="Featured embroidered stoner art"
-    className="mermaidFeaturedImage m-auto"
-  />
-</div>
+          {/* FEATURED IMAGE */}
+          <div className="mermaidImageWrapper m-auto mt-0">
+            <img
+              src={MermaidOgImage}
+              alt="Featured embroidered stoner art"
+              className="mermaidFeaturedImage m-auto"
+            />
+          </div>
 
-
-          <p className="mt-4 m-auto max-w-lg font-Itim-Regular text-sm text-[#baf9ba] md:text-xl">
+          <p className="m-auto mt-4 max-w-lg font-Itim-Regular text-sm text-[#baf9ba] md:text-xl">
             <span className="inline-block whitespace-nowrap">
               <span className="inline-block scale-x-[-1]">
                 <PiQuotesThin />
@@ -99,7 +90,7 @@ export default function LandingPage() {
           </p>
 
           {/* CTA BUTTON */}
-          <div className="flex h-[3rem] w-fit m-auto flex-row items-center justify-center ">
+          <div className="m-auto flex h-[3rem] w-fit flex-row items-center justify-center">
             <a
               href="https://thestitchingstoner.square.site"
               target="_blank"
@@ -124,7 +115,7 @@ export default function LandingPage() {
         </div>
       </main>
 
-      <div className="absolute bottom-8 right-4">
+      <div className="fixed bottom-[1.25rem] right-[1.25rem]">
         <ContactMe />
       </div>
     </div>

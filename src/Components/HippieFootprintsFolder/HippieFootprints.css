@@ -1,5 +1,5 @@
 .footprint {
-  color: rgba(186, 249, 186, .4);
+  color: rgba(186, 249, 186, 0.4);
   opacity: 0;
   filter: blur(6px);
 }
@@ -10,10 +10,22 @@
 }
 
 @keyframes footprintFade {
-  0% { opacity: 0; filter: blur(6px); }
-  30% { opacity: 1; filter: blur(0px); }
-  70% { opacity: 1; filter: blur(0px); }
-  100% { opacity: 0; filter: blur(6px); }
+  0% {
+    opacity: 0;
+    filter: blur(6px);
+  }
+  30% {
+    opacity: 1;
+    filter: blur(0px);
+  }
+  70% {
+    opacity: 1;
+    filter: blur(0px);
+  }
+  100% {
+    opacity: 0;
+    filter: blur(6px);
+  }
 }
 
 /* Left footprint */
