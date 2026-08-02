@@ -1,4 +1,5 @@
 import "./HippieFootprints.css";
+import "./HippieFootprints.css";
 import { GiFootprint } from "react-icons/gi";
 import { BsCup } from "react-icons/bs";
 import { GiCorkHat } from "react-icons/gi";
