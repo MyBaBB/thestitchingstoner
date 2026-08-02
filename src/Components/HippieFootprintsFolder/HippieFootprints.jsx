@@ -53,11 +53,11 @@ export default function HippieFootprints() {
       {/* FOOTPRINT */}
       <GiFootprint
         key={`fp-${step}`}
-        size={50}
+        size={40}
         className={`footprint fade-step ${isLeft ? "left-foot" : "right-foot"}`}
         style={{
           position: "fixed",
-          left: `${leftPx}px`,
+          left: `${leftPx + 20}px`,
           bottom: `${bottomPx}px`,
           zIndex: 9998,
           pointerEvents: "none",
