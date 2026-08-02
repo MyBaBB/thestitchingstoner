@@ -1,4 +1,5 @@
 import "./HippieFootprints.css";
+import "./HippieFootprints.css";
 import { GiFootprint } from "react-icons/gi";
 import { BsCup } from "react-icons/bs";
 import { GiCorkHat } from "react-icons/gi";
@@ -25,6 +26,14 @@ export default function HippieFootprints() {
     }, 16);
     return () => clearInterval(interval);
   }, []);
+  /* SMOKE PUFF TIMER */
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setPuffs((prev) => [...prev, Date.now()]);
+    }, 4000);
+    return () => clearInterval(interval);
+  }, []);
+
 
   const isLeft = step % 2 === 0;
 
@@ -33,7 +42,7 @@ export default function HippieFootprints() {
 
   // cup height
   const cupBottomPx = bottomPx + 40;
-
+  const [puffs, setPuffs] = useState([]);
   // hat height (head level)
   const hatBottomPx = bottomPx + 120;
 
@@ -85,6 +94,23 @@ export default function HippieFootprints() {
           transformOrigin: "center bottom",
         }}
       />
+      
+         
+      {/* SMOKE PUFFS */}
+      {puffs.map((id) => (
+        <div
+          key={id}
+          className="smoke-puff"
+          style={{
+            position: "fixed",
+            left: `${cupX + 35}px`,
+            bottom: `${hatBottomPx + 40}px`,
+            pointerEvents: "none",
+            zIndex: 9999,
+          }}
+        />
+      ))}
+      
     </>
   );
 }
