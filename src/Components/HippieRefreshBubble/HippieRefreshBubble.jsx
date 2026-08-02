@@ -57,7 +57,7 @@ const HippieRefreshBubble = () => {
       )}
 
        {showRefreshMessage && (
-        <div className="hippie-fade-msg">
+        <div className="hippie-fade-msg ">
              <p>
              <span className="pineTreeIcon inline-block ">
                    <GiPineTree /> 
