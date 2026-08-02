@@ -67,7 +67,7 @@
     filter: blur(5px);
   }
 }
-@media (min-width: 380px){
+@media screen and (max-width: 380px){
   .puff-away {
     animation: none;
   }
@@ -87,6 +87,7 @@
   position: absolute;
   top: 33.3%;
   left: 50%;
+  white-space: nowrap;
   transform: translateX(-32%);
   background: rgb(14, 78, 14);
   padding: 0.6rem 0.9rem;        /* smaller */
@@ -100,6 +101,12 @@
   animation: fadeOut 4s forwards;
   z-index: 9999;
 }
+@media screen and (max-width: 500px) {
+  .hippie-fade-msg {
+    font-size: 0.8rem;
+  }
+}
+
 
 @keyframes fadeOut {
   0% { opacity: 0; }
