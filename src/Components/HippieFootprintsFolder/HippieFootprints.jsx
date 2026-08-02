@@ -13,9 +13,8 @@ export default function HippieFootprints() {
 
     const tick = (t) => {
       if (!startTime.current) startTime.current = t;
-      const e = (t - startTime.current) / 1000; // seconds
+      const e = (t - startTime.current) / 1000;
       setElapsed(e);
-
       frame = requestAnimationFrame(tick);
     };
 
@@ -24,19 +23,18 @@ export default function HippieFootprints() {
   }, []);
 
   // Derived animation values
- // Derived animation values
-const step = Math.floor(elapsed / 2.5); // every 2.5s
-const isLeft = step % 2 === 0;
+  const step = Math.floor(elapsed / 2.5); // every 2.5s
+  const isLeft = step % 2 === 0;
 
-const leftPx = step * 60;
-const bottomPx = 64;
+  const leftPx = step * 60;
+  const bottomPx = 64;
 
-// EXACT walker speed: 24px/sec
-const cupX = elapsed * 24;
+  // EXACT walker speed: 24px/sec
+  const cupX = elapsed * 24;
 
-// Swing frequency stays the same
-const cupSwing = elapsed * 3;
-const swingAngle = Math.sin(cupSwing) * 12;
+  // Swing frequency stays the same
+  const cupSwing = elapsed * 3;
+  const swingAngle = Math.sin(cupSwing) * 12;
 
   // Smoke every 4 seconds
   useEffect(() => {
@@ -44,7 +42,7 @@ const swingAngle = Math.sin(cupSwing) * 12;
     if (!puffs.includes(nextPuff)) {
       setPuffs((prev) => [...prev, nextPuff]);
     }
-  }, [elapsed]);
+  }, [elapsed, puffs]);
 
   const cupBottomPx = bottomPx + 40;
   const hatBottomPx = bottomPx + 120;
@@ -52,7 +50,7 @@ const swingAngle = Math.sin(cupSwing) * 12;
   return (
     <>
       <GiFootprint
-        key={step}
+        key={step} // keep this so each footprint fades separately
         size={40}
         className={`footprint fade-step ${isLeft ? "left-foot" : "right-foot"}`}
         style={{
