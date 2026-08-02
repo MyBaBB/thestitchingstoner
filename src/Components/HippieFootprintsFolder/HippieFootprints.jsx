@@ -58,7 +58,7 @@ export default function HippieFootprints() {
         className={`footprint fade-step ${isLeft ? "left-foot" : "right-foot"}`}
         style={{
           position: "fixed",
-          left: `${leftPx + 20}px`,
+          left: `${leftPx + 10}px`,
           bottom: `${bottomPx}px`,
           zIndex: 9998,
           pointerEvents: "none",
