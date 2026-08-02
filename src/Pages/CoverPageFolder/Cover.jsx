@@ -9,6 +9,7 @@ import { PiPersonSimpleHike } from "react-icons/pi";
 import { SlDirection } from "react-icons/sl";
 import { PiQuotesThin } from "react-icons/pi";
 import HippieFootprints from "../../Components/HippieFootprintsFolder/HippieFootprints.jsx";
+import HippieRefreshBubble from "../../Components/HippieRefreshBubble/HippieRefreshBubble.jsx";
 export default function LandingPage() {
   // ROTATING DREAMY TEXT
   const messages = [
@@ -66,6 +67,13 @@ export default function LandingPage() {
           {/* FEATURED IMAGE */}
           {/* FEATURED IMAGE */}
           <div className="mermaidImageWrapper m-auto mt-0">
+
+<div id="image">
+  <HippieRefreshBubble />
+  {/* your image here */}
+</div>
+
+
             <img
               src={MermaidOgImage}
               alt="Featured embroidered stoner art"

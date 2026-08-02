@@ -1,0 +1,112 @@
+.hippie-bubble {
+  position: absolute;
+  top: 33.3%;
+  left: 50%;
+  transform: translateX(-32%);
+  background: #fff7d6;
+  padding: 0.6rem 0.9rem;        /* smaller padding */
+  border-radius: 14px;           /* smaller bubble */
+  border: 2px dashed #c47f00;    /* thinner border */
+  font-family: "Comic Sans MS", "Chalkboard SE", sans-serif;
+  font-size: 0.8rem;             /* smaller text */
+  color: #5a3e00;
+  text-align: center;
+  box-shadow: 0 3px 7px rgba(0,0,0,0.18); /* lighter shadow */
+  transition: opacity 0.3s ease;
+}
+
+/* Refresh button */
+.hippie-refresh-btn {
+  margin-top: 0.4rem;
+  background: #ffb347;
+  border: none;
+  padding: 0.3rem 0.7rem;        /* smaller button */
+  border-radius: 8px;
+  font-size: 0.75rem;            /* smaller font */
+  cursor: pointer;
+  color: #4a2b00;
+  font-weight: bold;
+  transition: transform 0.2s ease;
+}
+
+.hippie-refresh-btn:hover {
+  transform: scale(0.95);
+}
+
+/* Smoke puff animation */
+.puff-away {
+  animation: smokePuff 0.8s forwards;
+  
+}
+
+@keyframes smokePuff {
+  0% {
+    opacity: 1;
+    transform: translateX(-33.3%) scale(0.9); /* smaller start */
+    filter: blur(0px);
+  }
+  50% {
+    opacity: 0.6;
+    transform: translateX(-33.3%) scale(1.1);
+    filter: blur(2px);
+  }
+  100% {
+    opacity: 0;
+    transform: translateX(-3.3%) scale(1.4); /* smaller puff */
+    filter: blur(5px);
+  }
+}
+
+/* Refresh message fade */
+.hippie-fade-msg {
+  position: absolute;
+  top: 33.3%;
+  left: 50%;
+  transform: translateX(-32%);
+  background: rgb(14, 78, 14);
+  padding: 0.6rem 0.9rem;        /* smaller */
+  border-radius: 14px;
+  border: 2px solid white;     /* thinner border */
+  font-family: "Comic Sans MS", "Chalkboard SE", sans-serif;
+  font-size: 1.1rem;
+  font-weight: bolder;             /* smaller text */
+  color: White;
+  text-align: center;
+  animation: fadeOut 4s forwards;
+  z-index: 9999;
+}
+
+@keyframes fadeOut {
+  0% { opacity: 0; }
+
+  80% { opacity: .8; }
+  
+  100% { opacity: 1; }
+}
+.revibe-row {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.4rem;
+}
+
+/* Pointer animation */
+.pointer {
+  font-size: 1.2rem;
+  transform-origin: center;
+  opacity: 0.9;
+  margin-left: 0.2rem;
+}
+.pointer-anim {
+  font-size: 1.2rem;
+  animation: pointerBounce 1s infinite ease-in-out;
+  transform-origin: center;
+  opacity: 0.9;
+  margin-left: 0.2rem;
+}
+
+@keyframes pointerBounce {
+  0% { transform: translateX(0) rotate(0deg); }
+  50% { transform: translateX(4px) rotate(8deg); }
+  100% { transform: translateX(0) rotate(0deg); }
+}
