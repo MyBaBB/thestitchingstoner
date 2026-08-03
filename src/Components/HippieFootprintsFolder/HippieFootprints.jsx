@@ -47,6 +47,19 @@ export default function HippieFootprints() {
   const cupBottomPx = bottomPx + 40;
   const hatBottomPx = bottomPx + 120;
 
+// Reset the animation every 7.5 seconds (2.5s cycle + 5s pause)
+useEffect(() => {
+  const cycleDuration = 180000 ; // ms
+
+  const interval = setInterval(() => {
+    startTime.current = performance.now(); // reset animation clock
+    setPuffs([]); // clear smoke puffs
+  }, cycleDuration);
+
+  return () => clearInterval(interval);
+}, []);
+
+
   return (
     <>
       <GiFootprint
