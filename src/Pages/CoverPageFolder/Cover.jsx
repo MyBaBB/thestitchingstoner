@@ -13,10 +13,21 @@ import HippieRefreshBubble from "../../Components/HippieRefreshBubble/HippieRefr
 export default function LandingPage() {
   // ROTATING DREAMY TEXT
   const messages = [
-    "Handcrafted Crochet for Elevated Minds",
-    "Hook up your Hook at Hookaville 62",
-    "Dreamy Crochet Lessons Available ",
+    "🍄 Handmade Crochet for Elevated Minds 🧵",
+    "🧶 Hook up your Hook at Hookaville 62 🌻",
+    "💃🏻 Dreamy Crochet Lessons Available 💭 ",
+    "✌🏼 Sign up for Hookaville Lessons! 🚌",
+    "🌈 Perfect for Beginners through Experts 🧶  ",
   ];
+   const rainbowColors = [
+  "#FF0000", // red
+  "#FF7F00", // orange
+  "#FFFF00", // yellow
+  "#00FF00", // green
+  "skyblue", // blue
+  "#4B0082", // indigo
+  "#9400D3", // green
+];
 
   const [index, setIndex] = useState(0);
   const [exiting, setExiting] = useState(false);
@@ -56,12 +67,15 @@ export default function LandingPage() {
           </h1>
 
           {/* SMOKE-DISSOLVE TAGLINE */}
-          <p className="dreamyLanding m-auto mb-4 mt-0 max-w-md font-Itim-Regular text-lg md:text-2xl">
-            <span
-              className={`smokeText ${exiting ? "exitUpRight" : "enterCenter"}`}
-            >
-              {messages[index]}
-            </span>
+          <p className="dreamyLanding m-auto mb-4 mt-0 max-w-md font-Itim-Regular
+                       text-xs xs:text-xl md:text-2xl whitespace-nowrap">
+                      <span
+            className={`smokeText ${exiting ? "exitUpRight" : "enterCenter"}`} 
+            style={{ color: rainbowColors[index % rainbowColors.length] }}
+          >
+            {messages[index]}
+          </span>
+
           </p>
 
           {/* FEATURED IMAGE */}
