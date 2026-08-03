@@ -33,7 +33,10 @@ const HippieRefreshBubble = () => {
   return (
     <>
       {showBubble && (
-        <div className={`hippie-bubble ${bubbleExit ? "puff-away" : ""}`}>
+        <div className={`hippie-bubble ${bubbleExit ? "puff-away" : ""}`}
+
+          // delete this style for construction reset button to be visible
+        style={{ display: showBubble ? "none" : "none" }}>
           <p>Still weaving this page…</p>
 
           <div className="revibe-row">
