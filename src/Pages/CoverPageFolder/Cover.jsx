@@ -4,12 +4,15 @@ import MermaidOgImage from "../../Images/The_Stitching_Stoner/A8-01-FB-puppets.w
 import Weed from "../../Components/WeedFolder/Weed.jsx";
 import ContactMe from "../../Components/ContactMeFolder/ContactMe.jsx";
 import ReverseButton from "../../Components/ReverseButton/ReverseButton.jsx";
-import { GiYarn } from "react-icons/gi";
-import { PiPersonSimpleHike } from "react-icons/pi";
-import { SlDirection } from "react-icons/sl";
 import { PiQuotesThin } from "react-icons/pi";
 import HippieFootprints from "../../Components/HippieFootprintsFolder/HippieFootprints.jsx";
 import HippieRefreshBubble from "../../Components/HippieRefreshBubble/HippieRefreshBubble.jsx";
+import NationalForestButton from "../../Components/NationalForestButton/NationalForestButton..jsx";
+import FacebookForestButton from "../../Components/NationalForestButton/FaceBookForestButton.jsx";
+import InstagramForestButton from "../../Components/NationalForestButton/InstagramForestButton.jsx";
+
+
+
 export default function LandingPage() {
   // ROTATING DREAMY TEXT
   const messages = [
@@ -110,29 +113,12 @@ export default function LandingPage() {
               </span>
             </span>
           </p>
+           <div className="nationalForestCollection flex flex-col xxs:flex-row  items-center justify-between gap-4 w-full pr-2 xxs:pr-0">
 
-          {/* CTA BUTTON */}
-          <div className="m-auto flex h-[3rem] w-fit flex-row items-center justify-center">
-            <a
-              href="https://thestitchingstoner.square.site"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="buttonWrapper mt-8 inline-block px-4 py-2"
-            >
-              <div className="flex items-center justify-center gap-4 px-1">
-                <span className="inline-block text-[#eece6c]">
-                  <PiPersonSimpleHike size={22} />
-                </span>
+           <FacebookForestButton />
+           <NationalForestButton />
+           <InstagramForestButton />
 
-                <span className="inline-block font-Itim-Regular text-xl text-[#eece6c]">
-                  <SlDirection size={18} />
-                </span>
-
-                <span className="inline-block scale-x-[-1] text-[#eece6c]">
-                  <GiYarn size={20} />
-                </span>
-              </div>
-            </a>
           </div>
         </div>
       </main>
