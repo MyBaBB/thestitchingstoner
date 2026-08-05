@@ -79,6 +79,7 @@
 /* Independent slow rotation for the spiral icon */
 .spiralRotate {
   display: inline-block;
+  opacity: 0.7;
   animation: spiralSpin 18s linear infinite;
 }
 
