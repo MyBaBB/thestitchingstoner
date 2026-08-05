@@ -11,7 +11,7 @@ const ReverseButton = () => {
 
   useEffect(() => {
     if (window.history.length <= 1) {
-      setNoHistory(true);
+      setNoHistory(false);
     }
   }, []);
 
@@ -32,12 +32,12 @@ const ReverseButton = () => {
         
 
           {/* REAL JSX TOOLTIP */}
-          <div className="tooltipReact">
-           
-             < GiRun  size={18} className="inline-block mr-1 scale-x-[-1]"/>   
-            Before 
-              <BiSolidTimer  size={18} className="inline-block ml-1 scale-x-[-1]"/>
-           
+          <div className="tooltipReact ">
+            <div className="relative flex items-center justify-center w-full h-full">
+              <p>< GiRun  size={18} className="block mr-1 scale-x-[-1]"/></p>   
+                
+              <p><BiSolidTimer  size={18} className="block ml-1 scale-x-[-1]"/></p>
+           </div>
           </div>
         </button>
       </div>
