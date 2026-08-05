@@ -95,7 +95,7 @@ export default function LandingPage() {
               className="mermaidFeaturedImage m-auto"
             />
             {/* <span className="absolute top-[7.95rem] left-[.5rem]"> */}
-            <span className="absolute bottom-[14.34rem] left-[.434rem] rotate-[-8deg] xxs:bottom-[6.125rem] xxs:left-[.5rem] md:bottom-[3.95rem] md:left-[-2.25rem]">
+            <span className="absolute bottom-[14.34rem] left-[.434rem] rotate-[8deg] xxs:bottom-[6.125rem] xxs:left-[.5rem] md:bottom-[3.95rem] md:left-[-2.25rem]">
               <img src={StonerLogo} alt="" className="h-[120px] w-[120px]" />
             </span>
           </div>
