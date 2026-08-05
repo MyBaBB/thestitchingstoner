@@ -9,7 +9,7 @@ const ReverseButton = () => {
 
   useEffect(() => {
     if (window.history.length <= 1) {
-      setNoHistory(false);
+      setNoHistory(true);
     }
   }, []);
 
@@ -22,7 +22,7 @@ const ReverseButton = () => {
           }`}
           onClick={() => window.history.back()}
         >
-          <span className="spiralRotate">
+          <span className="spiralRotate ">
           
             <SiDreamstime  size={50} />
           </span>
