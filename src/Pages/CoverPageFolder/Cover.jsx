@@ -54,7 +54,7 @@ export default function LandingPage() {
 
   return (
     <div className="relative mb-[22rem] flex h-screen items-center justify-center bg-black">
-      <ReverseButton />
+           <span className="absolute top-4 left-4"> <ReverseButton /> </span>
       <main className="relative h-screen overflow-visible bg-black text-neutral-100">
         <HippieFootprints /> {/* ← ADD THIS */}
         <Weed />
