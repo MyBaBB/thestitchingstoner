@@ -1,11 +1,9 @@
-
-import { GiRun } from "react-icons/gi";
-import { SiDreamstime } from "react-icons/si";
  
-import { BiSolidTimer } from "react-icons/bi";
+import { SiDreamstime } from "react-icons/si";
+import { PiRewindBold } from "react-icons/pi";
 import "./ReverseButton.css";
 import { useEffect, useState } from "react";
-
+import { BiTimer } from "react-icons/bi";
 const ReverseButton = () => {
   const [noHistory, setNoHistory] = useState(false);
 
@@ -29,15 +27,16 @@ const ReverseButton = () => {
             <SiDreamstime  size={50} />
           </span>
 
-        
+          <span className="absolute bottom-[-8px] right-[-8px]">
+            <PiRewindBold />
+          </span>
 
           {/* REAL JSX TOOLTIP */}
-          <div className="tooltipReact ">
-            <div className="relative flex items-center justify-center w-full h-full">
-              <p>< GiRun  size={18} className="block mr-1 scale-x-[-1]"/></p>   
-                
-              <p><BiSolidTimer  size={18} className="block ml-1 scale-x-[-1]"/></p>
-           </div>
+          <div className="tooltipReact">
+            <BiTimer  size={18} className="inline-block mr-1 scale-x-[-1]" />
+        
+            Before  
+            
           </div>
         </button>
       </div>
