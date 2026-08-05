@@ -37,12 +37,15 @@ export default function HippieFootprints() {
   const swingAngle = Math.sin(cupSwing) * 12;
 
   // Smoke every 4 seconds
-  useEffect(() => {
-    const nextPuff = Math.floor(elapsed / 4);
-    if (!puffs.includes(nextPuff)) {
-      setPuffs((prev) => [...prev, nextPuff]);
-    }
-  }, [elapsed, puffs]);
+useEffect(() => {
+  const nextPuff = Math.floor(elapsed / 4);
+
+  setPuffs((prev) => {
+    if (prev.some((p) => p.id === nextPuff)) return prev;
+    return [...prev, { id: nextPuff, uid: crypto.randomUUID() }];
+  });
+}, [elapsed]);
+
 
   const cupBottomPx = bottomPx + 40;
   const hatBottomPx = bottomPx + 120;
@@ -103,19 +106,23 @@ useEffect(() => {
         }}
       />
 
-      {puffs.map((id) => (
-        <div
-          key={id}
-          className="smoke-puff"
-          style={{
-            position: "fixed",
-            left: `${cupX + 35}px`,
-            bottom: `${hatBottomPx + 40}px`,
-            pointerEvents: "none",
-            zIndex: 9999,
-          }}
-        />
-      ))}
+   {puffs.map((puff) => (
+  <div
+    key={puff.uid}
+    className="smoke-puff"
+    style={{
+      position: "fixed",
+      left: `${cupX + 35}px`,
+      bottom: `${hatBottomPx + 40}px`,
+      pointerEvents: "none",
+      zIndex: 9999,
+    }}
+  />
+))}
+
+
+ 
+
     </>
   );
 }

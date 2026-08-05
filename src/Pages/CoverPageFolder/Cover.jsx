@@ -10,7 +10,7 @@ import HippieRefreshBubble from "../../Components/HippieRefreshBubble/HippieRefr
 import NationalForestButton from "../../Components/NationalForestButton/NationalForestButton..jsx";
 import FacebookForestButton from "../../Components/NationalForestButton/FaceBookForestButton.jsx";
 import InstagramForestButton from "../../Components/NationalForestButton/InstagramForestButton.jsx";
-
+ import StonerLogo from "../../Images/Logo300x300-2.webp";
 
 
 export default function LandingPage() {
@@ -54,7 +54,13 @@ export default function LandingPage() {
 
   return (
     <div className="relative mb-[22rem] flex h-screen items-center justify-center bg-black">
-           <span className="absolute top-4 left-4"> <ReverseButton /> </span>
+           
+           <span className="absolute top-4 left-4">
+             <ReverseButton />
+           </span>
+
+          
+
       <main className="relative h-screen overflow-visible bg-black text-neutral-100">
         <HippieFootprints /> {/* ← ADD THIS */}
         <Weed />
@@ -68,7 +74,7 @@ export default function LandingPage() {
               The Stitching Stoner
             </span>
           </h1>
-
+          
           {/* SMOKE-DISSOLVE TAGLINE */}
           <p className="dreamyLanding m-auto mb-4 mt-0 max-w-md font-Itim-Regular
                        text-xs xs:text-xl md:text-2xl whitespace-nowrap">
@@ -85,10 +91,10 @@ export default function LandingPage() {
           {/* FEATURED IMAGE */}
           <div className="mermaidImageWrapper m-auto mt-0">
 
-<div id="image">
-  <HippieRefreshBubble />
-  {/* your image here */}
-</div>
+      <div id="image  " className="relative">
+        <HippieRefreshBubble />
+        {/* your image here */}
+          </div>
 
 
             <img
@@ -96,7 +102,15 @@ export default function LandingPage() {
               alt="Featured embroidered stoner art"
               className="mermaidFeaturedImage m-auto"
             />
+            {/* <span className="absolute top-[7.95rem] left-[.5rem]"> */}
+            <span className="absolute rotate-[-8deg] bottom-[14.34rem] xxs:bottom-[6.125rem]  md:bottom-[3.95rem] 
+                   left-[.434rem]  xxs:left-[.5rem]  md:left-[-2.25rem] ">
+                <img src={StonerLogo} alt="" className="h-[120px] w-[120px]"   />
+            </span>
+
+            
           </div>
+             
 
           <p className="m-auto mt-4 max-w-lg font-Itim-Regular text-sm text-[#baf9ba] md:text-xl">
             <span className="inline-block whitespace-nowrap">
