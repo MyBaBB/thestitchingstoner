@@ -95,8 +95,13 @@ export default function LandingPage() {
               className="mermaidFeaturedImage m-auto"
             />
             {/* <span className="absolute top-[7.95rem] left-[.5rem]"> */}
-            <span className="absolute bottom-[14.34rem] left-[.434rem] rotate-[8deg] xxs:bottom-[6.125rem] xxs:left-[.5rem] md:bottom-[3.95rem] md:left-[-2.25rem]">
-              <img src={StonerLogo} alt="" className="h-[120px] w-[120px]" />
+            
+            <a href="https://thestitchingstoner.square.site/the-stitching-who"></a>
+            <span className="absolute  hidden sm:block  rotate-[8deg]
+                        
+                  bottom-[3.95rem]  left-[-2.25rem]">
+              <img src={StonerLogo} alt="" className="h-[120px] w-[120px] scale-75 md:scale-100" 
+                  />
             </span>
           </div>
 
