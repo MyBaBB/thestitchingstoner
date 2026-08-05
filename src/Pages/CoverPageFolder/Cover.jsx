@@ -10,8 +10,7 @@ import HippieRefreshBubble from "../../Components/HippieRefreshBubble/HippieRefr
 import NationalForestButton from "../../Components/NationalForestButton/NationalForestButton..jsx";
 import FacebookForestButton from "../../Components/NationalForestButton/FaceBookForestButton.jsx";
 import InstagramForestButton from "../../Components/NationalForestButton/InstagramForestButton.jsx";
- import StonerLogo from "../../Images/Logo300x300-2.webp";
-
+import StonerLogo from "../../Images/Logo300x300-2.webp";
 
 export default function LandingPage() {
   // ROTATING DREAMY TEXT
@@ -22,15 +21,15 @@ export default function LandingPage() {
     "✌🏼 Sign up for Hookaville Lessons! 🚌",
     "🌈 Perfect for Beginners through Experts 🧶  ",
   ];
-   const rainbowColors = [
-  "#FF0000", // red
-  "#FF7F00", // orange
-  "#FFFF00", // yellow
-  "#00FF00", // green
-  "skyblue", // blue
-  "#4B0082", // indigo
-  "#9400D3", // green
-];
+  const rainbowColors = [
+    "#FF0000", // red
+    "#FF7F00", // orange
+    "#FFFF00", // yellow
+    "#00FF00", // green
+    "skyblue", // blue
+    "#4B0082", // indigo
+    "#9400D3", // green
+  ];
 
   const [index, setIndex] = useState(0);
   const [exiting, setExiting] = useState(false);
@@ -54,12 +53,9 @@ export default function LandingPage() {
 
   return (
     <div className="relative mb-[22rem] flex h-screen items-center justify-center bg-black">
-           
-           <span className="absolute top-4 left-4">
-             <ReverseButton />
-           </span>
-
-          
+      <span className="absolute left-4 top-4">
+        <ReverseButton />
+      </span>
 
       <main className="relative h-screen overflow-visible bg-black text-neutral-100">
         <HippieFootprints /> {/* ← ADD THIS */}
@@ -74,28 +70,24 @@ export default function LandingPage() {
               The Stitching Stoner
             </span>
           </h1>
-          
-          {/* SMOKE-DISSOLVE TAGLINE */}
-          <p className="dreamyLanding m-auto mb-4 mt-0 max-w-md font-Itim-Regular
-                       text-xs xs:text-xl md:text-2xl whitespace-nowrap">
-                      <span
-            className={`smokeText ${exiting ? "exitUpRight" : "enterCenter"}`} 
-            style={{ color: rainbowColors[index % rainbowColors.length] }}
-          >
-            {messages[index]}
-          </span>
 
+          {/* SMOKE-DISSOLVE TAGLINE */}
+          <p className="dreamyLanding m-auto mb-4 mt-0 max-w-md whitespace-nowrap font-Itim-Regular text-xs xs:text-xl md:text-2xl">
+            <span
+              className={`smokeText ${exiting ? "exitUpRight" : "enterCenter"}`}
+              style={{ color: rainbowColors[index % rainbowColors.length] }}
+            >
+              {messages[index]}
+            </span>
           </p>
 
           {/* FEATURED IMAGE */}
           {/* FEATURED IMAGE */}
           <div className="mermaidImageWrapper m-auto mt-0">
-
-      <div id="image  " className="relative">
-        <HippieRefreshBubble />
-        {/* your image here */}
-          </div>
-
+            <div id="image  " className="relative">
+              <HippieRefreshBubble />
+              {/* your image here */}
+            </div>
 
             <img
               src={MermaidOgImage}
@@ -103,14 +95,10 @@ export default function LandingPage() {
               className="mermaidFeaturedImage m-auto"
             />
             {/* <span className="absolute top-[7.95rem] left-[.5rem]"> */}
-            <span className="absolute rotate-[-8deg] bottom-[14.34rem] xxs:bottom-[6.125rem]  md:bottom-[3.95rem] 
-                   left-[.434rem]  xxs:left-[.5rem]  md:left-[-2.25rem] ">
-                <img src={StonerLogo} alt="" className="h-[120px] w-[120px]"   />
+            <span className="absolute bottom-[14.34rem] left-[.434rem] rotate-[-8deg] xxs:bottom-[6.125rem] xxs:left-[.5rem] md:bottom-[3.95rem] md:left-[-2.25rem]">
+              <img src={StonerLogo} alt="" className="h-[120px] w-[120px]" />
             </span>
-
-            
           </div>
-             
 
           <p className="m-auto mt-4 max-w-lg font-Itim-Regular text-sm text-[#baf9ba] md:text-xl">
             <span className="inline-block whitespace-nowrap">
@@ -127,12 +115,10 @@ export default function LandingPage() {
               </span>
             </span>
           </p>
-           <div className="nationalForestCollection flex flex-col xxs:flex-row  items-center justify-between gap-4 w-full pr-2 xxs:pr-0">
-
-           <FacebookForestButton />
-           <NationalForestButton />
-           <InstagramForestButton />
-
+          <div className="nationalForestCollection flex w-full flex-col items-center justify-between gap-4 pr-2 xxs:flex-row xxs:pr-0">
+            <FacebookForestButton />
+            <NationalForestButton />
+            <InstagramForestButton />
           </div>
         </div>
       </main>

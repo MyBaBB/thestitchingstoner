@@ -4,14 +4,14 @@
   left: 50%;
   transform: translateX(-32%);
   background: #fff7d6;
-  padding: 0.6rem 0.9rem;        /* smaller padding */
-  border-radius: 14px;           /* smaller bubble */
-  border: 2px dashed #c47f00;    /* thinner border */
+  padding: 0.6rem 0.9rem; /* smaller padding */
+  border-radius: 14px; /* smaller bubble */
+  border: 2px dashed #c47f00; /* thinner border */
   font-family: "Comic Sans MS", "Chalkboard SE", sans-serif;
-  font-size: 0.8rem;             /* smaller text */
+  font-size: 0.8rem; /* smaller text */
   color: #5a3e00;
   text-align: center;
-  box-shadow: 0 3px 7px rgba(0,0,0,0.18); /* lighter shadow */
+  box-shadow: 0 3px 7px rgba(0, 0, 0, 0.18); /* lighter shadow */
   transition: opacity 0.3s ease;
   z-index: 10;
 }
@@ -20,9 +20,9 @@
     top: 60%;
     left: 50%;
     transform: translateX(-32.5%);
-    font-size: .6rem;
+    font-size: 0.6rem;
     z-index: 10;
-    width: 10rem;           /* smaller text on smaller screens */
+    width: 10rem; /* smaller text on smaller screens */
   }
 }
 
@@ -31,9 +31,9 @@
   margin-top: 0.4rem;
   background: #ffb347;
   border: none;
-  padding: 0.3rem 0.7rem;        /* smaller button */
+  padding: 0.3rem 0.7rem; /* smaller button */
   border-radius: 8px;
-  font-size: 0.75rem;            /* smaller font */
+  font-size: 0.75rem; /* smaller font */
   cursor: pointer;
   color: #4a2b00;
   font-weight: bold;
@@ -47,7 +47,6 @@
 /* Smoke puff animation */
 .puff-away {
   animation: smokePuff 0.8s forwards;
-  
 }
 
 @keyframes smokePuff {
@@ -67,7 +66,7 @@
     filter: blur(5px);
   }
 }
-@media screen and (max-width: 380px){
+@media screen and (max-width: 380px) {
   .puff-away {
     animation: none;
   }
@@ -75,12 +74,11 @@
     top: 60%;
     left: 50%;
     transform: translateX(-50%);
-    font-size: .6rem;
+    font-size: 0.6rem;
     z-index: 10;
-    width: 10rem; 
+    width: 10rem;
   }
-  }
-  
+}
 
 /* Refresh message fade */
 .hippie-fade-msg {
@@ -90,12 +88,12 @@
   white-space: nowrap;
   transform: translateX(-32%);
   background: rgb(14, 78, 14);
-  padding: 0.6rem 0.9rem;        /* smaller */
+  padding: 0.6rem 0.9rem; /* smaller */
   border-radius: 14px;
-  border: 2px solid white;     /* thinner border */
+  border: 2px solid white; /* thinner border */
   font-family: "Comic Sans MS", "Chalkboard SE", sans-serif;
   font-size: 1.1rem;
-  font-weight: bolder;             /* smaller text */
+  font-weight: bolder; /* smaller text */
   color: White;
   text-align: center;
   animation: fadeOut 4s forwards;
@@ -107,13 +105,18 @@
   }
 }
 
-
 @keyframes fadeOut {
-  0% { opacity: 0; }
+  0% {
+    opacity: 0;
+  }
 
-  80% { opacity: .8; }
-  
-  100% { opacity: 1; }
+  80% {
+    opacity: 0.8;
+  }
+
+  100% {
+    opacity: 1;
+  }
 }
 .revibe-row {
   display: flex;
@@ -138,7 +141,13 @@
 }
 
 @keyframes pointerBounce {
-  0% { transform: translateX(0) rotate(0deg); }
-  50% { transform: translateX(4px) rotate(8deg); }
-  100% { transform: translateX(0) rotate(0deg); }
+  0% {
+    transform: translateX(0) rotate(0deg);
+  }
+  50% {
+    transform: translateX(4px) rotate(8deg);
+  }
+  100% {
+    transform: translateX(0) rotate(0deg);
+  }
 }

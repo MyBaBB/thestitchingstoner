@@ -20,9 +20,7 @@ const HippieRefreshBubble = () => {
 
       setTimeout(() => {
         const cleanUrl =
-          window.location.origin +
-          window.location.pathname +
-          "?clean=true";
+          window.location.origin + window.location.pathname + "?clean=true";
 
         window.open(cleanUrl, "_blank");
         setShowRefreshMessage(false);
@@ -33,43 +31,37 @@ const HippieRefreshBubble = () => {
   return (
     <>
       {showBubble && (
-        <div className={`hippie-bubble ${bubbleExit ? "puff-away" : ""}`}
+        <div
+          className={`hippie-bubble ${bubbleExit ? "puff-away" : ""}`}
 
           // delete this style for construction reset button to be visible
-        style={{ display: showBubble ? "none" : "none" }}>
+          style={{ display: showBubble ? "none" : "none" }}
+        >
           <p>Still weaving this page…</p>
 
           <div className="revibe-row">
-
-             {/* Animated pointer */}
-            {!bubbleExit && (
-              <div className="pointer-anim  ">
-              👉🏼</div>
-            )}
+            {/* Animated pointer */}
+            {!bubbleExit && <div className="pointer-anim">👉🏼</div>}
             <button className="hippie-refresh-btn" onClick={handleRefresh}>
               Re‑vibe
             </button>
 
-            {!bubbleExit && (
-              <div className="pointer  ">
-              🌻</div>
-            )}
-           
+            {!bubbleExit && <div className="pointer">🌻</div>}
           </div>
         </div>
       )}
 
-       {showRefreshMessage && (
-        <div className="hippie-fade-msg ">
-             <p>
-             <span className="pineTreeIcon inline-block ">
-                   <GiPineTree /> 
-             </span>  
-                ...Harmonizing... 
-             <span className="pineTreeIcon inline-block ">
-                   <GiPineTree /> 
-             </span>
-             </p>
+      {showRefreshMessage && (
+        <div className="hippie-fade-msg">
+          <p>
+            <span className="pineTreeIcon inline-block">
+              <GiPineTree />
+            </span>
+            ...Harmonizing...
+            <span className="pineTreeIcon inline-block">
+              <GiPineTree />
+            </span>
+          </p>
         </div>
       )}
     </>

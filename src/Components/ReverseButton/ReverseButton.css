@@ -92,15 +92,9 @@
   }
 }
 
-
-
-
-
-
 .dataToolTipTime:hover::after {
   --scale: 1;
 }
-
 
 .dataToolTipTime::after {
   content: "";
@@ -115,7 +109,7 @@
   transition: 0.35s;
   border: 15px solid transparent;
   border-bottom: rgba(0, 200, 255, 0.45) 10px solid;
-  
+
   --scale: 0;
   z-index: 2;
 }
@@ -125,7 +119,12 @@
   right: -5.8rem;
 
   /* Cosmic bubble */
-  background: radial-gradient(circle at 50% 50%, #0a1a2f, #00111c 60%, #000000 100%);
+  background: radial-gradient(
+    circle at 50% 50%,
+    #0a1a2f,
+    #00111c 60%,
+    #000000 100%
+  );
   border: 1px solid rgba(0, 200, 255, 0.45);
   border-radius: 14px;
   transform-origin: top right;
@@ -161,9 +160,6 @@
   /* Space-time ripple */
   animation: spacetimePulse 4s ease-in-out infinite;
 }
-
- 
- 
 
 /* Space-time breathing pulse */
 @keyframes spacetimePulse {

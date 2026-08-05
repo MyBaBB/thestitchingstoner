@@ -37,31 +37,29 @@ export default function HippieFootprints() {
   const swingAngle = Math.sin(cupSwing) * 12;
 
   // Smoke every 4 seconds
-useEffect(() => {
-  const nextPuff = Math.floor(elapsed / 4);
+  useEffect(() => {
+    const nextPuff = Math.floor(elapsed / 4);
 
-  setPuffs((prev) => {
-    if (prev.some((p) => p.id === nextPuff)) return prev;
-    return [...prev, { id: nextPuff, uid: crypto.randomUUID() }];
-  });
-}, [elapsed]);
-
+    setPuffs((prev) => {
+      if (prev.some((p) => p.id === nextPuff)) return prev;
+      return [...prev, { id: nextPuff, uid: crypto.randomUUID() }];
+    });
+  }, [elapsed]);
 
   const cupBottomPx = bottomPx + 40;
   const hatBottomPx = bottomPx + 120;
 
-// Reset the animation every 7.5 seconds (2.5s cycle + 5s pause)
-useEffect(() => {
-  const cycleDuration = 180000 ; // ms
+  // Reset the animation every 7.5 seconds (2.5s cycle + 5s pause)
+  useEffect(() => {
+    const cycleDuration = 180000; // ms
 
-  const interval = setInterval(() => {
-    startTime.current = performance.now(); // reset animation clock
-    setPuffs([]); // clear smoke puffs
-  }, cycleDuration);
+    const interval = setInterval(() => {
+      startTime.current = performance.now(); // reset animation clock
+      setPuffs([]); // clear smoke puffs
+    }, cycleDuration);
 
-  return () => clearInterval(interval);
-}, []);
-
+    return () => clearInterval(interval);
+  }, []);
 
   return (
     <>
@@ -106,23 +104,19 @@ useEffect(() => {
         }}
       />
 
-   {puffs.map((puff) => (
-  <div
-    key={puff.uid}
-    className="smoke-puff"
-    style={{
-      position: "fixed",
-      left: `${cupX + 35}px`,
-      bottom: `${hatBottomPx + 40}px`,
-      pointerEvents: "none",
-      zIndex: 9999,
-    }}
-  />
-))}
-
-
- 
-
+      {puffs.map((puff) => (
+        <div
+          key={puff.uid}
+          className="smoke-puff"
+          style={{
+            position: "fixed",
+            left: `${cupX + 35}px`,
+            bottom: `${hatBottomPx + 40}px`,
+            pointerEvents: "none",
+            zIndex: 9999,
+          }}
+        />
+      ))}
     </>
   );
 }

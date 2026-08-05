@@ -1,4 +1,3 @@
- 
 import { SiDreamstime } from "react-icons/si";
 import { PiRewindBold } from "react-icons/pi";
 import "./ReverseButton.css";
@@ -22,9 +21,8 @@ const ReverseButton = () => {
           }`}
           onClick={() => window.history.back()}
         >
-          <span className="spiralRotate ">
-          
-            <SiDreamstime  size={50} />
+          <span className="spiralRotate">
+            <SiDreamstime size={50} />
           </span>
 
           <span className="absolute bottom-[-8px] right-[-8px]">
@@ -33,10 +31,8 @@ const ReverseButton = () => {
 
           {/* REAL JSX TOOLTIP */}
           <div className="tooltipReact">
-            <BiTimer  size={18} className="inline-block mr-1 scale-x-[-1]" />
-        
-            Before  
-            
+            <BiTimer size={18} className="mr-1 inline-block scale-x-[-1]" />
+            Before
           </div>
         </button>
       </div>

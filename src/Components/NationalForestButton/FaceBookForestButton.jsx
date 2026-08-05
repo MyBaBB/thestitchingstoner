@@ -1,4 +1,3 @@
-
 // eslint-disable-next-line no-unused-vars
 import React from "react";
 import "./NationalForestButton.css";
@@ -24,5 +23,3 @@ const FacebookForestButton = () => {
 };
 
 export default FacebookForestButton;
-
-

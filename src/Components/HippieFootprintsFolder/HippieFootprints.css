@@ -14,10 +14,22 @@
 }
 
 @keyframes footprintFade {
-  0% { opacity: 0; filter: blur(6px); }
-  30% { opacity: 1; filter: blur(0px); }
-  70% { opacity: 1; filter: blur(0px); }
-  100% { opacity: 0; filter: blur(6px); }
+  0% {
+    opacity: 0;
+    filter: blur(6px);
+  }
+  30% {
+    opacity: 1;
+    filter: blur(0px);
+  }
+  70% {
+    opacity: 1;
+    filter: blur(0px);
+  }
+  100% {
+    opacity: 0;
+    filter: blur(6px);
+  }
 }
 
 /* Left footprint */
@@ -35,7 +47,7 @@
 
 .cup {
   color: rgba(28, 247, 28, 0.4);
-  filter: blur(.5px);
+  filter: blur(0.5px);
   opacity: 1;
   position: fixed;
   pointer-events: none;
@@ -45,7 +57,7 @@
 
 .hat {
   color: rgba(28, 247, 28, 0.4);
-  filter: blur(.5px);
+  filter: blur(0.5px);
   opacity: 1;
   position: fixed;
   pointer-events: none;
