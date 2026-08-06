@@ -1,3 +1,4 @@
+/* UNDER CONSTRUCTION TEXT */
 .underConstruction {
   position: relative;
   color: white;
@@ -6,6 +7,7 @@
   text-align: center;
   z-index: 1;
 }
+
 /* SMOKE ANIMATION */
 .stoner-cipher {
   position: relative;
@@ -33,33 +35,27 @@
 
 /* Keyframes: center → outward → pause */
 @keyframes stonerCenterOut {
-  /* Start: fully hidden */
   0% {
-    clip-path: inset(0 50% 0 50%); /* hide everything except center point */
+    clip-path: inset(0 50% 0 50%);
   }
-
-  /* Reveal outward over 2.5s */
   38% {
-    clip-path: inset(0 0 0 0); /* fully revealed */
-  }
-
-  /* Pause for 4 seconds */
-  90% {
-    clip-path: inset(0 0 0 0); /* stay revealed */
+    clip-path: inset(0 0 0 0);
   }
   90% {
-    clip-path: inset(0 0 0 0); /* stay revealed */
+    clip-path: inset(0 0 0 0);
   }
   100% {
-    clip-path: inset(0 50% 0 50%); /* hide everything except center point */
+    clip-path: inset(0 50% 0 50%);
   }
 }
 
+/* FEATURED MERMAID IMAGE (desktop default) */
 .mermaidFeaturedImage {
   width: 945px;
   height: 415px;
 }
 
+/* Height-based shrink */
 @media screen and (max-height: 900px) {
   .mermaidFeaturedImage {
     width: 650px;
@@ -67,18 +63,16 @@
   }
 }
 
+/* DREAMY LANDING ANIMATION */
 .dreamyLanding {
   position: relative;
   opacity: 0;
   transform: translateY(-80px) scale(1.05);
-
-  /* Your landing animation */
   animation:
     cloudLanding 2.4s ease-out forwards,
     cloudFloat 7.5s ease-in-out 2.4s infinite;
 }
 
-/* YOUR landing stays exactly the same */
 @keyframes cloudLanding {
   0% {
     color: #1c2830;
@@ -97,19 +91,11 @@
     transform: translateY(0px) scale(1.1);
     filter: blur(0px);
     color: #a7f3f6;
-    filter: blur(none);
-
-    ty: 1;
-    transform: translateY(0px) scale(1.1);
-    filter: blur(0px);
-    color: #a7f3f6;
-    filter: blur(none);
-
     z-index: 50;
   }
 }
 
-/* NEW: real floating path — up → sideways → down */
+/* Floating drift animation */
 @keyframes cloudFloat {
   0% {
     transform: translateY(0px) translateX(0px) rotate(0deg) scale(1.1);
@@ -127,6 +113,8 @@
     transform: translateY(0px) translateX(0px) rotate(0deg) scale(1.1);
   }
 }
+
+/* SMOKE TEXT TRANSITIONS */
 .smokeText {
   display: inline-block;
   transition:
@@ -135,70 +123,112 @@
     transform 2.5s ease;
 }
 
-/* ENTER: start centered, scale from 0 → 1, fade in */
 .enterCenter {
   opacity: 1;
   filter: blur(0px);
   transform: translate(0, 0) scale(1);
 }
 
-/* EXIT: drift up and right, fade out, shrink */
 .exitUpRight {
   opacity: 0;
   filter: blur(12px);
   transform: translate(0px, -180px) scale(0.7);
 }
 
-/* Desktop */
+/* MERMAID IMAGE WRAPPER */
 .mermaidImageWrapper {
   width: 100%;
-  max-width: 800px; /* desktop width */
-  height: 312px; /* or whatever your banner height is */
-  overflow: hidden; /* hide right overflow */
+  max-width: 800px;
+  height: 312px;
+  overflow: hidden;
   border-radius: 0.75rem;
   border: 1px solid #404040;
   box-shadow: 0 10px 25px rgba(0, 0, 0, 0.6);
 }
 
-/* the actual image */
+/* Actual image inside wrapper */
 .mermaidFeaturedImage {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  object-position: left center; /* anchor left */
+  object-position: left center;
   display: block;
 }
 
-/* Mobile: width shrinks, height stays the same */
+/* Mobile adjustments */
 @media (max-width: 768px) {
   .mermaidImageWrapper {
     width: 100%;
-    height: 312px; /* same height */
+    height: 312px;
   }
-
   .mermaidFeaturedImage {
     object-position: left center;
   }
 }
-/* Mobile: shift image left by 15rem */
+
+/* Extra-small mobile shift */
 @media (max-width: 382px) {
   .mermaidFeaturedImage {
-    object-position: left center;
     transform: translateX(-5rem);
     overflow: visible !important;
   }
 }
+
+/* Landscape small screens */
 @media screen and (orientation: landscape) and (max-width: 950px) and (max-height: 550px) {
   .mermaidImageWrapper {
-    width: 600px; /* adjust as needed */
-    height: auto; /* keeps aspect ratio clean */
+    width: 600px;
+    height: auto;
     object-fit: cover;
   }
 }
+
 @media screen and (orientation: landscape) and (max-width: 950px) and (max-height: 488px) {
   .mermaidImageWrapper {
-    width: 400px; /* adjust as needed */
-    height: auto; /* keeps aspect ratio clean */
+    width: 400px;
+    height: auto;
     object-fit: cover;
+  }
+}
+
+/* STONER LOGO WRAPPER */
+.stonerLogo {
+  position: absolute;
+  display: none;
+  transform: rotate(8deg);
+  bottom: 3.95rem;
+  left: -2.25rem;
+}
+
+/* Show at sm breakpoint */
+@media (min-width: 640px) {
+  .stonerLogo, .reverseButtonInstaller {
+    display: block;
+  }
+}
+
+/* Hide in landscape */
+@media screen and (orientation: landscape) and (max-width: 950px) and (max-height: 490px) {
+  .stonerLogo, .reverseButtonInstaller {
+    display: none !important;
+  }
+}
+
+
+/* STONER LOGO IMAGE */
+.stonerLogo img {
+  height: 120px;
+  width: 120px;
+  transform: scale(0.75);
+  transform-origin: center;
+}
+
+/* md:scale-100 */
+@media (min-width: 768px) {
+  .stonerLogo img {
+    transform: scale(1);
+  }
+  .reverseButtonInstaller{
+    transform: scale(1);
   }
 }

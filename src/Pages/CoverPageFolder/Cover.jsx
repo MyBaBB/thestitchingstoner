@@ -53,13 +53,16 @@ export default function LandingPage() {
 
   return (
     <div className="relative mb-[22rem] flex h-screen items-center justify-center bg-black">
-      <span className="absolute left-4 top-4">
+      <span className="reverseButtonInstaller absolute left-4 top-4">
         <ReverseButton />
       </span>
 
       <main className="relative h-screen overflow-visible bg-black text-neutral-100">
         <HippieFootprints /> {/* ← ADD THIS */}
+
         <Weed />
+
+        
         <div className="relative z-10 flex h-fit flex-col items-start justify-center text-center">
           {/* TITLE */}
           <h1 className="z-20 m-auto -mb-2 overflow-visible bg-clip-text font-EmilysCandy-Regular text-4xl md:text-6xl">
@@ -96,14 +99,14 @@ export default function LandingPage() {
             />
             {/* <span className="absolute top-[7.95rem] left-[.5rem]"> */}
             
-            <a href="https://thestitchingstoner.square.site/the-stitching-who"></a>
-            <span className="absolute  hidden sm:block  rotate-[8deg]
-                        
-                  bottom-[3.95rem]  left-[-2.25rem]">
+            <a href="https://thestitchingstoner.square.site/the-stitching-who">
+            <span className="stonerLogo ">
               <img src={StonerLogo} alt="" className="h-[120px] w-[120px] scale-75 md:scale-100" 
                   />
             </span>
+           </a>
           </div>
+          
 
           <p className="m-auto mt-4 max-w-lg font-Itim-Regular text-sm text-[#baf9ba] md:text-xl">
             <span className="inline-block whitespace-nowrap">

@@ -13,14 +13,7 @@
   }
 }
 
-/* EXISTING */
-.opacity-0 {
-  opacity: 0;
-  pointer-events: none;
-}
-.opacity-100 {
-  opacity: 1;
-}
+
 
 /* NEW — opacity when no history */
 .noHistoryOpacity {
@@ -65,17 +58,7 @@
   }
 }
 
-/* RESPONSIVE HIDING */
-@media screen and (max-height: 430px) and (orientation: landscape) {
-  .reverseButton {
-    display: none;
-  }
-}
-@media screen and (max-width: 440px) {
-  .reverseButton {
-    display: none;
-  }
-}
+
 /* Independent slow rotation for the spiral icon */
 .spiralRotate {
   display: inline-block;

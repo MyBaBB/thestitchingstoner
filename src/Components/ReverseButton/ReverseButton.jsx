@@ -14,9 +14,9 @@ const ReverseButton = () => {
 
   return (
     <>
-      <div className="reverseButtonWrapper relative z-50 hidden w-fit xs:block">
+      <div className="reverseButtonWrapper relative z-50 w-fit ">
         <button
-          className={`reverseButton dataToolTipTime z-50 transform ${
+          className={`reverseButton dataToolTipTime hidden md:block z-50 transform ${
             noHistory ? "noHistoryOpacity" : ""
           }`}
           onClick={() => window.history.back()}
