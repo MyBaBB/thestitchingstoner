@@ -13,10 +13,10 @@
 /* Landscape mode */
 @media screen and (orientation: landscape) and (max-height: 700px) {
   .weed-leaf {
-    position: absolute;
-    top: 1rem;
-    left: 50%;
-    transform: translateX(-50%);
+    position: relative;
+   
+  
+  
     width: 100px;
     height: 100px;
     z-index: 1;
@@ -49,6 +49,7 @@
 /* Hide in landscape */
 @media screen and (orientation: landscape) and (max-width: 950px) and (max-height: 490px) {
   .weed-leaf {
-    display: none !important;
+    position: relative;
+    
   }
 }
