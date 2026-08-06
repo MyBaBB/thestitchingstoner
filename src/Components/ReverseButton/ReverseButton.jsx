@@ -2,7 +2,7 @@ import { SiDreamstime } from "react-icons/si";
 import { PiRewindBold } from "react-icons/pi";
 import "./ReverseButton.css";
 import { useEffect, useState } from "react";
-import { BiTimer } from "react-icons/bi";
+ 
 const ReverseButton = () => {
   const [noHistory, setNoHistory] = useState(false);
 
@@ -23,7 +23,7 @@ const ReverseButton = () => {
         >
       
 
-          <span className="absolute top-[20px] left-[20px]">
+          <span className="absolute top-[20px] left-[20px] opacity-70">
             <PiRewindBold  size={30}/>
           </span>
 
