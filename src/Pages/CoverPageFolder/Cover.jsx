@@ -13,6 +13,7 @@ import InstagramForestButton from "../../Components/ButtonsFolder/NationalForest
 import StonerLogo from "../../Images/Logo300x300-2.webp";
 import SpecialEventButton from "../../Components/ButtonsFolder/SpecialEventButton/SpecialEventButton.jsx";
 import SimpleSpeaker from "../../Components/BackgroundMusicFolder/BackgroundMusic.jsx";
+import NotRobot from "../../Components/NotRobotFolder/NotRobot.jsx";
 export default function LandingPage() {
   // ROTATING DREAMY TEXT
   const messages = [
@@ -54,7 +55,16 @@ export default function LandingPage() {
 
   return (
     <div className="relative mb-[22rem] flex h-screen items-center justify-center bg-black">
-       
+         
+        <div className="not-robot2 p-4  flex-col items-center  ">
+  <NotRobot />
+  <span className="text-white font-bold font-Itim-Regular mt-1">
+    No Zone
+  </span>
+</div>
+
+         
+        
         <div className="backgroundMusic fixed z-50 bottom-4 left-4">
            < SimpleSpeaker />
         </div>

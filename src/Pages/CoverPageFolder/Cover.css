@@ -258,3 +258,30 @@
     transform: scale(1);
   }
 }
+ /* NOT ROBOT — top right */
+.not-robot2 {
+  position: fixed;        /* stays pinned */
+  transform: scale(0.65);
+  top: -1.5rem;
+  right: 0.5rem;
+  z-index: 999999;        /* above everything except your specialEventInstaller */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: white;
+  transform: scale(1);    /* default size */
+  pointer-events: auto;
+  transform: scale(0.65);
+      /* ensures it's clickable */
+}
+
+/* BELOW XS — shrink + tuck tighter */
+@media (max-width: 668px) {
+  .not-robot2 {
+   display: none;
+  }
+
+  .not-robot2 span {
+    font-size: 0.75rem; /* optional: shrink "No Zone" text */
+  }
+}

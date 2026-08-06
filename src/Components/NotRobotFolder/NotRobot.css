@@ -1,0 +1,30 @@
+.not-robot-img {
+  width: 125px;
+  height: auto;
+  margin: auto;
+  margin-top: 1rem;
+  z-index: 1;
+ 
+  
+}
+@media screen and ( min-width: 400px) {
+    .not-robot-img {
+      width: 125px;
+      height: auto;
+    }
+   }
+
+.notrobot-zone {
+  position: relative;
+  display:flex;
+  margin-top: -14rem;
+  width: 100vw;
+  bottom: 0;
+  left: 0;
+  pointer-events: none; /* optional */
+}
+
+.notrobot-wrapper {
+  background: transparent; 
+  isolation: isolate; /* THIS is the magic */
+}
