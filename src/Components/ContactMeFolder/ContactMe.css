@@ -46,11 +46,9 @@
   }
 }
 
-
 /* md:scale-100 */
 @media (min-width: 768px) {
-
-  .ContactButtonHide{
+  .ContactButtonHide {
     transform: scale(1);
   }
 }

@@ -2,7 +2,7 @@ import { SiDreamstime } from "react-icons/si";
 import { PiRewindBold } from "react-icons/pi";
 import "./ReverseButton.css";
 import { useEffect, useState } from "react";
- 
+
 const ReverseButton = () => {
   const [noHistory, setNoHistory] = useState(false);
 
@@ -14,25 +14,22 @@ const ReverseButton = () => {
 
   return (
     <>
-      <div className="reverseButtonWrapper relative z-50 w-fit ">
+      <div className="reverseButtonWrapper relative z-50 w-fit">
         <button
-          className={`reverseButton dataToolTipTime hidden md:block z-50 transform ${
+          className={`reverseButton dataToolTipTime z-50 hidden transform md:block ${
             noHistory ? "noHistoryOpacity" : ""
           }`}
           onClick={() => window.history.back()}
         >
-      
-
-          <span className="absolute top-[20px] left-[20px] opacity-70">
-            <PiRewindBold  size={30}/>
+          <span className="absolute left-[20px] top-[20px] opacity-70">
+            <PiRewindBold size={30} />
           </span>
 
           {/* REAL JSX TOOLTIP */}
           <div className="tooltipReact">
-            
             <span className="spiralRotate">
-            <SiDreamstime size={50} />
-          </span>
+              <SiDreamstime size={50} />
+            </span>
           </div>
         </button>
       </div>

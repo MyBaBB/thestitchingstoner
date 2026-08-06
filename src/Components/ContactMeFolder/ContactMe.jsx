@@ -6,8 +6,8 @@ import "./ContactMe.css";
 
 const ContactMe = () => {
   return (
-    <div className="ContactButtonHide m-auto -mb-5   h-full w-full items-center justify-center  ">
-      <div 
+    <div className="ContactButtonHide m-auto -mb-5 h-full w-full items-center justify-center">
+      <div
         id="contact"
         className="buttonsAllWrapper z-20 m-auto w-fit cursor-pointer px-1 pb-2 duration-500 ease-in-out hover:scale-[100.8%]"
       >

@@ -13,8 +13,6 @@
   }
 }
 
-
-
 /* NEW — opacity when no history */
 .noHistoryOpacity {
   opacity: 0.3 !important;
@@ -57,7 +55,6 @@
     transform: scale(1);
   }
 }
-
 
 /* Independent slow rotation for the spiral icon */
 .spiralRotate {

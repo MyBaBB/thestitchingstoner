@@ -1,0 +1,75 @@
+/* Full psychedelic background */
+.specialEventPage {
+  min-height: 100vh;
+  width: 100%;
+  padding: 3rem 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  text-align: center;
+  color: white;
+
+  background:
+    radial-gradient(circle at 20% 20%, #ff00cc, transparent 40%),
+    radial-gradient(circle at 80% 30%, #00eaff, transparent 45%),
+    radial-gradient(circle at 50% 80%, #ffae00, transparent 50%),
+    linear-gradient(135deg, #1a0033, #001a1a);
+
+  background-size: cover;
+  background-attachment: fixed;
+  animation: hippieFlow 18s ease-in-out infinite;
+}
+
+/* Trippy shifting background */
+@keyframes hippieFlow {
+  0% {
+    filter: hue-rotate(0deg) saturate(1.2);
+  }
+  50% {
+    filter: hue-rotate(120deg) saturate(1.6);
+  }
+  100% {
+    filter: hue-rotate(360deg) saturate(1.2);
+  }
+}
+
+/* Content wrapper */
+.specialEventContent {
+  max-width: 700px;
+  background: rgba(0, 0, 0, 0.55);
+  padding: 2rem;
+  border-radius: 1rem;
+  border: 2px dashed #fff;
+  box-shadow: 0 0 25px rgba(255, 255, 255, 0.25);
+}
+
+/* Title */
+.specialEventTitle {
+  font-family: "EmilysCandy-Regular";
+  font-size: 2.5rem;
+  margin-bottom: 1.5rem;
+  text-shadow: 0 0 12px #ff8bd8;
+}
+
+/* Paragraph */
+.specialEventParagraph {
+  font-family: "Itim-Regular";
+  font-size: 1.2rem;
+  line-height: 1.7rem;
+  color: #e8ffe8;
+}
+
+/* Highlight words */
+.highlight {
+  color: #ffb3f6;
+  font-weight: 400;
+  text-shadow: 0 0 5px #ff5cd1;
+}
+.highlight2 {
+  color: #ff8bd8;
+  font-weight: 400;
+  text-shadow: 0 0 5px #ff5cd1;
+  border: 2px solid #ff8bd8;
+  border-radius: 5px;
+  padding: 0.2rem;
+}

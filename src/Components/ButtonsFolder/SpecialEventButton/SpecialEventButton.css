@@ -1,0 +1,81 @@
+.special-event-btn {
+  padding: 0.3rem 0.6rem;
+  font-size: 1rem;
+  font-weight: 500;
+
+  color: white;
+  background: #e370a8; /* your brand pink */
+  border-radius: 14px;
+  text-decoration: none;
+  z-index: 9;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  border: 2px dashed wheat;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+  /* Outer patch border */
+  box-shadow:
+    0 0 0 3px #191616,
+    /* thick outer border */ 0 0 0 4px #653b3b; /* second border layer */
+  /* Slight fabric texture */
+  background-image: linear-gradient(
+    135deg,
+    rgba(255, 255, 255, 0.08) 0%,
+    rgba(0, 0, 0, 0.08) 100%
+  );
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.special-event-btn:hover {
+  transform: scale(1.05);
+  box-shadow:
+    0 0 0 3px #000,
+    0 0 0 3px #fff,
+    0 0 12px rgba(227, 112, 168, 0.6);
+  opacity: 1;
+}
+/* Tooltip trigger */
+.special-event-btn:hover::before,
+.special-event-btn:hover::after {
+  --scale: 1;
+}
+
+/* Tooltip bubble */
+.special-event-btn::before {
+  content: attr(data-tool-tip);
+  position: absolute;
+  top: 3.2rem;
+  left: 50%;
+  transform: translateX(-50%) scale(var(--scale));
+  transform-origin: top center;
+  background: radial-gradient(#1e4571, #1d8164);
+  color: white;
+  padding: 0.35rem 1rem;
+  border-radius: 10px;
+  border: 1px solid #259150;
+  font-family: "Itim-Regular";
+  font-size: 0.9rem;
+  white-space: nowrap;
+  z-index: 999;
+  transition: 0.25s ease-in-out;
+  --scale: 0;
+}
+
+/* Tooltip pointer */
+.special-event-btn::after {
+  content: "";
+  position: absolute;
+  top: 2.5rem;
+  left: 50%;
+  transform: translateX(-50%) scale(var(--scale));
+  transform-origin: bottom center;
+  width: 18px;
+  height: 10px;
+  background-color: #dfebe4;
+  clip-path: polygon(50% 0, 100% 100%, 0 100%);
+  z-index: 998;
+  transition: 0.25s ease-in-out;
+  --scale: 0;
+}

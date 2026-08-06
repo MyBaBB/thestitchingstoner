@@ -3,15 +3,15 @@ import { useState, useEffect } from "react";
 import MermaidOgImage from "../../Images/8-05-FB_National_Forest-3.webp";
 import Weed from "../../Components/WeedFolder/Weed.jsx";
 import ContactMe from "../../Components/ContactMeFolder/ContactMe.jsx";
-import ReverseButton from "../../Components/ReverseButton/ReverseButton.jsx";
+import ReverseButton from "../../Components/ButtonsFolder/ReverseButton/ReverseButton.jsx";
 import { PiQuotesThin } from "react-icons/pi";
 import HippieFootprints from "../../Components/HippieFootprintsFolder/HippieFootprints.jsx";
 import HippieRefreshBubble from "../../Components/HippieRefreshBubble/HippieRefreshBubble.jsx";
-import NationalForestButton from "../../Components/NationalForestButton/NationalForestButton..jsx";
-import FacebookForestButton from "../../Components/NationalForestButton/FaceBookForestButton.jsx";
-import InstagramForestButton from "../../Components/NationalForestButton/InstagramForestButton.jsx";
+import NationalForestButton from "../../Components/ButtonsFolder/NationalForestButton/NationalForestButton..jsx";
+import FacebookForestButton from "../../Components/ButtonsFolder/NationalForestButton/FaceBookForestButton.jsx";
+import InstagramForestButton from "../../Components/ButtonsFolder/NationalForestButton/InstagramForestButton.jsx";
 import StonerLogo from "../../Images/Logo300x300-2.webp";
-
+import SpecialEventButton from "../../Components/ButtonsFolder/SpecialEventButton/SpecialEventButton.jsx";
 export default function LandingPage() {
   // ROTATING DREAMY TEXT
   const messages = [
@@ -59,10 +59,7 @@ export default function LandingPage() {
 
       <main className="relative h-screen overflow-visible bg-black text-neutral-100">
         <HippieFootprints /> {/* ← ADD THIS */}
-
         <Weed />
-
-        
         <div className="relative z-10 flex h-fit flex-col items-start justify-center text-center">
           {/* TITLE */}
           <h1 className="z-20 m-auto -mb-2 overflow-visible bg-clip-text font-EmilysCandy-Regular text-4xl md:text-6xl">
@@ -86,7 +83,7 @@ export default function LandingPage() {
 
           {/* FEATURED IMAGE */}
           {/* FEATURED IMAGE */}
-          <div className="mermaidImageWrapper m-auto mt-0">
+          <div className="mermaidImageWrapper relative m-auto mt-0">
             <div id="image  " className="relative">
               <HippieRefreshBubble />
               {/* your image here */}
@@ -95,18 +92,23 @@ export default function LandingPage() {
             <img
               src={MermaidOgImage}
               alt="Featured embroidered stoner art"
-              className="mermaidFeaturedImage m-auto"
+              className="mermaidFeaturedImage relative m-auto"
             />
-            {/* <span className="absolute top-[7.95rem] left-[.5rem]"> */}
-            
+
+            <div className="specialEventInstaller">
+              <SpecialEventButton />
+            </div>
+
             <a href="https://thestitchingstoner.square.site/the-stitching-who">
-            <span className="stonerLogo ">
-              <img src={StonerLogo} alt="" className="h-[120px] w-[120px] scale-75 md:scale-100" 
-                  />
-            </span>
-           </a>
+              <span className="stonerLogo overflow-visible">
+                <img
+                  src={StonerLogo}
+                  alt=""
+                  className="h-[120px] w-[120px] scale-75 md:scale-100"
+                />
+              </span>
+            </a>
           </div>
-          
 
           <p className="m-auto mt-4 max-w-lg font-Itim-Regular text-sm text-[#baf9ba] md:text-xl">
             <span className="inline-block whitespace-nowrap">
