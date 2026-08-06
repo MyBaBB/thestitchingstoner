@@ -95,7 +95,7 @@ Minimal, year‑aware, brand‑consistent.
 
 
 ## 📸 Readme Image  
-<center>![The_Stitching_Stoner](Readme.webp) 
+![The_Stitching_Stoner](Readme.webp) 
 
 
 ---
