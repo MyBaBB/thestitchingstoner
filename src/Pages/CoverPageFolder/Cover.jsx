@@ -12,6 +12,7 @@ import FacebookForestButton from "../../Components/ButtonsFolder/NationalForestB
 import InstagramForestButton from "../../Components/ButtonsFolder/NationalForestButton/InstagramForestButton.jsx";
 import StonerLogo from "../../Images/Logo300x300-2.webp";
 import SpecialEventButton from "../../Components/ButtonsFolder/SpecialEventButton/SpecialEventButton.jsx";
+import SimpleSpeaker from "../../Components/BackgroundMusicFolder/BackgroundMusic.jsx";
 export default function LandingPage() {
   // ROTATING DREAMY TEXT
   const messages = [
@@ -53,10 +54,15 @@ export default function LandingPage() {
 
   return (
     <div className="relative mb-[22rem] flex h-screen items-center justify-center bg-black">
+       
+        <div className="backgroundMusic fixed z-50 bottom-4 left-4">
+           < SimpleSpeaker />
+        </div>
+         
       <span className="reverseButtonInstaller absolute left-4 top-4">
         <ReverseButton />
       </span>
-
+  
       <main className="relative h-screen overflow-visible bg-black text-neutral-100">
         <HippieFootprints /> {/* ← ADD THIS */}
         <Weed />

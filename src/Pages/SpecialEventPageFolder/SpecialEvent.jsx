@@ -1,13 +1,15 @@
 import React from "react";
 import ReverseButton from "../../Components/ButtonsFolder/ReverseButton/ReverseButton.jsx";
+import SimpleSpeaker from "../../Components/BackgroundMusicFolder/BackgroundMusic.jsx";
 import "./SpecialEvent.css";
+
 
 export default function SpecialEventPage() {
   return (
 <> 
 
 <ReverseButton />
-
+        <span className="  z-50 absolute bottom-4 leftt-4">< SimpleSpeaker /></span> 
     <div className="specialEventPage">
      
       <div className="specialEventContent">
