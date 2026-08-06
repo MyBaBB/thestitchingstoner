@@ -73,3 +73,11 @@
   border-radius: 5px;
   padding: 0.2rem;
 }
+.notrobot-wrapper {
+  isolation: isolate;        /* breaks filter inheritance */
+  filter: none !important;   /* stops hue-rotate from affecting children */
+  background: transparent;
+}
+.not-robot-img {
+  filter: none !important;
+}
