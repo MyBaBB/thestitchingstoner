@@ -4,7 +4,7 @@
 ---
 
 ## ✨ Overview  
-**The Stitching Stoner** is a handcrafted embroidery and textile‑art brand built with intention, creativity, and high‑vibe energy. This project serves as the official web experience — a fast, modern, React‑powered storefront showcasing custom patches, apparel drops, and elevated handmade pieces.
+**The Stitching Stoner** is a handcrafted embroidery and textile‑art brand built with intention, creativity, and high‑vibe energy. This project serves as the official web experience — a fast, modern, React‑powered storefront Landing page,  and elevated handmade pieces.
 
 Built using:
 
@@ -98,7 +98,8 @@ Minimal, year‑aware, brand‑consistent.
 Place your hero image at:
 
 ```
-./Readme.png
+![The_Stitching_Stoner](./Readme.webp)
+
 ```
 
 Recommended size: **1200×630** (perfect for GitHub + social previews).
