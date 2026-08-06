@@ -6,7 +6,7 @@ export default function SpecialEventPage() {
     <div className="specialEventPage">
       <div className="specialEventContent">
         <h1 className="specialEventTitle">
-          🌼 Hookaville 62 — Special Crochet Classes 🌼
+          🌈 Hookaville 62 ✌🏼 Special Crochet Classes 🧶
         </h1>
 
         <p className="specialEventParagraph">
