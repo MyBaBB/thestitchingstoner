@@ -92,17 +92,11 @@ Minimal, year‑aware, brand‑consistent.
 - Tailwind utility‑first styling  
 - Mobile‑first layout  
 
----
+
 
 ## 📸 Readme Image  
-Place your hero image at:
+<center>![The_Stitching_Stoner](Readme.webp) 
 
-```
-![The_Stitching_Stoner](./Readme.webp)
-
-```
-
-Recommended size: **1200×630** (perfect for GitHub + social previews).
 
 ---
 
