@@ -1,9 +1,15 @@
 import React from "react";
+import ReverseButton from "../../Components/ButtonsFolder/ReverseButton/ReverseButton.jsx";
 import "./SpecialEvent.css";
 
 export default function SpecialEventPage() {
   return (
+<> 
+
+<ReverseButton />
+
     <div className="specialEventPage">
+     
       <div className="specialEventContent">
         <h1 className="specialEventTitle">
           🌈 Hookaville 62 ✌🏼 Special Crochet Classes 🧶
@@ -30,5 +36,6 @@ export default function SpecialEventPage() {
         </p>
       </div>
     </div>
+ </>
   );
 }

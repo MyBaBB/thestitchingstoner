@@ -12,8 +12,12 @@ const App = () => {
           <Route path="/" element={<Zenith />} />
           <Route path="/coverpage" element={<CoverPage />} />
           <Route path="/specialevent" element={<SpecialEvent />} />
+
+          {/* optional catch-all */}
+          <Route path="*" element={<Zenith />} />
         </Routes>
       </Router>
+
     </main>
   );
 };
