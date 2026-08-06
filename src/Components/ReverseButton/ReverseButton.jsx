@@ -21,18 +21,18 @@ const ReverseButton = () => {
           }`}
           onClick={() => window.history.back()}
         >
-          <span className="spiralRotate">
-            <SiDreamstime size={50} />
-          </span>
+      
 
-          <span className="absolute bottom-[-8px] right-[-8px]">
-            <PiRewindBold />
+          <span className="absolute top-[20px] left-[20px]">
+            <PiRewindBold  size={30}/>
           </span>
 
           {/* REAL JSX TOOLTIP */}
           <div className="tooltipReact">
-            <BiTimer size={18} className="mr-1 inline-block scale-x-[-1]" />
-            Before
+            
+            <span className="spiralRotate">
+            <SiDreamstime size={50} />
+          </span>
           </div>
         </button>
       </div>

@@ -79,7 +79,7 @@
   --scale: 1;
 }
 
-.dataToolTipTime::after {
+/* .dataToolTipTime::after {
   content: "";
   width: 15px;
   height: 15px;
@@ -92,14 +92,14 @@
   transition: 0.35s;
   border: 15px solid transparent;
   border-bottom: rgba(0, 200, 255, 0.45) 10px solid;
-
+  
   --scale: 0;
   z-index: 2;
-}
+} */
 .tooltipReact {
   position: absolute;
-  bottom: -4.8rem;
-  right: -5.8rem;
+  top: 10px;
+  left: 10px;
 
   /* Cosmic bubble */
   background: radial-gradient(
@@ -109,7 +109,7 @@
     #000000 100%
   );
   border: 1px solid rgba(0, 200, 255, 0.45);
-  border-radius: 14px;
+  border-radius: 100%;
   transform-origin: top right;
   /* Glow + distortion */
   box-shadow:
@@ -124,7 +124,7 @@
   color: #c8f7ff;
   font-weight: bold;
   font-size: 0.85rem;
-  padding: 8px 2rem;
+  padding: 8px 8px;
 
   display: flex;
   align-items: center;
