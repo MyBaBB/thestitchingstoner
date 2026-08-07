@@ -57,11 +57,11 @@ export default function LandingPage() {
     <div className="relative mb-[22rem] flex h-screen items-center justify-center bg-black">
          
         <div className="not-robot2 p-4  flex-col items-center  ">
-  <NotRobot />
-  <span className="text-white font-bold font-Itim-Regular mt-1">
-    No Zone
-  </span>
-</div>
+           <NotRobot />
+           <span className="text-white font-bold font-Itim-Regular mt-1">
+              No Zone
+           </span>
+       </div>
 
          
         

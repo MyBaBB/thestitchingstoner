@@ -9,7 +9,14 @@ export default function SpecialEventPage() {
     <>
       <div className="w-screen min-h-screen overflow-x-hidden overflow-y-auto">
 
- 
+        <div className="not-robot absolute z-50 top-8 right-8">
+            <div className="not-robot-wrapper-SpecialEvent p-4 flex flex-col items-center">
+              <NotRobot />
+              <span className="text-white font-bold font-Itim-Regular mt-4">
+                No Zone
+              </span>
+            </div>
+          </div>
 
         <ReverseButton />
 
@@ -47,14 +54,7 @@ export default function SpecialEventPage() {
             </p>
              {/* <div className="notrobot-zone w-screen h-fit bg-transparent overflow-y-auto"> */}
 
-          <div className="flex justify-center items-center w-full">
-            <div className="notrobot-wrapper p-4 flex flex-col items-center">
-              <NotRobot />
-              <span className="text-white font-bold font-Itim-Regular mt-4">
-                No Zone
-              </span>
-            </div>
-          </div>
+          
         </div>
           </div>
           
@@ -64,7 +64,7 @@ export default function SpecialEventPage() {
       
 
       </div>
-       <span className="z-50 absolute bottom-8 left-4 hidden sm:block">
+         <span className="z-50 absolute bottom-8 left-4 hidden sm:block">
           <SimpleSpeaker />
         </span>
     </>

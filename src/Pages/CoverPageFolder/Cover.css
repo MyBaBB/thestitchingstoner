@@ -260,20 +260,18 @@
 }
  /* NOT ROBOT — top right */
 .not-robot2 {
-  position: fixed;        /* stays pinned */
-  transform: scale(0.65);
-  top: -1.5rem;
-  right: 0.5rem;
-  z-index: 999999;        /* above everything except your specialEventInstaller */
+  position: absolute;
+  bottom: -14.5rem;                 /* sit just above bottom */
+  left: 50%;                      /* center horizontally */
+  transform: translateX(-50%) scale(0.65);
+  z-index: 999999;
   display: flex;
   flex-direction: column;
   align-items: center;
   color: white;
-  transform: scale(1);    /* default size */
   pointer-events: auto;
-  transform: scale(0.65);
-      /* ensures it's clickable */
 }
+
 
 /* BELOW XS — shrink + tuck tighter */
 @media (max-width: 668px) {

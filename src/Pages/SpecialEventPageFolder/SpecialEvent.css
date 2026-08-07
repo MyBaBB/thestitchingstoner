@@ -73,11 +73,34 @@
   border-radius: 5px;
   padding: 0.2rem;
 }
-.notrobot-wrapper {
-  isolation: isolate;        /* breaks filter inheritance */
-  filter: none !important;   /* stops hue-rotate from affecting children */
-  background: transparent;
+ 
+  /* NOT ROBOT — top right */
+.not-robot-wrapper-SpecialEvent{
+  position: fixed;        /* stays pinned */
+  bottom: -1.5rem;
+  right: 0.5rem;
+  z-index: 999999;        /* above everything except your specialEventInstaller */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: white;
+  transform: scale(1);    /* default size */
+  pointer-events: auto;
+  transform: scale(0.65);
+      /* ensures it's clickable */
 }
+
+/* BELOW XS — shrink + tuck tighter */
+@media (max-width: 668px) {
+   
+
+  .not-robot span {
+    font-size: 0.75rem; /* optional: shrink "No Zone" text */
+  }
+}
+   
+
+ 
 .not-robot-img {
   filter: none !important;
 }
