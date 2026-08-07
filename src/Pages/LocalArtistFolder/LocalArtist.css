@@ -3,10 +3,10 @@
   min-height: 100vh;
   background-image: url("../../Components/UnsplashImageFolder/bwVan1820x1080.webp");
   background-size: cover; /* fills the screen */
-  background-position: center; /* keeps the subject centered */
+  background-position: center -10rem; /* moves image UP by 15rem */
   background-repeat: no-repeat; /* prevents tiling */
   overflow: hidden;
-  font-family: "Groovy", sans-serif;
+ 
 }
 
 /* Floating Objects */
@@ -206,7 +206,34 @@
 }
 
 .noZone {
+  position: absolute;
+  top: -41px;
+  white-space: nowrap;
   left: 50%;
   transform: translateX(-50%);
   color: rgb(249, 234, 174);
+  font-family: "Sansita-Regular", sans-serif;
+  font-size: 1.9rem !important;
 }
+ .hrNoZone {
+  border: 1px solid rgba(46, 90, 44, 0.63); /* Forest Service Green */
+  border-radius: 8px;
+  width: 4%;
+  box-shadow: 0px 0px 5px 0px #adff2fbf;
+  background-color: rgba(51, 35, 25, 0.85) ;
+  padding: 2px;
+  margin: auto;
+  margin-bottom: 15px;
+  margin-top: 15px;
+ }
+ .hrNoZoneTop {
+  border: 1px solid rgba(46, 90, 44, 0.63); /* Forest Service Green */
+  border-radius: 8px;
+  width: 4%;
+  box-shadow: 0px 0px 5px 0px #adff2fbf;
+  background-color: rgba(51, 35, 25, 0.85) ;
+  padding: 2px;
+  margin: auto;
+  margin-bottom: 45px;
+  margin-top: 15px;
+ }

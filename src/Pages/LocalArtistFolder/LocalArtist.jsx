@@ -1,6 +1,8 @@
 import React from "react";
 import ReverseButton from "../../Components/ButtonsFolder/ReverseButton/ReverseButton.jsx";
 import NotRobot from "../../Components/NotRobotFolder/NotRobot.jsx";
+import BatSignal from "../../Components/ContactMeFolder/ContactMe.jsx";
+
 import "./LocalArtist.css";
 // import PeaceFlower from "./peace-flower.svg";
 // import SparkleStar from "./sparkle-star.svg";
@@ -22,18 +24,26 @@ const LocalArtistFolder = () => {
 
       {/* Main Content */}
       <div className="content-box mt-8">
+
+        
+
         <div className="NotRobotGradient relative m-auto mb-2 mt-4 h-[100px] w-[100px]">
-          <span className="not-robot noZone absolute -top-[31px] whitespace-nowrap">
+          <span className="not-robot noZone ">
             No Zone
           </span>
           <NotRobot />
         </div>
+         <span className="fixed right-8 top-8 scale-[150%] z-50">
+          < BatSignal />
+          </span>
+     
+
         <h1 className="groovy-title mb-4 whitespace-nowrap">
           🧑🏼‍🎨 Support Your Local Artist 🎨
         </h1>
 
         <p className="groovy-text text-center">
-          Our hippie community believes in
+          A Hippie community believes in
           <strong> human hands, real hearts, and real creativity</strong>.
         </p>
 
@@ -62,6 +72,7 @@ const LocalArtistFolder = () => {
 
         <div className="badge">💛 Made by Human Hands 💛</div>
       </div>
+        
     </div>
   );
 };
