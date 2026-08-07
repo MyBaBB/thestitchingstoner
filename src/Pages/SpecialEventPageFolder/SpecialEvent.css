@@ -68,39 +68,35 @@
 .highlight2 {
   color: #ff8bd8;
   font-weight: 800;
- 
+
   border: 2px solid #ff8bd8;
   border-radius: 5px;
   padding: 0.2rem;
 }
- 
-  /* NOT ROBOT — top right */
-.not-robot-wrapper-SpecialEvent{
-  position: fixed;        /* stays pinned */
+
+/* NOT ROBOT — top right */
+.not-robot-wrapper-SpecialEvent {
+  position: fixed; /* stays pinned */
   bottom: -1.5rem;
   right: 0.5rem;
-  z-index: 999999;        /* above everything except your specialEventInstaller */
+  z-index: 999999; /* above everything except your specialEventInstaller */
   display: flex;
   flex-direction: column;
   align-items: center;
   color: white;
-  transform: scale(1);    /* default size */
+  transform: scale(1); /* default size */
   pointer-events: auto;
   transform: scale(0.65);
-      /* ensures it's clickable */
+  /* ensures it's clickable */
 }
 
 /* BELOW XS — shrink + tuck tighter */
 @media (max-width: 668px) {
-   
-
   .not-robot span {
     font-size: 0.75rem; /* optional: shrink "No Zone" text */
   }
 }
-   
 
- 
 .not-robot-img {
   filter: none !important;
 }

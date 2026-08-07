@@ -36,8 +36,7 @@ export default function SimpleSpeaker() {
   return (
     <button
       onClick={toggleSound}
-      className={`p-3 rounded-full transition-all duration-300 
-        ${isOn ? "text-green-500" : "text-gray-500"}`}
+      className={`rounded-full p-3 transition-all duration-300 ${isOn ? "text-green-500" : "text-gray-500"}`}
     >
       {isOn ? <RxSpeakerLoud size={35} /> : <RxSpeakerOff size={35} />}
     </button>

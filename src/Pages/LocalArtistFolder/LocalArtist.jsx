@@ -1,6 +1,6 @@
 import React from "react";
 import ReverseButton from "../../Components/ButtonsFolder/ReverseButton/ReverseButton.jsx";
-
+import NotRobot from "../../Components/NotRobotFolder/NotRobot.jsx";
 import "./LocalArtist.css";
 // import PeaceFlower from "./peace-flower.svg";
 // import SparkleStar from "./sparkle-star.svg";
@@ -16,6 +16,7 @@ const LocalArtistFolder = () => {
   return (
     <div className="local-artist-wrapper">
        < ReverseButton />
+      
       {/* Floating Hippie Objects */}
       {/* <img src={PeaceFlower} className="float peace-flower" alt="Peace Flower" />
       <img src={SparkleStar} className="float sparkle-star" alt="Sparkle Star" />
@@ -23,14 +24,19 @@ const LocalArtistFolder = () => {
 
       {/* Main Content */}
       <div className="content-box">
-       
-        <h1 className="groovy-title ">🌈 Support Your Local Artist </h1>
+         <div className="NotRobotGradient h-[100px] w-[100px] m-auto mb-2  ">< NotRobot /></div>
+        <h1 className="groovy-title  whitespace-nowrap mb-4 
+              ">
+          🧑🏼‍🎨 Support Your Local Artist 🎨
+        </h1>
 
-        <p className="groovy-text">
-          This is the <span className="highlight">No AI Art Zone</span>.  
-          Our hippie community believes in <strong>human hands, real hearts, and real creativity</strong>.
+               
+
+        <p className="groovy-text text-center">
+          Our hippie community believes in 
+          <strong>human hands, real hearts, and real creativity</strong>.
         </p>
-
+        
         <p className="groovy-text">
           Digital art has been around for decades — long before AI — and it`s a legit art form
           created by real humans. On this site, everything you see is either:

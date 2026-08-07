@@ -56,26 +56,23 @@ export default function LandingPage() {
 
   return (
     <div className="relative mb-[22rem] flex h-screen items-center justify-center bg-black">
-         
-
-      < Link to="/localartist"> 
-        <div className="not-robot2 p-4  flex-col items-center  ">
-           <NotRobot />
-           <span className="text-white font-bold font-Itim-Regular mt-1">
-              No Zone
-           </span>
-       </div>
-       </Link>
-         
-        
-        <div className="backgroundMusic fixed z-50 bottom-4 left-4">
-           < SimpleSpeaker />
+      <Link to="/localartist">
+        <div className="not-robot2 flex-col items-center p-4">
+          <NotRobot />
+          <span className="mt-1 font-Itim-Regular font-bold text-white">
+            No Zone
+          </span>
         </div>
-         
+      </Link>
+
+      <div className="backgroundMusic fixed bottom-4 left-4 z-50">
+        <SimpleSpeaker />
+      </div>
+
       <span className="reverseButtonInstaller absolute left-4 top-4">
         <ReverseButton />
       </span>
-  
+
       <main className="relative h-screen overflow-visible bg-black text-neutral-100">
         <HippieFootprints /> {/* ← ADD THIS */}
         <Weed />

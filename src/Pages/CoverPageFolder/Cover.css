@@ -258,11 +258,11 @@
     transform: scale(1);
   }
 }
- /* NOT ROBOT — top right */
+/* NOT ROBOT — top right */
 .not-robot2 {
   position: absolute;
-  bottom: -14.5rem;                 /* sit just above bottom */
-  left: 50%;                      /* center horizontally */
+  bottom: -14.5rem; /* sit just above bottom */
+  left: 50%; /* center horizontally */
   transform: translateX(-50%) scale(0.65);
   z-index: 999999;
   display: flex;
@@ -272,11 +272,10 @@
   pointer-events: auto;
 }
 
-
 /* BELOW XS — shrink + tuck tighter */
 @media (max-width: 668px) {
   .not-robot2 {
-   display: none;
+    display: none;
   }
 
   .not-robot2 span {

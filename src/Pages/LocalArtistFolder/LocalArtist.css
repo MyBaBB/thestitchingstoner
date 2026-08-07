@@ -1,11 +1,14 @@
 .local-artist-wrapper {
   position: relative;
-  padding: 40px;
   min-height: 100vh;
-  background: linear-gradient(120deg, #ffe7c7, #ffd6f2, #c7f7ff);
+  background-image: url("../../Components/UnsplashImageFolder/bwVan1820x1080.webp");
+  background-size: cover;        /* fills the screen */
+  background-position: center;   /* keeps the subject centered */
+  background-repeat: no-repeat;  /* prevents tiling */
   overflow: hidden;
   font-family: "Groovy", sans-serif;
 }
+
 
 /* Floating Objects */
 .float {
@@ -15,64 +18,129 @@
   animation: floaty 10s infinite ease-in-out;
 }
 
-.peace-flower { top: 10%; left: 5%; animation-delay: 0s; }
-.sparkle-star { top: 40%; right: 10%; animation-delay: 2s; }
-.groovy-heart { bottom: 15%; left: 20%; animation-delay: 4s; }
+.peace-flower {
+  top: 10%;
+  left: 5%;
+  animation-delay: 0s;
+}
+.sparkle-star {
+  top: 40%;
+  right: 10%;
+  animation-delay: 2s;
+}
+.groovy-heart {
+  bottom: 15%;
+  left: 20%;
+  animation-delay: 4s;
+}
 
 @keyframes floaty {
-  0% { transform: translateY(0px) rotate(0deg); }
-  50% { transform: translateY(-25px) rotate(6deg); }
-  100% { transform: translateY(0px) rotate(0deg); }
+  0% {
+    transform: translateY(0px) rotate(0deg);
+  }
+  50% {
+    transform: translateY(-25px) rotate(6deg);
+  }
+  100% {
+    transform: translateY(0px) rotate(0deg);
+  }
 }
 
 /* Content Box */
 .content-box {
   max-width: 700px;
   margin: auto;
-  background: rgba(255, 255, 255, 0.65);
-  padding: 30px;
+  background: rgba(55, 39, 29, 0.4);
+  padding: 10px;
   border-radius: 20px;
-  backdrop-filter: blur(6px);
+ 
   box-shadow: 0 0 20px rgba(255, 255, 255, 0.4);
-}
+  }
 
 /* Typography */
 .groovy-title {
-  font-size: 3rem;
+  background: linear-gradient(
+    to bottom,
+    rgba(63, 46, 36, .85) 0%,
+    /* top lighter */ rgba(51, 35, 25, .85 ) 50%,
+    /* middle darker */ rgba(63, 46, 36, .85 ) 100% /* bottom lighter */
+  );
+  border: 1px solid rgba(46, 90, 44, 0.63); /* Forest Service Green */
+  border-radius: 12px;
+  box-shadow: 0px 0px 5px 0px #adff2fbf;
+  padding:12px;
   text-align: center;
-  margin-bottom: 20px;
-  color: #7b2cbf;
+  margin-bottom: 5px;
+  color:  #ade0f8;
   animation: wobble 3s infinite ease-in-out;
 }
 
 @keyframes wobble {
-  0% { transform: rotate(-1deg); }
-  50% { transform: rotate(1deg); }
-  100% { transform: rotate(-1deg); }
+  0% {
+    transform: rotate(-1deg);
+  }
+  50% {
+    transform: rotate(1deg);
+  }
+  100% {
+    transform: rotate(-1deg);
+  }
 }
 
 .groovy-text {
   font-size: 1.3rem;
   line-height: 1.6;
   margin-bottom: 20px;
-  color: #4a3f35;
+    font-weight: 500;
+    
+  background: linear-gradient(
+    to bottom,
+    rgba(63, 46, 36, .85) 0%,
+    /* top lighter */ rgba(51, 35, 25, .85 ) 50%,
+    /* middle darker */ rgba(63, 46, 36, .85 ) 100% /* bottom lighter */
+  );
+  border: 1px solid rgba(46, 90, 44, 0.63); /* Forest Service Green */
+  border-radius: 12px;
+  box-shadow: 0px 0px 5px 0px #adff2fbf;
+  padding:12px;
 }
 
-.highlight {
-  background: #fffa8b;
-  padding: 4px 8px;
-  border-radius: 6px;
-}
+.highlight3 {
+ 
+  font-weight: 500;
+   background: linear-gradient(
+    to bottom,
+    rgba(63, 46, 36, .85) 0%,
+    /* top lighter */ rgba(51, 35, 25, .85 ) 50%,
+    /* middle darker */ rgba(63, 46, 36, .85 ) 100% /* bottom lighter */
+  );
+
+  border: 1px solid rgba(46, 90, 44, 0.63); /* Forest Service Green */
+  border-radius: 12px;
+  box-shadow: 0px 0px 5px 0px #adff2fbf;
+  padding:12px;
+} 
 
 /* List */
 .groovy-list {
   list-style: none;
-  padding-left: 0;
+ 
   margin-bottom: 20px;
+    font-weight: 500;
+  background: linear-gradient(
+    to bottom,
+    rgba(63, 46, 36, .85) 0%,
+    /* top lighter */ rgba(51, 35, 25, .85 ) 50%,
+    /* middle darker */ rgba(63, 46, 36, .85 ) 100% /* bottom lighter */
+  );
+  border: 1px solid rgba(46, 90, 44, 0.63); /* Forest Service Green */
+  border-radius: 12px;
+  box-shadow: 0px 0px 5px 0px #adff2fbf;
+  padding:12px;
 }
 
 .groovy-list li {
-  font-size: 1.2rem;
+ 
   margin: 10px 0;
 }
 
@@ -80,9 +148,47 @@
 .badge {
   margin-top: 30px;
   text-align: center;
-  font-size: 1.4rem;
-  padding: 10px 20px;
-  background: #ffe8a3;
+ 
+    font-weight: 500;
+  background: linear-gradient(
+    to bottom,
+    rgba(63, 46, 36, .85) 0%,
+    /* top lighter */ rgba(51, 35, 25, .85 ) 50%,
+    /* middle darker */ rgba(63, 46, 36, .85 ) 100% /* bottom lighter */
+  );
+  border: 1px solid rgba(46, 90, 44, 0.63); /* Forest Service Green */
   border-radius: 12px;
-  box-shadow: 0 0 10px rgba(255, 255, 255, 0.6);
+  box-shadow: 0px 0px 5px 0px #adff2fbf;
+  padding:12px;
+}
+
+   /* base: up to 400px */
+.groovy-title, .groovy-text, .groovy-list, .content-box   { 
+  font-size: 0.75rem; color: #fcfbef;
+  font-family: 'Sansita-Regular', sans-serif  ; }
+
+/* 400px to 700px */
+@media screen and (min-width: 400px) and (max-width: 700px) {
+  .content-box {
+    padding: 5px;
+  }
+  .groovy-title, .groovy-text, .groovy-list, .content-box   {
+     font-size: 1.11rem; }
+ }
+
+/* 700px and up */
+@media screen and (min-width: 700px) {
+  .groovy-title, .groovy-text, .groovy-list, .content-box   { 
+    font-size: 2rem; }
+}
+.NotRobotGradient {
+ 
+  border-radius: 100%;
+ 
+  
+  background: radial-gradient(
+    rgba(70, 56, 47, 1) 0%,
+    rgba(70, 56, 47, 0.6) 50%,
+    rgba(70, 56, 47, 0) 100%
+  );
 }

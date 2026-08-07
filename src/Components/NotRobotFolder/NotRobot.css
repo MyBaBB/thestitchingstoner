@@ -4,19 +4,17 @@
   margin: auto;
   margin-top: 1rem;
   z-index: 1;
- 
-  
 }
-@media screen and ( min-width: 400px) {
-    .not-robot-img {
-      width: 155px;
-      height: auto;
-    }
-   }
+@media screen and (min-width: 400px) {
+  .not-robot-img {
+    width: 155px;
+    height: auto;
+  }
+}
 
 .notrobot-zone {
   position: relative;
-  display:flex;
+  display: flex;
   margin-top: -14rem;
   width: 100vw;
   bottom: 0;
@@ -25,6 +23,6 @@
 }
 
 .notrobot-wrapper {
-  background: transparent; 
+  background: transparent;
   isolation: isolate; /* THIS is the magic */
 }
