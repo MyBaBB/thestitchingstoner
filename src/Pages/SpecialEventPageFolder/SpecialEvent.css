@@ -61,14 +61,14 @@
 
 /* Highlight words */
 .highlight {
-  color: #ffb3f6;
-  font-weight: 400;
-  text-shadow: 0 0 5px #ff5cd1;
+  color: hotpink;
+  font-weight: 800;
+  background-color: black !important;
 }
 .highlight2 {
   color: #ff8bd8;
-  font-weight: 400;
-  text-shadow: 0 0 5px #ff5cd1;
+  font-weight: 800;
+ 
   border: 2px solid #ff8bd8;
   border-radius: 5px;
   padding: 0.2rem;

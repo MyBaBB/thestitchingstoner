@@ -2,14 +2,16 @@ import React from "react";
 import ReverseButton from "../../Components/ButtonsFolder/ReverseButton/ReverseButton.jsx";
 import SimpleSpeaker from "../../Components/BackgroundMusicFolder/BackgroundMusic.jsx";
 import NotRobot from "../../Components/NotRobotFolder/NotRobot.jsx";
+import { Link } from "react-router-dom";
 import "./SpecialEvent.css";
 
 export default function SpecialEventPage() {
   return (
     <>
       <div className="w-screen min-h-screen overflow-x-hidden overflow-y-auto">
-
-        <div className="not-robot absolute z-50 top-8 right-8">
+       <Link to="/localartist">
+          <div className="not-robot absolute z-50 top-8 right-8">
+          
             <div className="not-robot-wrapper-SpecialEvent p-4 flex flex-col items-center">
               <NotRobot />
               <span className="text-white font-bold font-Itim-Regular mt-4">
@@ -17,7 +19,7 @@ export default function SpecialEventPage() {
               </span>
             </div>
           </div>
-
+        </Link>
         <ReverseButton />
 
        
@@ -35,7 +37,7 @@ export default function SpecialEventPage() {
 
             <p className="specialEventParagraph">
               The Stitching Stoner is hosting a limited‑seat crochet experience at
-              <span className="highlight"> Hookaville 62</span> — a dreamy,
+              <span className="text-green-400 text-bold font-Itim-Regular"> Hookaville 62</span> — a dreamy,
               psychedelic, high‑vibe workshop where beginners and experts can
               stitch, chill, and connect.
               <br />

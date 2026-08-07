@@ -1,0 +1,88 @@
+.local-artist-wrapper {
+  position: relative;
+  padding: 40px;
+  min-height: 100vh;
+  background: linear-gradient(120deg, #ffe7c7, #ffd6f2, #c7f7ff);
+  overflow: hidden;
+  font-family: "Groovy", sans-serif;
+}
+
+/* Floating Objects */
+.float {
+  position: absolute;
+  width: 80px;
+  opacity: 0.8;
+  animation: floaty 10s infinite ease-in-out;
+}
+
+.peace-flower { top: 10%; left: 5%; animation-delay: 0s; }
+.sparkle-star { top: 40%; right: 10%; animation-delay: 2s; }
+.groovy-heart { bottom: 15%; left: 20%; animation-delay: 4s; }
+
+@keyframes floaty {
+  0% { transform: translateY(0px) rotate(0deg); }
+  50% { transform: translateY(-25px) rotate(6deg); }
+  100% { transform: translateY(0px) rotate(0deg); }
+}
+
+/* Content Box */
+.content-box {
+  max-width: 700px;
+  margin: auto;
+  background: rgba(255, 255, 255, 0.65);
+  padding: 30px;
+  border-radius: 20px;
+  backdrop-filter: blur(6px);
+  box-shadow: 0 0 20px rgba(255, 255, 255, 0.4);
+}
+
+/* Typography */
+.groovy-title {
+  font-size: 3rem;
+  text-align: center;
+  margin-bottom: 20px;
+  color: #7b2cbf;
+  animation: wobble 3s infinite ease-in-out;
+}
+
+@keyframes wobble {
+  0% { transform: rotate(-1deg); }
+  50% { transform: rotate(1deg); }
+  100% { transform: rotate(-1deg); }
+}
+
+.groovy-text {
+  font-size: 1.3rem;
+  line-height: 1.6;
+  margin-bottom: 20px;
+  color: #4a3f35;
+}
+
+.highlight {
+  background: #fffa8b;
+  padding: 4px 8px;
+  border-radius: 6px;
+}
+
+/* List */
+.groovy-list {
+  list-style: none;
+  padding-left: 0;
+  margin-bottom: 20px;
+}
+
+.groovy-list li {
+  font-size: 1.2rem;
+  margin: 10px 0;
+}
+
+/* Badge */
+.badge {
+  margin-top: 30px;
+  text-align: center;
+  font-size: 1.4rem;
+  padding: 10px 20px;
+  background: #ffe8a3;
+  border-radius: 12px;
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.6);
+}
