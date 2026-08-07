@@ -1,13 +1,14 @@
 import React from "react";
 import WhiteVan from "../UnsplashImageFolder/bwVan1820x1080.webp";
 const hippieImages = [
-   {
+  {
     src: WhiteVan,
     alt: "White Van",
   },
 ];
 
-const randomImage = hippieImages[Math.floor(Math.random() * hippieImages.length)];
+const randomImage =
+  hippieImages[Math.floor(Math.random() * hippieImages.length)];
 
 function LocalArtistFolder() {
   return (
@@ -21,7 +22,7 @@ function LocalArtistFolder() {
         backgroundSize: "cover",
         backgroundPosition: "center",
         backgroundRepeat: "no-repeat",
-        zIndex: 99999999
+        zIndex: 99999999,
       }}
     >
       {/* your content goes here */}

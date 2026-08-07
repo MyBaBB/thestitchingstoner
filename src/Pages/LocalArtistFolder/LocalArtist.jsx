@@ -7,39 +7,40 @@ import "./LocalArtist.css";
 // import GroovyHeart from "./groovy-heart.svg";
 import { useEffect } from "react";
 
-
-
 const LocalArtistFolder = () => {
   useEffect(() => {
-  window.scrollTo(0, 0);
-}, []);
+    window.scrollTo(0, 0);
+  }, []);
   return (
     <div className="local-artist-wrapper">
-       < ReverseButton />
-      
+      <ReverseButton />
+
       {/* Floating Hippie Objects */}
       {/* <img src={PeaceFlower} className="float peace-flower" alt="Peace Flower" />
       <img src={SparkleStar} className="float sparkle-star" alt="Sparkle Star" />
       <img src={GroovyHeart} className="float groovy-heart" alt="Groovy Heart" /> */}
 
       {/* Main Content */}
-      <div className="content-box">
-         <div className="NotRobotGradient h-[100px] w-[100px] m-auto mb-2  ">< NotRobot /></div>
-        <h1 className="groovy-title  whitespace-nowrap mb-4 
-              ">
+      <div className="content-box mt-8">
+        <div className="NotRobotGradient relative m-auto mb-2 mt-4 h-[100px] w-[100px]">
+          <span className="not-robot noZone absolute -top-[31px] whitespace-nowrap">
+            No Zone
+          </span>
+          <NotRobot />
+        </div>
+        <h1 className="groovy-title mb-4 whitespace-nowrap">
           🧑🏼‍🎨 Support Your Local Artist 🎨
         </h1>
 
-               
-
         <p className="groovy-text text-center">
-          Our hippie community believes in 
+          Our hippie community believes in
           <strong>human hands, real hearts, and real creativity</strong>.
         </p>
-        
+
         <p className="groovy-text">
-          Digital art has been around for decades — long before AI — and it`s a legit art form
-          created by real humans. On this site, everything you see is either:
+          Digital art has been around for decades — long before AI — and it`s a
+          legit art form created by real humans. On this site, everything you
+          see is either:
         </p>
 
         <ul className="groovy-list">
@@ -53,15 +54,13 @@ const LocalArtistFolder = () => {
         </ul>
 
         <p className="groovy-text">
-          We honor the artists who pour their soul into their work—whether they use cameras,
-          pencils, tablets, or vector tools.  
-          This page is your reminder: <strong>Love your local creators</strong>.  
-          Buy their art. Share their work. Keep the vibe alive.
+          We honor the artists who pour their soul into their work—whether they
+          use cameras, pencils, tablets, or vector tools. This page is your
+          reminder: <strong>Love your local creators</strong>. Buy their art.
+          Share their work. Keep the vibe alive.
         </p>
 
-        <div className="badge">
-          💛 Made by Human Hands 💛
-        </div>
+        <div className="badge">💛 Made by Human Hands 💛</div>
       </div>
     </div>
   );
