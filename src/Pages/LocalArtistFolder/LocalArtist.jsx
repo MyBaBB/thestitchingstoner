@@ -2,7 +2,8 @@ import React from "react";
 import ReverseButton from "../../Components/ButtonsFolder/ReverseButton/ReverseButton.jsx";
 import NotRobot from "../../Components/NotRobotFolder/NotRobot.jsx";
 import BatSignal from "../../Components/ContactMeFolder/ContactMe.jsx";
-
+import Weed from "../../Images/The_Stitching_Stoner/favicon.png";
+import { Link } from "react-router-dom";
 import "./LocalArtist.css";
 // import PeaceFlower from "./peace-flower.svg";
 // import SparkleStar from "./sparkle-star.svg";
@@ -15,6 +16,7 @@ const LocalArtistFolder = () => {
   }, []);
   return (
     <div className="local-artist-wrapper">
+          
       <ReverseButton />
 
       {/* Floating Hippie Objects */}
@@ -23,20 +25,27 @@ const LocalArtistFolder = () => {
       <img src={GroovyHeart} className="float groovy-heart" alt="Groovy Heart" /> */}
 
       {/* Main Content */}
-      <div className="content-box mt-8">
+      <div className="relative content-box mt-8">
 
-        
+          < Link to="/">   
+          <span>
+             <img src={Weed} className="badge absolute left-4  top-4  scale-[175%] z-50" alt="Weed" />
+          </span>
+          </Link>
+
+
+         
+
 
         <div className="NotRobotGradient relative m-auto mb-2 mt-4 h-[100px] w-[100px]">
           <span className="not-robot noZone ">
             No Zone
           </span>
+          
           <NotRobot />
         </div>
-         <span className="fixed right-8 top-8 scale-[150%] z-50">
-          < BatSignal />
-          </span>
-     
+          
+          
 
         <h1 className="groovy-title mb-4 whitespace-nowrap">
           🧑🏼‍🎨 Support Your Local Artist 🎨
@@ -69,10 +78,14 @@ const LocalArtistFolder = () => {
           reminder: <strong>Love your local creators</strong>. Buy their art.
           Share their work. Keep the vibe alive.
         </p>
-
-        <div className="badge">💛 Made by Human Hands 💛</div>
+ 
+          <div className="badge relative">💛 Made by Human Hands 💛
+           <span className="absolute   right-4 scale-[150%] z-50">
+          < BatSignal />
+          </span>
+        </div>
       </div>
-        
+       
     </div>
   );
 };
