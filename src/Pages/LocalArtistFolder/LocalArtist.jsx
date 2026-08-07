@@ -29,7 +29,7 @@ const LocalArtistFolder = () => {
 
           < Link to="/">   
           <span>
-             <img src={Weed} className="badge absolute left-4  top-4  scale-[175%] z-50" alt="Weed" />
+             <img src={Weed} className=" absolute left-4  top-4  scale-[175%] z-50" alt="Weed" />
           </span>
           </Link>
 
