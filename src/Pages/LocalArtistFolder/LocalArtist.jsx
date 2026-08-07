@@ -34,7 +34,7 @@ const LocalArtistFolder = () => {
 
         <p className="groovy-text text-center">
           Our hippie community believes in
-          <strong>human hands, real hearts, and real creativity</strong>.
+          <strong> human hands, real hearts, and real creativity</strong>.
         </p>
 
         <p className="groovy-text">
