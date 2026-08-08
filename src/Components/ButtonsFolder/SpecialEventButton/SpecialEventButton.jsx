@@ -4,7 +4,7 @@ import "./SpecialEventButton.css";
 const SpecialEventButton = () => {
   return (
     <a
-      href="./specialevent"
+      href="/specialevent"
       className="special-event-btn"
       data-tool-tip="🌈 Hookaville Crochet Classes ✌🏼"
     >

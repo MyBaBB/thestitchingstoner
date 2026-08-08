@@ -14,7 +14,7 @@ import StonerLogo from "../../Images/Logo300x300-2.webp";
 import SpecialEventButton from "../../Components/ButtonsFolder/SpecialEventButton/SpecialEventButton.jsx";
 import SimpleSpeaker from "../../Components/BackgroundMusicFolder/BackgroundMusic.jsx";
 import NotRobot from "../../Components/NotRobotFolder/NotRobot.jsx";
-import { Link } from "react-router-dom";
+
 export default function LandingPage() {
   // ROTATING DREAMY TEXT
   const messages = [
@@ -56,14 +56,14 @@ export default function LandingPage() {
 
   return (
     <div className="relative mb-[22rem] flex h-screen items-center justify-center bg-black">
-      <Link to="/localartist">
+     
         <div className="not-robot2 flex-col items-center p-4">
           <NotRobot />
           <span className="mt-1 font-Itim-Regular font-bold text-white">
             No Zone
           </span>
         </div>
-      </Link>
+   
 
       <div className="backgroundMusic fixed bottom-4 left-4 z-50">
         <SimpleSpeaker />
