@@ -1,51 +1,42 @@
-import React from "react";
+import React, { useEffect } from "react";
 import ReverseButton from "../../Components/ButtonsFolder/ReverseButton/ReverseButton.jsx";
 import NotRobot from "../../Components/NotRobotFolder/NotRobot.jsx";
 import BatSignal from "../../Components/ContactMeFolder/ContactMe.jsx";
 import Weed from "../../Images/The_Stitching_Stoner/favicon.png";
-import { Link } from "react-router-dom";
 import "./LocalArtist.css";
-// import PeaceFlower from "./peace-flower.svg";
-// import SparkleStar from "./sparkle-star.svg";
-// import GroovyHeart from "./groovy-heart.svg";
-import { useEffect } from "react";
 
 const LocalArtistFolder = () => {
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
+
   return (
     <div className="local-artist-wrapper">
-          
-      <ReverseButton />
 
-      {/* Floating Hippie Objects */}
-      {/* <img src={PeaceFlower} className="float peace-flower" alt="Peace Flower" />
-      <img src={SparkleStar} className="float sparkle-star" alt="Sparkle Star" />
-      <img src={GroovyHeart} className="float groovy-heart" alt="Groovy Heart" /> */}
+      {/* HEADER */}
+      <header className="local-artist-header relative">
 
-      {/* Main Content */}
-      <div className="relative content-box mt-8">
+        {/* Home Link */}
+        <a href="/" className="home-link">
+          <img
+            src={Weed}
+            className="absolute left-4 top-4 scale-[175%] z-50"
+            alt="Return to Home"
+          />
+        </a>
 
-          < Link to="/">   
-          <span>
-             <img src={Weed} className=" absolute left-4  top-4  scale-[175%] z-50" alt="Weed" />
-          </span>
-          </Link>
+        {/* Reverse Button */}
+        <ReverseButton />
 
-
-         
-
-
+        {/* No Zone Badge */}
         <div className="NotRobotGradient relative m-auto mb-2 mt-4 h-[100px] w-[100px]">
-          <span className="not-robot noZone ">
-            No Zone
-          </span>
-          
+          <span className="not-robot noZone">No Zone</span>
           <NotRobot />
         </div>
-          
-          
+      </header>
+
+      {/* MAIN CONTENT */}
+      <main className="relative content-box mt-8">
 
         <h1 className="groovy-title mb-4 whitespace-nowrap">
           🧑🏼‍🎨 Support Your Local Artist 🎨
@@ -57,7 +48,7 @@ const LocalArtistFolder = () => {
         </p>
 
         <p className="groovy-text">
-          Digital art has been around for decades — long before AI — and it`s a
+          Digital art has been around for decades — long before AI — and it’s a
           legit art form created by real humans. On this site, everything you
           see is either:
         </p>
@@ -78,14 +69,20 @@ const LocalArtistFolder = () => {
           reminder: <strong>Love your local creators</strong>. Buy their art.
           Share their work. Keep the vibe alive.
         </p>
- 
-          <div className="badge relative">💛 Made by Human Hands 💛
-           <span className="absolute   right-4 scale-[150%] z-50">
-          < BatSignal />
-          </span>
-        </div>
-      </div>
-       
+      </main>
+
+      {/* CONTACT ASIDE */}
+      <aside className="contact-aside relative">
+        <span className="absolute right-4 scale-[150%] z-50">
+          <BatSignal />
+        </span>
+      </aside>
+
+      {/* FOOTER */}
+      <footer className="badge relative">
+        💛 Made by Human Hands 💛
+      </footer>
+
     </div>
   );
 };
