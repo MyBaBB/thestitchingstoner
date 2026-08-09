@@ -55,14 +55,13 @@ export default function LandingPage() {
   }, []);
 
   return (
-    <div className="relative mb-[22rem] flex h-screen items-center justify-center bg-black">
+   <>
+   
+   
+    <div className="relative flex h-screen items-center justify-center  bg-black
+                    ">
      
-        <div className="not-robot2 flex-col items-center p-4">
-          <NotRobot />
-          <span className="mt-1 font-Itim-Regular font-bold text-white">
-            No Zone
-          </span>
-        </div>
+        
    
 
       <div className="backgroundMusic fixed bottom-4 left-4 z-50">
@@ -152,6 +151,15 @@ export default function LandingPage() {
       <div className="fixed bottom-[1.25rem] right-[1.25rem]">
         <ContactMe />
       </div>
+       
     </div>
-  );
+       <div className="not-robot2   flex-col items-center p-4 ">
+          <NotRobot />
+          <span className="mt-1 font-Itim-Regular font-bold text-white">
+            No Zone
+          </span>
+        </div>
+  
+</>
+);
 }

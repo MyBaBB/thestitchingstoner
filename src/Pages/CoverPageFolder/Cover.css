@@ -260,23 +260,17 @@
 }
 /* NOT ROBOT — top right */
 .not-robot2 {
-  position: absolute;
-  bottom: -12.5rem; /* sit just above bottom */
-  left: 50%; /* center horizontally */
-  transform: translateX(-50%) scale(0.65);
-  z-index: 999999;
+  position: relative;
   display: flex;
   flex-direction: column;
   align-items: center;
   color: white;
   pointer-events: auto;
   opacity: .90;
+  z-index: 999999;
+  scale: 0.65;
 }
-@media screen and (min-width: 668px) {
-  .not-robot2 {
-    bottom: 0rem; /* sit just above bottom */
-  }
-}
+
 /* BELOW XS — shrink + tuck tighter */
 @media (max-width: 668px) {
   .not-robot2 span {
