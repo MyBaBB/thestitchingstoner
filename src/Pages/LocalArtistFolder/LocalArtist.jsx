@@ -11,7 +11,7 @@ const LocalArtistFolder = () => {
   }, []);
 
   return (
-    <div className="local-artist-wrapper">
+    <div className="local-artist-wrapper ">
 
       {/* HEADER */}
       <header className="local-artist-header relative">
@@ -20,7 +20,7 @@ const LocalArtistFolder = () => {
         <a href="/" className="home-link">
           <img
             src={Weed}
-            className="absolute left-4 top-4 scale-[175%] z-50"
+            className="absolute left-8 top-8 scale-[175%] z-50"
             alt="Return to Home"
           />
         </a>
@@ -73,13 +73,13 @@ const LocalArtistFolder = () => {
 
       {/* CONTACT ASIDE */}
       <aside className="contact-aside relative">
-        <span className="absolute right-4 scale-[150%] z-50">
+        <span className="absolute right-4 bottom-[-.5rem]  z-50">
           <BatSignal />
         </span>
       </aside>
 
       {/* FOOTER */}
-      <footer className="badge relative">
+      <footer className="badge relative text-amber-200">
         💛 Made by Human Hands 💛
       </footer>
 
