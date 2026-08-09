@@ -74,7 +74,7 @@ const LocalArtistFolder = () => {
       
 
         <ul className="groovy-list mt-4">
-           <p className=" text-center">Everything you see comes from:</p>
+           <p className=" text-center">Everything here has been requested:</p>
           <li>🌼 Handmade art and illustration</li>
           <li>📸 Real photography shot by human eyes</li>
           <li>🖌️ Illustrator artwork and hand‑crafted vectors</li>
@@ -99,7 +99,7 @@ const LocalArtistFolder = () => {
 
       {/* FOOTER */}
       <footer className="badge relative text-amber-200 w-fit m-auto mt-4">
-        💛 Made by Human Hands 💛
+        💛 Special Request 💛
       </footer>
 
     </div>
