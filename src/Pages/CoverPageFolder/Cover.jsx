@@ -57,7 +57,7 @@ export default function LandingPage() {
   return (
    <>
    
-   
+      
     <div className="relative flex h-screen items-center justify-center  bg-black
                     ">
      

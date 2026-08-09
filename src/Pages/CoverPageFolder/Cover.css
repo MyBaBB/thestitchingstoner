@@ -267,7 +267,7 @@
   color: white;
   pointer-events: auto;
   opacity: .90;
-  z-index: 999999;
+  z-index: 9;
   scale: 0.65;
 }
 
