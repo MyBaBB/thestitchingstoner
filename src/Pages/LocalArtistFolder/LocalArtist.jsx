@@ -5,6 +5,10 @@ import BatSignal from "../../Components/ContactMeFolder/ContactMe.jsx";
 import Weed from "../../Images/The_Stitching_Stoner/favicon.png";
 import { TbCamper } from "react-icons/tb";
 import { PiQuotes } from "react-icons/pi";
+import { GiCampCookingPot } from "react-icons/gi";
+import { FaCampground } from "react-icons/fa";
+import { GiOldWagon } from "react-icons/gi";
+import HippieFootprints from "../../Components/HippieFootprintsFolder/HippieFootprints.jsx";
 
 import "./LocalArtist.css";
 
@@ -42,21 +46,21 @@ const LocalArtistFolder = () => {
         </h1> */}
 
         <article className="groovy-title relative flex flex-col items-center justify-center text-center">
-          <p className="font-bold">&nbsp;No Zone&nbsp;</p>
+       
           <h2>
             {" "}
             <span className="inline-block scale-x-[-1] text-base xs:text-lg md:text-2xl">
-              <PiQuotes />
+              <PiQuotes color="limegreen"/>
             </span>
             <span className="inline-block whitespace-nowrap">
-              &nbsp;Hippie&nbsp;
-              <span className="inline-block text-base xs:text-lg md:text-2xl">
-                <TbCamper color="hotpink" />
+              &nbsp;&nbsp;Hippie&nbsp;&nbsp;
+              <span className="inline-block tbCamper text-base xs:text-lg md:text-2xl">
+                <TbCamper color="limegreen" />
               </span>
-              &nbsp;Friendly&nbsp;
+              &nbsp;&nbsp;Adapter&nbsp;&nbsp;
             </span>
             <span className="inline-block text-base xs:text-lg md:text-2xl">
-              <PiQuotes />
+              <PiQuotes color="limegreen"/>
             </span>
           </h2>
 
@@ -64,7 +68,18 @@ const LocalArtistFolder = () => {
         </article>
 
         <ul className="groovy-list mt-4">
-          <p className="text-center">Everything here has been requested:</p>
+        <p className="text-center">
+            <span className="inline-block scale-x-[-1] text-base xs:text-lg md:text-2xl">
+              <FaCampground color="limegreen"/>
+         </span> 
+             &nbsp;&nbsp;Traditional Style&nbsp;&nbsp;
+         <span className="inline-block text-base xs:text-lg md:text-2xl ">
+              < GiCampCookingPot  color="limegreen" />
+                
+         </span>
+        </p>
+
+
           <li>🌼 Handmade art and illustration</li>
           <li>📸 Real photography shot by human eyes</li>
           <li>🖌️ Illustrator artwork and hand‑crafted vectors</li>
@@ -82,15 +97,25 @@ const LocalArtistFolder = () => {
 
       {/* CONTACT ASIDE */}
       <aside className="contact-aside relative">
-        <span className="absolute bottom-[-.5rem] right-4 z-50">
+        <span className="absolute bottom-[-3.5rem] right-4 z-50">
           <BatSignal />
         </span>
       </aside>
 
       {/* FOOTER */}
-      <footer className="badge relative m-auto mt-4 w-fit text-amber-200">
-        💛 Special Request 💛
-      </footer>
+     {/* FOOTER */}
+<footer className="badge relative m-auto mt-4 mb-4 w-fit text-amber-200 whitespace-nowrap">
+  <button
+    className="backToTopBtn"
+    onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
+  >
+    <GiOldWagon size={50} />
+    <span className="tooltip">Back to Top</span>
+  </button>
+
+  
+</footer>
+     <div className="absolute bottom-0 z-50"></div><HippieFootprints />
     </div>
   );
 };

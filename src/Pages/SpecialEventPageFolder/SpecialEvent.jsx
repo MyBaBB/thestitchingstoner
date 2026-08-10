@@ -14,7 +14,7 @@ export default function SpecialEventPage() {
             <div className="not-robot-wrapper-SpecialEvent flex flex-col items-center p-4">
               <NotRobot />
               <span className="mt-4 font-Itim-Regular font-bold text-white">
-                No Zone
+                Hippie Adapter
               </span>
             </div>
           </div>

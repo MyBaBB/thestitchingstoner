@@ -154,7 +154,7 @@
   border: 1px solid rgba(46, 90, 44, 0.63); /* Forest Service Green */
   border-radius: 12px;
   box-shadow: 0px 0px 5px 0px #adff2fbf;
-  padding: 12px;
+  padding: 4px;
 }
 
 /* base: up to 400px */
@@ -241,4 +241,69 @@
   margin: auto;
   margin-bottom: 45px;
   margin-top: 15px;
+}
+/* HIPPIE VAN SLIDE-IN */
+.tbCamper {
+  display: inline-block;
+  animation: hippieVanSlide 4.2s ease-out forwards;
+  transform-origin: center;
+}
+
+/* Keyframes: slow slide + tiny bounce + mellow wiggle */
+@keyframes hippieVanSlide {
+  0% {
+    opacity: 0;
+    transform: translateX(-400px) rotate(-8deg) scale(0.9);
+    filter: blur(3px);
+  }
+  40% {
+    opacity: 1;
+    transform: translateX(10px) rotate(3deg) scale(1.05);
+    filter: blur(0px);
+  }
+  70% {
+    transform: translateX(0px) rotate(-2deg) scale(1);
+  }
+  100% {
+    transform: translateX(0px) rotate(0deg);
+  }
+}
+/* BACK TO TOP BUTTON */
+.backToTopBtn {
+  position: relative;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 6px;
+  border-radius: 12px;
+  color: inherit;
+  transition: transform 0.3s ease;
+}
+
+.backToTopBtn:hover {
+  transform: scale(1.1) rotate(-2deg);
+}
+
+/* Tooltip */
+.backToTopBtn .tooltip {
+  position: absolute;
+  bottom: 3.4rem;
+  left: 50%;
+  transform: translateX(-50%);
+  background: rgba(63, 46, 36, 0.85);
+  border: 1px solid rgba(46, 90, 44, 0.63); /* Forest Service Green */
+  padding: 4px 8px;
+  border-radius: 8px;
+  box-shadow: 0px 0px 5px 0px #adff2fbf;
+  color: #ade0f8;
+  font-family: "Sansita-Regular", sans-serif;
+  font-size: 1rem;
+  white-space: nowrap;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+}
+
+.backToTopBtn:hover .tooltip {
+  opacity: 1;
 }
