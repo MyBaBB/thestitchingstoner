@@ -4,21 +4,15 @@
   <!-- Homepage -->
   <url>
     <loc>https://thestitchingstoner.brainbuddys.com/</loc>
-  
-    <priority>1.0</priority>
   </url>
 
   <!-- Confirmed routes -->
   <url>
     <loc>https://thestitchingstoner.brainbuddys.com/localartist</loc>
-   
-    <priority>0.8</priority>
   </url>
 
   <url>
     <loc>https://thestitchingstoner.brainbuddys.com/specialevent</loc>
- 
-    <priority>0.8</priority>
   </url>
 
 </urlset>
