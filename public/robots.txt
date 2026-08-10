@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://thestitchingstoner.brainbuddys.com/sitemap.xml
