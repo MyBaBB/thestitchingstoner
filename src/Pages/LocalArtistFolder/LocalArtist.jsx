@@ -4,7 +4,7 @@ import NotRobot from "../../Components/NotRobotFolder/NotRobot.jsx";
 import BatSignal from "../../Components/ContactMeFolder/ContactMe.jsx";
 import Weed from "../../Images/The_Stitching_Stoner/favicon.png";
 import { TbCamper } from "react-icons/tb";
-import { PiQuotes } from "react-icons/pi";
+import { ImEarth } from "react-icons/im";
 import { GiCampCookingPot } from "react-icons/gi";
 import { FaCampground } from "react-icons/fa";
 import { GiOldWagon } from "react-icons/gi";
@@ -50,8 +50,8 @@ const LocalArtistFolder = () => {
           <h2>
             {" "}
             <span className="inline-block scale-x-[-1] text-base xs:text-lg md:text-2xl">
-              <PiQuotes color="limegreen"/>
-            </span>
+              <FaCampground color="limegreen"/>
+         </span>
             <span className="inline-block whitespace-nowrap">
               &nbsp;&nbsp;Hippie&nbsp;&nbsp;
               <span className="inline-block tbCamper text-base xs:text-lg md:text-2xl">
@@ -59,25 +59,31 @@ const LocalArtistFolder = () => {
               </span>
               &nbsp;&nbsp;Adapter&nbsp;&nbsp;
             </span>
-            <span className="inline-block text-base xs:text-lg md:text-2xl">
-              <PiQuotes color="limegreen"/>
-            </span>
+            <span className="inline-block text-base xs:text-lg md:text-2xl ">
+              < GiCampCookingPot  color="limegreen" />
+         </span>
           </h2>
 
           <p>Support your Local Artist</p>
         </article>
 
         <ul className="groovy-list mt-4">
-        <p className="text-center">
-            <span className="inline-block scale-x-[-1] text-base xs:text-lg md:text-2xl">
-              <FaCampground color="limegreen"/>
-         </span> 
-             &nbsp;&nbsp;Traditional Style&nbsp;&nbsp;
-         <span className="inline-block text-base xs:text-lg md:text-2xl ">
-              < GiCampCookingPot  color="limegreen" />
-                
-         </span>
-        </p>
+<div className="relative flex justify-center items-enter w-full">
+       <p className="traditionalSwapBlock traditionalWord">
+  <div className="quoteLeft absolute left-2 top-[50%] transform -translate-y-1/2 text-base xs:text-lg md:text-2xl scale-x-[-1]">
+    <ImEarth color="limegreen " />
+
+  </div>
+
+  <span className="traditionalWordVapor"></span>
+
+  <div className="quoteRight  absolute right-2 top-[50%] transform -translate-y-1/2  text-base xs:text-lg md:text-2xl">
+    <ImEarth color="limegreen" />
+   
+  </div>
+</p>
+</div>
+
 
 
           <li>🌼 Handmade art and illustration</li>

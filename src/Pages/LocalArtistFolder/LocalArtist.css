@@ -307,3 +307,67 @@
 .backToTopBtn:hover .tooltip {
   opacity: 1;
 }
+/* Animated Traditional Style ↔ Optional */
+/* Container */
+.traditionalSwapBlock {
+  width: 20rem;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: .5rem;
+  text-align: center;
+  font-family: "Sansita-Regular", sans-serif;
+  border: 1px solid  rgba(46, 90, 44, 0.63); /* Forest Service Green */
+}
+
+/* Quotes */
+ 
+
+/* Animated word box */
+.traditionalWord {
+  position: relative;
+  display: inline-block;
+  width: 20rem;
+  padding: 2px 8px;
+  border-radius: 8px;
+  background: rgba(63, 46, 36, 0.6);
+  border: 1px solid rgba(46, 90, 44, 0.63);
+  box-shadow: 0px 0px 5px #adff2fbf;
+  color: #F9EAAE;
+  white-space: nowrap;
+  margin: 0 auto;
+}
+
+/* The animated text */
+.traditionalWordVapor::after {
+  content: "Traditional Style";
+  animation: hippieSwap 10s infinite ease-in-out;
+}
+
+/* Swap animation */
+@keyframes hippieSwap {
+  0%, 40% {
+    content: "Traditional Style";
+    opacity: 1;
+    transform: scale(1);
+  }
+  45% {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+  50%, 90% {
+    content: "Optional";
+    opacity: 1;
+    transform: scale(1);
+  }
+  95% {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+  100% {
+    content: "Traditional Style";
+    opacity: 1;
+    transform: scale(1);
+  }
+}
