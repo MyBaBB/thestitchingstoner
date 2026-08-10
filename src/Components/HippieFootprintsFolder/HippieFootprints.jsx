@@ -183,9 +183,9 @@ export default function HippieFootprints() {
     bottom: "20px",
     left: "20px",
     zIndex: 10000,
-  
+    padding: "5px 5px",
     background: "rgba(32, 20, 12, 0.55)",
-   
+    borderRadius: "8px",
     fontFamily: "'Courier New', monospace",
     color: "#fdf6e3",
   }}
@@ -194,7 +194,7 @@ export default function HippieFootprints() {
     style={{
       display: "flex",
       alignItems: "center",
-      gap: "10px",
+   
       cursor: "pointer",
     }}
     onClick={toggleMusic}
@@ -214,7 +214,7 @@ export default function HippieFootprints() {
         display: "flex",
         alignItems: "center",
         justifyContent: "center",
-        marginLeft: "7px",
+       
         fontSize: "18px",
         paddingRight: "3px",
         paddingTop: "3px",
@@ -230,7 +230,7 @@ export default function HippieFootprints() {
         textShadow: "0 0 4px rgba(255,255,255,0.4)",
       }}
     >
-      {musicOn ? "Groovin’" : ""}
+      {musicOn ? " Groovin’ " : ""}
     </span>
   </div>
 
