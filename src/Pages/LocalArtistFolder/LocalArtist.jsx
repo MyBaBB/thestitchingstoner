@@ -116,12 +116,12 @@ const LocalArtistFolder = () => {
     onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
   >
     <GiOldWagon size={50} />
-    <span className="tooltip">Back to Top</span>
+    <span className="tooltip hidden sm:block ">Back to Top</span>
   </button>
 
   
 </footer>
-     <div className="absolute bottom-0 z-50"></div><HippieFootprints />
+     <div className="absolute bottom-0 z-50 "></div><HippieFootprints />
     </div>
   );
 };
