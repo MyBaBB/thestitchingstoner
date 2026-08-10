@@ -6,7 +6,7 @@
   background-position: center -10rem; /* moves image UP by 15rem */
   background-repeat: no-repeat; /* prevents tiling */
   overflow: hidden;
-  background-color: #8E8E8E;
+  background-color: #8e8e8e;
 }
 
 /* Floating Objects */
@@ -154,7 +154,7 @@
   border: 1px solid rgba(46, 90, 44, 0.63); /* Forest Service Green */
   border-radius: 12px;
   box-shadow: 0px 0px 5px 0px #adff2fbf;
-  padding: 12px;
+  padding: 4px;
 }
 
 /* base: up to 400px */
@@ -218,28 +218,156 @@
   border-radius: 8px;
   padding: 0px 2px 0px 2px;
   box-shadow: 0px 0px 5px 0px #adff2fbf;
-  background-color: rgba(51, 35, 25, 0.85) ;
-  
+  background-color: rgba(51, 35, 25, 0.85);
 }
- .hrNoZone {
+.hrNoZone {
   border: 1px solid rgba(46, 90, 44, 0.63); /* Forest Service Green */
   border-radius: 8px;
   width: 4%;
   box-shadow: 0px 0px 5px 0px #adff2fbf;
-  background-color: rgba(51, 35, 25, 0.85) ;
+  background-color: rgba(51, 35, 25, 0.85);
   padding: 2px;
   margin: auto;
   margin-bottom: 15px;
   margin-top: 15px;
- }
- .hrNoZoneTop {
+}
+.hrNoZoneTop {
   border: 1px solid rgba(46, 90, 44, 0.63); /* Forest Service Green */
   border-radius: 8px;
   width: 4%;
   box-shadow: 0px 0px 5px 0px #adff2fbf;
-  background-color: rgba(51, 35, 25, 0.85) ;
+  background-color: rgba(51, 35, 25, 0.85);
   padding: 2px;
   margin: auto;
   margin-bottom: 45px;
   margin-top: 15px;
- }
+}
+/* HIPPIE VAN SLIDE-IN */
+.tbCamper {
+  display: inline-block;
+  animation: hippieVanSlide 4.2s ease-out forwards;
+  transform-origin: center;
+}
+
+/* Keyframes: slow slide + tiny bounce + mellow wiggle */
+@keyframes hippieVanSlide {
+  0% {
+    opacity: 0;
+    transform: translateX(-400px) rotate(-8deg) scale(0.9);
+    filter: blur(3px);
+  }
+  40% {
+    opacity: 1;
+    transform: translateX(10px) rotate(3deg) scale(1.05);
+    filter: blur(0px);
+  }
+  70% {
+    transform: translateX(0px) rotate(-2deg) scale(1);
+  }
+  100% {
+    transform: translateX(0px) rotate(0deg);
+  }
+}
+/* BACK TO TOP BUTTON */
+.backToTopBtn {
+  position: relative;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 6px;
+  border-radius: 12px;
+  color: inherit;
+  transition: transform 0.3s ease;
+}
+
+.backToTopBtn:hover {
+  transform: scale(1.1) rotate(-2deg);
+}
+
+/* Tooltip */
+.backToTopBtn .tooltip {
+  position: absolute;
+  bottom: 3.4rem;
+  left: 50%;
+  transform: translateX(-50%);
+  background: rgba(63, 46, 36, 0.85);
+  border: 1px solid rgba(46, 90, 44, 0.63); /* Forest Service Green */
+  padding: 4px 8px;
+  border-radius: 8px;
+  box-shadow: 0px 0px 5px 0px #adff2fbf;
+  color: #ade0f8;
+  font-family: "Sansita-Regular", sans-serif;
+  font-size: 1rem;
+  white-space: nowrap;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+}
+
+.backToTopBtn:hover .tooltip {
+  opacity: 1;
+}
+/* Animated Traditional Style ↔ Optional */
+/* Container */
+.traditionalSwapBlock {
+  width: 20rem;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: .5rem;
+  text-align: center;
+  font-family: "Sansita-Regular", sans-serif;
+  border: 1px solid  rgba(46, 90, 44, 0.63); /* Forest Service Green */
+}
+
+/* Quotes */
+ 
+
+/* Animated word box */
+.traditionalWord {
+  position: relative;
+  display: inline-block;
+  width: 20rem;
+  padding: 2px 8px;
+  border-radius: 8px;
+  background: rgba(63, 46, 36, 0.6);
+  border: 1px solid rgba(46, 90, 44, 0.63);
+  box-shadow: 0px 0px 5px #adff2fbf;
+  color: #F9EAAE;
+  white-space: nowrap;
+  margin: 0 auto;
+}
+
+/* The animated text */
+.traditionalWordVapor::after {
+  content: "Traditional Style";
+  animation: hippieSwap 10s infinite ease-in-out;
+}
+
+/* Swap animation */
+@keyframes hippieSwap {
+  0%, 40% {
+    content: "Traditional Style";
+    opacity: 1;
+    transform: scale(1);
+  }
+  45% {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+  50%, 90% {
+    content: "Optional";
+    opacity: 1;
+    transform: scale(1);
+  }
+  95% {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+  100% {
+    content: "Traditional Style";
+    opacity: 1;
+    transform: scale(1);
+  }
+}
