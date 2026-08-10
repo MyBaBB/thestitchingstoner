@@ -12,7 +12,6 @@ import FacebookForestButton from "../../Components/ButtonsFolder/NationalForestB
 import InstagramForestButton from "../../Components/ButtonsFolder/NationalForestButton/InstagramForestButton.jsx";
 import StonerLogo from "../../Images/Logo300x300-2.webp";
 import SpecialEventButton from "../../Components/ButtonsFolder/SpecialEventButton/SpecialEventButton.jsx";
-import SimpleSpeaker from "../../Components/BackgroundMusicFolder/BackgroundMusic.jsx";
 import NotRobot from "../../Components/NotRobotFolder/NotRobot.jsx";
 
 export default function LandingPage() {
@@ -57,16 +56,16 @@ export default function LandingPage() {
   return (
     <>
       <div className="relative flex h-screen items-center justify-center bg-black">
-        <div className="backgroundMusic fixed bottom-4 left-4 z-50">
-          <SimpleSpeaker />
-        </div>
+       
 
         <span className="reverseButtonInstaller absolute left-4 top-4">
           <ReverseButton />
         </span>
 
         <main className="relative h-screen overflow-visible bg-black text-neutral-100">
-          <HippieFootprints /> {/* ← ADD THIS */}
+
+          <HippieFootprints /> 
+          
           <Weed />
           <div className="relative z-10 flex h-fit flex-col items-start justify-center text-center">
             {/* TITLE */}

@@ -1,6 +1,6 @@
 import React from "react";
 import ReverseButton from "../../Components/ButtonsFolder/ReverseButton/ReverseButton.jsx";
-import SimpleSpeaker from "../../Components/BackgroundMusicFolder/BackgroundMusic.jsx";
+ 
 import NotRobot from "../../Components/NotRobotFolder/NotRobot.jsx";
 import { Link } from "react-router-dom";
 import "./SpecialEvent.css";
@@ -63,9 +63,7 @@ export default function SpecialEventPage() {
 
         {/* Isolated badge section */}
       </div>
-      <span className="absolute bottom-8 left-4 z-50 hidden sm:block">
-        <SimpleSpeaker />
-      </span>
+      
     </>
   );
 }

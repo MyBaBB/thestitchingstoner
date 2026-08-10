@@ -2,12 +2,45 @@ import { useEffect, useRef, useState } from "react";
 import { GiFootprint, GiCorkHat } from "react-icons/gi";
 import { BsCup } from "react-icons/bs";
 import "./HippieFootprints.css";
+import bgMusic from "./bgMusic.mp3"; // ← your music file
 
 export default function HippieFootprints() {
   const startTime = useRef(null);
+  const audioRef = useRef(null);
+
   const [elapsed, setElapsed] = useState(0);
   const [puffs, setPuffs] = useState([]);
 
+  const [musicOn, setMusicOn] = useState(false);
+  const [volume, setVolume] = useState(0.5);
+
+  // Initialize audio
+  useEffect(() => {
+    audioRef.current = new Audio(bgMusic);
+    audioRef.current.loop = true;
+    audioRef.current.volume = volume;
+  }, []);
+
+  // Handle volume changes
+  useEffect(() => {
+    if (audioRef.current) {
+      audioRef.current.volume = volume;
+    }
+  }, [volume]);
+
+  // Restart animation + music when toggled ON
+  const restartEverything = () => {
+    startTime.current = performance.now();
+    setElapsed(0);
+    setPuffs([]);
+
+    if (musicOn && audioRef.current) {
+      audioRef.current.currentTime = 0;
+      audioRef.current.play();
+    }
+  };
+
+  // Animation loop
   useEffect(() => {
     let frame;
 
@@ -23,16 +56,13 @@ export default function HippieFootprints() {
   }, []);
 
   // Derived animation values
-  const step = Math.floor(elapsed / 2.5); // every 2.5s
+  const step = Math.floor(elapsed / 2.5);
   const isLeft = step % 2 === 0;
 
   const leftPx = step * 60;
   const bottomPx = 64;
 
-  // EXACT walker speed: 24px/sec
   const cupX = elapsed * 24;
-
-  // Swing frequency stays the same
   const cupSwing = elapsed * 3;
   const swingAngle = Math.sin(cupSwing) * 12;
 
@@ -49,22 +79,31 @@ export default function HippieFootprints() {
   const cupBottomPx = bottomPx + 40;
   const hatBottomPx = bottomPx + 120;
 
-  // Reset the animation every 7.5 seconds (2.5s cycle + 5s pause)
+  // Reset animation every 3 minutes
   useEffect(() => {
-    const cycleDuration = 180000; // ms
+    const cycleDuration = 180000;
 
-    const interval = setInterval(() => {
-      startTime.current = performance.now(); // reset animation clock
-      setPuffs([]); // clear smoke puffs
-    }, cycleDuration);
-
+    const interval = setInterval(() => restartEverything(), cycleDuration);
     return () => clearInterval(interval);
-  }, []);
+  }, [musicOn]);
+
+  // Toggle music
+  const toggleMusic = () => {
+    const newState = !musicOn;
+    setMusicOn(newState);
+
+    if (newState) {
+      restartEverything();
+    } else {
+      audioRef.current.pause();
+    }
+  };
 
   return (
     <>
+      {/* FOOTPRINT */}
       <GiFootprint
-        key={step} // keep this so each footprint fades separately
+        key={step}
         size={40}
         className={`footprint fade-step ${isLeft ? "left-foot" : "right-foot"}`}
         style={{
@@ -76,6 +115,7 @@ export default function HippieFootprints() {
         }}
       />
 
+      {/* CUP */}
       <BsCup
         size={30}
         className="cup"
@@ -90,6 +130,7 @@ export default function HippieFootprints() {
         }}
       />
 
+      {/* HAT */}
       <GiCorkHat
         size={50}
         className="hat"
@@ -104,6 +145,7 @@ export default function HippieFootprints() {
         }}
       />
 
+      {/* SMOKE */}
       {puffs.map((puff) => (
         <div
           key={puff.uid}
@@ -117,6 +159,46 @@ export default function HippieFootprints() {
           }}
         />
       ))}
+
+      {/* MUSIC CONTROL UI */}
+      <div
+        style={{
+          position: "fixed",
+          bottom: "20px",
+          left: "20px",
+          zIndex: 10000,
+          background: "rgba(0,0,0,0.4)",
+          padding: "10px 14px",
+          borderRadius: "10px",
+          color: "white",
+          fontFamily: "sans-serif",
+        }}
+      >
+        <label style={{ cursor: "pointer" }}>
+          <input
+            type="checkbox"
+            checked={musicOn}
+            onChange={toggleMusic}
+            style={{ marginRight: "8px" }}
+          />
+          Music
+        </label>
+
+        {musicOn && (
+          <div style={{ marginTop: "10px" }}>
+            <input
+              type="range"
+              min="0"
+              max="1"
+              step="0.01"
+              value={volume}
+              onChange={(e) => setVolume(Number(e.target.value))}
+            />
+          </div>
+        )}
+      </div>
     </>
   );
 }
+
+ 
