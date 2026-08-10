@@ -266,7 +266,7 @@
   align-items: center;
   color: white;
   pointer-events: auto;
-  opacity: .90;
+  opacity: 0.9;
   z-index: 9;
   scale: 0.65;
 }

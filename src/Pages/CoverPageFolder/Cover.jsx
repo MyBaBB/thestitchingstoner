@@ -55,111 +55,102 @@ export default function LandingPage() {
   }, []);
 
   return (
-   <>
-   
-      
-    <div className="relative flex h-screen items-center justify-center  bg-black
-                    ">
-     
-        
-   
+    <>
+      <div className="relative flex h-screen items-center justify-center bg-black">
+        <div className="backgroundMusic fixed bottom-4 left-4 z-50">
+          <SimpleSpeaker />
+        </div>
 
-      <div className="backgroundMusic fixed bottom-4 left-4 z-50">
-        <SimpleSpeaker />
-      </div>
+        <span className="reverseButtonInstaller absolute left-4 top-4">
+          <ReverseButton />
+        </span>
 
-      <span className="reverseButtonInstaller absolute left-4 top-4">
-        <ReverseButton />
-      </span>
+        <main className="relative h-screen overflow-visible bg-black text-neutral-100">
+          <HippieFootprints /> {/* ← ADD THIS */}
+          <Weed />
+          <div className="relative z-10 flex h-fit flex-col items-start justify-center text-center">
+            {/* TITLE */}
+            <h1 className="z-20 m-auto -mb-2 overflow-visible bg-clip-text font-EmilysCandy-Regular text-4xl md:text-6xl">
+              <span
+                className="stoner-cipher p-[.6rem]"
+                data-text="The Stitching Stoner"
+              >
+                The Stitching Stoner
+              </span>
+            </h1>
 
-      <main className="relative h-screen overflow-visible bg-black text-neutral-100">
-        <HippieFootprints /> {/* ← ADD THIS */}
-        <Weed />
-        <div className="relative z-10 flex h-fit flex-col items-start justify-center text-center">
-          {/* TITLE */}
-          <h1 className="z-20 m-auto -mb-2 overflow-visible bg-clip-text font-EmilysCandy-Regular text-4xl md:text-6xl">
-            <span
-              className="stoner-cipher p-[.6rem]"
-              data-text="The Stitching Stoner"
-            >
-              The Stitching Stoner
-            </span>
-          </h1>
+            {/* SMOKE-DISSOLVE TAGLINE */}
+            <p className="dreamyLanding m-auto mb-4 mt-0 max-w-md whitespace-nowrap font-Itim-Regular text-xs xs:text-xl md:text-2xl">
+              <span
+                className={`smokeText ${exiting ? "exitUpRight" : "enterCenter"}`}
+                style={{ color: rainbowColors[index % rainbowColors.length] }}
+              >
+                {messages[index]}
+              </span>
+            </p>
 
-          {/* SMOKE-DISSOLVE TAGLINE */}
-          <p className="dreamyLanding m-auto mb-4 mt-0 max-w-md whitespace-nowrap font-Itim-Regular text-xs xs:text-xl md:text-2xl">
-            <span
-              className={`smokeText ${exiting ? "exitUpRight" : "enterCenter"}`}
-              style={{ color: rainbowColors[index % rainbowColors.length] }}
-            >
-              {messages[index]}
-            </span>
-          </p>
+            {/* FEATURED IMAGE */}
+            {/* FEATURED IMAGE */}
+            <div className="mermaidImageWrapper relative m-auto mt-0">
+              <div id="image  " className="relative">
+                <HippieRefreshBubble />
+                {/* your image here */}
+              </div>
 
-          {/* FEATURED IMAGE */}
-          {/* FEATURED IMAGE */}
-          <div className="mermaidImageWrapper relative m-auto mt-0">
-            <div id="image  " className="relative">
-              <HippieRefreshBubble />
-              {/* your image here */}
+              <img
+                src={MermaidOgImage}
+                alt="Featured embroidered stoner art"
+                className="mermaidFeaturedImage relative m-auto"
+              />
+
+              <div className="specialEventInstaller">
+                <SpecialEventButton />
+              </div>
+
+              <a href="https://thestitchingstoner.square.site/the-stitching-who">
+                <span className="stonerLogo overflow-visible">
+                  <img
+                    src={StonerLogo}
+                    alt=""
+                    className="h-[120px] w-[120px] scale-75 md:scale-100"
+                  />
+                </span>
+              </a>
             </div>
 
-            <img
-              src={MermaidOgImage}
-              alt="Featured embroidered stoner art"
-              className="mermaidFeaturedImage relative m-auto"
-            />
-
-            <div className="specialEventInstaller">
-              <SpecialEventButton />
+            <p className="m-auto mt-4 max-w-lg font-Itim-Regular text-sm text-[#baf9ba] md:text-xl">
+              <span className="inline-block whitespace-nowrap">
+                <span className="inline-block scale-x-[-1]">
+                  <PiQuotesThin />
+                </span>
+                &nbsp;Peace, Creativity, and Connection
+              </span>
+              <br className="inline-block sm:hidden" />
+              <span className="inline-block whitespace-nowrap">
+                &nbsp;all Woven Together&nbsp;
+                <span className="inline-block">
+                  <PiQuotesThin />
+                </span>
+              </span>
+            </p>
+            <div className="nationalForestCollection flex w-full flex-col items-center justify-between gap-4 pr-2 xxs:flex-row xxs:pr-0">
+              <FacebookForestButton />
+              <NationalForestButton />
+              <InstagramForestButton />
             </div>
-
-            <a href="https://thestitchingstoner.square.site/the-stitching-who">
-              <span className="stonerLogo overflow-visible">
-                <img
-                  src={StonerLogo}
-                  alt=""
-                  className="h-[120px] w-[120px] scale-75 md:scale-100"
-                />
-              </span>
-            </a>
           </div>
+        </main>
 
-          <p className="m-auto mt-4 max-w-lg font-Itim-Regular text-sm text-[#baf9ba] md:text-xl">
-            <span className="inline-block whitespace-nowrap">
-              <span className="inline-block scale-x-[-1]">
-                <PiQuotesThin />
-              </span>
-              &nbsp;Peace, Creativity, and Connection
-            </span>
-            <br className="inline-block sm:hidden" />
-            <span className="inline-block whitespace-nowrap">
-              &nbsp;all Woven Together&nbsp;
-              <span className="inline-block">
-                <PiQuotesThin />
-              </span>
-            </span>
-          </p>
-          <div className="nationalForestCollection flex w-full flex-col items-center justify-between gap-4 pr-2 xxs:flex-row xxs:pr-0">
-            <FacebookForestButton />
-            <NationalForestButton />
-            <InstagramForestButton />
-          </div>
+        <div className="fixed bottom-[1.25rem] right-[1.25rem]">
+          <ContactMe />
         </div>
-      </main>
-
-      <div className="fixed bottom-[1.25rem] right-[1.25rem]">
-        <ContactMe />
       </div>
-       
-    </div>
-       <div className="not-robot2   flex-col items-center p-4 ">
-          <NotRobot />
-          <span className="mt-1 font-Itim-Regular font-bold text-white">
-            No Zone
-          </span>
-        </div>
-  
-</>
-);
+      <div className="not-robot2 flex-col items-center p-4">
+        <NotRobot />
+        <span className="mt-1 font-Itim-Regular font-bold text-white">
+          Hippie Adapter
+        </span>
+      </div>
+    </>
+  );
 }

@@ -6,7 +6,7 @@
   background-position: center -10rem; /* moves image UP by 15rem */
   background-repeat: no-repeat; /* prevents tiling */
   overflow: hidden;
-  background-color: #8E8E8E;
+  background-color: #8e8e8e;
 }
 
 /* Floating Objects */
@@ -218,28 +218,27 @@
   border-radius: 8px;
   padding: 0px 2px 0px 2px;
   box-shadow: 0px 0px 5px 0px #adff2fbf;
-  background-color: rgba(51, 35, 25, 0.85) ;
-  
+  background-color: rgba(51, 35, 25, 0.85);
 }
- .hrNoZone {
+.hrNoZone {
   border: 1px solid rgba(46, 90, 44, 0.63); /* Forest Service Green */
   border-radius: 8px;
   width: 4%;
   box-shadow: 0px 0px 5px 0px #adff2fbf;
-  background-color: rgba(51, 35, 25, 0.85) ;
+  background-color: rgba(51, 35, 25, 0.85);
   padding: 2px;
   margin: auto;
   margin-bottom: 15px;
   margin-top: 15px;
- }
- .hrNoZoneTop {
+}
+.hrNoZoneTop {
   border: 1px solid rgba(46, 90, 44, 0.63); /* Forest Service Green */
   border-radius: 8px;
   width: 4%;
   box-shadow: 0px 0px 5px 0px #adff2fbf;
-  background-color: rgba(51, 35, 25, 0.85) ;
+  background-color: rgba(51, 35, 25, 0.85);
   padding: 2px;
   margin: auto;
   margin-bottom: 45px;
   margin-top: 15px;
- }
+}
