@@ -2,7 +2,7 @@ import { useEffect, useRef, useState } from "react";
 import { GiFootprint, GiCorkHat } from "react-icons/gi";
 import { BsCup } from "react-icons/bs";
 import "./HippieFootprints.css";
-import bgMusic from "./bgMusic.mp3"; // ← your music file
+import bgMusic from "./GarciaIntro_01.mp3";
 
 export default function HippieFootprints() {
   const startTime = useRef(null);
@@ -14,13 +14,6 @@ export default function HippieFootprints() {
   const [musicOn, setMusicOn] = useState(false);
   const [volume, setVolume] = useState(0.5);
 
-  // Initialize audio
-  useEffect(() => {
-    audioRef.current = new Audio(bgMusic);
-    audioRef.current.loop = true;
-    audioRef.current.volume = volume;
-  }, []);
-
   // Handle volume changes
   useEffect(() => {
     if (audioRef.current) {
@@ -28,7 +21,7 @@ export default function HippieFootprints() {
     }
   }, [volume]);
 
-  // Restart animation + music when toggled ON
+  // Restart animation + music
   const restartEverything = () => {
     startTime.current = performance.now();
     setElapsed(0);
@@ -36,7 +29,9 @@ export default function HippieFootprints() {
 
     if (musicOn && audioRef.current) {
       audioRef.current.currentTime = 0;
-      audioRef.current.play();
+      audioRef.current.play().catch((err) => {
+        console.log("Autoplay blocked:", err);
+      });
     }
   };
 
@@ -93,12 +88,32 @@ export default function HippieFootprints() {
     setMusicOn(newState);
 
     if (newState) {
+      // Create audio ONLY when user clicks
+      if (!audioRef.current) {
+        audioRef.current = new Audio(bgMusic);
+        audioRef.current.loop = true;
+        audioRef.current.volume = volume;
+      }
+
+      audioRef.current.currentTime = 0;
+
+      audioRef.current
+        .play()
+        .catch((err) => console.log("Autoplay blocked:", err));
+
       restartEverything();
     } else {
-      audioRef.current.pause();
+      audioRef.current?.pause();
     }
   };
 
+
+
+
+
+
+
+  
   return (
     <>
       {/* FOOTPRINT */}
@@ -161,44 +176,100 @@ export default function HippieFootprints() {
       ))}
 
       {/* MUSIC CONTROL UI */}
-      <div
+      {/* MUSIC CONTROL UI */}
+<div
+  style={{
+    position: "fixed",
+    bottom: "20px",
+    left: "20px",
+    zIndex: 10000,
+  
+    background: "rgba(32, 20, 12, 0.55)",
+   
+    fontFamily: "'Courier New', monospace",
+    color: "#fdf6e3",
+  }}
+>
+  <div
+    style={{
+      display: "flex",
+      alignItems: "center",
+      gap: "10px",
+      cursor: "pointer",
+    }}
+    onClick={toggleMusic}
+  >
+    <div
+      style={{
+        width: "34px",
+        height: "34px",
+        borderRadius: "50%",
+        background: musicOn
+          ? "radial-gradient(circle, #ffdd99 0%, #ff9933 70%)"
+          : "radial-gradient(circle, #666 0%, #333 70%)",
+        boxShadow: musicOn
+          ? "0 0 12px #ffdd99"
+          : "0 0 6px rgba(0,0,0,0.4)",
+        transition: "all 0.3s ease",
+        display: "flex",
+        alignItems: "center",
+        justifyContent: "center",
+        marginLeft: "7px",
+        fontSize: "18px",
+        paddingRight: "3px",
+        paddingTop: "3px",
+      }}
+    >
+      🎵
+    </div>
+
+    <span
+      style={{
+        fontSize: "18px",
+        letterSpacing: "1px",
+        textShadow: "0 0 4px rgba(255,255,255,0.4)",
+      }}
+    >
+      {musicOn ? "Groovin’" : ""}
+    </span>
+  </div>
+
+  {musicOn && (
+    <div
+      style={{
+        marginTop: "14px",
+        display: "flex",
+        flexDirection: "column",
+        gap: "6px",
+      }}
+    >
+      <span
         style={{
-          position: "fixed",
-          bottom: "20px",
-          left: "20px",
-          zIndex: 10000,
-          background: "rgba(0,0,0,0.4)",
-          padding: "10px 14px",
-          borderRadius: "10px",
-          color: "white",
-          fontFamily: "sans-serif",
+          fontSize: "14px",
+          opacity: 0.8,
+          marginBottom: "4px",
         }}
       >
-        <label style={{ cursor: "pointer" }}>
-          <input
-            type="checkbox"
-            checked={musicOn}
-            onChange={toggleMusic}
-            style={{ marginRight: "8px" }}
-          />
-          Music
-        </label>
+        Volume
+      </span>
 
-        {musicOn && (
-          <div style={{ marginTop: "10px" }}>
-            <input
-              type="range"
-              min="0"
-              max="1"
-              step="0.01"
-              value={volume}
-              onChange={(e) => setVolume(Number(e.target.value))}
-            />
-          </div>
-        )}
-      </div>
+      <input
+        type="range"
+        min="0"
+        max="1"
+        step="0.01"
+        value={volume}
+        onChange={(e) => setVolume(Number(e.target.value))}
+        style={{
+          width: "140px",
+          accentColor: "#ffdd99",
+          filter: "drop-shadow(0 0 4px #ffdd99)",
+        }}
+      />
+    </div>
+  )}
+</div>
+
     </>
   );
 }
-
- 
