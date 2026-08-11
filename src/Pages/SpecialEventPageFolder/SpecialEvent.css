@@ -2,7 +2,7 @@
 .specialEventPage {
   min-height: 100vh;
   width: 100%;
-  padding: 3rem 1rem;
+  padding: 2rem 1rem;
   display: flex;
   justify-content: center;
   align-items: flex-start;
@@ -16,8 +16,10 @@
     linear-gradient(135deg, #1a0033, #001a1a);
 
   background-size: cover;
-  background-attachment: fixed;
+  background-attachment: scroll; /* FIXED: mobile-safe */
   animation: hippieFlow 18s ease-in-out infinite;
+
+  flex-wrap: wrap; /* FIXED: prevents overflow */
 }
 
 /* Trippy shifting background */
@@ -35,18 +37,19 @@
 
 /* Content wrapper */
 .specialEventContent {
-  max-width: 700px;
   background: rgba(0, 0, 0, 0.55);
   padding: 2rem;
   border-radius: 1rem;
   border: 2px dashed #fff;
   box-shadow: 0 0 25px rgba(255, 255, 255, 0.25);
+  max-width: 700px;
+  width: 100%;
 }
 
 /* Title */
 .specialEventTitle {
   font-family: "EmilysCandy-Regular";
-  font-size: 2.5rem;
+  font-size: 2rem;
   margin-bottom: 1.5rem;
   text-shadow: 0 0 12px #ff8bd8;
 }
@@ -54,8 +57,8 @@
 /* Paragraph */
 .specialEventParagraph {
   font-family: "Itim-Regular";
-  font-size: 1.2rem;
-  line-height: 1.7rem;
+  font-size: 1.1rem;
+  line-height: 1.6rem;
   color: #e8ffe8;
 }
 
@@ -68,35 +71,103 @@
 .highlight2 {
   color: #ff8bd8;
   font-weight: 800;
-
   border: 2px solid #ff8bd8;
   border-radius: 5px;
   padding: 0.2rem;
 }
-
+/* Responsive YouTube iframe */
+#random-yt-player iframe {
+  width: 100% !important;
+  height: auto !important;
+  aspect-ratio: 16 / 9;
+}
 /* NOT ROBOT — top right */
 .not-robot-wrapper-SpecialEvent {
-  position: fixed; /* stays pinned */
-  bottom: -1.5rem;
-  right: 0.5rem;
-  z-index: 999999; /* above everything except your specialEventInstaller */
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  position: fixed;
+  bottom: 1rem;
+  right: 1rem;
+  z-index: 999999;
   color: white;
-  transform: scale(1); /* default size */
   pointer-events: auto;
-  transform: scale(0.65);
-  /* ensures it's clickable */
+  transform: scale(0.75);
 }
 
-/* BELOW XS — shrink + tuck tighter */
-@media (max-width: 668px) {
-  .not-robot span {
-    font-size: 0.75rem; /* optional: shrink "No Zone" text */
+
+/* Default: fixed footer for large screens */
+.specialEventFooter {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  padding: 0.5rem 1rem;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  z-index: 999999;
+  pointer-events: none;
+}
+
+.footer-left,
+.footer-right {
+  pointer-events: auto;
+  display: flex;
+  align-items: center;
+  transform: scale(0.85);
+}
+.footer-left {
+  margin:auto;
+  margin-left: .5rem;
+  margin-bottom: 0.5rem;
+}
+
+/* Label under NotRobot */
+.footer-label {
+  margin-top: 0.25rem;
+  font-family: "Itim-Regular";
+  font-weight: bold;
+  color: white;
+}
+
+/* BELOW 1100px — footer becomes normal flow */
+@media (max-width: 1180px) {
+  .specialEventFooter {
+    position: static;       /* no longer fixed */
+    padding: 1rem 0;
+    margin-top: 2rem;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    pointer-events: auto;   /* allow normal interaction */
+  }
+
+  .footer-left,
+  .footer-right {
+    transform: scale(0.75); /* slightly smaller */
+  }
+
+  .footer-label {
+    font-size: 0.85rem;
   }
 }
 
-.not-robot-img {
-  filter: none !important;
+/* BELOW 600px — tighter mobile layout */
+@media (max-width: 600px) {
+  .specialEventFooter {
+    flex-direction: row;
+    padding: 0.5rem 0;
+  }
+
+  .footer-left,
+  .footer-right {
+    transform: scale(0.65);
+  }
+
+  .footer-label {
+    font-size: 0.75rem;
+  }
 }
+ 

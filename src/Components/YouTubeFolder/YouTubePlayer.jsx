@@ -3,44 +3,43 @@ import { useNavigate } from "react-router-dom";
 import { GiHemp } from "react-icons/gi";
 import { MdOutlineForest } from "react-icons/md";
 import "./YouTubePlayer.css";
+
 export default function RandomYouTubePlayer() {
   const playerRef = useRef(null);
   const navigate = useNavigate();
 
-  // Your YouTube video IDs
   const videoList = [
-       "kH5oJYh6f8w",    //Hookahville
-       "5xOZ43vdEUI",    //Roll the Dice
-       "QwzT17V82UU",    //Music 
-       "S2_u5-Nt6Tg",    //Springtime Again
-       "l668SIWPZBo",    //Octofrye
-       "nhDHQQfrZug",    //Dragonfly
-       "OLCa-mS0SCY",    //Smile and Sing
-       "3YQtEKiI124",    //Ecstasy
-       "e9ZtQsviCz0",    //Raging River
-       "r-zV_rUGku0",    //Mississippi Steamboat
-       "79pyb_83FrY",    //Another Good Man Gone
-       "y7hHyFk6xgk",    //Schwa 
-       "im0vrCjzCTQ",    //BackwoodsRose
-       "nhDHQQfrZug",    //Ohio Grown
-       "2z9aDUK7QFI",    //Loner
-     ];
+    "kH5oJYh6f8w",
+    "5xOZ43vdEUI",
+    "QwzT17V82UU",
+    "S2_u5-Nt6Tg",
+    "l668SIWPZBo",
+    "nhDHQQfrZug",
+    "OLCa-mS0SCY",
+    "3YQtEKiI124",
+    "e9ZtQsviCz0",
+    "r-zV_rUGku0",
+    "79pyb_83FrY",
+    "y7hHyFk6xgk",
+    "im0vrCjzCTQ",
+    "nhDHQQfrZug",
+    "2z9aDUK7QFI",
+  ];
 
-  // State so we can change videos
   const [currentVideo, setCurrentVideo] = useState(
     videoList[Math.floor(Math.random() * videoList.length)]
   );
 
   // Load YouTube API
   useEffect(() => {
-    const tag = document.createElement("script");
-    tag.src = "https://www.youtube.com/iframe_api";
-    document.body.appendChild(tag);
+    if (!window.YT) {
+      const tag = document.createElement("script");
+      tag.src = "https://www.youtube.com/iframe_api";
+      document.body.appendChild(tag);
+    }
 
     window.onYouTubeIframeAPIReady = () => {
       playerRef.current = new window.YT.Player("random-yt-player", {
-        height: "360",
-        width: "640",
         videoId: currentVideo,
         playerVars: {
           autoplay: 1,
@@ -59,14 +58,13 @@ export default function RandomYouTubePlayer() {
     };
   }, []);
 
-  // When currentVideo changes, load new video
+  // Change video
   useEffect(() => {
     if (playerRef.current) {
       playerRef.current.loadVideoById(currentVideo);
     }
   }, [currentVideo]);
 
-  // Pick a new random song
   const playAnother = () => {
     const next = videoList[Math.floor(Math.random() * videoList.length)];
     setCurrentVideo(next);
@@ -74,22 +72,22 @@ export default function RandomYouTubePlayer() {
 
   return (
     <div className="youtubePlayerWrapper">
-      <div id="random-yt-player"></div>
+      {/* Responsive YouTube container */}
+      <div className="yt-responsive-container">
+        <div id="random-yt-player"></div>
+      </div>
 
       {/* NEXT SONG BUTTON */}
-      <button className="spinAgainButton"
-        onClick={playAnother}
-             >
-        <span className="inline-block text-amber-200 text-xl ">
+      <button className="spinAgainButton" onClick={playAnother}>
+        <span className="inline-block text-amber-200 text-xl">
           <MdOutlineForest />
-        </span>      
-           <span className="inline-block text-amber-200 ">
-            &nbsp;&nbsp;Spin Again&nbsp;&nbsp;
-          </span>  
-        <span className="inline-block text-amber-200 text-xl ">
-             <GiHemp />
         </span>
-      
+        <span className="inline-block text-amber-200">
+          &nbsp;&nbsp;Spin Again&nbsp;&nbsp;
+        </span>
+        <span className="inline-block text-amber-200 text-xl">
+          <GiHemp />
+        </span>
       </button>
     </div>
   );

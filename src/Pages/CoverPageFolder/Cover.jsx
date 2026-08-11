@@ -57,14 +57,21 @@ export default function LandingPage() {
 
   return (
     <>
-      <div className="relative flex h-screen items-center justify-center bg-black">
-       
+      <div className="relative flex min-h-screen items-center justify-center bg-black">
+       <div className="earButtonWrapper">
+      <Link to="/specialevent">
+        <button className="earButton">
+          <LuEar />
+          <span className="earTooltip">Ekoostik Hookah</span>
+        </button>
+      </Link>
+    </div>
 
         <span className="reverseButtonInstaller absolute left-4 top-4">
           <ReverseButton />
         </span>
 
-        <main className="relative h-screen overflow-visible bg-black text-neutral-100">
+        <main className="relative min-h-screen overflow-visible bg-black text-neutral-100">
 
           <HippieFootprints /> 
           
@@ -108,14 +115,7 @@ export default function LandingPage() {
                 <SpecialEventButton />
               </div>
 
-            <div className="earButtonWrapper">
-      <Link to="/specialevent">
-        <button className="earButton">
-          <LuEar />
-          <span className="earTooltip">Ekoostik Hookah</span>
-        </button>
-      </Link>
-    </div>
+            
               
 
 

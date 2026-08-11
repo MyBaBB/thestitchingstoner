@@ -9,26 +9,17 @@ import "./SpecialEvent.css";
 export default function SpecialEventPage() {
   return (
     <>
-      <div className="min-h-screen w-screen overflow-y-auto overflow-x-hidden">
-        < HippieFootprints />
-        {/* Hippie Adapter Badge */}
-        <Link to="/localartist">
-          <div className="not-robot absolute right-8 top-8 z-50">
-            <div className="not-robot-wrapper-SpecialEvent flex flex-col items-center p-4">
-              <NotRobot />
-              <span className="mt-4 font-Itim-Regular font-bold text-white">
-                Hippie Adapter
-              </span>
-            </div>
-          </div>
-        </Link>
+      <div className="min-h-screen w-full overflow-y-auto overflow-x-hidden">
+       
+
+        
 
         <ReverseButton />
 
         {/* Main psychedelic background section */}
         <div className="specialEventPage">
-          <div className="specialEventContent">
-            <h1 className="specialEventTitle text-base xs:text-2xl xl:text-3xl">
+          <div className="specialEventContent relative flex flex-col items-center">
+            <h1 className="specialEventTitle">
               <span className="whitespace-nowrap"> 🌈 Hookahville 62 ✌🏼</span>
               <br />
               <span className="whitespace-nowrap">
@@ -64,6 +55,19 @@ export default function SpecialEventPage() {
             <YouTubePlayer />
           </div>
         </div>
+      <div className="specialEventFooter">
+  <div className="footer-left">
+    <HippieFootprints />
+  </div>
+
+  <Link to="/localartist">
+    <div className="footer-right">
+      <NotRobot />
+      <span className="footer-label">Hippie Adapter</span>
+    </div>
+  </Link>
+</div>
+
       </div>
     </>
   );
