@@ -270,7 +270,7 @@
 }
 
 /* BELOW XS — shrink + tuck tighter */
-@media (min-width: 320px) {
+@media (min-width: 300px) {
   .not-robot2 {
     display: flex;
   }

@@ -33,7 +33,7 @@
 }
 
 /* Show at sm breakpoint */
-@media (min-width: 640px) {
+@media (min-width: 250px) {
   .ContactButtonHide {
     display: block;
   }

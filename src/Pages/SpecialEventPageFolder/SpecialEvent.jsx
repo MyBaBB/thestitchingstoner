@@ -44,7 +44,7 @@ export default function SpecialEventPage() {
               and reserve your spot before the festival rush rolls in.
               <br />
               <br />
-              Peace, creativity, and connection — all woven together. 🧶✨
+               <span className="text-amber-200 ">🧶Peace, creativity, and connection — all woven together. 🐸</span>
             </p>
 
             {/* YOUTUBE PLAYER */}
