@@ -39,7 +39,7 @@ export default function SpecialEventPage() {
                 className="specialEventLink"
                 href="https://thestitchingstoner.square.site/#bottom"
               >
-                <span className="highlight2">Contact Me</span>
+                <span className="highlight2 text-sm xs:text-base whitespace-nowrap">Contact Me</span>
               </a>
               and reserve your spot before the festival rush rolls in.
               <br />
