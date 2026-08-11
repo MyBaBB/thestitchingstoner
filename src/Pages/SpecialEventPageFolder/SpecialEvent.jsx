@@ -1,6 +1,6 @@
 import React from "react";
 import ReverseButton from "../../Components/ButtonsFolder/ReverseButton/ReverseButton.jsx";
- 
+import YouTubePlayer from "../../Components/YouTubeFolder/YouTubePlayer.jsx";
 import NotRobot from "../../Components/NotRobotFolder/NotRobot.jsx";
 import { Link } from "react-router-dom";
 import "./SpecialEvent.css";
@@ -57,6 +57,15 @@ export default function SpecialEventPage() {
             </p>
             {/* <div className="notrobot-zone w-screen h-fit bg-transparent overflow-y-auto"> */}
           </div>
+
+
+         <div className="specialEventContent">
+                       {/* existing text content */}
+              <YouTubePlayer />
+         </div>
+
+
+
         </div>
 
         {/* </div> */}
