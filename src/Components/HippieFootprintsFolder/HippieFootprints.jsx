@@ -1,4 +1,8 @@
 import { useEffect, useRef, useState } from "react";
+import { useNavigate } from "react-router-dom";
+
+
+
 import { GiFootprint, GiCorkHat } from "react-icons/gi";
 import { BsCup } from "react-icons/bs";
 import "./HippieFootprints.css";
@@ -13,6 +17,8 @@ export default function HippieFootprints() {
 
   const [musicOn, setMusicOn] = useState(false);
   const [volume, setVolume] = useState(0.5);
+  const navigate = useNavigate();
+
 
   // Handle volume changes
   useEffect(() => {
@@ -94,6 +100,12 @@ export default function HippieFootprints() {
         audioRef.current.loop = true;
         audioRef.current.volume = volume;
       }
+      if (newState) {
+  // existing music logic...
+
+  navigate("/specialevent");
+}
+
 
       audioRef.current.currentTime = 0;
 
@@ -198,6 +210,7 @@ export default function HippieFootprints() {
       cursor: "pointer",
     }}
     onClick={toggleMusic}
+    
   >
     <div
       style={{
