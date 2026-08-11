@@ -277,3 +277,82 @@
     font-size: 0.75rem; /* optional: shrink "No Zone" text */
   }
 }
+/* FIXED TOP RIGHT */
+.earButtonWrapper {
+  position: fixed;
+  top: 4rem;
+  right: 4rem;
+  z-index: 9999;
+}
+
+/* BUTTON */
+.earButton {
+  position: relative;
+  padding: 0.6rem 0.8rem;
+  border-radius: 50%;
+  background: radial-gradient(
+    circle,
+    rgba(90, 62, 43, .7) 0%,      /* Forest Sign Brown */
+    rgba(46, 90, 44, .9) 70%      /* Forest Service Green */
+  );
+  box-shadow: 0 0 12px rgba(242, 209, 91, .8); /* Ranger Gold Glow */
+  color: #f2d15b; /* Forest Service Yellow */
+  font-size: 1.6rem;
+  border: none;
+  cursor: pointer;
+  transition: transform .2s ease, box-shadow .2s ease;
+}
+
+.earButton:hover {
+  transform: scale(1.08);
+  box-shadow: 0 0 18px rgba(242, 209, 91, 1);
+}
+
+/* TOOLTIP */
+.earTooltip {
+  visibility: hidden;
+  opacity: 0;
+  position: absolute;
+  bottom: -3rem;
+  right: 3rem;
+  background: #5a3e2b; /* Forest Sign Brown */
+  color: #f2d15b;      /* Forest Service Yellow */
+  padding: 4px 10px;
+  border-radius: 6px;
+  font-size: 0.75rem;
+  white-space: nowrap;
+  box-shadow: 0 0 8px rgba(242, 209, 91, .6);
+  transform-origin: top right;
+  transition: visibility .2s ease;
+}
+
+/* HOVER ANIMATION */
+.earButton:hover .earTooltip {
+  visibility: visible;
+  animation: forestFadeIn .25s ease forwards;
+}
+
+.earButton:not(:hover) .earTooltip {
+  animation: forestFadeOut .25s ease forwards;
+}
+@keyframes forestFadeIn {
+  0% {
+    opacity: 0;
+    transform: translate(10px, -10px);
+  }
+  100% {
+    opacity: 1;
+    transform: translate(0, 0);
+  }
+}
+
+@keyframes forestFadeOut {
+  0% {
+    opacity: 1;
+    transform: translate(0, 0);
+  }
+  100% {
+    opacity: 0;
+    transform: translate(10px, -10px);
+  }
+}

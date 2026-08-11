@@ -8,12 +8,14 @@ import { PiQuotesThin } from "react-icons/pi";
 import HippieFootprints from "../../Components/HippieFootprintsFolder/HippieFootprints.jsx";
 import HippieRefreshBubble from "../../Components/HippieRefreshBubble/HippieRefreshBubble.jsx";
 import NationalForestButton from "../../Components/ButtonsFolder/NationalForestButton/NationalForestButton..jsx";
+import { LuEar } from "react-icons/lu";
+
 import FacebookForestButton from "../../Components/ButtonsFolder/NationalForestButton/FaceBookForestButton.jsx";
 import InstagramForestButton from "../../Components/ButtonsFolder/NationalForestButton/InstagramForestButton.jsx";
 import StonerLogo from "../../Images/Logo300x300-2.webp";
 import SpecialEventButton from "../../Components/ButtonsFolder/SpecialEventButton/SpecialEventButton.jsx";
 import NotRobot from "../../Components/NotRobotFolder/NotRobot.jsx";
-
+import { Link } from "react-router-dom"; 
 export default function LandingPage() {
   // ROTATING DREAMY TEXT
   const messages = [
@@ -105,6 +107,20 @@ export default function LandingPage() {
               <div className="specialEventInstaller">
                 <SpecialEventButton />
               </div>
+
+            <div className="earButtonWrapper">
+      <Link to="/specialevent">
+        <button className="earButton">
+          <LuEar />
+          <span className="earTooltip">Ekoostik Hookah</span>
+        </button>
+      </Link>
+    </div>
+              
+
+
+
+
 
               <a href="https://thestitchingstoner.square.site/the-stitching-who">
                 <span className="stonerLogo overflow-visible">
