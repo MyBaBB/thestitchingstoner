@@ -49,10 +49,17 @@
 /* Title */
 .specialEventTitle {
   font-family: "EmilysCandy-Regular";
-  font-size: 2rem;
+  font-size: 1rem;
   margin-bottom: 1.5rem;
   text-shadow: 0 0 12px #ff8bd8;
 }
+
+@media (min-width: 440px) {
+  .specialEventTitle {
+    font-size: 1.5rem;
+  }
+}
+
 
 /* Paragraph */
 .specialEventParagraph {
@@ -163,7 +170,10 @@
 
   .footer-left,
   .footer-right {
-    transform: scale(0.65);
+    transform: scale(1); /* even smaller */
+  }
+  .footer-right {
+    transform: scale(0.5);
   }
 
   .footer-label {

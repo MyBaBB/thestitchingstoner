@@ -61,7 +61,7 @@ export default function SpecialEventPage() {
   </div>
 
   <Link to="/localartist">
-    <div className="footer-right">
+    <div className="footer-right flex flex-col">
       <NotRobot />
       <span className="footer-label">Hippie Adapter</span>
     </div>
