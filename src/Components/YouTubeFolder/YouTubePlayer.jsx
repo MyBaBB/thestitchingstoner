@@ -1,6 +1,8 @@
 import React, { useEffect, useRef, useState } from "react";
 import { useNavigate } from "react-router-dom";
-
+import { GiHemp } from "react-icons/gi";
+import { MdOutlineForest } from "react-icons/md";
+import "./YouTubePlayer.css";
 export default function RandomYouTubePlayer() {
   const playerRef = useRef(null);
   const navigate = useNavigate();
@@ -22,8 +24,7 @@ export default function RandomYouTubePlayer() {
        "im0vrCjzCTQ",    //BackwoodsRose
        "nhDHQQfrZug",    //Ohio Grown
        "2z9aDUK7QFI",    //Loner
-     
-  ];
+     ];
 
   // State so we can change videos
   const [currentVideo, setCurrentVideo] = useState(
@@ -76,21 +77,19 @@ export default function RandomYouTubePlayer() {
       <div id="random-yt-player"></div>
 
       {/* NEXT SONG BUTTON */}
-      <button
+      <button className="spinAgainButton"
         onClick={playAnother}
-        style={{
-          marginTop: "20px",
-          padding: "10px 20px",
-          background: "rgba(0, 0, 0, 0.5)",
-          borderRadius: "8px",
-          fontSize: "18px",
-          color: "orange",
-          cursor: "pointer",
-          fontFamily: "Comic Sans MS, Chalkboard SE, sans-serif",
-          boxShadow: "0 2px 4px rgba(0, 0, 0, 0.2)",
-        }}
-      >
-        🚐 Spin Again 🎵
+             >
+        <span className="inline-block text-amber-200 text-xl ">
+          <MdOutlineForest />
+        </span>      
+           <span className="inline-block text-amber-200 ">
+            &nbsp;&nbsp;Spin Again&nbsp;&nbsp;
+          </span>  
+        <span className="inline-block text-amber-200 text-xl ">
+             <GiHemp />
+        </span>
+      
       </button>
     </div>
   );

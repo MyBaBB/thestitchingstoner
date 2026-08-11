@@ -1,16 +1,23 @@
 import { useEffect, useRef, useState } from "react";
 import { GiFootprint, GiCorkHat } from "react-icons/gi";
 import { BsCup } from "react-icons/bs";
-import { useNavigate } from "react-router-dom";
+import { GiMushroomHouse } from "react-icons/gi";
+import { GiSuperMushroom } from "react-icons/gi";
+
+
+
 import "./HippieFootprints.css";
 
 export default function HippieFootprints() {
   const startTime = useRef(null);
   const [elapsed, setElapsed] = useState(0);
   const [puffs, setPuffs] = useState([]);
-  const [musicOn, setMusicOn] = useState(false);
+const [showWizard, setShowWizard] = useState(true);
 
-  const navigate = useNavigate();
+function toggleIcon() {
+  setShowWizard(prev => !prev);
+  restartEverything(); // keep your original function
+}
 
   // Restart animation
   const restartEverything = () => {
@@ -64,17 +71,6 @@ export default function HippieFootprints() {
     const interval = setInterval(() => restartEverything(), cycleDuration);
     return () => clearInterval(interval);
   }, []);
-
-  // Toggle music → now acts as navigation trigger
-  const toggleMusic = () => {
-    const newState = !musicOn;
-    setMusicOn(newState);
-
-    if (newState) {
-      restartEverything();
-      navigate("/specialevent");
-    }
-  };
 
   return (
     <>
@@ -137,62 +133,16 @@ export default function HippieFootprints() {
         />
       ))}
 
-      {/* MUSIC CONTROL UI */}
-      <div
-        style={{
-          position: "fixed",
-          bottom: "20px",
-          left: "20px",
-          zIndex: 10000,
-          padding: "5px 5px",
-          background: "rgba(32, 20, 12, 0.55)",
-          borderRadius: "8px",
-          fontFamily: "'Courier New', monospace",
-          color: "#fdf6e3",
-        }}
-      >
-        <div
-          style={{
-            display: "flex",
-            alignItems: "center",
-            cursor: "pointer",
-          }}
-          onClick={toggleMusic}
-        >
-          <div
-            style={{
-              width: "34px",
-              height: "34px",
-              borderRadius: "50%",
-              background: musicOn
-                ? "radial-gradient(circle, #ffdd99 0%, #ff9933 70%)"
-                : "radial-gradient(circle, #666 0%, #333 70%)",
-              boxShadow: musicOn
-                ? "0 0 12px #ffdd99"
-                : "0 0 6px rgba(0,0,0,0.4)",
-              transition: "all 0.3s ease",
-              display: "flex",
-              alignItems: "center",
-              justifyContent: "center",
-              fontSize: "18px",
-              paddingRight: "3px",
-              paddingTop: "3px",
-            }}
-          >
-            🎵
-          </div>
+      {/* RESTART BUTTON */}
+     {/* RESTART BUTTON */}
+<button
+  className="footprintWizard "
+  onClick={toggleIcon}
+>
+  {showWizard ? <GiMushroomHouse /> : <GiSuperMushroom /> }
+</button>
 
-          <span
-            style={{
-              fontSize: "18px",
-              letterSpacing: "1px",
-              textShadow: "0 0 4px rgba(255,255,255,0.4)",
-            }}
-          >
-            {musicOn ? " Groovin’ " : ""}
-          </span>
-        </div>
-      </div>
+
     </>
   );
 }
