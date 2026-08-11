@@ -2,8 +2,8 @@ import React from "react";
 import "./SpecialEventButton.css";
 
 const SpecialEventButton = () => {
-  return ( 
-    <a 
+  return (
+    <a
       href="/specialevent"
       className="special-event-btn"
       data-tool-tip="🌈 Hookahville Crochet Classes ✌🏼"

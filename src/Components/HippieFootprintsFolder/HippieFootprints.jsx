@@ -4,20 +4,18 @@ import { BsCup } from "react-icons/bs";
 import { GiMushroomHouse } from "react-icons/gi";
 import { GiSuperMushroom } from "react-icons/gi";
 
-
-
 import "./HippieFootprints.css";
 
 export default function HippieFootprints() {
   const startTime = useRef(null);
   const [elapsed, setElapsed] = useState(0);
   const [puffs, setPuffs] = useState([]);
-const [showWizard, setShowWizard] = useState(true);
+  const [showWizard, setShowWizard] = useState(true);
 
-function toggleIcon() {
-  setShowWizard(prev => !prev);
-  restartEverything(); // keep your original function
-}
+  function toggleIcon() {
+    setShowWizard((prev) => !prev);
+    restartEverything(); // keep your original function
+  }
 
   // Restart animation
   const restartEverything = () => {
@@ -134,15 +132,10 @@ function toggleIcon() {
       ))}
 
       {/* RESTART BUTTON */}
-     {/* RESTART BUTTON */}
-<button
-  className="footprintWizard "
-  onClick={toggleIcon}
->
-  {showWizard ? <GiMushroomHouse /> : <GiSuperMushroom /> }
-</button>
-
-
+      {/* RESTART BUTTON */}
+      <button className="footprintWizard" onClick={toggleIcon}>
+        {showWizard ? <GiMushroomHouse /> : <GiSuperMushroom />}
+      </button>
     </>
   );
 }

@@ -15,7 +15,7 @@ import InstagramForestButton from "../../Components/ButtonsFolder/NationalForest
 import StonerLogo from "../../Images/Logo300x300-2.webp";
 import SpecialEventButton from "../../Components/ButtonsFolder/SpecialEventButton/SpecialEventButton.jsx";
 import NotRobot from "../../Components/NotRobotFolder/NotRobot.jsx";
-import { Link } from "react-router-dom"; 
+import { Link } from "react-router-dom";
 export default function LandingPage() {
   // ROTATING DREAMY TEXT
   const messages = [
@@ -58,23 +58,22 @@ export default function LandingPage() {
   return (
     <>
       <div className="relative flex min-h-screen items-center justify-center bg-black">
-       <div className="earButtonWrapper">
-      <Link to="/specialevent">
-        <button className="earButton">
-          <LuEar />
-          <span className="earTooltip">Ekoostik Hookah</span>
-        </button>
-      </Link>
-    </div>
+        <div className="earButtonWrapper">
+          <Link to="/specialevent">
+            <button className="earButton">
+              <LuEar />
+              <span className="earTooltip">Ekoostik Hookah</span>
+            </button>
+          </Link>
+        </div>
 
         <span className="reverseButtonInstaller absolute left-4 top-4">
           <ReverseButton />
         </span>
 
         <main className="relative min-h-screen overflow-visible bg-black text-neutral-100">
+          <HippieFootprints />
 
-          <HippieFootprints /> 
-          
           <Weed />
           <div className="relative z-10 flex h-fit flex-col items-start justify-center text-center">
             {/* TITLE */}
@@ -114,13 +113,6 @@ export default function LandingPage() {
               <div className="specialEventInstaller">
                 <SpecialEventButton />
               </div>
-
-            
-              
-
-
-
-
 
               <a href="https://thestitchingstoner.square.site/the-stitching-who">
                 <span className="stonerLogo overflow-visible">

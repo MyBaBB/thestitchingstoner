@@ -10,10 +10,6 @@ export default function SpecialEventPage() {
   return (
     <>
       <div className="min-h-screen w-full overflow-y-auto overflow-x-hidden">
-       
-
-        
-
         <ReverseButton />
 
         {/* Main psychedelic background section */}
@@ -55,19 +51,18 @@ export default function SpecialEventPage() {
             <YouTubePlayer />
           </div>
         </div>
-      <div className="specialEventFooter">
-  <div className="footer-left">
-    <HippieFootprints />
-  </div>
+        <div className="specialEventFooter">
+          <div className="footer-left">
+            <HippieFootprints />
+          </div>
 
-  <Link to="/localartist">
-    <div className="footer-right flex flex-col">
-      <NotRobot />
-      <span className="footer-label">Hippie Adapter</span>
-    </div>
-  </Link>
-</div>
-
+          <Link to="/localartist">
+            <div className="footer-right flex flex-col">
+              <NotRobot />
+              <span className="footer-label">Hippie Adapter</span>
+            </div>
+          </Link>
+        </div>
       </div>
     </>
   );

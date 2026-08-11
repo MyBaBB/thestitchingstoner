@@ -315,14 +315,13 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: .5rem;
+  gap: 0.5rem;
   text-align: center;
   font-family: "Sansita-Regular", sans-serif;
-  border: 1px solid  rgba(46, 90, 44, 0.63); /* Forest Service Green */
+  border: 1px solid rgba(46, 90, 44, 0.63); /* Forest Service Green */
 }
 
 /* Quotes */
- 
 
 /* Animated word box */
 .traditionalWord {
@@ -334,7 +333,7 @@
   background: rgba(63, 46, 36, 0.6);
   border: 1px solid rgba(46, 90, 44, 0.63);
   box-shadow: 0px 0px 5px #adff2fbf;
-  color: #F9EAAE;
+  color: #f9eaae;
   white-space: nowrap;
   margin: 0 auto;
 }
@@ -347,7 +346,8 @@
 
 /* Swap animation */
 @keyframes hippieSwap {
-  0%, 40% {
+  0%,
+  40% {
     content: "Traditional Style";
     opacity: 1;
     transform: scale(1);
@@ -356,7 +356,8 @@
     opacity: 0;
     transform: scale(0.9);
   }
-  50%, 90% {
+  50%,
+  90% {
     content: "Available";
     opacity: 1;
     transform: scale(1);

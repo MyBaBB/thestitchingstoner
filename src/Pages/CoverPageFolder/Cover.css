@@ -210,9 +210,7 @@
 }
 @media (min-width: 320px) {
   .specialEventInstaller {
-    
     top: 1rem;
-  
   }
 }
 /* Show at sm breakpoint */
@@ -269,11 +267,11 @@
   opacity: 0.9;
   z-index: 9;
   scale: 0.65;
-  }
+}
 
 /* BELOW XS — shrink + tuck tighter */
 @media (min-width: 320px) {
-  .not-robot2  {
+  .not-robot2 {
     display: flex;
   }
 }
@@ -301,15 +299,17 @@
   border-radius: 50%;
   background: radial-gradient(
     circle,
-    rgba(90, 62, 43, .7) 0%,      /* Forest Sign Brown */
-    rgba(46, 90, 44, .9) 70%      /* Forest Service Green */
+    rgba(90, 62, 43, 0.7) 0%,
+    /* Forest Sign Brown */ rgba(46, 90, 44, 0.9) 70% /* Forest Service Green */
   );
-  box-shadow: 0 0 12px rgba(242, 209, 91, .8); /* Ranger Gold Glow */
+  box-shadow: 0 0 12px rgba(242, 209, 91, 0.8); /* Ranger Gold Glow */
   color: #f2d15b; /* Forest Service Yellow */
   font-size: 1.6rem;
   border: none;
   cursor: pointer;
-  transition: transform .2s ease, box-shadow .2s ease;
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
 }
 
 .earButton:hover {
@@ -325,24 +325,24 @@
   bottom: -3rem;
   right: 3rem;
   background: #5a3e2b; /* Forest Sign Brown */
-  color: #f2d15b;      /* Forest Service Yellow */
+  color: #f2d15b; /* Forest Service Yellow */
   padding: 4px 10px;
   border-radius: 6px;
   font-size: 0.75rem;
   white-space: nowrap;
-  box-shadow: 0 0 8px rgba(242, 209, 91, .6);
+  box-shadow: 0 0 8px rgba(242, 209, 91, 0.6);
   transform-origin: top right;
-  transition: visibility .2s ease;
+  transition: visibility 0.2s ease;
 }
 
 /* HOVER ANIMATION */
 .earButton:hover .earTooltip {
   visibility: visible;
-  animation: forestFadeIn .25s ease forwards;
+  animation: forestFadeIn 0.25s ease forwards;
 }
 
 .earButton:not(:hover) .earTooltip {
-  animation: forestFadeOut .25s ease forwards;
+  animation: forestFadeOut 0.25s ease forwards;
 }
 @keyframes forestFadeIn {
   0% {

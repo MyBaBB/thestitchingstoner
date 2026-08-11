@@ -27,7 +27,7 @@ export default function RandomYouTubePlayer() {
   ];
 
   const [currentVideo, setCurrentVideo] = useState(
-    videoList[Math.floor(Math.random() * videoList.length)]
+    videoList[Math.floor(Math.random() * videoList.length)],
   );
 
   // Load YouTube API
@@ -79,13 +79,13 @@ export default function RandomYouTubePlayer() {
 
       {/* NEXT SONG BUTTON */}
       <button className="spinAgainButton" onClick={playAnother}>
-        <span className="inline-block text-amber-200 text-xl">
+        <span className="inline-block text-xl text-amber-200">
           <MdOutlineForest />
         </span>
         <span className="inline-block text-amber-200">
           &nbsp;&nbsp;Spin Again&nbsp;&nbsp;
         </span>
-        <span className="inline-block text-amber-200 text-xl">
+        <span className="inline-block text-xl text-amber-200">
           <GiHemp />
         </span>
       </button>

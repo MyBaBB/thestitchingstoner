@@ -46,45 +46,40 @@ const LocalArtistFolder = () => {
         </h1> */}
 
         <article className="groovy-title relative flex flex-col items-center justify-center text-center">
-       
           <h2>
             {" "}
             <span className="inline-block scale-x-[-1] text-base xs:text-lg md:text-2xl">
-              <FaCampground color="limegreen"/>
-         </span>
+              <FaCampground color="limegreen" />
+            </span>
             <span className="inline-block whitespace-nowrap">
               &nbsp;&nbsp;Hippie&nbsp;&nbsp;
-              <span className="inline-block tbCamper text-base xs:text-lg md:text-2xl">
+              <span className="tbCamper inline-block text-base xs:text-lg md:text-2xl">
                 <TbCamper color="limegreen" />
               </span>
               &nbsp;&nbsp;Adapter&nbsp;&nbsp;
             </span>
-            <span className="inline-block text-base xs:text-lg md:text-2xl ">
-              < GiCampCookingPot  color="limegreen" />
-         </span>
+            <span className="inline-block text-base xs:text-lg md:text-2xl">
+              <GiCampCookingPot color="limegreen" />
+            </span>
           </h2>
 
           <p>Support your Local Artist</p>
         </article>
 
         <ul className="groovy-list mt-4">
-<div className="relative flex justify-center items-enter w-full">
-       <p className="traditionalSwapBlock traditionalWord">
-  <div className="quoteLeft absolute left-2 top-[50%] transform -translate-y-1/2 text-base xs:text-lg md:text-2xl scale-x-[-1]">
-    <ImEarth color="limegreen " />
+          <div className="items-enter relative flex w-full justify-center">
+            <p className="traditionalSwapBlock traditionalWord">
+              <div className="quoteLeft absolute left-2 top-[50%] -translate-y-1/2 scale-x-[-1] transform text-base xs:text-lg md:text-2xl">
+                <ImEarth color="limegreen " />
+              </div>
 
-  </div>
+              <span className="traditionalWordVapor"></span>
 
-  <span className="traditionalWordVapor"></span>
-
-  <div className="quoteRight  absolute right-2 top-[50%] transform -translate-y-1/2  text-base xs:text-lg md:text-2xl">
-    <ImEarth color="limegreen" />
-   
-  </div>
-</p>
-</div>
-
-
+              <div className="quoteRight absolute right-2 top-[50%] -translate-y-1/2 transform text-base xs:text-lg md:text-2xl">
+                <ImEarth color="limegreen" />
+              </div>
+            </p>
+          </div>
 
           <li>🌼 Handmade art and illustration</li>
           <li>📸 Real photography shot by human eyes</li>
@@ -109,19 +104,18 @@ const LocalArtistFolder = () => {
       </aside>
 
       {/* FOOTER */}
-     {/* FOOTER */}
-<footer className="badge relative m-auto mt-4 mb-4 w-fit text-amber-200 whitespace-nowrap">
-  <button
-    className="backToTopBtn"
-    onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
-  >
-    <GiOldWagon size={50} />
-    <span className="tooltip hidden sm:block ">Back to Top</span>
-  </button>
-
-  
-</footer>
-     <div className="absolute bottom-0 z-50 "></div><HippieFootprints />
+      {/* FOOTER */}
+      <footer className="badge relative m-auto mb-4 mt-4 w-fit whitespace-nowrap text-amber-200">
+        <button
+          className="backToTopBtn"
+          onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
+        >
+          <GiOldWagon size={50} />
+          <span className="tooltip hidden sm:block">Back to Top</span>
+        </button>
+      </footer>
+      <div className="absolute bottom-0 z-50"></div>
+      <HippieFootprints />
     </div>
   );
 };
