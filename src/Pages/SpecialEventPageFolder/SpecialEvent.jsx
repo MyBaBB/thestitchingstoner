@@ -29,7 +29,7 @@ export default function SpecialEventPage() {
         <div className="specialEventPage">
           <div className="specialEventContent">
             <h1 className="specialEventTitle text-base xs:text-2xl xl:text-3xl">
-              <span className="whitespace-nowrap"> 🌈 Hookaville 62 ✌🏼</span>
+              <span className="whitespace-nowrap"> 🌈 Hookahville 62 ✌🏼</span>
               <br />
               <span className="whitespace-nowrap">
                 🚐 Special Crochet Classes 🧶
@@ -41,7 +41,7 @@ export default function SpecialEventPage() {
               at
               <span className="text-bold font-Itim-Regular text-green-400">
                 {" "}
-                Hookaville 62
+                Hookahville 62
               </span>{" "}
               — a dreamy, psychedelic, high‑vibe workshop where beginners and
               experts can stitch, chill, and connect.

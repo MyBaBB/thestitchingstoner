@@ -6,7 +6,7 @@ const SpecialEventButton = () => {
     <a
       href="/specialevent"
       className="special-event-btn"
-      data-tool-tip="🌈 Hookaville Crochet Classes ✌🏼"
+      data-tool-tip="🌈 Hookahville Crochet Classes ✌🏼"
     >
       Special Event
     </a>

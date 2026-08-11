@@ -20,9 +20,9 @@ export default function LandingPage() {
   // ROTATING DREAMY TEXT
   const messages = [
     "🍄 Handmade Crochet for Elevated Minds 🧵",
-    "🧶 Hook up your Hook at Hookaville 62 🌻",
+    "🧶 Hook up your Hook at Hookahville 62 🌻",
     "💃🏻 Dreamy Crochet Lessons Available 💭 ",
-    "✌🏼 Sign up for Hookaville Lessons! 🚌",
+    "✌🏼 Sign up for Hookahville Lessons! 🚌",
     "🌈 Perfect for Beginners through Experts 🧶  ",
   ];
   const rainbowColors = [
