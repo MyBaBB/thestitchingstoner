@@ -1,14 +1,17 @@
 import React from "react";
 import ReverseButton from "../../Components/ButtonsFolder/ReverseButton/ReverseButton.jsx";
- 
+import HippieFootprints from "../../Components/HippieFootprintsFolder/HippieFootprints.jsx";
 import NotRobot from "../../Components/NotRobotFolder/NotRobot.jsx";
 import { Link } from "react-router-dom";
+import YouTubePlayer from "../../Components/YouTubeFolder/YouTubePlayer.jsx";
 import "./SpecialEvent.css";
 
 export default function SpecialEventPage() {
   return (
     <>
       <div className="min-h-screen w-screen overflow-y-auto overflow-x-hidden">
+        < HippieFootprints />
+        {/* Hippie Adapter Badge */}
         <Link to="/localartist">
           <div className="not-robot absolute right-8 top-8 z-50">
             <div className="not-robot-wrapper-SpecialEvent flex flex-col items-center p-4">
@@ -19,6 +22,7 @@ export default function SpecialEventPage() {
             </div>
           </div>
         </Link>
+
         <ReverseButton />
 
         {/* Main psychedelic background section */}
@@ -55,15 +59,12 @@ export default function SpecialEventPage() {
               <br />
               Peace, creativity, and connection — all woven together. 🧶✨
             </p>
-            {/* <div className="notrobot-zone w-screen h-fit bg-transparent overflow-y-auto"> */}
+
+            {/* YOUTUBE PLAYER */}
+            <YouTubePlayer />
           </div>
         </div>
-
-        {/* </div> */}
-
-        {/* Isolated badge section */}
       </div>
-      
     </>
   );
 }

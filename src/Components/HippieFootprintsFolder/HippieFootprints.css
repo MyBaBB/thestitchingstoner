@@ -98,3 +98,30 @@
     filter: blur(8px);
   }
 }
+
+.footprintWizard {
+  position: fixed;
+  bottom: 40px;
+  left: 20px;
+  z-index: 10000;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
+  padding-right: 1px;
+  padding-top: 0px;
+  background: radial-gradient(circle, rgba(90, 62, 43, .7) 0%, rgba(46, 90, 44, .9) 70%);
+  box-shadow: 0 0 12px rgba(242, 209, 91, .8);
+  color:aquamarine;
+  transition: all 0.3s ease;
+  font-size:28px;
+}
+.footprintWizard:hover {
+ background: radial-gradient(circle, rgba(90, 62, 43, 1) 0%, rgba(46, 90, 44, 1) 70%);
+ box-shadow: 0 0 12px rgba(242, 209, 91, 1);
+
+  cursor: pointer;
+}
