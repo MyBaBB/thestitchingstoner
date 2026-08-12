@@ -2,7 +2,6 @@ import "./Cover.css";
 import { useState, useEffect } from "react";
 import MermaidOgImage from "../../Images/8-05-FB_National_Forest-3.webp";
 import Weed from "../../Components/WeedFolder/Weed.jsx";
-import ContactMe from "../../Components/ContactMeFolder/ContactMe.jsx";
 import ReverseButton from "../../Components/ButtonsFolder/ReverseButton/ReverseButton.jsx";
 import { PiQuotesThin } from "react-icons/pi";
 import HippieFootprints from "../../Components/HippieFootprintsFolder/HippieFootprints.jsx";
@@ -15,10 +14,14 @@ import InstagramForestButton from "../../Components/ButtonsFolder/NationalForest
 import StonerLogo from "../../Images/Logo300x300-2.webp";
 import SpecialEventButton from "../../Components/ButtonsFolder/SpecialEventButton/SpecialEventButton.jsx";
 import NotRobot from "../../Components/NotRobotFolder/NotRobot.jsx";
+// import { TbNeedleThread } from "react-icons/tb";
+// import { GiYarn } from "react-icons/gi";
+
 import { Link } from "react-router-dom";
 export default function LandingPage() {
   // ROTATING DREAMY TEXT
   const messages = [
+    
     "🍄 Handmade Crochet for Elevated Minds 🧵",
     "🧶 Hook up your Hook at Hookahville 62 🌻",
     "💃🏻 Dreamy Crochet Lessons Available 💭 ",
@@ -29,7 +32,7 @@ export default function LandingPage() {
     "#FF0000", // red
     "#FF7F00", // orange
     "#FFFF00", // yellow
-    "#00FF00", // green
+    "#baf9ba", // green
     "skyblue", // blue
     "#4B0082", // indigo
     "#9400D3", // green
@@ -57,12 +60,18 @@ export default function LandingPage() {
 
   return (
     <>
-      <div className="relative flex min-h-screen items-center justify-center bg-black">
+      <div className="relative flex min-h-screen text-2xl items-center justify-center bg-black">
         <div className="earButtonWrapper">
           <Link to="/specialevent">
             <button className="earButton">
               <LuEar />
-              <span className="earTooltip">Ekoostik Hookah</span>
+              <span className="earTooltip">
+                <div className="relative     inline-block  ">
+                  E
+                </div>
+                
+                koostik Hookah
+              </span>
             </button>
           </Link>
         </div>
@@ -148,11 +157,9 @@ export default function LandingPage() {
           </div>
         </main>
 
-        <div className="fixed bottom-[1.25rem] right-[1.25rem]">
-          <ContactMe />
-        </div>
+       
       </div>
-      <div className="not-robot2 flex-col items-center p-4">
+      <div className="not-robot2 flex-col items-center p-4 ">
         <NotRobot />
         <span className="mt-1 font-Itim-Regular font-bold text-white">
           Hippie Adapter
