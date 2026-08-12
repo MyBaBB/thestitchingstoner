@@ -1,8 +1,8 @@
 import React from "react";
 import ReverseButton from "../../Components/ButtonsFolder/ReverseButton/ReverseButton.jsx";
-import HippieFootprints from "../../Components/HippieFootprintsFolder/HippieFootprints.jsx";
-import NotRobot from "../../Components/NotRobotFolder/NotRobot.jsx";
-import { Link } from "react-router-dom";
+import Footer from "../../Components/FooterFolder/Footer.jsx";
+
+
 import YouTubePlayer from "../../Components/YouTubeFolder/YouTubePlayer.jsx";
 import "./SpecialEvent.css";
 
@@ -50,18 +50,8 @@ export default function SpecialEventPage() {
             {/* YOUTUBE PLAYER */}
             <YouTubePlayer />
           </div>
-        </div>
-        <div className="specialEventFooter">
-          <div className="footer-left">
-            <HippieFootprints />
-          </div>
+           < Footer />
 
-          <Link to="/localartist">
-            <div className="footer-right flex flex-col">
-              <NotRobot />
-              <span className="footer-label">Hippie Adapter</span>
-            </div>
-          </Link>
         </div>
       </div>
     </>

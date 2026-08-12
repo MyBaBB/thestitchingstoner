@@ -4,7 +4,7 @@ import MermaidOgImage from "../../Images/8-05-FB_National_Forest-3.webp";
 import Weed from "../../Components/WeedFolder/Weed.jsx";
 import ReverseButton from "../../Components/ButtonsFolder/ReverseButton/ReverseButton.jsx";
 import { PiQuotesThin } from "react-icons/pi";
-import HippieFootprints from "../../Components/HippieFootprintsFolder/HippieFootprints.jsx";
+ 
 import HippieRefreshBubble from "../../Components/HippieRefreshBubble/HippieRefreshBubble.jsx";
 import NationalForestButton from "../../Components/ButtonsFolder/NationalForestButton/NationalForestButton..jsx";
 import { LuEar } from "react-icons/lu";
@@ -13,7 +13,7 @@ import FacebookForestButton from "../../Components/ButtonsFolder/NationalForestB
 import InstagramForestButton from "../../Components/ButtonsFolder/NationalForestButton/InstagramForestButton.jsx";
 import StonerLogo from "../../Images/Logo300x300-2.webp";
 import SpecialEventButton from "../../Components/ButtonsFolder/SpecialEventButton/SpecialEventButton.jsx";
-import NotRobot from "../../Components/NotRobotFolder/NotRobot.jsx";
+import Footer from "../../Components/FooterFolder/Footer.jsx";
 // import { TbNeedleThread } from "react-icons/tb";
 // import { GiYarn } from "react-icons/gi";
 
@@ -81,7 +81,7 @@ export default function LandingPage() {
         </span>
 
         <main className="relative min-h-screen overflow-visible bg-black text-neutral-100">
-          <HippieFootprints />
+        
 
           <Weed />
           <div className="relative z-10 flex h-fit flex-col items-start justify-center text-center">
@@ -159,12 +159,7 @@ export default function LandingPage() {
 
        
       </div>
-      <div className="not-robot2 flex-col items-center p-4 ">
-        <NotRobot />
-        <span className="mt-1 font-Itim-Regular font-bold text-white">
-          Hippie Adapter
-        </span>
-      </div>
+     < Footer />
     </>
   );
 }
