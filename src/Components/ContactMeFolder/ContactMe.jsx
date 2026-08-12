@@ -20,11 +20,11 @@ const ContactMe = () => {
             title="Rescue Button"
           >
             <div className="batSignal flex items-center justify-center">
-              <div className="absolute h-10 w-10 rounded-full bg-black/30"></div>
+              <div className="absolute h-[3.5rem] w-[3.5rem] rounded-full bg-black/30"></div>
               <img
                 src={BatSignal}
                 alt="Bat Signal"
-                className="imgBatSignal h-10 w-10"
+                className="imgBatSignal h-[3.5rem] w-[3.5rem]"
               />
             </div>
           </button>

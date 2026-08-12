@@ -20,6 +20,9 @@ const LocalArtistFolder = () => {
   return (
     <div className="local-artist-wrapper">
       {/* HEADER */}
+        <span className="absolute top-[1.2rem] scale-[118%] right-4 z-50">
+          <BatSignal />
+        </span>
       <header className="local-artist-header relative">
         {/* Home Link */}
         <a href="/" className="home-link">
@@ -81,13 +84,13 @@ const LocalArtistFolder = () => {
             </p>
           </div>
 
-          <li>🌼 Handmade art and illustration</li>
+          <li>🎨 Handmade art and illustration</li>
           <li>📸 Real photography shot by human eyes</li>
           <li>🖌️ Illustrator artwork and hand‑crafted vectors</li>
           <li>🔷 Custom SVGs drawn with intention</li>
           <li>🍄 Human produced 3D Art Graphics</li>
           <li>✨ Photoshop for the digital artist</li>
-          <li>✨ Custom Written CSS Animations</li>
+          <li>🧑🏼‍💻 Custom Written CSS Animations</li>
         </ul>
 
         <p className="groovy-title">
