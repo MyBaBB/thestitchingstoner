@@ -358,7 +358,7 @@
   }
   50%,
   90% {
-    content: "Available";
+    content: "Selected";
     opacity: 1;
     transform: scale(1);
   }
