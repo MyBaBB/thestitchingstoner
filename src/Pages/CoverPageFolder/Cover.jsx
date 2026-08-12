@@ -150,8 +150,9 @@ export default function LandingPage() {
             </div>
           </div>
         </main>
+     
       </div>
-      <Footer />
+          <div className="absolute -bottom-40 w-full bg-black"><Footer /></div>
     </>
   );
 }
