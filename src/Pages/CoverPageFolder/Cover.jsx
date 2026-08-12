@@ -4,7 +4,7 @@ import MermaidOgImage from "../../Images/8-05-FB_National_Forest-3.webp";
 import Weed from "../../Components/WeedFolder/Weed.jsx";
 import ReverseButton from "../../Components/ButtonsFolder/ReverseButton/ReverseButton.jsx";
 import { PiQuotesThin } from "react-icons/pi";
- 
+
 import HippieRefreshBubble from "../../Components/HippieRefreshBubble/HippieRefreshBubble.jsx";
 import NationalForestButton from "../../Components/ButtonsFolder/NationalForestButton/NationalForestButton..jsx";
 import { LuEar } from "react-icons/lu";
@@ -21,7 +21,6 @@ import { Link } from "react-router-dom";
 export default function LandingPage() {
   // ROTATING DREAMY TEXT
   const messages = [
-    
     "🍄 Handmade Crochet for Elevated Minds 🧵",
     "🧶 Hook up your Hook at Hookahville 62 🌻",
     "💃🏻 Dreamy Crochet Lessons Available 💭 ",
@@ -60,16 +59,13 @@ export default function LandingPage() {
 
   return (
     <>
-      <div className="relative flex min-h-screen text-2xl items-center justify-center bg-black">
+      <div className="relative flex min-h-screen items-center justify-center bg-black text-2xl">
         <div className="earButtonWrapper">
           <Link to="/specialevent">
             <button className="earButton">
               <LuEar />
               <span className="earTooltip">
-                <div className="relative     inline-block  ">
-                  E
-                </div>
-                
+                <div className="relative inline-block">E</div>
                 koostik Hookah
               </span>
             </button>
@@ -81,8 +77,6 @@ export default function LandingPage() {
         </span>
 
         <main className="relative min-h-screen overflow-visible bg-black text-neutral-100">
-        
-
           <Weed />
           <div className="relative z-10 flex h-fit flex-col items-start justify-center text-center">
             {/* TITLE */}
@@ -156,10 +150,8 @@ export default function LandingPage() {
             </div>
           </div>
         </main>
-
-       
       </div>
-     < Footer />
+      <Footer />
     </>
   );
 }

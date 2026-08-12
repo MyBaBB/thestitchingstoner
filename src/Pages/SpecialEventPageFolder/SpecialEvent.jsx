@@ -2,7 +2,6 @@ import React from "react";
 import ReverseButton from "../../Components/ButtonsFolder/ReverseButton/ReverseButton.jsx";
 import Footer from "../../Components/FooterFolder/Footer.jsx";
 
-
 import YouTubePlayer from "../../Components/YouTubeFolder/YouTubePlayer.jsx";
 import "./SpecialEvent.css";
 
@@ -39,19 +38,22 @@ export default function SpecialEventPage() {
                 className="specialEventLink"
                 href="https://thestitchingstoner.square.site/#bottom"
               >
-                <span className="highlight2 text-sm xs:text-base whitespace-nowrap">Contact Me</span>
+                <span className="highlight2 whitespace-nowrap text-sm xs:text-base">
+                  Contact Me
+                </span>
               </a>
               and reserve your spot before the festival rush rolls in.
               <br />
               <br />
-               <span className="text-amber-200 ">🧶Peace, creativity, and connection — all woven together. 🐸</span>
+              <span className="text-amber-200">
+                🧶Peace, creativity, and connection — all woven together. 🐸
+              </span>
             </p>
 
             {/* YOUTUBE PLAYER */}
             <YouTubePlayer />
           </div>
-           < Footer />
-
+          <Footer />
         </div>
       </div>
     </>

@@ -78,14 +78,17 @@ export default function RandomYouTubePlayer() {
       </div>
 
       {/* NEXT SONG BUTTON */}
-      <button className="spinAgainButton whitespace-nowrap" onClick={playAnother}>
-        <span className="inline-block text-sm xs:text-xl text-amber-200">
+      <button
+        className="spinAgainButton whitespace-nowrap"
+        onClick={playAnother}
+      >
+        <span className="inline-block text-sm text-amber-200 xs:text-xl">
           <MdOutlineForest />
         </span>
-        <span className="inline-block text-sm  xs:text-base text-amber-200 font-Itim-Regular">
+        <span className="inline-block font-Itim-Regular text-sm text-amber-200 xs:text-base">
           &nbsp;&nbsp;Spin Again&nbsp;&nbsp;
         </span>
-        <span className="inline-block text-sm  xs:text-xl text-amber-200">
+        <span className="inline-block text-sm text-amber-200 xs:text-xl">
           <GiHemp />
         </span>
       </button>
