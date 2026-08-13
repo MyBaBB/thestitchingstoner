@@ -1,6 +1,6 @@
 import "./Cover.css";
 import { useState, useEffect } from "react";
-import MermaidOgImage from "../../Images/8-05-FB_National_Forest-3.webp";
+import MermaidOgImage from "../../Images/shroom-site-version.webp";
 import Weed from "../../Components/WeedFolder/Weed.jsx";
 import ReverseButton from "../../Components/ButtonsFolder/ReverseButton/ReverseButton.jsx";
 import { PiQuotesThin } from "react-icons/pi";
@@ -80,7 +80,8 @@ export default function LandingPage() {
           <Weed />
           <div className="relative z-10 flex h-fit flex-col items-start justify-center text-center">
             {/* TITLE */}
-            <h1 className="z-20 m-auto -mb-2 overflow-visible bg-clip-text font-EmilysCandy-Regular text-4xl md:text-6xl">
+            <h1 className="z-20 m-auto -mb-2 overflow-visible bg-clip-text    
+                            font-Itim-Regular text-4xl md:text-6xl">
               <span
                 className="stoner-cipher p-[.6rem]"
                 data-text="The Stitching Stoner"
@@ -88,9 +89,10 @@ export default function LandingPage() {
                 The Stitching Stoner
               </span>
             </h1>
-
+ 
             {/* SMOKE-DISSOLVE TAGLINE */}
-            <p className="dreamyLanding m-auto mb-4 mt-0 max-w-md whitespace-nowrap font-Itim-Regular text-xs xs:text-xl md:text-2xl">
+            <p className="dreamyLanding m-auto mb-4 mt-0 max-w-md whitespace-nowrap 
+                     font-Itim-Regular text-xs xs:text-xl md:text-2xl">
               <span
                 className={`smokeText ${exiting ? "exitUpRight" : "enterCenter"}`}
                 style={{ color: rainbowColors[index % rainbowColors.length] }}
@@ -101,7 +103,12 @@ export default function LandingPage() {
 
             {/* FEATURED IMAGE */}
             {/* FEATURED IMAGE */}
-            <div className="mermaidImageWrapper relative m-auto mt-0">
+             <div className="specialEventInstaller  w-full relative">
+                <SpecialEventButton />
+              </div>
+            <div className="mermaidImageWrapper relative m-auto mt-0
+                       overflow-visible">
+
               <div id="image  " className="relative">
                 <HippieRefreshBubble />
                 {/* your image here */}
@@ -110,23 +117,21 @@ export default function LandingPage() {
               <img
                 src={MermaidOgImage}
                 alt="Featured embroidered stoner art"
-                className="mermaidFeaturedImage relative m-auto"
+                className="mermaidFeaturedImage relative m-auto border-2 border-transparent rounded-xl"
               />
-
-              <div className="specialEventInstaller">
-                <SpecialEventButton />
-              </div>
+             
+             
 
               <a href="https://thestitchingstoner.square.site/the-stitching-who">
-                <span className="stonerLogo overflow-visible">
+                <div className="stonerLogo overflow-visible">
                   <img
                     src={StonerLogo}
                     alt=""
                     className="h-[120px] w-[120px] scale-75 md:scale-100"
                   />
-                </span>
+                </div>
               </a>
-            </div>
+             </div>
 
             <p className="m-auto mt-4 max-w-lg font-Itim-Regular text-sm text-[#baf9ba] md:text-xl">
               <span className="inline-block whitespace-nowrap">

@@ -24,6 +24,7 @@ export default function RandomYouTubePlayer() {
     "im0vrCjzCTQ",
     "nhDHQQfrZug",
     "2z9aDUK7QFI",
+    "wSqYybyib-A",
   ];
 
   const [currentVideo, setCurrentVideo] = useState(
