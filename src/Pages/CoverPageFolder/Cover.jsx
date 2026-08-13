@@ -103,7 +103,7 @@ export default function LandingPage() {
 
             {/* FEATURED IMAGE */}
             {/* FEATURED IMAGE */}
-             <div className="specialEventInstaller  w-full relative">
+             <div className="specialEventInstaller  w-full relative -mb-12">
                 <SpecialEventButton />
               </div>
             <div className="mermaidImageWrapper relative m-auto mt-0
