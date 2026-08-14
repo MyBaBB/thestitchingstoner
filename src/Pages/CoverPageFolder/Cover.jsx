@@ -5,10 +5,9 @@ import Weed from "../../Components/WeedFolder/Weed.jsx";
 import ReverseButton from "../../Components/ButtonsFolder/ReverseButton/ReverseButton.jsx";
 import { PiQuotesThin } from "react-icons/pi";
 
-import HippieRefreshBubble from "../../Components/HippieRefreshBubble/HippieRefreshBubble.jsx";
 import NationalForestButton from "../../Components/ButtonsFolder/NationalForestButton/NationalForestButton..jsx";
-import { LuEar } from "react-icons/lu";
 
+import EkoostikEar from "../../Components/ButtonsFolder/EkoostikEarFolder/EkoostikEar.jsx";
 import FacebookForestButton from "../../Components/ButtonsFolder/NationalForestButton/FaceBookForestButton.jsx";
 import InstagramForestButton from "../../Components/ButtonsFolder/NationalForestButton/InstagramForestButton.jsx";
 import StonerLogo from "../../Images/Logo300x300-2.webp";
@@ -17,7 +16,7 @@ import Footer from "../../Components/FooterFolder/Footer.jsx";
 // import { TbNeedleThread } from "react-icons/tb";
 // import { GiYarn } from "react-icons/gi";
 
-import { Link } from "react-router-dom";
+ 
 export default function LandingPage() {
   // ROTATING DREAMY TEXT
   const messages = [
@@ -60,18 +59,8 @@ export default function LandingPage() {
   return (
     <>
       <div className="relative flex min-h-screen items-center justify-center bg-black text-2xl  ">
-        <div className="earButtonWrapper">
-          <Link to="/specialevent">
-            <button className="earButton">
-              <LuEar />
-              <span className="earTooltip">
-                <div className="relative inline-block">E</div>
-                koostik Hookah
-              </span>
-            </button>
-          </Link>
-        </div>
-
+        
+          < EkoostikEar />
 
 
 
@@ -108,10 +97,7 @@ export default function LandingPage() {
               <SpecialEventButton />
             </div>
             <div className="mermaidImageWrapper relative flex m-auto overflow-visible">
-              <div id="image  " className="relative">
-                <HippieRefreshBubble />
-                {/* your image here */}
-              </div>
+              
 
               <img
                 src={MermaidOgImage}
