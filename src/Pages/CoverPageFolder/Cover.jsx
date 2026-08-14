@@ -4,13 +4,13 @@ import MermaidOgImage from "../../Images/shroom-site-version.webp";
 import Weed from "../../Components/WeedFolder/Weed.jsx";
 import ReverseButton from "../../Components/ButtonsFolder/ReverseButton/ReverseButton.jsx";
 import { PiQuotesThin } from "react-icons/pi";
-
+import StonerLogo from "../../Components/StonerLogoFolder/StonerLogo.jsx";
 import NationalForestButton from "../../Components/ButtonsFolder/NationalForestButton/NationalForestButton..jsx";
 
 import EkoostikEar from "../../Components/ButtonsFolder/EkoostikEarFolder/EkoostikEar.jsx";
 import FacebookForestButton from "../../Components/ButtonsFolder/NationalForestButton/FaceBookForestButton.jsx";
 import InstagramForestButton from "../../Components/ButtonsFolder/NationalForestButton/InstagramForestButton.jsx";
-import StonerLogo from "../../Images/Logo300x300-2.webp";
+
 import SpecialEventButton from "../../Components/ButtonsFolder/SpecialEventButton/SpecialEventButton.jsx";
 import Footer from "../../Components/FooterFolder/Footer.jsx";
 // import { TbNeedleThread } from "react-icons/tb";
@@ -93,7 +93,7 @@ export default function LandingPage() {
 
             {/* FEATURED IMAGE */}
             {/* FEATURED IMAGE */}
-            <div className="specialEventInstaller relative   w-full">
+            <div className="specialEventInstaller relative w-full">
               <SpecialEventButton />
             </div>
             <div className="mermaidImageWrapper relative flex m-auto overflow-visible">
@@ -104,16 +104,7 @@ export default function LandingPage() {
                 alt="Featured embroidered stoner art"
                 className="mermaidFeaturedImage relative flex m-auto rounded-xl border-2 border-transparent"
               />
-
-              <a href="https://thestitchingstoner.square.site/the-stitching-who">
-                <div className="stonerLogo overflow-visible">
-                  <img
-                    src={StonerLogo}
-                    alt=""
-                    className="h-[120px] w-[120px] scale-75 md:scale-100"
-                  />
-                </div>
-              </a>
+             < StonerLogo />
             </div>
 
             <p className="m-auto mt-4 max-w-lg font-Itim-Regular text-sm text-[#baf9ba] md:text-xl">
@@ -139,7 +130,7 @@ export default function LandingPage() {
           </div>
         </main>
       </div>
-    <div className="absolute -bottom-40 w-full bg-black">
+      <div className="absolute -bottom-40 w-full bg-black">
         <Footer />
       </div>  
     </>

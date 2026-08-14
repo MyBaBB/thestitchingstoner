@@ -1,0 +1,108 @@
+
+
+
+
+.stonerLogoTooltip::before {
+  content: attr(data-tooltip);
+  position: absolute;
+  top: -5.2rem;   
+  right: -1.5rem;         
+  transform: translateY(10px) scale(0);
+  transform-origin: bottom center;
+  rotate: -8deg;
+  background: radial-gradient(#6b4f3f, #3e2c25);
+  color: #fbf39a;
+  border: 1px solid #d9c7a3;
+  border-radius: 10px;
+  padding: 0.35rem 1rem;
+  font-family: "Itim-Regular";
+  font-size: 0.9rem;
+  white-space: nowrap;
+  opacity: 0;
+  transition: 0.25s ease-in-out;
+  z-index: 999;
+}
+
+/* ============================
+   DOWN-POINTING ARROW
+   ============================ */
+.stonerLogoTooltip::after {
+  content: "";
+  rotate: -8deg;
+  position: absolute;
+  top: -2.35rem;   
+  right: 3rem;   
+  width: 18px;
+  height: 12px;
+  background-color: #d9c7a3;
+  clip-path: polygon(50% 100%, 0 0, 100% 0);
+  opacity: 0;
+  transform: translateY(10px) scale(0);
+  transform-origin: bottom center;
+  transition: 0.25s ease-in-out;
+  z-index: 998;
+}
+
+
+.stonerLogoTooltip:hover::before,
+.stonerLogoTooltip:hover::after {
+  opacity: 1;
+  transform: translateY(0) scale(1);
+}
+
+/* ============================
+   MOBILE: HIDE TOOLTIP
+   ============================ */
+@media (max-width: 685px) {
+  .stonerLogoTooltip::before,
+  .stonerLogoTooltip::after {
+    display: none;
+  }
+}
+.stonerLogo {
+  position: absolute;
+  display: none; /* ← FIX */
+  transform: rotate(8deg);
+  bottom: -0.95rem;
+  right: -0.75rem;
+  z-index: 9999; /* ← IMPORTANT */
+}
+.stonerLogo:hover {
+  opacity: 1;
+  scale: 0.975;
+  transition:
+    opacity 0.5s ease,
+    scale 0.5s ease;
+}
+@media (min-width: 640px) {
+  .stonerLogo,
+  .reverseButtonInstaller {
+    display: flex;
+  }
+}
+
+@media screen and (orientation: landscape) and (max-width: 950px) and (max-height: 490px) {
+  .stonerLogo {
+    display: none !important;
+  }
+}
+/* STONER LOGO IMAGE */
+.stonerLogo img {
+  height: 120px;
+  width: 120px;
+  transform: scale(0.75);
+  transform-origin: center;
+}
+
+/* md:scale-100 */
+@media (min-width: 768px) {
+  .stonerLogo img {
+    transform: scale(1);
+    overflow: visible !important;
+  }
+  .stonerLogo {
+    bottom: -2rem;
+    right: -3.75rem;
+  }
+ 
+}
