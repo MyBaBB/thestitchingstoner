@@ -12,9 +12,9 @@ const FacebookForestButton = () => {
         rel="noopener noreferrer"
         className="nationalForest_FB_Wrapper mt-8 inline-block px-4 py-2"
       >
-        <div className="flex items-center justify-center gap-4 px-1">
-          <span className="inline-block text-[skyblue]">
-            <FaFacebookF size={22} />
+        <div className="flex items-center justify-center gap-4 px-1 bg-transparent">
+          <span className="inline-block text-[skyblue] bg-transparent">
+            <FaFacebookF size={21} />
           </span>
         </div>
       </a>

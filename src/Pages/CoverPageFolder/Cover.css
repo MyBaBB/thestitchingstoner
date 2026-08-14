@@ -193,21 +193,7 @@
 }
 
 /* STONER LOGO WRAPPER */
-.stonerLogo {
-  position: absolute;
-  display: none; /* ← FIX */
-  transform: rotate(8deg);
-  bottom: -0.95rem;
-  right: -0.75rem;
-  z-index: 9999; /* ← IMPORTANT */
-}
-.stonerLogo:hover {
-  opacity: 0.7;
-  scale: 0.975;
-  transition:
-    opacity 0.5s ease,
-    scale 0.5s ease;
-}
+
 
 .specialEventInstaller {
   position: relative;
@@ -222,10 +208,7 @@
 
 /* Show at sm breakpoint */
 @media (min-width: 640px) {
-  .stonerLogo,
-  .reverseButtonInstaller {
-    display: flex;
-  }
+   
 }
 @media (min-width: 240px) {
   .specialEventInstaller {
@@ -235,30 +218,16 @@
 
 /* Hide in landscape */
 @media screen and (orientation: landscape) and (max-width: 950px) and (max-height: 490px) {
-  .stonerLogo,
+  
   .reverseButtonInstaller {
     display: none !important;
   }
 }
 
-/* STONER LOGO IMAGE */
-.stonerLogo img {
-  height: 120px;
-  width: 120px;
-  transform: scale(0.75);
-  transform-origin: center;
-}
+
 
 /* md:scale-100 */
 @media (min-width: 768px) {
-  .stonerLogo img {
-    transform: scale(1);
-    overflow: visible !important;
-  }
-  .stonerLogo {
-    bottom: -2rem;
-    right: -3.75rem;
-  }
   .reverseButtonInstaller {
     transform: scale(1);
   }

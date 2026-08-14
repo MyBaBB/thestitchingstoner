@@ -14,9 +14,12 @@ const Footer = () => {
         </div>
 
         <Link to="/localartist">
-          <div className="footer-right flex flex-col">
+          <div className="footer-right footer-right_Tooltip flex flex-col opacity-80"
+          data-tool-tip=" 🌈 This Website use Real Art 🎨 ">
             <NotRobot />
-            <span className="footer-label">Hippie Adapter</span>
+            <span className="footer-label text-xl"
+                 
+              >Hippie Style</span>
           </div>
         </Link>
       </div>
