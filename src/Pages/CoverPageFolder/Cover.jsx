@@ -101,10 +101,10 @@ export default function LandingPage() {
 
             {/* FEATURED IMAGE */}
             {/* FEATURED IMAGE */}
-            <div className="specialEventInstaller relative -mb-12 w-full">
+            <div className="specialEventInstaller relative   w-full">
               <SpecialEventButton />
             </div>
-            <div className="mermaidImageWrapper relative m-auto mt-0 overflow-visible">
+            <div className="mermaidImageWrapper relative flex m-auto overflow-visible">
               <div id="image  " className="relative">
                 <HippieRefreshBubble />
                 {/* your image here */}

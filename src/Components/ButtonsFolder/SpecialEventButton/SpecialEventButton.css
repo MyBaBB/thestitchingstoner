@@ -1,31 +1,29 @@
+
+
 .special-event-btn {
+  position: relative;
+  margin-top: 0.5rem;  
   padding: 0.3rem 0.6rem;
   font-size: 1rem;
-  font-weight: 500;
-
+  font-weight: 400;
   color: white;
-  background: #e370a8; /* your brand pink */
+  background: #e370a8;
   border-radius: 14px;
   text-decoration: none;
   z-index: 9;
   white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
+  overflow: visible; /* allow tooltip */
   border: 2px dashed wheat;
-  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
-  /* Outer patch border */
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
   box-shadow:
     0 0 0 3px #191616,
-    /* thick outer border */ 0 0 0 4px #653b3b; /* second border layer */
-  /* Slight fabric texture */
+    0 0 0 4px #653b3b;
   background-image: linear-gradient(
     135deg,
     rgba(255, 255, 255, 0.08) 0%,
     rgba(0, 0, 0, 0.08) 100%
   );
-  transition:
-    transform 0.2s ease,
-    box-shadow 0.2s ease;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
 .special-event-btn:hover {
@@ -43,6 +41,7 @@
 }
 
 /* Tooltip bubble */
+/* Tooltip bubble */
 .special-event-btn::before {
   content: attr(data-tool-tip);
   position: absolute;
@@ -50,11 +49,13 @@
   left: 50%;
   transform: translateX(-50%) scale(var(--scale));
   transform-origin: top center;
-  background: radial-gradient(#1e4571, #1d8164);
-  color: white;
-  padding: 0.35rem 1rem;
+
+  background: radial-gradient(#6b4f3f, #3e2c25); /* earthy gradient */
+  color: #fbf39a; /* soft cream text */
+  border: 1px solid #d9c7a3; /* warm canvas border */
+      
   border-radius: 10px;
-  border: 1px solid #259150;
+  padding: 0.35rem 1rem;
   font-family: "Itim-Regular";
   font-size: 0.9rem;
   white-space: nowrap;
@@ -67,15 +68,26 @@
 .special-event-btn::after {
   content: "";
   position: absolute;
-  top: 2.5rem;
+  top: 2.7rem;
   left: 50%;
   transform: translateX(-50%) scale(var(--scale));
   transform-origin: bottom center;
   width: 18px;
   height: 10px;
-  background-color: #dfebe4;
+  
+  background-color: #d9c7a3; /* matches border */
+  
   clip-path: polygon(50% 0, 100% 100%, 0 100%);
   z-index: 998;
   transition: 0.25s ease-in-out;
   --scale: 0;
+}
+@media screen and  ( max-width: 685px) {
+  .special-event-btn::before,
+  .special-event-btn::after {
+        display: none;
+  }
+
+
+
 }
