@@ -16,7 +16,7 @@ const Footer = () => {
         <Link to="/localartist">
           <div className="footer-right flex flex-col">
             <NotRobot />
-            <span className="footer-label">Hippie Adapter</span>
+            <span className="footer-label">Hippie Style</span>
           </div>
         </Link>
       </div>

@@ -57,7 +57,7 @@ const LocalArtistFolder = () => {
               <span className="tbCamper inline-block text-base xs:text-lg md:text-2xl">
                 <TbCamper color="limegreen" />
               </span>
-              &nbsp;&nbsp;Adapter&nbsp;&nbsp;
+              &nbsp;&nbsp;Style&nbsp;&nbsp;
             </span>
             <span className="inline-block text-base xs:text-lg md:text-2xl">
               <GiCampCookingPot color="limegreen" />
