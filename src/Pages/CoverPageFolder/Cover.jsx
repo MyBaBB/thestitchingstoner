@@ -59,7 +59,7 @@ export default function LandingPage() {
 
   return (
     <>
-      <div className="relative flex min-h-screen items-center justify-center bg-black text-2xl">
+      <div className="relative flex min-h-screen items-center justify-center bg-black text-2xl  ">
         <div className="earButtonWrapper">
           <Link to="/specialevent">
             <button className="earButton">
@@ -113,7 +113,7 @@ export default function LandingPage() {
               <img
                 src={MermaidOgImage}
                 alt="Featured embroidered stoner art"
-                className="mermaidFeaturedImage relative m-auto rounded-xl border-2 border-transparent"
+                className="mermaidFeaturedImage relative flex m-auto rounded-xl border-2 border-transparent"
               />
 
               <a href="https://thestitchingstoner.square.site/the-stitching-who">
@@ -150,9 +150,9 @@ export default function LandingPage() {
           </div>
         </main>
       </div>
-      <div className="absolute -bottom-40 w-full bg-black">
+    <div className="absolute -bottom-40 w-full bg-black">
         <Footer />
-      </div>
+      </div>  
     </>
   );
 }
