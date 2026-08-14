@@ -14,7 +14,7 @@ const FacebookForestButton = () => {
       >
         <div className="flex items-center justify-center gap-4 px-1 bg-transparent">
           <span className="inline-block text-[skyblue] bg-transparent">
-            <FaFacebookF size={22} />
+            <FaFacebookF size={21} />
           </span>
         </div>
       </a>

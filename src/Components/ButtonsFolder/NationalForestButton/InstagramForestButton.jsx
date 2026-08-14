@@ -14,7 +14,7 @@ const InstagramForestButton = () => {
       >
         <div className="flex items-center justify-center gap-4 px-1 bg-transparent">
           <span className="inline-block text-[hotpink] bg-transparent">
-            <FaInstagram size={22} />
+            <FaInstagram size={21} />
           </span>
         </div>
       </a>
