@@ -145,7 +145,6 @@
   border: 1px solid #404040;
   box-shadow: 0 10px 25px rgba(0, 0, 0, 0.6);
   position: relative;
- 
 }
 
 /* Actual image inside wrapper */
@@ -211,8 +210,8 @@
 }
 
 .specialEventInstaller {
-  position:relative;
-  display:flex;
+  position: relative;
+  display: flex;
   justify-content: start;
   align-items: center;
   margin-bottom: -2.51rem;

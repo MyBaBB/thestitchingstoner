@@ -20,7 +20,7 @@ const LocalArtistFolder = () => {
   return (
     <div className="local-artist-wrapper">
       {/* HEADER */}
-       
+
       <header className="local-artist-header relative">
         {/* Home Link */}
         <a href="/" className="home-link">
