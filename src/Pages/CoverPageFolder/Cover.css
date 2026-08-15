@@ -49,7 +49,7 @@
 /* Height-based shrink */
 @media (max-width: 382px) {
    
-
+  
  
   .specialEventInstaller {
     display: none;
@@ -139,13 +139,14 @@
   box-shadow: 0 10px 25px rgba(0, 0, 0, 0.6);
   position: relative;
 }
-
+   
 /* Actual image inside wrapper */
 .mermaidFeaturedImage {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  object-position: left center;
+  object-position: center;
+  
   display: block;
 }
 
@@ -155,9 +156,7 @@
     width: 100%;
     height: 312px;
   }
-  .mermaidFeaturedImage {
-    object-position: left center;
-  }
+  
 }
 
 
@@ -260,6 +259,10 @@
     display: none;
   }
 }
+
+
+
+
 /* BUTTON */
 .earButton {
   position: relative;

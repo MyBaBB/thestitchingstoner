@@ -74,7 +74,7 @@
     opacity 0.5s ease,
     scale 0.5s ease;
 }
-@media (min-width: 640px) {
+@media (min-width: 375px) {
   .stonerLogo,
   .reverseButtonInstaller {
     display: flex;

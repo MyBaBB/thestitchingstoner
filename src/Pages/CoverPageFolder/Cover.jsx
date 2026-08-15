@@ -59,7 +59,7 @@ export default function LandingPage() {
   return (
     <>
       <div className="relative flex-col  h-screen items-center justify-center text-2xl
-        border-2 border-red-500 ">
+       ">
         
           < EkoostikEar />
  
@@ -153,7 +153,7 @@ export default function LandingPage() {
     gap-4
     flex-col
     md:hidden
-    border-2 border-red-500
+     
   "
   
 >
