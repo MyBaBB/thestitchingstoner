@@ -1,6 +1,6 @@
 import "./Cover.css";
 import { useState, useEffect } from "react";
-import MermaidOgImage from "../../Images/shroom-site-version.webp";
+import MermaidOgImage from "../../Images/shroom-site-version-2.webp";
 import Weed from "../../Components/WeedFolder/Weed.jsx";
 import ReverseButton from "../../Components/ButtonsFolder/ReverseButton/ReverseButton.jsx";
 import { PiQuotesThin } from "react-icons/pi";
@@ -96,7 +96,7 @@ export default function LandingPage() {
             {/* FEATURED IMAGE */}
             {/* FEATURED IMAGE */}
            
-             <div className="mermaidImageWrapper relative flex m-auto   ">
+             <div className="mermaidImageWrapper  relative flex m-auto   ">
                 <div className="specialEventInstaller  ">
                     <SpecialEventButton />
                 </div>
@@ -134,7 +134,7 @@ export default function LandingPage() {
 <div
   className="
     nationalForestCollection
-    flex w-[50%] m-auto
+    w-[50%] m-auto
     items-center justify-between
     gap-4
     flex-col md:flex-row
