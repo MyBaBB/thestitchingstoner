@@ -15,52 +15,31 @@ import SpecialEventButton from "../../Components/ButtonsFolder/SpecialEventButto
 import Footer from "../../Components/FooterFolder/Footer.jsx";
 
 export default function LandingPage() {
-  // ROTATING DREAMY TEXT (now JSX, not plain strings)
   const messages = [
     <>
-      <span className="inline-block whitespace-nowrap">
-        🍄 Handmade
-      </span>{" "}
-        Crochet for Elevated{" "}
-      <span className="inline-block whitespace-nowrap">
-        Minds 🧵
-      </span>
+      <span className="inline-block whitespace-nowrap">🍄 Handmade</span>{" "}
+      Crochet for Elevated{" "}
+      <span className="inline-block whitespace-nowrap">Minds 🧵</span>
     </>,
     <>
-      <span className="inline-block whitespace-nowrap">
-        🧶 Hook
-      </span>{" "}
+      <span className="inline-block whitespace-nowrap">🧶 Hook</span>{" "}
       up your Hook at{" "}
-      <span className="inline-block whitespace-nowrap">
-        Hookahville 62 🌻
-      </span>
+      <span className="inline-block whitespace-nowrap">Hookahville 62 🌻</span>
     </>,
     <>
-      <span className="inline-block whitespace-nowrap">
-        💃🏻 Dreamy
-      </span>{" "}
+      <span className="inline-block whitespace-nowrap">💃🏻 Dreamy</span>{" "}
       Crochet Lessons{" "}
-      <span className="inline-block whitespace-nowrap">
-        Available 💭
-      </span>
+      <span className="inline-block whitespace-nowrap">Available 💭</span>
     </>,
     <>
-      <span className="inline-block whitespace-nowrap">
-        ✌🏼 Sign
-      </span>{" "}
+      <span className="inline-block whitespace-nowrap">✌🏼 Sign</span>{" "}
       up for Hookahville{" "}
-      <span className="inline-block whitespace-nowrap">
-        Lessons! 🚌
-      </span>
+      <span className="inline-block whitespace-nowrap">Lessons! 🚌</span>
     </>,
     <>
-      <span className="inline-block whitespace-nowrap">
-        🌈 Perfect
-      </span>{" "}
+      <span className="inline-block whitespace-nowrap">🌈 Perfect</span>{" "}
       for Beginners through{" "}
-      <span className="inline-block whitespace-nowrap">
-        Experts 🧶
-      </span>
+      <span className="inline-block whitespace-nowrap">Experts 🧶</span>
     </>,
   ];
 
@@ -92,18 +71,22 @@ export default function LandingPage() {
 
   return (
     <>
-      <div className="relative flex-col h-screen items-center justify-center text-2xl">
+      {/* FIX: use min-h-[100svh] instead of h-screen */}
+      <div className="relative flex-col min-h-[100svh] items-center justify-center text-2xl overflow-hidden">
+
         <EkoostikEar />
 
         <span className="reverseButtonInstaller">
           <ReverseButton />
         </span>
 
-        <main className="relative min-h-screen overflow-visible bg-black text-neutral-100">
+        {/* FIX: remove overflow-visible */}
+        <main className="relative min-h-[100svh] bg-black text-neutral-100 overflow-hidden">
           <Weed />
-          <div className="relative z-10 flex h-fit flex-col items-start justify-center text-center">
-            {/* TITLE */}
-            <h1 className="z-20 m-auto -mb-2 overflow-visible bg-clip-text font-Itim-Regular text-4xl md:text-6xl">
+
+          <div className="relative z-10 flex flex-col items-start justify-center text-center w-full">
+
+            <h1 className="z-20 m-auto -mb-2 bg-clip-text font-Itim-Regular text-4xl md:text-6xl">
               <span
                 className="stoner-cipher p-[.6rem]"
                 data-text="The Stitching Stoner"
@@ -112,7 +95,6 @@ export default function LandingPage() {
               </span>
             </h1>
 
-            {/* SMOKE-DISSOLVE TAGLINE */}
             <p className="dreamyLanding hidden xxs:flex m-auto mb-4 mt-0 max-w-md font-Itim-Regular text-xs xs:text-xl md:text-2xl">
               <span
                 className={`smokeText ${exiting ? "exitUpRight" : "enterCenter"}`}
@@ -122,21 +104,24 @@ export default function LandingPage() {
               </span>
             </p>
 
-            {/* FEATURED IMAGE */}
-            <div className="mermaidImageWrapper relative flex m-auto">
-              <div className="specialEventInstaller">
-                <SpecialEventButton />
-              </div>
+            {/* FIX: remove fixed height */}
+            <div className="mermaidImageWrapper relative m-auto overflow-visible">
+  <div className="specialEventInstaller">
+    <SpecialEventButton />
+  </div>
 
-              <img
-                src={MermaidOgImage}
-                alt="Featured embroidered stoner art"
-                className="mermaidFeaturedImage relative flex m-auto rounded-xl border-2 border-transparent"
-              />
-              <StonerLogo />
-            </div>
+  <img
+    src={MermaidOgImage}
+    alt="Featured embroidered stoner art"
+    className="mermaidFeaturedImage relative m-auto rounded-xl border-2 border-transparent"
+  />
 
-            {/* QUOTE */}
+  <div className="logoWrapper absolute bottom-[-3rem] right-[-3rem] overflow-visible">
+    <StonerLogo />
+  </div>
+</div>
+
+
             <p className="m-auto hidden xxs:flex mt-4 max-w-lg font-Itim-Regular text-sm text-[#baf9ba] md:text-xl">
               <span className="inline-block whitespace-nowrap">
                 <span className="inline-block scale-x-[-1]">
@@ -153,34 +138,15 @@ export default function LandingPage() {
               </span>
             </p>
 
-            {/* FOREST BUTTONS — DESKTOP */}
-            <div
-              className="
-                nationalForestCollection
-                w-full max-w-[400px]
-                m-auto
-                items-center justify-between
-                gap-4
-                flex-col md:flex-row
-                hidden md:flex
-              "
-            >
+            {/* DESKTOP BUTTONS */}
+            <div className="nationalForestCollection w-full max-w-[400px] m-auto items-center justify-between gap-4 flex-col md:flex-row hidden md:flex">
               <FacebookForestButton />
               <NationalForestButton />
               <InstagramForestButton />
             </div>
 
-            {/* FOREST BUTTONS — MOBILE */}
-            <div
-              className="
-                nationalForestCollection
-                flex w-full max-w-[400px] m-auto
-                items-center justify-between
-                gap-4
-                flex-col
-                md:hidden
-              "
-            >
+            {/* MOBILE BUTTONS */}
+            <div className="nationalForestCollection flex w-full max-w-[400px] m-auto items-center justify-between gap-4 flex-col md:hidden">
               <NationalForestButton className="order-1 md:order-2" />
               <div className="flex flex-row gap-4 order-2 md:order-1 md:flex-col">
                 <FacebookForestButton />
