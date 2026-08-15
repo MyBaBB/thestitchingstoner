@@ -77,7 +77,10 @@
 @media (min-width: 375px) {
   .stonerLogo,
   .reverseButtonInstaller {
-    display: flex;
+    position: fixed !important;
+    top: 2rem !important;
+    left: 2rem !important;
+    z-index: 999999999 !important;
   }
 }
 

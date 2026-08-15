@@ -65,7 +65,7 @@ export default function LandingPage() {
  
 
 
-        <span className="reverseButtonInstaller absolute left-4 top-4">
+        <span className="reverseButtonInstaller">
           <ReverseButton />
         </span>
 
@@ -83,13 +83,15 @@ export default function LandingPage() {
             </h1>
 
             {/* SMOKE-DISSOLVE TAGLINE */}
-            <p className="dreamyLanding m-auto mb-4 mt-0 max-w-md  
+            <p className="dreamyLanding m-auto mb-4 mt-0 max-w-md whitespace-nowrap  
                         font-Itim-Regular text-xs xs:text-xl md:text-2xl">
+              
               <span
                 className={`smokeText ${exiting ? "exitUpRight" : "enterCenter"}`}
                 style={{ color: rainbowColors[index % rainbowColors.length] }}
               >
                 {messages[index]}
+              
               </span>
             </p>
 
@@ -110,14 +112,14 @@ export default function LandingPage() {
             </div> 
 
             <p className="m-auto mt-4 max-w-lg font-Itim-Regular text-sm text-[#baf9ba] md:text-xl">
-              <span className="inline-block ">
+              <span className="inline-block  whitespace-nowrap">
                 <span className="inline-block scale-x-[-1]">
                   <PiQuotesThin />
                 </span>
                 &nbsp;Peace, Creativity, and Connection
               </span>
               <br className="inline-block sm:hidden" />
-              <span className="inline-block ">
+              <span className="inline-block whitespace-nowrap ">
                 &nbsp;all Woven Together&nbsp;
                 <span className="inline-block">
                   <PiQuotesThin />
@@ -134,7 +136,8 @@ export default function LandingPage() {
 <div
   className="
     nationalForestCollection
-    w-[50%] m-auto
+     w-full max-w-[400px]
+     m-auto
     items-center justify-between
     gap-4
     flex-col md:flex-row
