@@ -69,7 +69,7 @@ export default function LandingPage() {
           <ReverseButton />
         </span>
 
-        <main className="relative min-h-screen overflow-visible bg-black text-neutral-100">
+        <main className="relative min-h-screen overflow-hidden bg-black text-neutral-100">
           <Weed />
           <div className="relative z-10 flex h-fit flex-col items-start justify-center text-center">
             {/* TITLE */}
