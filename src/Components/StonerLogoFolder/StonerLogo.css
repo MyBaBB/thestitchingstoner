@@ -72,10 +72,10 @@
   height: 120px !important; /* ← IMPORTANT */
 }
 .stonerLogo:hover {
-  opacity: .8;
+  
   scale: 0.975;
   transition:
-    opacity 0.5s ease,
+   
     scale 0.5s ease;
 }
  
@@ -86,5 +86,5 @@
     right: 2.5rem;  
   }
 }
- 
+
  

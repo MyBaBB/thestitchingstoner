@@ -16,7 +16,11 @@ import Footer from "../../Components/FooterFolder/Footer.jsx";
 
 export default function LandingPage() {
   const messages = [
+    
+    
+    
     <>
+    
       <span className="inline-block whitespace-nowrap">🍄 Handmade</span>{" "}
       Crochet for Elevated{" "}
       <span className="inline-block whitespace-nowrap">Minds 🧵</span>
@@ -41,6 +45,8 @@ export default function LandingPage() {
       for Beginners through{" "}
       <span className="inline-block whitespace-nowrap">Experts 🧶</span>
     </>,
+
+
   ];
 
   const rainbowColors = [
@@ -95,7 +101,7 @@ export default function LandingPage() {
               </span>
             </h1>
 
-            <p className="dreamyLanding hidden xxs:flex m-auto mb-4 mt-0 max-w-md font-Itim-Regular text-xs xs:text-xl md:text-2xl">
+            <p className="dreamyLanding hidden xxs:flex m-auto mb-4 mt-0 max-w-md font-Itim-Regular whitespace-nowrap sm:whitespace-wrap text-xs xs:text-xl md:text-2xl">
               <span
                 className={`smokeText ${exiting ? "exitUpRight" : "enterCenter"}`}
                 style={{ color: rainbowColors[index % rainbowColors.length] }}
@@ -116,7 +122,7 @@ export default function LandingPage() {
     className="mermaidFeaturedImage relative m-auto rounded-xl border-2 border-transparent"
   />
 
-  <div className="logoWrapper absolute bottom-[-3rem] right-[-3rem] overflow-visible">
+  <div className="logoWrapper   bottom-[-3rem] right-[-3rem] overflow-visible">
     <StonerLogo />
   </div>
 </div>
