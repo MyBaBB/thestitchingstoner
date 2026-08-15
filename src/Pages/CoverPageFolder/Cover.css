@@ -1,5 +1,3 @@
- 
-
 /* SMOKE ANIMATION */
 .stoner-cipher {
   position: relative;
@@ -9,61 +7,26 @@
   z-index: 5;
 }
 
-/* Animated overlay text */
 .stoner-cipher::after {
   content: attr(data-text);
   position: absolute;
-  left: 0;
-  top: 0;
-  width: 100%;
+  inset: 0;
   height: 110%;
-  color: rgb(208, 69, 208) !important;
+  color: rgb(208, 69, 208);
   animation: stonerCenterOut 9.5s linear infinite;
   opacity: 1;
-  overflow: visible;
   z-index: 21;
   padding: 0.6rem;
 }
 
-/* Keyframes: center → outward → pause */
 @keyframes stonerCenterOut {
-  0% {
-    clip-path: inset(0 50% 0 50%);
-  }
-  38% {
-    clip-path: inset(0 0 0 0);
-  }
-  90% {
-    clip-path: inset(0 0 0 0);
-  }
-  100% {
-    clip-path: inset(0 50% 0 50%);
-  }
+  0% { clip-path: inset(0 50% 0 50%); }
+  38% { clip-path: inset(0 0 0 0); }
+  90% { clip-path: inset(0 0 0 0); }
+  100% { clip-path: inset(0 50% 0 50%); }
 }
 
-/* FEATURED MERMAID IMAGE (desktop default) */
-.mermaidFeaturedImage {
-  width: 945px;
-  height: 415px;
-}
-
-/* Height-based shrink */
-@media (max-width: 382px) {
-  .mermaidImageWrapper {
-    height: auto !important;
-  }
-
-  .mermaidFeaturedImage {
-    height: auto !important;
-    width: 100%;
-    object-fit: contain; /* or cover, but contain avoids white gaps */
-  }
-  .specialEventInstaller {
-    display: none;
-  }
-}
-
-/* DREAMY LANDING ANIMATION */
+/* DREAMY LANDING */
 .dreamyLanding {
   position: relative;
   opacity: 0;
@@ -74,269 +37,109 @@
 }
 
 @keyframes cloudLanding {
-  0% {
-    color: #1c2830;
-  }
-  40% {
-    opacity: 0.7;
-    transform: translateY(0px) scale(1);
-  }
-  70% {
-    opacity: 1;
-    transform: translateY(-2px) scale(1.7);
-    filter: blur(1px);
-  }
-  100% {
-    opacity: 1;
-    transform: translateY(0px) scale(1.1);
-    filter: blur(0px);
-    color: #a7f3f6;
-    z-index: 50;
-  }
+  0% { color: #1c2830; }
+  40% { opacity: 0.7; transform: translateY(0) scale(1); }
+  70% { opacity: 1; transform: translateY(-2px) scale(1.7); filter: blur(1px); }
+  100% { opacity: 1; transform: translateY(0) scale(1.1); filter: blur(0); color: #a7f3f6; }
 }
 
-/* Floating drift animation */
 @keyframes cloudFloat {
-  0% {
-    transform: translateY(0px) translateX(0px) rotate(0deg) scale(1.1);
-  }
-  25% {
-    transform: translateY(20px) translateX(0px) rotate(1deg) scale(1.1);
-  }
-  50% {
-    transform: translateY(0px) translateX(0px) rotate(-2deg) scale(1.1);
-  }
-  75% {
-    transform: translateY(0px) translateX(0px) rotate(1deg) scale(1.1);
-  }
-  100% {
-    transform: translateY(0px) translateX(0px) rotate(0deg) scale(1.1);
-  }
+  0% { transform: translateY(0) rotate(0) scale(1.1); }
+  25% { transform: translateY(20px) rotate(1deg) scale(1.1); }
+  50% { transform: translateY(0) rotate(-2deg) scale(1.1); }
+  75% { transform: translateY(0) rotate(1deg) scale(1.1); }
+  100% { transform: translateY(0) rotate(0) scale(1.1); }
 }
 
-/* SMOKE TEXT TRANSITIONS */
+/* SMOKE TEXT */
 .smokeText {
   display: inline-block;
-  transition:
-    opacity 5s ease,
-    filter 2.5s ease,
-    transform 2.5s ease;
+  transition: opacity 5s ease, filter 2.5s ease, transform 2.5s ease;
 }
 
 .enterCenter {
   opacity: 1;
-  filter: blur(0px);
+  filter: blur(0);
   transform: translate(0, 0) scale(1);
 }
 
 .exitUpRight {
   opacity: 0;
   filter: blur(12px);
-  transform: translate(0px, -180px) scale(0.7);
+  transform: translate(0, -180px) scale(0.7);
 }
 
-/* MERMAID IMAGE WRAPPER */
+/* MERMAID IMAGE WRAPPER — FIXED HEIGHT REMOVED */
 .mermaidImageWrapper {
   width: 100%;
   max-width: 800px;
-  height: 312px;
-  overflow: visible;
+  overflow: hidden;
   border-radius: 0.75rem;
   border: 1px solid #404040;
   box-shadow: 0 10px 25px rgba(0, 0, 0, 0.6);
   position: relative;
 }
 
-/* Actual image inside wrapper */
 .mermaidFeaturedImage {
   width: 100%;
-  height: 100%;
+  height: auto;
   object-fit: cover;
-  object-position: left center;
+  object-position: center;
   display: block;
 }
 
-/* Mobile adjustments */
-@media (max-width: 768px) {
-  .mermaidImageWrapper {
-    width: 100%;
-    height: 312px;
-  }
-  .mermaidFeaturedImage {
-    object-position: left center;
-  }
-}
-
-
-       /*NOTE: Extra-small mobile shift  fix is
-         remove and transform: translateX(-5rem);
-         replace with overflow: hidden  */ 
+/* XS FIX */
 @media (max-width: 382px) {
-  .mermaidFeaturedImage {
-    /* transform: translateX(-5rem); */
-    overflow: hidden !important;
-  }
+  .specialEventInstaller { display: none; }
 }
 
-
-
-/* Landscape small screens */
-@media screen and (orientation: landscape) and (max-width: 950px) and (max-height: 550px) {
+/* LANDSCAPE FIX — MERGED */
+@media screen and (orientation: landscape) and (max-height: 550px) {
   .mermaidImageWrapper {
-    width: 600px;
-    height: auto;
-    object-fit: cover;
+    max-width: 600px;
   }
 }
 
-@media screen and (orientation: landscape) and (max-width: 950px) and (max-height: 488px) {
+@media screen and (orientation: landscape) and (max-height: 480px) {
   .mermaidImageWrapper {
-    width: 400px;
-    height: auto;
-    object-fit: cover;
+    max-width: 401px;
   }
 }
 
-/* STONER LOGO WRAPPER */
+/* BUTTON WRAPPER */
+.reverseButtonInstaller {
+  position: relative;
+}
 
+/* Hidden by default */
+.logoWrapper {
+  display: none;
+}
 
- 
-
- 
-
-/* Hide in landscape */
-@media screen and (orientation: landscape) and (max-width: 950px) and (max-height: 490px) {
-  
-  .reverseButtonInstaller {
+/* Hide below 500px */
+@media screen and (max-width: 500px) {
+  .logoWrapper {
     display: none !important;
   }
 }
 
-
-
-/* md:scale-100 */
-@media (min-width: 768px) {
-  .reverseButtonInstaller {
-    transform: scale(1);
-  }
-}
-/* NOT ROBOT — top right */
-.not-robot2 {
-  position: relative;
-  display: none;
-  width: fit-content;
-  margin: 0 auto;
-  flex-direction: column;
-  align-items: center;
-  color: white;
-  pointer-events: auto;
-  opacity: 0.9;
-  z-index: 9;
-  scale: 0.65;
-}
-
-.not-robot2:hover {
-  opacity: 0.7;
-  scale: 0.625;
-  transition:
-    opacity 0.5s ease,
-    scale 0.5s ease;
-}
-
-/* BELOW XS — shrink + tuck tighter */
-@media (min-width: 300px) {
-  .not-robot2 {
-    display: flex;
-  }
-}
-@media (max-width: 668px) {
-  .not-robot2 span {
-    font-size: 0.75rem; /* optional: shrink "No Zone" text */
+/* Show between 501px and 951px */
+@media screen and (min-width: 501px) and (max-width: 951px) {
+  .logoWrapper {
+    display: block;
+    position: absolute;
+    bottom: 0;
+    right: 0;
   }
 }
 
-/* FIXED TOP RIGHT */
-.earButtonWrapper {
-  position: absolute;
-  top: 3rem;
-  right: 3rem;
-  z-index: 9999;
-}
-@media (max-width: 380px) {
-  .earButtonWrapper {
-    display: none;
+/* Show above 951px */
+@media screen and (min-width: 952px) {
+  .logoWrapper {
+    display: block;
+    position: absolute;
+    bottom: 0;
+    right: 0;
   }
 }
-/* BUTTON */
-.earButton {
-  position: relative;
-  padding: 0.6rem 0.8rem;
-  border-radius: 50%;
-  background: radial-gradient(
-    circle,
-    rgba(90, 62, 43, 0.7) 0%,
-    /* Forest Sign Brown */ rgba(46, 90, 44, 0.9) 70% /* Forest Service Green */
-  );
-  box-shadow: 0 0 12px rgba(242, 209, 91, 0.8); /* Ranger Gold Glow */
-  color: #f2d15b; /* Forest Service Yellow */
-  font-size: 1.6rem;
-  border: none;
-  cursor: pointer;
-  transition:
-    transform 0.2s ease,
-    box-shadow 0.2s ease;
-}
-
-.earButton:hover {
-  transform: scale(1.08);
-  box-shadow: 0 0 18px rgba(242, 209, 91, 1);
-}
-
-/* TOOLTIP */
-.earTooltip {
-  visibility: hidden;
-  opacity: 0;
-  position: absolute;
-  bottom: -3rem;
-  right: 3rem;
-  background: #5a3e2b; /* Forest Sign Brown */
-  color: #f2d15b; /* Forest Service Yellow */
-  padding: 4px 10px;
-  border-radius: 6px;
-  font-size: 0.75rem;
-  white-space: nowrap;
-  box-shadow: 0 0 8px rgba(242, 209, 91, 0.6);
-  transform-origin: top right;
-  transition: visibility 0.2s ease;
-}
-
-/* HOVER ANIMATION */
-.earButton:hover .earTooltip {
-  visibility: visible;
-  animation: forestFadeIn 0.25s ease forwards;
-}
-
-.earButton:not(:hover) .earTooltip {
-  animation: forestFadeOut 0.25s ease forwards;
-}
-@keyframes forestFadeIn {
-  0% {
-    opacity: 0;
-    transform: translate(10px, -10px);
-  }
-  100% {
-    opacity: 1;
-    transform: translate(0, 0);
-  }
-}
-
-@keyframes forestFadeOut {
-  0% {
-    opacity: 1;
-    transform: translate(0, 0);
-  }
-  100% {
-    opacity: 0;
-    transform: translate(10px, -10px);
-  }
-}
+  

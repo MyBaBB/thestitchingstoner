@@ -1,8 +1,5 @@
- #root {
-  width: 100%;
-  height:auto;
-  background-color: black;
-}
-* {
+ #root
+ {
   box-sizing: border-box;
+  background-color: black;
 }
