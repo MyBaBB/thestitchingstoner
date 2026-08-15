@@ -83,7 +83,7 @@ export default function LandingPage() {
             </h1>
 
             {/* SMOKE-DISSOLVE TAGLINE */}
-            <p className="dreamyLanding m-auto mb-4 mt-0 max-w-md whitespace-nowrap 
+            <p className="dreamyLanding m-auto mb-4 mt-0 max-w-md  
                         font-Itim-Regular text-xs xs:text-xl md:text-2xl">
               <span
                 className={`smokeText ${exiting ? "exitUpRight" : "enterCenter"}`}

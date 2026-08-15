@@ -59,7 +59,7 @@ export default function LandingPage() {
   return (
     <>
       <div className="relative flex-col  h-screen items-center justify-center text-2xl
-        ">
+        border-2 border-red-500 ">
         
           < EkoostikEar />
  
@@ -83,7 +83,7 @@ export default function LandingPage() {
             </h1>
 
             {/* SMOKE-DISSOLVE TAGLINE */}
-            <p className="dreamyLanding m-auto mb-4 mt-0 max-w-md whitespace-nowrap 
+            <p className="dreamyLanding m-auto mb-4 mt-0 max-w-md  
                         font-Itim-Regular text-xs xs:text-xl md:text-2xl">
               <span
                 className={`smokeText ${exiting ? "exitUpRight" : "enterCenter"}`}
@@ -96,7 +96,7 @@ export default function LandingPage() {
             {/* FEATURED IMAGE */}
             {/* FEATURED IMAGE */}
            
-             <div className="mermaidImageWrapper  relative flex m-auto   ">
+            <div className="mermaidImageWrapper  relative flex m-auto   ">
                 <div className="specialEventInstaller  ">
                     <SpecialEventButton />
                 </div>
@@ -107,17 +107,17 @@ export default function LandingPage() {
                 className="mermaidFeaturedImage relative flex m-auto rounded-xl border-2 border-transparent"
               />
              < StonerLogo />
-            </div>
+            </div> 
 
             <p className="m-auto mt-4 max-w-lg font-Itim-Regular text-sm text-[#baf9ba] md:text-xl">
-              <span className="inline-block whitespace-nowrap">
+              <span className="inline-block ">
                 <span className="inline-block scale-x-[-1]">
                   <PiQuotesThin />
                 </span>
                 &nbsp;Peace, Creativity, and Connection
               </span>
               <br className="inline-block sm:hidden" />
-              <span className="inline-block whitespace-nowrap">
+              <span className="inline-block ">
                 &nbsp;all Woven Together&nbsp;
                 <span className="inline-block">
                   <PiQuotesThin />
@@ -148,12 +148,14 @@ export default function LandingPage() {
 <div
   className="
     nationalForestCollection
-    flex w-[50%] m-auto
+    flex w-fit m-auto
     items-center justify-between
     gap-4
     flex-col
     md:hidden
+    border-2 border-red-500
   "
+  
 >
   <NationalForestButton className="order-1 md:order-2" />
   <div className="flex flex-row gap-4 order-2 md:order-1 md:flex-col">

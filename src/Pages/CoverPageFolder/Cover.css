@@ -44,22 +44,13 @@
  
 
 /* FEATURED MERMAID IMAGE (desktop default) */
-.mermaidFeaturedImage {
-  width: 945px;
-  height: 415px;
-}
+ 
 
 /* Height-based shrink */
 @media (max-width: 382px) {
-  .mermaidImageWrapper {
-    height: auto !important;
-  }
+   
 
-  .mermaidFeaturedImage {
-    height: auto !important;
-    width: 100%;
-    object-fit: contain; /* or cover, but contain avoids white gaps */
-  }
+ 
   .specialEventInstaller {
     display: none;
   }
