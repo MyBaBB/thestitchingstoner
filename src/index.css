@@ -2,11 +2,11 @@
 @import "tailwindcss/components";
 @import "tailwindcss/utilities";
 
-* {
+body {
   scroll-behavior: smooth;
   box-sizing: border-box;
- 
-}
+  background-color: black;
+  }
 
 @font-face {
   font-family: "Archivo_Black";

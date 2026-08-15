@@ -58,11 +58,11 @@ export default function LandingPage() {
 
   return (
     <>
-      <div className="relative flex-col  h-screen items-center justify-center text-2xl
-        border-2 border-red-500">
+      <div className="relative flex  h-screen items-center justify-center bg-black text-2xl
+        border-2 border-red-500 ">
         
           < EkoostikEar />
- 
+
 
 
         <span className="reverseButtonInstaller absolute left-4 top-4">
@@ -95,11 +95,11 @@ export default function LandingPage() {
 
             {/* FEATURED IMAGE */}
             {/* FEATURED IMAGE */}
-           
-             <div className="mermaidImageWrapper relative flex m-auto   ">
-                <div className="specialEventInstaller  ">
-                    <SpecialEventButton />
-                </div>
+            <div className="specialEventInstaller relative w-full">
+              <SpecialEventButton />
+            </div>
+            <div className="mermaidImageWrapper relative flex m-auto overflow-visible">
+              
 
               <img
                 src={MermaidOgImage}
@@ -124,52 +124,16 @@ export default function LandingPage() {
                 </span>
               </span>
             </p>
-
-
-
-
-
-
-
-<div
-  className="
-    nationalForestCollection
-    flex w-[50%] m-auto
-    items-center justify-between
-    gap-4
-    flex-col md:flex-row
-    hidden md:flex
-  "
->
-  <FacebookForestButton />
-  <NationalForestButton />
-  <InstagramForestButton />
-</div>
-<div
-  className="
-    nationalForestCollection
-    flex w-[50%] m-auto
-    items-center justify-between
-    gap-4
-    flex-col
-    md:hidden
-  "
->
-  <NationalForestButton className="order-1 md:order-2" />
-  <div className="flex flex-row gap-4 order-2 md:order-1 md:flex-col">
-    <FacebookForestButton />
-    <InstagramForestButton />
-  </div>
-</div>
-
-
-            
+            <div className="nationalForestCollection flex w-full flex-col items-center justify-between gap-4 pr-2 xxs:flex-row xxs:pr-0">
+              <FacebookForestButton />
+              <NationalForestButton />
+              <InstagramForestButton />
+            </div>
           </div>
-           <div className="relative w-full bg-black">
+        </main>
+         <div className="relative w-full bg-black">
         <Footer />
          </div> 
-        </main>
-        
       </div>
         
     </>

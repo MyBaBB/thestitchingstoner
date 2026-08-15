@@ -95,7 +95,7 @@
 }
 
 /* md:scale-100 */
-@media (min-width: 768px) {
+@media (min-width: 927px) {
   .stonerLogo img {
     transform: scale(1);
     overflow: visible !important;

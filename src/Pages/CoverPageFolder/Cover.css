@@ -1,12 +1,4 @@
-/* UNDER CONSTRUCTION TEXT */
-.underConstruction {
-  position: relative;
-  color: white;
-  font-size: clamp(0.5rem, 2vw, 1.5rem);
-  font-weight: bold;
-  text-align: center;
-  z-index: 1;
-}
+ 
 
 /* SMOKE ANIMATION */
 .stoner-cipher {
@@ -56,10 +48,18 @@
 }
 
 /* Height-based shrink */
-@media screen and (max-height: 900px) {
+@media (max-width: 382px) {
+  .mermaidImageWrapper {
+    height: auto !important;
+  }
+
   .mermaidFeaturedImage {
-    width: 650px;
-    height: 300px;
+    height: auto !important;
+    width: 100%;
+    object-fit: contain; /* or cover, but contain avoids white gaps */
+  }
+  .specialEventInstaller {
+    display: none;
   }
 }
 
@@ -167,13 +167,18 @@
   }
 }
 
-/* Extra-small mobile shift */
+
+       /*NOTE: Extra-small mobile shift  fix is
+         remove and transform: translateX(-5rem);
+         replace with overflow: hidden  */ 
 @media (max-width: 382px) {
   .mermaidFeaturedImage {
-    transform: translateX(-5rem);
-    overflow: visible !important;
+    /* transform: translateX(-5rem); */
+    overflow: hidden !important;
   }
 }
+
+
 
 /* Landscape small screens */
 @media screen and (orientation: landscape) and (max-width: 950px) and (max-height: 550px) {
@@ -195,26 +200,9 @@
 /* STONER LOGO WRAPPER */
 
 
-.specialEventInstaller {
-  position: relative;
-  display: flex;
-  justify-content: start;
-  align-items: center;
-  margin-bottom: -2.51rem;
-  z-index: 9999999; /* ← IMPORTANT */
-  display: none;
-  padding-left: 1rem;
-}
+ 
 
-/* Show at sm breakpoint */
-@media (min-width: 640px) {
-   
-}
-@media (min-width: 240px) {
-  .specialEventInstaller {
-    display: flex;
-  }
-}
+ 
 
 /* Hide in landscape */
 @media screen and (orientation: landscape) and (max-width: 950px) and (max-height: 490px) {
