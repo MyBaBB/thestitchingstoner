@@ -59,7 +59,7 @@ export default function LandingPage() {
   return (
     <>
       <div className="relative flex  h-screen items-center justify-center bg-black text-2xl
-        border-2 border-red-500 ">
+         ">
         
           < EkoostikEar />
 
