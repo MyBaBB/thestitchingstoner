@@ -102,17 +102,18 @@
 
 @media screen and (orientation: landscape) and (max-height: 480px) {
   .mermaidImageWrapper {
-    max-width: 400px;
+    max-width: 401px;
   }
 }
 
 /* BUTTON WRAPPER */
-/* .reverseButtonInstaller {
+.reverseButtonInstaller {
   position: relative;
-} */
+}
 
-/* @media screen and (orientation: landscape) and (max-height: 490px) {
+@media screen and (orientation: landscape) and (max-height: 490px) {
   .reverseButtonInstaller {
     display: none !important;
+
   }
-} */
+}
