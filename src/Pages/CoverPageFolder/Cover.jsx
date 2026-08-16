@@ -12,6 +12,7 @@ import FacebookForestButton from "../../Components/ButtonsFolder/NationalForestB
 import InstagramForestButton from "../../Components/ButtonsFolder/NationalForestButton/InstagramForestButton.jsx";
 import SpecialEventButton from "../../Components/ButtonsFolder/SpecialEventButton/SpecialEventButton.jsx";
 import CoolBG from "../../Components/Super_BG_Cover_Folder/Super_BG_Cover.jsx";
+import HippieFootprints from "../../Components/HippieFootprintsFolder/HippieFootprints.jsx";
  export default function LandingPage() {
   const messages = [
     
@@ -144,6 +145,7 @@ import CoolBG from "../../Components/Super_BG_Cover_Folder/Super_BG_Cover.jsx";
           {/* <div className="relative w-full bg-black">
             <Footer />
           </div> */}
+          < HippieFootprints />
         </main>
       </div>
     </>
