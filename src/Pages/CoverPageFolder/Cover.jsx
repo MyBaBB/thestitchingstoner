@@ -161,9 +161,9 @@ export default function LandingPage() {
             </div>
           </div>
 
-          <div className="relative w-full bg-black">
+          {/* <div className="relative w-full bg-black">
             <Footer />
-          </div>
+          </div> */}
         </main>
       </div>
     </>

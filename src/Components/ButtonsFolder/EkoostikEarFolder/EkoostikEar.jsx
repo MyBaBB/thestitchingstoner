@@ -1,5 +1,5 @@
 import React from 'react'
-import { LuEar } from "react-icons/lu";
+import { GiGuitar } from "react-icons/gi";
 import { Link } from "react-router-dom";
 import './EkoostikEar.css'
 const EkoostikEar = () => {
@@ -9,7 +9,7 @@ const EkoostikEar = () => {
             <button className="ekoostikEarTooltip ekoostikEarButton"
             data-tooltip="🔊 Hookahville 62 ✌🏼">
 
-              <LuEar />
+              <GiGuitar />
               
             </button>
           </Link>

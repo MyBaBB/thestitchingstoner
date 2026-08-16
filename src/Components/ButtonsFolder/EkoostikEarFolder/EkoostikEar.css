@@ -3,8 +3,8 @@
    ============================ */
 .ekoostikEarButtonWrapper {
   position: absolute;
-  top: 3rem;
-  right: 3rem;
+  top: 2.2rem;
+  right: 2rem;
   z-index: 9999;
 }
 
@@ -21,14 +21,13 @@
   position: relative;
   padding: 0.6rem 0.8rem;
   border-radius: 50%;
-  background: radial-gradient(
-    circle,
-    rgba(90, 62, 43, 0.7) 0%,
-    rgba(46, 90, 44, 0.9) 70%
-  );
-  box-shadow: 0 0 12px rgba(242, 209, 91, 0.8);
-  color: #f2d15b;
-  font-size: 1.6rem;
+  background: radial-gradient(circle,
+    rgba(208, 69, 208, .5) 0%,
+    rgba(84, 225, 84, .5) 100%
+    );
+  box-shadow: 0 0 2px rgba(84, 225, 84, .5);
+  color: rgba(84, 225, 84, 0.8);
+  font-size: 3rem;
   border: none;
   cursor: pointer;
   transition: transform 0.2s ease, box-shadow 0.2s ease;
@@ -36,7 +35,8 @@
 
 .ekoostikEarButton:hover {
   transform: scale(1.08);
-  box-shadow: 0 0 18px rgba(242, 209, 91, 1);
+  box-shadow: 0 0 18px rgba(84, 225, 84, .625);
+  color: rgba(84, 225, 84, 1);
 }
 
 /* ============================
