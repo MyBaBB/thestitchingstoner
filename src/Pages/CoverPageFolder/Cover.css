@@ -98,7 +98,7 @@
 /* SM–XL */
 @media (min-width: 382px) and (max-width: 1550px) {
   .mermaidImageWrapper {
-    max-width: 500px;
+    max-width: 501px;
   }
 }
 
