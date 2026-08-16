@@ -63,13 +63,13 @@
 
 .stonerLogo {
   position: absolute;
- 
-
   bottom: -0.95rem;
   right: -0.75rem;
   z-index: 9999;
   width: 120px !important;
   height: 120px !important; /* ← IMPORTANT */
+  border-radius: 50%
+
 }
 .stonerLogo:hover {
   
@@ -81,7 +81,7 @@
  
  @media (max-width: 1550px) {
   .stonerLogo {
-    scale: 0.7;
+    scale: 1;
     bottom: 2.5rem;
     right: 2.5rem;  
   }

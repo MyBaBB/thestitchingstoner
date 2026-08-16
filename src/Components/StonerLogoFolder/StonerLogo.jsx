@@ -9,12 +9,12 @@ const StonerLogo2 = () => {
       
       
                     <a href="https://thestitchingstoner.square.site/the-stitching-who">
-                      <div className="stonerLogo stonerLogoTooltip   "
+                      <div className="stonerLogo stonerLogoTooltip w-[80px] h-[80px] md:w-[120px] md:h-[120px] "
                            data-tooltip="❔The Stitching Who ">
                         <img
                           src={StonerLogo}
                           alt=""
-                          className="h-[120px] w-[120px] scale-75 md:scale-100 "
+                          className="h-[120px] w-[120px]  "
                         />
                       </div>
                     </a>
