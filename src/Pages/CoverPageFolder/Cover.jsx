@@ -11,7 +11,7 @@ import EkoostikEar from "../../Components/ButtonsFolder/EkoostikEarFolder/Ekoost
 import FacebookForestButton from "../../Components/ButtonsFolder/NationalForestButton/FaceBookForestButton.jsx";
 import InstagramForestButton from "../../Components/ButtonsFolder/NationalForestButton/InstagramForestButton.jsx";
 import SpecialEventButton from "../../Components/ButtonsFolder/SpecialEventButton/SpecialEventButton.jsx";
-import CoolBG from "../../Components/Super_BG_Cover_Folder/Super_BG_Cover.jsx";
+// import CoolBG from "../../Components/Super_BG_Cover_Folder/Super_BG_Cover.jsx";
  export default function LandingPage() {
   const messages = [
     
@@ -69,7 +69,7 @@ import CoolBG from "../../Components/Super_BG_Cover_Folder/Super_BG_Cover.jsx";
   return (
     <>
 
-    <div className="coolBG"><CoolBG /></div>
+    {/* <div className="coolBG"><CoolBG /></div> */}
       {/* FIX: use min-h-[100svh] instead of h-screen */}
       <div className="relative flex-col min-h-[100svh] items-center justify-center text-2xl overflow-hidden">
         <EkoostikEar />
