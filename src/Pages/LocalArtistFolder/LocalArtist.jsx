@@ -26,7 +26,7 @@ const LocalArtistFolder = () => {
         <a href="/" className="home-link">
           <img
             src={Weed}
-            className="absolute left-8 top-8 z-50 scale-[175%]"
+            className="absolute left-[4rem] top-[4rem] z-50 scale-[175%]"
             alt="Return to Home"
           />
         </a>
@@ -35,8 +35,13 @@ const LocalArtistFolder = () => {
         <ReverseButton />
 
         {/* No Zone Badge */}
-        <div className="NotRobotGradient relative m-auto mb-2 mt-4 h-[100px] w-[100px]">
+        
+         <div className="NotRobotGradient relative m-auto mb-2 mt-4 h-[100px] w-[100px]">
+        <a   href="https://mybabb.com" className="relative flex not-robot-link " >
           <NotRobot />
+        </a> 
+        
+        
         </div>
       </header>
 
