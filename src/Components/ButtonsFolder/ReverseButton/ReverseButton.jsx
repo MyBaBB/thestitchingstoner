@@ -1,5 +1,5 @@
 import { SiDreamstime } from "react-icons/si";
-import { PiRewindBold } from "react-icons/pi";
+
 import "./ReverseButton.css";
 import { useEffect, useState } from "react";
 
@@ -21,8 +21,10 @@ const ReverseButton = () => {
           }`}
           onClick={() => window.history.back()}
         >
-          <span className="absolute left-[20px] top-[20px] opacity-70">
-            <PiRewindBold size={30} />
+          <span className="absolute left-[50px] top-[50px] opacity-70">
+            <span className="spiralRotate">
+              <SiDreamstime size={50} />
+            </span>
           </span>
 
           {/* REAL JSX TOOLTIP */}

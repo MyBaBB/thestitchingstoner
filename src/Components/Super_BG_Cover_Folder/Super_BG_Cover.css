@@ -2,7 +2,7 @@
   /* full-screen container */
   position: fixed;
   inset: 0;
-  z-index: 9;
+  z-index: 1;
 
   /* dark base */
   background-color: #02040a;
