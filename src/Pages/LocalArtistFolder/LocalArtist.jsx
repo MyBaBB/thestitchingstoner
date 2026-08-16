@@ -26,7 +26,7 @@ const LocalArtistFolder = () => {
         <a href="/" className="home-link">
           <img
             src={Weed}
-            className="absolute left-[3.8rem] top-[3.8rem] z-50 scale-[175%]"
+            className="absolute left-[4rem] top-[4rem] z-50 scale-[175%]"
             alt="Return to Home"
           />
         </a>
