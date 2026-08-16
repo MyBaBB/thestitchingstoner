@@ -23,7 +23,7 @@ const LocalArtistFolder = () => {
 
       <header className="local-artist-header relative">
         {/* Home Link */}
-        <a href="/https://mybabb.com" className="home-link">
+        <a href="/" className="home-link">
           <img
             src={Weed}
             className="absolute left-[3.8rem] top-[3.8rem] z-50 scale-[175%]"
