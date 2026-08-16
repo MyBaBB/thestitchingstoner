@@ -5,11 +5,15 @@
   margin: auto;
   margin-top: 1rem;
   background-color: transparent;
-  width: 100px;
-  height: 100px;
+  width: fit-content;
+  height: auto;
+  padding: .5rem 0.5rem;
   z-index: 1;
- 
+  border: 1.1px solid rgba(0, 200, 255, 0.1);
   border-radius: 50%;
+  overflow: hidden;
+  box-shadow: 0px 0px 0px 3.5px rgba(0, 200, 255, 0.1);
+
 }
 
 /* Landscape mode */

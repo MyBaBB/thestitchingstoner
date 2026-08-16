@@ -95,8 +95,8 @@
 } */
 .tooltipReact {
   position: absolute;
-  top: 10px;
-  left: 10px;
+  top: 40px;
+  left: 40px;
 
   /* Cosmic bubble */
   background: radial-gradient(

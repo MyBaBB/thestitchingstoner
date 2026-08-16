@@ -133,9 +133,9 @@ export default function HippieFootprints() {
 
       {/* RESTART BUTTON */}
       {/* RESTART BUTTON */}
-      <button className="footprintWizard" onClick={toggleIcon}>
+      {/* <button className="footprintWizard" onClick={toggleIcon}>
         {showWizard ? <GiMushroomHouse /> : <GiSuperMushroom />}
-      </button>
+      </button> */}
     </>
   );
 }
