@@ -88,10 +88,28 @@
   display: block;
 }
 
-/* XS FIX */
+/* XS */
 @media (max-width: 382px) {
-  .specialEventInstaller { display: none; }
+  .specialEventInstaller {
+    display: none;
+  }
 }
+
+/* SM–XL */
+@media (min-width: 382px) and (max-width: 1550px) {
+  .mermaidImageWrapper {
+    max-width: 500px;
+  }
+}
+
+/* XXL */
+@media (min-width: 1550px) {
+  .mermaidImageWrapper {
+    max-width: 800px; /* current */
+    /* Add XXL-specific rules here */
+  }
+}
+
 
 /* LANDSCAPE FIX — MERGED */
 @media screen and (orientation: landscape) and (max-height: 550px) {
