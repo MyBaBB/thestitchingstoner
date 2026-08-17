@@ -1,6 +1,6 @@
 import React, { useEffect, useRef } from "react";
 import p5 from "p5";
-import "./Super_BG_Cover.css";
+import "./Super-Sample-BG-1.css";
 
 const Super_BG_Cover = () => {
   const sketchRef = useRef(null);
@@ -19,7 +19,8 @@ const Super_BG_Cover = () => {
           document.documentElement.clientHeight
         );
 
-        p.background(0, 59, 105);
+        // DARK PURPLE BACKGROUND
+        p.background(40, 0, 60); 
         p.stroke(255);
 
         for (let i = 0; i < num; i++) {
@@ -33,16 +34,18 @@ const Super_BG_Cover = () => {
       };
 
       p.draw = () => {
-        p.background(0, 59, 105, 10);
+        // DARK PURPLE FADE
+        p.background(40, 0, 60, 10);
 
         for (let i = 0; i < num; i++) {
           let pt = particles[i];
 
+          // ORIGINAL COLOR EFFECTS — unchanged
           let r = p.map(pt.x, 0, p.width, 50, 255);
           let g = p.map(pt.y, 0, p.height, 50, 255);
           let b = p.map(pt.x, 0, p.width, 255, 50);
-          p.stroke(r, g, b);
 
+          p.stroke(r, g, b);
           p.point(pt.x, pt.y);
 
           let n = p.noise(pt.x * noiseScale, pt.y * noiseScale);

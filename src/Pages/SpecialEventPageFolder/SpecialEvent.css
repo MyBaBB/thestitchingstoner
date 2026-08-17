@@ -8,19 +8,14 @@
   align-items: flex-start;
   text-align: center;
   color: white;
-
-  background:
-    radial-gradient(circle at 20% 20%, #a5298c, transparent 40%),
-    radial-gradient(circle at 80% 30%, #44a8b1, transparent 45%),
-    radial-gradient(circle at 50% 80%, #ae811f, transparent 50%),
-    linear-gradient(135deg, #1a0033, #001a1a);
-
-  background-size: cover;
-  background-attachment: scroll; /* FIXED: mobile-safe */
-  animation: hippieFlow 18s ease-in-out infinite;
-
-  flex-wrap: wrap; /* FIXED: prevents overflow */
+  z-index: 10;
+  flex-wrap: wrap;
+   
 }
+ 
+ 
+ 
+ 
 
 /* Trippy shifting background */
 @keyframes hippieFlow {
@@ -44,6 +39,7 @@
   box-shadow: 0 0 25px rgba(255, 255, 255, 0.25);
   max-width: 700px;
   width: 100%;
+  z-index: 10;
 }
 
 /* Paragraph */

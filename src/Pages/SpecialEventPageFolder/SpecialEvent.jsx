@@ -5,16 +5,19 @@ import Footer from "../../Components/FooterFolder/Footer.jsx";
 import YouTubePlayer from "../../Components/YouTubeFolder/YouTubePlayer.jsx";
 import "./SpecialEvent.css";
 import VanSlideIn from "../../Components/VanSlideInFolder/VanSlideIn.jsx";
-
+import SuperBG from "../../Components/Super-Sample-BG-Folder/Super-Sample-BG-1.jsx";
 export default function SpecialEventPage() {
   return (
     <>
+ < SuperBG />
+      
       <div className="min-h-screen w-full overflow-y-auto overflow-x-hidden">
         <ReverseButton />
 
-        <div className="specialEventPage">
+        <div className="specialEventPage ">
+          
           <div className="specialEventContent relative flex flex-col items-center">
-
+          
         {/* xxxxxxxxx H1 Animation  xxxxxxxx*/}
               <VanSlideIn />
 
