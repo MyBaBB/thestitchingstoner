@@ -99,9 +99,11 @@ import HippieFootprints from "../../Components/HippieFootprintsFolder/HippieFoot
             </p>
             {/* FIX: remove fixed height */}
             <div className="mermaidImageWrapper relative m-auto overflow-visible">
-  <div className="specialEventInstaller">
-    <SpecialEventButton />
-  </div>
+
+        <div className="specialEventInstaller">
+          <SpecialEventButton />
+        </div>
+
   <img
     src={MermaidOgImage}
     alt="Featured embroidered stoner art"
