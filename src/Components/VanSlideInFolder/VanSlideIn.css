@@ -1,0 +1,121 @@
+
+/* Title */
+.specialEventTitle {
+  font-family: "EmilysCandy-Regular";
+  font-size: 1rem;
+  margin-bottom: 1.5rem;
+  text-shadow: 0 0 12px #ff8bd8;
+}
+
+@media (min-width: 440px) {
+  .specialEventTitle {
+    font-size: 1.5rem;
+  }
+}
+ 
+ /* VanBounce.css */
+.vanBounce {
+ 
+  display: inline-block;
+  animation: vanSlideIn 1.8s ease-out forwards;
+  transform-origin: center;
+}
+
+/* Slide + bounce + bump */
+@keyframes vanSlideIn {
+  0% {
+    transform: translateX(-200px) scaleX(-1) scale(1);
+    opacity: 0;
+  }
+  40% {
+    transform: translateX(10px) scaleX(-1);
+    opacity: 1;
+  }
+  55% {
+    transform: translateX(0px) scaleX(-1) scale(1.15);
+  }
+  70% {
+    transform: translateX(3px) scaleX(-1) scale(1);
+  }
+  100% {
+    transform: translateX(0px) scaleX(-1);
+  }
+}
+
+/* Make the text react AFTER the van arrives */
+.sessionBump {
+  display: inline-block;
+  animation: sessionBump 1.8s ease-out forwards;
+  animation-delay: .5s; /* sync with van arrival */
+  transform-origin: left center;
+}
+
+@keyframes sessionBump {
+  0% {
+    transform: translateX(0);
+  }
+  20% {
+    transform: translateX(1rem);
+  }
+  60% {
+    transform: translateX(0rem);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+.yarnWiggle {
+  display: inline-block;
+  animation: yarnWiggle 1.6s ease-in-out ;
+  animation-delay: .5s; /* adjust this however you want */
+  transform-origin: center;
+}
+
+@keyframes yarnWiggle {
+  0% {
+    transform: rotate(0deg) translateY(0);
+  }
+
+  /* Stronger right rotation + bounce + slide */
+  25% {
+    transform: rotate(7deg) translateY(-1px) translateX(1.9rem);
+  }
+
+  50% {
+    transform: rotate(-12deg) translateY(0);
+  }
+
+  75% {
+    transform: rotate(8deg) translateY(0);
+  }
+
+  100% {
+    transform: rotate(0deg) translateY(0);
+  }
+}
+
+.crochetRotate {
+  display: inline-block;
+  animation: crochetRotate 1.4s ease-out forwards;
+  animation-delay: .5s; /* adjust this however you want */
+  transform-origin: right bottom;
+}
+
+@keyframes crochetRotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  25% {
+    transform: rotate(10deg);
+  }
+  50% {
+    transform: rotate(-6deg);
+  }
+  75% {
+    transform: rotate(4deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}

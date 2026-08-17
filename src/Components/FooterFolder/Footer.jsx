@@ -1,3 +1,5 @@
+
+// eslint-disable-next-line no-unused-vars
 import React from "react";
 import { Link } from "react-router-dom";
 import HippieFootprints from "../../Components/HippieFootprintsFolder/HippieFootprints.jsx";
@@ -15,11 +17,9 @@ const Footer = () => {
 
         <Link to="/localartist">
           <div className="footer-right footer-right_Tooltip flex flex-col opacity-80"
-          data-tool-tip=" 🌈 This Website uses Real Art 🎨 ">
+          data-tool-tip=" 🌈 This Website Chooses Real Art 🎨 ">
             <NotRobot />
-            <span className="footer-label text-xl"
-                 
-              >Hippie Style</span>
+          
           </div>
         </Link>
       </div>

@@ -1,6 +1,6 @@
 import React, { useEffect, useRef } from "react";
 import p5 from "p5";
-import "./Super_BG_Cover.css";
+import "./Super-Sample-BG-1.css";
 
 const Super_BG_Cover = () => {
   const sketchRef = useRef(null);
@@ -9,9 +9,9 @@ const Super_BG_Cover = () => {
     let myP5;
 
     const Sketch = (p) => {
-      let particles = [];
-      const num = 1500;
-      const noiseScale = 0.01;
+      let threads = [];
+      const num = 40;            // fewer threads, more elegance
+      const noiseScale = 0.003;
 
       p.setup = () => {
         p.createCanvas(
@@ -19,42 +19,71 @@ const Super_BG_Cover = () => {
           document.documentElement.clientHeight
         );
 
-        p.background(0, 59, 105);
-        p.stroke(255);
+        p.background(120, 0, 112);
+
 
         for (let i = 0; i < num; i++) {
-          particles.push(
-            p.createVector(
-              p.random(p.width),
-              p.random(p.height)
-            )
-          );
+          threads.push({
+            x: p.random(p.width),
+            y: p.random(p.height),
+
+            speed: p.random(0.4, 1.4),
+            offset: p.random(1000),
+            wobble: p.random(0.02, 0.08),
+
+            // VERY long threads
+            length: p.random(180, 360),
+
+            // curve randomness
+            curveAmp: p.random(20, 60),
+
+            weight: p.random(1.2, 2.8),
+          });
         }
       };
 
       p.draw = () => {
-        p.background(0, 59, 105, 10);
+        p.background(40, 0, 60, 12);
 
-        for (let i = 0; i < num; i++) {
-          let pt = particles[i];
+        for (let t of threads) {
+          let n = p.noise(t.x * noiseScale, t.y * noiseScale, t.offset);
+          let angle = n * p.TWO_PI;
 
-          let r = p.map(pt.x, 0, p.width, 50, 255);
-          let g = p.map(pt.y, 0, p.height, 50, 255);
-          let b = p.map(pt.x, 0, p.width, 255, 50);
-          p.stroke(r, g, b);
+          // organic hippie wobble
+          angle += p.sin(p.frameCount * 0.01) * t.wobble;
 
-          p.point(pt.x, pt.y);
+          // move head
+          t.x += p.cos(angle) * t.speed;
+          t.y += p.sin(angle) * t.speed;
 
-          let n = p.noise(pt.x * noiseScale, pt.y * noiseScale);
-          let angle = p.TAU * n;
+          // wrap edges
+          if (t.x < 0) t.x = p.width;
+          if (t.x > p.width) t.x = 0;
+          if (t.y < 0) t.y = p.height;
+          if (t.y > p.height) t.y = 0;
 
-          pt.x += p.cos(angle);
-          pt.y += p.sin(angle);
+          // hippie crochet colors (no red)
+          let g = p.map(n, 0, 1, 180, 255);
+          let b = p.map(n, 0, 1, 160, 255);
+          let r = 0;
 
-          if (pt.x < 0 || pt.x > p.width || pt.y < 0 || pt.y > p.height) {
-            pt.x = p.random(p.width);
-            pt.y = p.random(p.height);
-          }
+          p.stroke(r, g, b, 220);
+          p.strokeWeight(t.weight);
+          p.noFill();
+
+          // CURVED THREAD — Bezier curve
+          let endX = t.x - p.cos(angle) * t.length;
+          let endY = t.y - p.sin(angle) * t.length;
+
+          let controlX = t.x + p.sin(angle) * t.curveAmp;
+          let controlY = t.y - p.cos(angle) * t.curveAmp;
+
+          p.bezier(
+            t.x, t.y,
+            controlX, controlY,
+            controlX, controlY,
+            endX, endY
+          );
         }
       };
 
