@@ -14,8 +14,6 @@ const App = () => {
           <Route path="/coverpage" element={<CoverPage />} />
           <Route path="/specialevent" element={<SpecialEvent />} />
           <Route path="/localartist" element={<LocalArtist />} />
-
-          {/* optional catch-all */}
           <Route path="*" element={<Zenith />} />
         </Routes>
       </Router>

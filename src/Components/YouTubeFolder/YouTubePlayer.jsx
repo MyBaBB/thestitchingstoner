@@ -1,45 +1,46 @@
 import React, { useEffect, useRef, useState } from "react";
-import { useNavigate } from "react-router-dom";
 import { GiHemp } from "react-icons/gi";
 import { MdOutlineForest } from "react-icons/md";
 import "./YouTubePlayer.css";
 
+const VIDEO_LIST = [
+  "kH5oJYh6f8w",
+  "5xOZ43vdEUI",
+  "QwzT17V82UU",
+  "S2_u5-Nt6Tg",
+  "l668SIWPZBo",
+  "nhDHQQfrZug",
+  "OLCa-mS0SCY",
+  "3YQtEKiI124",
+  "e9ZtQsviCz0",
+  "r-zV_rUGku0",
+  "79pyb_83FrY",
+  "y7hHyFk6xgk",
+  "im0vrCjzCTQ",
+  "2z9aDUK7QFI",
+  "wSqYybyib-A",
+];
+
+const getRandomVideo = () =>
+  VIDEO_LIST[Math.floor(Math.random() * VIDEO_LIST.length)];
+
 export default function RandomYouTubePlayer() {
   const playerRef = useRef(null);
-  const navigate = useNavigate();
+  const containerRef = useRef(null);
+  const [currentVideo, setCurrentVideo] = useState(getRandomVideo);
 
-  const videoList = [
-    "kH5oJYh6f8w",
-    "5xOZ43vdEUI",
-    "QwzT17V82UU",
-    "S2_u5-Nt6Tg",
-    "l668SIWPZBo",
-    "nhDHQQfrZug",
-    "OLCa-mS0SCY",
-    "3YQtEKiI124",
-    "e9ZtQsviCz0",
-    "r-zV_rUGku0",
-    "79pyb_83FrY",
-    "y7hHyFk6xgk",
-    "im0vrCjzCTQ",
-    "nhDHQQfrZug",
-    "2z9aDUK7QFI",
-    "wSqYybyib-A",
-  ];
-
-  const [currentVideo, setCurrentVideo] = useState(
-    videoList[Math.floor(Math.random() * videoList.length)],
-  );
-
-  // Load YouTube API
   useEffect(() => {
-    if (!window.YT) {
-      const tag = document.createElement("script");
-      tag.src = "https://www.youtube.com/iframe_api";
-      document.body.appendChild(tag);
-    }
+    let isSubscribed = true;
 
-    window.onYouTubeIframeAPIReady = () => {
+    // Helper to instantiate the player
+    const initPlayer = () => {
+      if (!isSubscribed || !window.YT || !window.YT.Player) return;
+
+      // Destroy old instance if re-initializing
+      if (playerRef.current) {
+        playerRef.current.destroy();
+      }
+
       playerRef.current = new window.YT.Player("random-yt-player", {
         videoId: currentVideo,
         playerVars: {
@@ -51,34 +52,65 @@ export default function RandomYouTubePlayer() {
         events: {
           onStateChange: (event) => {
             if (event.data === window.YT.PlayerState.ENDED) {
-              navigate("/specialevent");
+              window.location.href = "/specialevent";
             }
           },
         },
       });
     };
-  }, []);
 
-  // Change video
+    // Case 1: YT API is already fully loaded
+    if (window.YT && window.YT.Player) {
+      initPlayer();
+    } else {
+      // Case 2: Attach to global callback or chain onto existing one
+      const previousCallback = window.onYouTubeIframeAPIReady;
+      window.onYouTubeIframeAPIReady = () => {
+        if (previousCallback) previousCallback();
+        initPlayer();
+      };
+
+      // Case 3: Script tag isn't added yet
+      if (!document.getElementById("youtube-iframe-api")) {
+        const tag = document.createElement("script");
+        tag.id = "youtube-iframe-api";
+        tag.src = "https://www.youtube.com/iframe_api";
+        document.body.appendChild(tag);
+      }
+    }
+
+    // Cleanup when component unmounts
+    return () => {
+      isSubscribed = false;
+      if (playerRef.current && typeof playerRef.current.destroy === "function") {
+        playerRef.current.destroy();
+        playerRef.current = null;
+      }
+    };
+  }, []); // Run once on mount
+
+  // Handle switching videos when currentVideo state changes
   useEffect(() => {
-    if (playerRef.current) {
+    if (playerRef.current && typeof playerRef.current.loadVideoById === "function") {
       playerRef.current.loadVideoById(currentVideo);
     }
   }, [currentVideo]);
 
   const playAnother = () => {
-    const next = videoList[Math.floor(Math.random() * videoList.length)];
-    setCurrentVideo(next);
+    let nextVideo = getRandomVideo();
+    // Avoid picking the exact same video twice in a row
+    while (nextVideo === currentVideo && VIDEO_LIST.length > 1) {
+      nextVideo = getRandomVideo();
+    }
+    setCurrentVideo(nextVideo);
   };
 
   return (
     <div className="youtubePlayerWrapper">
-      {/* Responsive YouTube container */}
       <div className="yt-responsive-container">
         <div id="random-yt-player"></div>
       </div>
 
-      {/* NEXT SONG BUTTON */}
       <button
         className="spinAgainButton whitespace-nowrap"
         onClick={playAnother}

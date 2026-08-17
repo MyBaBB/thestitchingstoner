@@ -7,6 +7,7 @@ import "./SpecialEvent.css";
 import VanSlideIn from "../../Components/VanSlideInFolder/VanSlideIn.jsx";
  
 
+
 export default function SpecialEventPage() {
   return (
     <>
