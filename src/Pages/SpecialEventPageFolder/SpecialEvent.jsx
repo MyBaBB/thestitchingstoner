@@ -30,22 +30,22 @@ export default function SpecialEventPage() {
  
    <div className="flex flex-col items-center text-center leading-relaxed font-Itim-Regular">
 
-  <span className="inline-block font-bold text-red-400">
+  <span className="inline-block font-semibold text-red-400">
     <span className="inline-block whitespace-nowrap">✨ High‑vibe&nbsp;</span>
     stitching for creative souls <span className="whitespace-nowrap">🧵</span>
   </span>
 
-  <span className="inline-block font-bold text-orange-400 mt-2">
+  <span className="inline-block font-semibold text-orange-400 mt-2">
     <span className="inline-block whitespace-nowrap">🌙 Psychedelic&nbsp;</span>
     chill zone <span className="whitespace-nowrap">awaits 🌈</span>
   </span>
 
-  <span className="inline-block font-bold text-yellow-400 mt-2">
+  <span className="inline-block font-semibold text-yellow-400 mt-2">
     <span className="inline-block whitespace-nowrap">🔥 Limited&nbsp;</span>
     seats — <span className="whitespace-nowrap">tap in ⚡️</span>
   </span>
 
-  <span className="inline-block font-bold text-green-400 mt-2">
+  <span className="inline-block font-semibold text-green-400 mt-2">
     <span className="inline-block whitespace-nowrap">🌼 Creative&nbsp;</span>
     flow session <span className="whitespace-nowrap">begins soon ✨</span>
   </span>
