@@ -157,7 +157,7 @@ import { IoMdArrowDropright } from "react-icons/io";
       </div>
 
 
-      <footer className="fixed z-10 bottom-2 right-5   text-[aliceblue]  tracking-wide select-none
+      <footer className="fixed z-10 bottom-2 left-5   text-[aliceblue]  tracking-wide select-none
                           hidden sm:block hover:scale-125">
          <a href="https://mybabb.com"><div className="flex flex-col px-8 py-4 items-center justify-center ">
         <span className="inline-block text-orange-300/40 ">
