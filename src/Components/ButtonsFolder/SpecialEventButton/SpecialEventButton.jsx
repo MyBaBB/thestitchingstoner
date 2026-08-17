@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import "./SpecialEventButton.css";
 
 const SpecialEventButton = () => {
+  
   return (
     <Link to = "/specialevent"
       className="special-event-btn"
