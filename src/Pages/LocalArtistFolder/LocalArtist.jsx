@@ -9,6 +9,8 @@ import { GiCampCookingPot } from "react-icons/gi";
 import { FaCampground } from "react-icons/fa";
 import { GiOldWagon } from "react-icons/gi";
 import HippieFootprints from "../../Components/HippieFootprintsFolder/HippieFootprints.jsx";
+import { FaRegCopyright } from "react-icons/fa";
+import { IoMdArrowDropright } from "react-icons/io";
 
 import "./LocalArtist.css";
 
@@ -18,6 +20,7 @@ const LocalArtistFolder = () => {
   }, []);
 
   return (
+    <>
     <div className="local-artist-wrapper">
       {/* HEADER */}
 
@@ -123,6 +126,27 @@ const LocalArtistFolder = () => {
       <div className="absolute bottom-0 z-50"></div>
       <HippieFootprints />
     </div>
+    <div className="fixed z-10 bottom-2 left-5   text-[aliceblue]  tracking-wide select-none
+                          hidden sm:block hover:scale-125">
+         <a href="https://mybabb.com"><div className="flex flex-col px-8 py-4 items-center justify-center ">
+        <span className="inline-block text-orange-300/40 ">
+        </span>
+               
+                <span className="absolute left-4 top-[50%] transform -translate-y-1/2 text-orange-300/80 ">
+                 <FaRegCopyright size={11}/>
+                </span>
+
+              <span className="inline-block font-Itim-Regular   text-[8px] text-white/80  ">
+                  Brett&apos;s&nbsp;Web&nbsp;Development  
+              </span>
+                 <span className="absolute right-3 top-[50%] transform -translate-y-1/2 text-orange-300/80 ">
+               
+                <IoMdArrowDropright  size={20}/>
+                </span>
+          </div>   
+          </a>
+</div>
+</>
   );
 };
 
