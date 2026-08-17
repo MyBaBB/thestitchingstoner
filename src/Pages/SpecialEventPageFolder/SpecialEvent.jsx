@@ -1,8 +1,10 @@
+// eslint-disable-next-line no-unused-vars
 import React from "react";
 import ReverseButton from "../../Components/ButtonsFolder/ReverseButton/ReverseButton.jsx";
 import Footer from "../../Components/FooterFolder/Footer.jsx";
 import YouTubePlayer from "../../Components/YouTubeFolder/YouTubePlayer.jsx";
 import "./SpecialEvent.css";
+import VanSlideIn from "../../Components/VanSlideInFolder/VanSlideIn.jsx";
 
 export default function SpecialEventPage() {
   return (
@@ -13,11 +15,8 @@ export default function SpecialEventPage() {
         <div className="specialEventPage">
           <div className="specialEventContent relative flex flex-col items-center">
 
-            <h1 className="specialEventTitle">
-              🌈 Hookahville 62 ✌🏼
-              <br />
-              🚐 Crochet Sessions 🧶
-            </h1>
+        {/* xxxxxxxxx H1 Animation  xxxxxxxx*/}
+              <VanSlideIn />
 
             <p className="specialEventParagraph text-center">
               High‑vibe stitching.  

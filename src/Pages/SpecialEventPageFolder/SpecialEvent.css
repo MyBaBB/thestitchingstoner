@@ -46,20 +46,6 @@
   width: 100%;
 }
 
-/* Title */
-.specialEventTitle {
-  font-family: "EmilysCandy-Regular";
-  font-size: 1rem;
-  margin-bottom: 1.5rem;
-  text-shadow: 0 0 12px #ff8bd8;
-}
-
-@media (min-width: 440px) {
-  .specialEventTitle {
-    font-size: 1.5rem;
-  }
-}
-
 /* Paragraph */
 .specialEventParagraph {
   font-family: "Itim-Regular";
@@ -97,5 +83,3 @@
   pointer-events: auto;
   transform: scale(0.75);
 }
-
-/* Default: fixed footer for large screens */
