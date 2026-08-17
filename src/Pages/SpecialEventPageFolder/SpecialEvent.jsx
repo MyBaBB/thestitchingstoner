@@ -8,51 +8,16 @@ import VanSlideIn from "../../Components/VanSlideInFolder/VanSlideIn.jsx";
 import { FaRegCopyright } from "react-icons/fa";
 import { IoMdArrowDropright } from "react-icons/io";
 
-const messages = [
-  <>
-    <span className="inline-block whitespace-nowrap">✨ High‑vibe</span>{" "}
-    stitching for{" "}
-    <span className="inline-block whitespace-nowrap">creative souls 🧵</span>
-  </>,
+ 
+  
+    
 
-  <>
-    <span className="inline-block whitespace-nowrap">🌙 Psychedelic</span>{" "}
-    chill zone{" "}
-    <span className="inline-block whitespace-nowrap">awaits 🌈</span>
-  </>,
-
-  <>
-    <span className="inline-block whitespace-nowrap">🔥 Limited</span>{" "}
-    seats —{" "}
-    <span className="inline-block whitespace-nowrap">tap in ⚡️</span>
-  </>,
-];
-
-const rainbowColors = [
-  "#FF0000",
-  "#FF7F00",
-  "#FFFF00",
-  "#baf9ba",
-  "skyblue",
-  "#4B0082",
-  "#9400D3",
-];
+ 
 
 export default function SpecialEventPage() {
-  const [index, setIndex] = useState(0);
-  const [exiting, setExiting] = useState(false);
+  
 
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setExiting(true);
-      setTimeout(() => {
-        setIndex((prev) => (prev + 1) % messages.length);
-        setExiting(false);
-      }, 5000);
-    }, 16000);
-
-    return () => clearInterval(interval);
-  }, []);
+ 
 
   return (
     <>
@@ -62,16 +27,32 @@ export default function SpecialEventPage() {
         <div className="specialEventPage">
           <div className="specialEventContent relative flex flex-col items-center">
             <VanSlideIn />
+ 
+   <div className="flex flex-col items-center text-center leading-relaxed font-Itim-Regular">
 
-            <p className="dreamyLanding hidden xxs:flex m-auto mb-4 mt-0 max-w-md font-Itim-Regular whitespace-nowrap sm:whitespace-wrap text-xs xs:text-xl md:text-2xl">
-              <span
-                className={`smokeText ${exiting ? "exitUpRight" : "enterCenter"}`}
-                style={{ color: rainbowColors[index % rainbowColors.length] }}
-              >
-                {messages[index]}
-              </span>
-            </p>
+  <span className="inline-block font-bold text-red-400">
+    <span className="inline-block whitespace-nowrap">✨ High‑vibe&nbsp;</span>
+    stitching for creative souls <span className="whitespace-nowrap">🧵</span>
+  </span>
 
+  <span className="inline-block font-bold text-orange-400 mt-2">
+    <span className="inline-block whitespace-nowrap">🌙 Psychedelic&nbsp;</span>
+    chill zone <span className="whitespace-nowrap">awaits 🌈</span>
+  </span>
+
+  <span className="inline-block font-bold text-yellow-400 mt-2">
+    <span className="inline-block whitespace-nowrap">🔥 Limited&nbsp;</span>
+    seats — <span className="whitespace-nowrap">tap in ⚡️</span>
+  </span>
+
+  <span className="inline-block font-bold text-green-400 mt-2">
+    <span className="inline-block whitespace-nowrap">🌼 Creative&nbsp;</span>
+    flow session <span className="whitespace-nowrap">begins soon ✨</span>
+  </span>
+
+</div>
+
+ 
             <YouTubePlayer />
           </div>
 
