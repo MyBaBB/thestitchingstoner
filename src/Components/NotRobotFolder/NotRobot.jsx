@@ -1,11 +1,11 @@
 import React from "react";
 import "./NotRobot.css";
-import NotRobotArt from "./Not-Robot-Art.svg";
+import NotRobotArt from "./11am-NoAi_new-150x150.webp";
 
 const NotRobot = () => {
   return (
     <>
-      <a href="/localartist ">
+      
         <div className="not-robot">
           <img
             src={NotRobotArt}
@@ -13,7 +13,7 @@ const NotRobot = () => {
             className="not-robot-img"
           />
         </div>
-      </a>
+  
     </>
   );
 };

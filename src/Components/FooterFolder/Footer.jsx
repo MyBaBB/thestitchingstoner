@@ -17,9 +17,7 @@ const Footer = () => {
           <div className="footer-right footer-right_Tooltip flex flex-col opacity-80"
           data-tool-tip=" 🌈 This Website uses Real Art 🎨 ">
             <NotRobot />
-            <span className="footer-label text-xl"
-                 
-              >Hippie Style</span>
+          
           </div>
         </Link>
       </div>
