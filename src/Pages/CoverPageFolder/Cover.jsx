@@ -164,7 +164,7 @@ import { IoMdArrowDropright } from "react-icons/io";
         </span>
                
                 <span className="absolute left-4 top-[50%] transform -translate-y-1/2 text-orange-300/80 ">
-                  < FaRegCopyright  size={10}/>
+                  < FaRegCopyright  size={11}/>
                 </span>
 
               <span className="inline-block font-Itim-Regular   text-[8px] text-white/80  ">
