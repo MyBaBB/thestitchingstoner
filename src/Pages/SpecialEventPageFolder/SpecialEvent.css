@@ -1,23 +1,25 @@
-/* Full psychedelic background */
 .specialEventPage {
   min-height: 100vh;
   width: 100%;
-  padding: .3rem .3rem;
+  padding: 2rem 1rem;
   display: flex;
   justify-content: center;
   align-items: flex-start;
   text-align: center;
   color: white;
-  z-index: 10;
-  flex-wrap: wrap;
-  background: transparent !important;
+
+  background:
+    radial-gradient(circle at 20% 20%, #a5298c, transparent 40%),
+    radial-gradient(circle at 80% 30%, #44a8b1, transparent 45%),
+    radial-gradient(circle at 50% 80%, #ae811f, transparent 50%),
+    linear-gradient(135deg, #1a0033, #001a1a);
+
+  background-size: cover;
+  background-attachment: scroll; /* FIXED: mobile-safe */
+  animation: hippieFlow 18s ease-in-out infinite;
+
+  flex-wrap: wrap; /* FIXED: prevents overflow */
 }
- 
-
-
-
- 
- 
 
 /* Trippy shifting background */
 @keyframes hippieFlow {
@@ -31,6 +33,15 @@
     filter: hue-rotate(360deg) saturate(1.2);
   }
 }
+
+ 
+
+
+
+ 
+ 
+
+ 
 
 /* Content wrapper */
 .specialEventContent {
