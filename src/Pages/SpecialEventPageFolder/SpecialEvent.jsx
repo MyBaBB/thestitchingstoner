@@ -10,33 +10,30 @@ import SuperBG from "../../Components/Super-Sample-BG-Folder/Super-Sample-BG-1.j
 export default function SpecialEventPage() {
   return (
     <>
-      {/* FULLSCREEN BACKGROUND — always behind everything */}
-      <SuperBG />
+  <SuperBG />
 
-      {/* PAGE CONTENT — sits above background */}
-      <div className="page-content relative z-10 min-h-screen w-full overflow-x-hidden overflow-y-auto">
+  <div className="page-content relative z-10 min-h-screen w-full overflow-x-hidden overflow-y-auto">
 
-        <ReverseButton />
+    <ReverseButton />
 
-        <div className="specialEventPage">
+    <div className="specialEventPage">
+      <div className="specialEventContent relative flex flex-col items-center">
+        <VanSlideIn />
 
-          <div className="specialEventContent relative flex flex-col items-center">
+        <p className="specialEventParagraph text-center">
+          High‑vibe stitching.
+          Psychedelic chill zone.
+          Limited seats — tap in.
+        </p>
 
-            {/* H1 Animation */}
-            <VanSlideIn />
-
-            <p className="specialEventParagraph text-center">
-              High‑vibe stitching.  
-              Psychedelic chill zone.  
-              Limited seats — tap in.
-            </p>
-
-            <YouTubePlayer />
-          </div>
-
-          <Footer />
-        </div>
+        <YouTubePlayer />
       </div>
-    </>
+    </div>
+  </div>
+
+  {/* FOOTER MOVED OUTSIDE */}
+  <Footer />
+</>
+
   );
 }

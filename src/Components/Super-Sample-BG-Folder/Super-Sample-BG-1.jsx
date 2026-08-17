@@ -1,79 +1,108 @@
 import React, { useEffect, useRef } from "react";
+import p5 from "p5";
+import "./Super-Sample-BG-1.css";
 
 const Super_BG_Cover = () => {
-  const canvasRef = useRef(null);
-  const animationRef = useRef(null);
+  const sketchRef = useRef(null);
 
   useEffect(() => {
-    const canvas = canvasRef.current;
-    const ctx = canvas.getContext("2d");
+    let myP5;
 
-    canvas.width = window.innerWidth;
-    canvas.height = window.innerHeight;
+    const Sketch = (p) => {
+      let threads = [];
+      const num = 40;            // fewer threads, more elegance
+      const noiseScale = 0.003;
 
-    let t = 0;
+      p.setup = () => {
+        p.createCanvas(
+          document.documentElement.clientWidth,
+          document.documentElement.clientHeight
+        );
 
-    const draw = () => {
-      const w = canvas.width;
-      const h = canvas.height;
+        p.background(120, 0, 112);
 
-      // Slight fade for motion trails
-      ctx.fillStyle = "rgba(0,0,0,0.15)";
-      ctx.fillRect(0, 0, w, h);
 
-      const cell = 12; // grid size
+        for (let i = 0; i < num; i++) {
+          threads.push({
+            x: p.random(p.width),
+            y: p.random(p.height),
 
-      for (let y = 0; y < h; y += cell) {
-        for (let x = 0; x < w; x += cell) {
-          // Psycho rainbow color
-          const r = 128 + Math.sin((x + t) * 0.01) * 127;
-          const g = 128 + Math.sin((y + t) * 0.015) * 127;
-          const b = 128 + Math.sin((x + y + t) * 0.02) * 127;
+            speed: p.random(0.4, 1.4),
+            offset: p.random(1000),
+            wobble: p.random(0.02, 0.08),
 
-          ctx.fillStyle = `rgb(${r},${g},${b})`;
+            // VERY long threads
+            length: p.random(180, 360),
 
-          // Wavy distortion
-          const offsetX = Math.sin((y * 0.03) + t * 0.02) * 10;
-          const offsetY = Math.cos((x * 0.03) + t * 0.02) * 10;
+            // curve randomness
+            curveAmp: p.random(20, 60),
 
-          ctx.fillRect(x + offsetX, y + offsetY, cell, cell);
+            weight: p.random(1.2, 2.8),
+          });
         }
-      }
+      };
 
-      t += 1.5;
-      animationRef.current = requestAnimationFrame(draw);
+      p.draw = () => {
+        p.background(40, 0, 60, 12);
+
+        for (let t of threads) {
+          let n = p.noise(t.x * noiseScale, t.y * noiseScale, t.offset);
+          let angle = n * p.TWO_PI;
+
+          // organic hippie wobble
+          angle += p.sin(p.frameCount * 0.01) * t.wobble;
+
+          // move head
+          t.x += p.cos(angle) * t.speed;
+          t.y += p.sin(angle) * t.speed;
+
+          // wrap edges
+          if (t.x < 0) t.x = p.width;
+          if (t.x > p.width) t.x = 0;
+          if (t.y < 0) t.y = p.height;
+          if (t.y > p.height) t.y = 0;
+
+          // hippie crochet colors (no red)
+          let g = p.map(n, 0, 1, 180, 255);
+          let b = p.map(n, 0, 1, 160, 255);
+          let r = 0;
+
+          p.stroke(r, g, b, 220);
+          p.strokeWeight(t.weight);
+          p.noFill();
+
+          // CURVED THREAD — Bezier curve
+          let endX = t.x - p.cos(angle) * t.length;
+          let endY = t.y - p.sin(angle) * t.length;
+
+          let controlX = t.x + p.sin(angle) * t.curveAmp;
+          let controlY = t.y - p.cos(angle) * t.curveAmp;
+
+          p.bezier(
+            t.x, t.y,
+            controlX, controlY,
+            controlX, controlY,
+            endX, endY
+          );
+        }
+      };
+
+      p.windowResized = () => {
+        p.resizeCanvas(
+          document.documentElement.clientWidth,
+          document.documentElement.clientHeight
+        );
+      };
     };
 
-    draw();
-
-    const handleResize = () => {
-      cancelAnimationFrame(animationRef.current);
-      canvas.width = window.innerWidth;
-      canvas.height = window.innerHeight;
-      draw();
-    };
-
-    window.addEventListener("resize", handleResize);
+    myP5 = new p5(Sketch, sketchRef.current);
 
     return () => {
-      cancelAnimationFrame(animationRef.current);
-      window.removeEventListener("resize", handleResize);
+      myP5.remove();
     };
   }, []);
 
-  return (
-    <canvas
-      ref={canvasRef}
-      style={{
-        position: "fixed",
-        top: 0,
-        left: 0,
-        width: "100vw",
-        height: "100vh",
-        zIndex: -1,
-      }}
-    />
-  );
+  return <div className="super-bg-cover" ref={sketchRef}></div>;
 };
 
 export default Super_BG_Cover;
