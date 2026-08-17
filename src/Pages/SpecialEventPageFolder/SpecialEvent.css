@@ -10,10 +10,14 @@
   color: white;
   z-index: 10;
   flex-wrap: wrap;
-   
+  background: transparent !important;
 }
  
- 
+ html, body {
+  background: transparent !important;
+}
+
+
  
  
 

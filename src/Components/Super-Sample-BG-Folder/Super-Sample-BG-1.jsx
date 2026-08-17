@@ -1,82 +1,79 @@
 import React, { useEffect, useRef } from "react";
-import p5 from "p5";
-import "./Super-Sample-BG-1.css";
 
 const Super_BG_Cover = () => {
-  const sketchRef = useRef(null);
+  const canvasRef = useRef(null);
+  const animationRef = useRef(null);
 
   useEffect(() => {
-    let myP5;
+    const canvas = canvasRef.current;
+    const ctx = canvas.getContext("2d");
 
-    const Sketch = (p) => {
-      let particles = [];
-      const num = 1500;
-      const noiseScale = 0.01;
+    canvas.width = window.innerWidth;
+    canvas.height = window.innerHeight;
 
-      p.setup = () => {
-        p.createCanvas(
-          document.documentElement.clientWidth,
-          document.documentElement.clientHeight
-        );
+    let t = 0;
 
-        // DARK PURPLE BACKGROUND
-        p.background(40, 0, 60); 
-        p.stroke(255);
+    const draw = () => {
+      const w = canvas.width;
+      const h = canvas.height;
 
-        for (let i = 0; i < num; i++) {
-          particles.push(
-            p.createVector(
-              p.random(p.width),
-              p.random(p.height)
-            )
-          );
+      // Slight fade for motion trails
+      ctx.fillStyle = "rgba(0,0,0,0.15)";
+      ctx.fillRect(0, 0, w, h);
+
+      const cell = 12; // grid size
+
+      for (let y = 0; y < h; y += cell) {
+        for (let x = 0; x < w; x += cell) {
+          // Psycho rainbow color
+          const r = 128 + Math.sin((x + t) * 0.01) * 127;
+          const g = 128 + Math.sin((y + t) * 0.015) * 127;
+          const b = 128 + Math.sin((x + y + t) * 0.02) * 127;
+
+          ctx.fillStyle = `rgb(${r},${g},${b})`;
+
+          // Wavy distortion
+          const offsetX = Math.sin((y * 0.03) + t * 0.02) * 10;
+          const offsetY = Math.cos((x * 0.03) + t * 0.02) * 10;
+
+          ctx.fillRect(x + offsetX, y + offsetY, cell, cell);
         }
-      };
+      }
 
-      p.draw = () => {
-        // DARK PURPLE FADE
-        p.background(40, 0, 60, 10);
-
-        for (let i = 0; i < num; i++) {
-          let pt = particles[i];
-
-          // ORIGINAL COLOR EFFECTS — unchanged
-          let r = p.map(pt.x, 0, p.width, 50, 255);
-          let g = p.map(pt.y, 0, p.height, 50, 255);
-          let b = p.map(pt.x, 0, p.width, 255, 50);
-
-          p.stroke(r, g, b);
-          p.point(pt.x, pt.y);
-
-          let n = p.noise(pt.x * noiseScale, pt.y * noiseScale);
-          let angle = p.TAU * n;
-
-          pt.x += p.cos(angle);
-          pt.y += p.sin(angle);
-
-          if (pt.x < 0 || pt.x > p.width || pt.y < 0 || pt.y > p.height) {
-            pt.x = p.random(p.width);
-            pt.y = p.random(p.height);
-          }
-        }
-      };
-
-      p.windowResized = () => {
-        p.resizeCanvas(
-          document.documentElement.clientWidth,
-          document.documentElement.clientHeight
-        );
-      };
+      t += 1.5;
+      animationRef.current = requestAnimationFrame(draw);
     };
 
-    myP5 = new p5(Sketch, sketchRef.current);
+    draw();
+
+    const handleResize = () => {
+      cancelAnimationFrame(animationRef.current);
+      canvas.width = window.innerWidth;
+      canvas.height = window.innerHeight;
+      draw();
+    };
+
+    window.addEventListener("resize", handleResize);
 
     return () => {
-      myP5.remove();
+      cancelAnimationFrame(animationRef.current);
+      window.removeEventListener("resize", handleResize);
     };
   }, []);
 
-  return <div className="super-bg-cover" ref={sketchRef}></div>;
+  return (
+    <canvas
+      ref={canvasRef}
+      style={{
+        position: "fixed",
+        top: 0,
+        left: 0,
+        width: "100vw",
+        height: "100vh",
+        zIndex: -1,
+      }}
+    />
+  );
 };
 
 export default Super_BG_Cover;
