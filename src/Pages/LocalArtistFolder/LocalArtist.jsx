@@ -5,12 +5,10 @@ import BatSignal from "../../Components/ContactMeFolder/ContactMe.jsx";
 import Weed from "../../Images/The_Stitching_Stoner/favicon.png";
 import { TbCamper } from "react-icons/tb";
 import { ImEarth } from "react-icons/im";
-import { GiCampCookingPot } from "react-icons/gi";
-import { FaCampground } from "react-icons/fa";
-import { GiGoat } from "react-icons/gi";
+import { GiCampCookingPot, GiGoat } from "react-icons/gi";
+import { FaCampground, FaRegCopyright } from "react-icons/fa";
 import HippieFootprints from "../../Components/HippieFootprintsFolder/HippieFootprints.jsx";
-import { FaRegCopyright } from "react-icons/fa";
-
+import Copyright from "../../Components/CopyrightFolder/Copyright.jsx";
 import "./LocalArtist.css";
 
 const LocalArtistFolder = () => {
@@ -22,9 +20,7 @@ const LocalArtistFolder = () => {
     <>
       <div className="relative local-artist-wrapper">
         {/* HEADER */}
-
         <header className="local-artist-header relative">
-          {/* Home Link */}
           <a href="/" className="home-link">
             <img
               src={Weed}
@@ -33,10 +29,7 @@ const LocalArtistFolder = () => {
             />
           </a>
 
-          {/* Reverse Button */}
           <ReverseButton />
-
-          {/* No Zone Badge */}
 
           <div className="NotRobotGradient relative m-auto mb-2 mt-4 h-[100px] w-[100px]">
             <a
@@ -50,13 +43,8 @@ const LocalArtistFolder = () => {
 
         {/* MAIN CONTENT */}
         <main className="content-box relative mt-8">
-          {/* <h1 className="groovy-title mb-4 whitespace-nowrap">
-          🧑🏼‍🎨 Support Your Local Artist 🎨
-        </h1> */}
-
           <article className="groovy-title relative flex flex-col items-center justify-center text-center">
             <h2>
-              {" "}
               <span className="inline-block scale-x-[-1] text-base xs:text-lg md:text-2xl">
                 <FaCampground color="limegreen" />
               </span>
@@ -105,69 +93,32 @@ const LocalArtistFolder = () => {
           </p>
         </main>
 
-          <div className="copyRightAnchorTag2">
-  <div className="copyRightContainer2 absolute bottom-8 left-4">
-
-    <span className="copyRightCool2 absolute left-4 top-[50%] transform -translate-y-1/2">
-      <FaRegCopyright />
-    </span>
-
-    <span className="noLeftBorder2 inline-block font-Itim-Regular">
-      <img
-        src="/images/hybrid-webcrafter.png"
-        alt="Hybrid Webcrafter Logo"
-        className="webDevFancyWords2 pl-8 hybridTooltipImage"
-      />
-    </span>
-
-  </div>
-</div>
-
-
-
+        {/* COPYRIGHT + HYBRID TOOLTIP */}
+        
+        <div className="relative"> 
+          <span className="absolute bottom-[-5.8rem] left-4 z-0 w-10 h-10 bg-transparent ">< Copyright /> </span>
         {/* CONTACT ASIDE */}
         <aside className="contact-aside relative">
           <span className="absolute bottom-[-4.5rem] right-4 z-50">
             <BatSignal />
           </span>
         </aside>
-
-        {/* FOOTER */}
+</div>
         {/* FOOTER */}
         <footer className="badge relative m-auto mb-4 mt-4 w-fit whitespace-nowrap text-amber-200">
-          
-          
-          
           <button
             className="backToTopBtn"
             onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
           >
-            <GiGoat size={50}/>
-          
+            <GiGoat size={50} />
             <span className="tooltip hidden sm:block">Back to Top</span>
           </button>
-
-
-
         </footer>
 
         <div className="absolute bottom-0 z-50">
-        <HippieFootprints />
-       </div> 
-
+          <HippieFootprints />
+        </div>
       </div>
-
-      
-        
-       
-         
-        
-         
-       
-
-    
-    
-    
     </>
   );
 };
