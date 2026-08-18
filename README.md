@@ -106,7 +106,7 @@ The Stitching Stoner blends craftsmanship with creativity — embroidered art, c
 ---
 
 ## ❤️ Credits  
-Created by **Brett's Custom Web Development**  
+Created by **Brett's Custom  Hybrid Web Development**  
   High‑Vibe Creative Director
 
 

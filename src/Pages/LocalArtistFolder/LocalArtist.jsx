@@ -105,19 +105,24 @@ const LocalArtistFolder = () => {
           </p>
         </main>
 
-          <a href="https://mybabb.com" 
-              className="copyRightAnchorTag2">
-         <div className="copyRightContainer2 absolute bottom-8 left-4 ">
-        
-                <span className="copyRightCool2 absolute left-4 top-[50%] transform -translate-y-1/2 ">
-                  < FaRegCopyright  />
-                </span>
-                <span className="noLeftBorder2 inline-block font-Itim-Regular     ">
-                       <span className='webDevFancyWords2 pl-8'>Brett&apos;s&nbsp;Web&nbsp;Development</span>  
-                </span>
-                  
-          </div>   
-        </a>
+          <div className="copyRightAnchorTag2">
+  <div className="copyRightContainer2 absolute bottom-8 left-4">
+
+    <span className="copyRightCool2 absolute left-4 top-[50%] transform -translate-y-1/2">
+      <FaRegCopyright />
+    </span>
+
+    <span className="noLeftBorder2 inline-block font-Itim-Regular">
+      <img
+        src="/images/hybrid-webcrafter.png"
+        alt="Hybrid Webcrafter Logo"
+        className="webDevFancyWords2 pl-8 hybridTooltipImage"
+      />
+    </span>
+
+  </div>
+</div>
+
 
 
         {/* CONTACT ASIDE */}

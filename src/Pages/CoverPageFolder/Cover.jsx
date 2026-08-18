@@ -155,9 +155,9 @@ import Copyright from "../../Components/CopyrightFolder/Copyright.jsx";
           < HippieFootprints />
         </main>
       </div>
-
+    <a href="https://mybabb.com/youtubepagecatwoman"> 
          < Copyright />
-      
+   </a>   
  
     </>
   );
