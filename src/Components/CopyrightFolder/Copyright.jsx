@@ -7,7 +7,7 @@ const Copyright = () => {
     <>
     
     <section className="copyRightWrapper fixed z-10 bottom-2 left-5 tracking-wide hidden sm:block"
-       title="Brett's Web Development">
+       title="Custom Work ">
         <a href="https://mybabb.com" 
               className="copyRightAnchorTag">
          <div className="copyRightContainer flex flex-col px-8 py-4 items-center justify-center ">
