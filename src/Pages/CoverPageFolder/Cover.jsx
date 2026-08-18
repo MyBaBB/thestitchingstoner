@@ -13,7 +13,7 @@ import InstagramForestButton from "../../Components/ButtonsFolder/NationalForest
 import SpecialEventButton from "../../Components/ButtonsFolder/SpecialEventButton/SpecialEventButton.jsx";
 import CoolBG from "../../Components/Super_BG_Cover_Folder/Super_BG_Cover.jsx";
 import HippieFootprints from "../../Components/HippieFootprintsFolder/HippieFootprints.jsx";
-import { FaRegCopyright } from "react-icons/fa";
+import Copyright from "../../Components/CopyrightFolder/Copyright.jsx";
 
  
 
@@ -156,24 +156,8 @@ import { FaRegCopyright } from "react-icons/fa";
         </main>
       </div>
 
-
-      <footer className="fixed z-10 bottom-2 left-5   text-[aliceblue]  tracking-wide select-none
-                          hidden sm:block hover:scale-125">
-         <a href="https://mybabb.com"><div className="flex flex-col px-8 py-4 items-center justify-center ">
-        <span className="inline-block text-orange-300/40 ">
-        </span>
-               
-                <span className="copyrightCool absolute left-4 top-[50%] transform -translate-y-1/2  ">
-                  < FaRegCopyright  size={11}/>
-                </span>
-
-              <span className="noLeftBorder inline-block font-Itim-Regular text-[8px]  ">
-                    Brett&apos;s&nbsp;Web&nbsp;Development  
-              </span>
-                 
-          </div>   
-          </a>
-</footer>
+         < Copyright />
+      
  
     </>
   );

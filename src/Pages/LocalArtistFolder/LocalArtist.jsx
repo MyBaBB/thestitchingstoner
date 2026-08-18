@@ -7,10 +7,9 @@ import { TbCamper } from "react-icons/tb";
 import { ImEarth } from "react-icons/im";
 import { GiCampCookingPot } from "react-icons/gi";
 import { FaCampground } from "react-icons/fa";
-import { GiOldWagon } from "react-icons/gi";
+import { GiGoat } from "react-icons/gi";
 import HippieFootprints from "../../Components/HippieFootprintsFolder/HippieFootprints.jsx";
 import { FaRegCopyright } from "react-icons/fa";
-import { IoMdArrowDropright } from "react-icons/io";
 
 import "./LocalArtist.css";
 
@@ -21,7 +20,7 @@ const LocalArtistFolder = () => {
 
   return (
     <>
-      <div className="local-artist-wrapper">
+      <div className="relative local-artist-wrapper">
         {/* HEADER */}
 
         <header className="local-artist-header relative">
@@ -106,9 +105,24 @@ const LocalArtistFolder = () => {
           </p>
         </main>
 
+          <a href="https://mybabb.com" 
+              className="copyRightAnchorTag2">
+         <div className="copyRightContainer2 absolute bottom-8 left-4 ">
+        
+                <span className="copyRightCool2 absolute left-4 top-[50%] transform -translate-y-1/2 ">
+                  < FaRegCopyright  />
+                </span>
+                <span className="noLeftBorder2 inline-block font-Itim-Regular     ">
+                       <span className='webDevFancyWords2 pl-8'>Brett&apos;s&nbsp;Web&nbsp;Development</span>  
+                </span>
+                  
+          </div>   
+        </a>
+
+
         {/* CONTACT ASIDE */}
         <aside className="contact-aside relative">
-          <span className="absolute bottom-[-3.5rem] right-4 z-50">
+          <span className="absolute bottom-[-4.5rem] right-4 z-50">
             <BatSignal />
           </span>
         </aside>
@@ -116,35 +130,39 @@ const LocalArtistFolder = () => {
         {/* FOOTER */}
         {/* FOOTER */}
         <footer className="badge relative m-auto mb-4 mt-4 w-fit whitespace-nowrap text-amber-200">
+          
+          
+          
           <button
             className="backToTopBtn"
             onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
           >
-            <GiOldWagon size={50} />
+            <GiGoat size={50}/>
+          
             <span className="tooltip hidden sm:block">Back to Top</span>
           </button>
+
+
+
         </footer>
-        <div className="absolute bottom-0 z-50"></div>
+
+        <div className="absolute bottom-0 z-50">
         <HippieFootprints />
-      </div>
-      <div className="fixed bottom-2 left-5 z-10 hidden select-none tracking-wide text-[aliceblue] hover:scale-125 sm:block">
-        <a href="https://mybabb.com">
-          <div className="flex flex-col items-center justify-center px-8 py-4">
-            <span className="inline-block text-orange-300/40"></span>
+       </div> 
 
-            <span className="absolute left-4 top-[50%] -translate-y-1/2 transform text-orange-300/80">
-              <FaRegCopyright size={11} />
-            </span>
-
-            <span className="inline-block font-Itim-Regular text-[8px] text-white/80">
-              Brett&apos;s&nbsp;Web&nbsp;Development
-            </span>
-            <span className="absolute right-3 top-[50%] -translate-y-1/2 transform text-orange-300/80">
-              <IoMdArrowDropright size={20} />
-            </span>
-          </div>
-        </a>
       </div>
+
+      
+        
+       
+         
+        
+         
+       
+
+    
+    
+    
     </>
   );
 };

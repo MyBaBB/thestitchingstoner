@@ -5,8 +5,7 @@ import Footer from "../../Components/FooterFolder/Footer.jsx";
 import YouTubePlayer from "../../Components/YouTubeFolder/YouTubePlayer.jsx";
 import "./SpecialEvent.css";
 import VanSlideIn from "../../Components/VanSlideInFolder/VanSlideIn.jsx";
-import { FaRegCopyright } from "react-icons/fa";
-import { IoMdArrowDropright } from "react-icons/io";
+import Copyright from "../../Components/CopyrightFolder/Copyright.jsx";
 
 export default function SpecialEventPage() {
   return (
@@ -52,30 +51,12 @@ export default function SpecialEventPage() {
 
             <YouTubePlayer />
           </div>
-
+          < Copyright />
           <Footer />
         </div>
       </div>
 
-      <div className="fixed bottom-2 left-5 z-10 hidden select-none tracking-wide text-[aliceblue] hover:scale-125 sm:block">
-        <a href="https://mybabb.com">
-          <div className="flex flex-col items-center justify-center px-8 py-4">
-            <span className="inline-block text-orange-300/40"></span>
-
-            <span className="absolute left-4 top-[50%] -translate-y-1/2 transform text-orange-300/80">
-              <FaRegCopyright size={11} />
-            </span>
-
-            <span className="inline-block font-Itim-Regular text-[8px] text-white/80">
-              Brett&apos;s&nbsp;Web&nbsp;Development
-            </span>
-
-            <span className="absolute right-3 top-[50%] -translate-y-1/2 transform text-orange-300/80">
-              <IoMdArrowDropright size={20} />
-            </span>
-          </div>
-        </a>
-      </div>
+     
     </>
   );
 }

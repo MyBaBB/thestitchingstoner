@@ -194,13 +194,7 @@
     right: 0;
   }
 }
-.noLeftBorder {
-  border: 0.1px solid rgba(253, 186, 116, 0.3);
 
-  border-radius: 4px;
-  border-left: none;
 
-  border-top: none;
-  padding-right: 0.25rem;
-  padding-bottom: 0.15rem;
-}
+ 
+ 
