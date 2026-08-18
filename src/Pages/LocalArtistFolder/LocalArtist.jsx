@@ -6,7 +6,7 @@ import Weed from "../../Images/The_Stitching_Stoner/favicon.png";
 import { TbCamper } from "react-icons/tb";
 import { ImEarth } from "react-icons/im";
 import { GiCampCookingPot, GiGoat } from "react-icons/gi";
-import { FaCampground, FaRegCopyright } from "react-icons/fa";
+import { FaCampground} from "react-icons/fa";
 import HippieFootprints from "../../Components/HippieFootprintsFolder/HippieFootprints.jsx";
 import Copyright from "../../Components/CopyrightFolder/Copyright.jsx";
 import "./LocalArtist.css";
@@ -94,20 +94,21 @@ const LocalArtistFolder = () => {
         </main>
 
         {/* COPYRIGHT + HYBRID TOOLTIP */}
-        
+      
         <div className="relative"> 
-
-         <a href="https://mybabb.com/youtubepageserious" />
-          <span className="absolute bottom-[-5.8rem] left-4 z-0 w-10 h-10 bg-transparent ">< Copyright /> 
+             
+          <span className="absolute bottom-[-5.8rem] left-4 z-0 w-10 h-10 bg-transparent ">
+            <a href="https://mybabb.com/youtubepageecho">< Copyright /></a> 
           </span>
-
+             
         {/* CONTACT ASIDE */}
         <aside className="contact-aside relative">
           <span className="absolute bottom-[-4.5rem] right-4 z-50">
             <BatSignal />
           </span>
         </aside>
-</div>
+     
+    
         {/* FOOTER */}
         <footer className="badge relative m-auto mb-4 mt-4 w-fit whitespace-nowrap text-amber-200">
           <button
@@ -123,6 +124,8 @@ const LocalArtistFolder = () => {
           <HippieFootprints />
         </div>
       </div>
+    </div>
+   
     </>
   );
 };
