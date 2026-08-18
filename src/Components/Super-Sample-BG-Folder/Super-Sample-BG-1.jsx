@@ -10,17 +10,16 @@ const Super_BG_Cover = () => {
 
     const Sketch = (p) => {
       let threads = [];
-      const num = 40;            // fewer threads, more elegance
+      const num = 40; // fewer threads, more elegance
       const noiseScale = 0.003;
 
       p.setup = () => {
         p.createCanvas(
           document.documentElement.clientWidth,
-          document.documentElement.clientHeight
+          document.documentElement.clientHeight,
         );
 
         p.background(120, 0, 112);
-
 
         for (let i = 0; i < num; i++) {
           threads.push({
@@ -79,10 +78,14 @@ const Super_BG_Cover = () => {
           let controlY = t.y - p.cos(angle) * t.curveAmp;
 
           p.bezier(
-            t.x, t.y,
-            controlX, controlY,
-            controlX, controlY,
-            endX, endY
+            t.x,
+            t.y,
+            controlX,
+            controlY,
+            controlX,
+            controlY,
+            endX,
+            endY,
           );
         }
       };
@@ -90,7 +93,7 @@ const Super_BG_Cover = () => {
       p.windowResized = () => {
         p.resizeCanvas(
           document.documentElement.clientWidth,
-          document.documentElement.clientHeight
+          document.documentElement.clientHeight,
         );
       };
     };

@@ -1,6 +1,6 @@
 .specialEventFooter {
   position: relative;
-  
+
   width: 100%;
   padding: 0.5rem 1rem;
 
@@ -96,8 +96,8 @@
 .footer-right_Tooltip::before {
   content: attr(data-tool-tip);
   position: absolute;
-  bottom: 14.8rem;   /* below the element */
-  right: 3.5rem;          /* align to bottom-right */
+  bottom: 14.8rem; /* below the element */
+  right: 3.5rem; /* align to bottom-right */
   transform: translateY(10px) scale(0);
   transform-origin: bottom right;
   background: radial-gradient(#6b4f3f, #3e2c25);
@@ -119,8 +119,8 @@
 .footer-right_Tooltip::after {
   content: "";
   position: absolute;
-  bottom: 13.5rem;  /* just above bubble */
-  right: 4.5rem;         /* bottom-right origin */
+  bottom: 13.5rem; /* just above bubble */
+  right: 4.5rem; /* bottom-right origin */
   width: 30px;
   height: 24px;
   background-color: #d9c7a3;

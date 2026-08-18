@@ -16,16 +16,16 @@ const NationalForestButton = () => {
         rel="noopener noreferrer"
         className="nationalForest_buttonWrapper mt-8 inline-block px-4 py-2"
       >
-        <div className="flex items-center justify-center gap-4 px-1 bg-transparent">
-          <span className="inline-block text-[#eece6c] bg-transparent">
+        <div className="flex items-center justify-center gap-4 bg-transparent px-1">
+          <span className="inline-block bg-transparent text-[#eece6c]">
             <PiPersonSimpleHike size={22} />
           </span>
 
-          <span className="inline-block font-Itim-Regular text-xl text-[#eece6c] bg-transparent">
+          <span className="inline-block bg-transparent font-Itim-Regular text-xl text-[#eece6c]">
             <SlDirection size={18} />
           </span>
 
-          <span className="inline-block scale-x-[-1] text-[#eece6c] bg-transparent">
+          <span className="inline-block scale-x-[-1] bg-transparent text-[#eece6c]">
             <GiYarn size={20} />
           </span>
         </div>

@@ -9,11 +9,31 @@
 
   /* layered hippie chartreuse pattern */
   background-image:
-    radial-gradient(circle at 10% 20%, rgba(190, 255, 120, 0.18) 0, transparent 55%),
-    radial-gradient(circle at 80% 0%, rgba(210, 255, 150, 0.16) 0, transparent 50%),
-    radial-gradient(circle at 0% 80%, rgba(160, 230, 90, 0.22) 0, transparent 55%),
-    radial-gradient(circle at 90% 70%, rgba(190, 255, 120, 0.18) 0, transparent 50%),
-    radial-gradient(circle at 50% 50%, rgba(140, 210, 70, 0.25) 0, transparent 60%);
+    radial-gradient(
+      circle at 10% 20%,
+      rgba(190, 255, 120, 0.18) 0,
+      transparent 55%
+    ),
+    radial-gradient(
+      circle at 80% 0%,
+      rgba(210, 255, 150, 0.16) 0,
+      transparent 50%
+    ),
+    radial-gradient(
+      circle at 0% 80%,
+      rgba(160, 230, 90, 0.22) 0,
+      transparent 55%
+    ),
+    radial-gradient(
+      circle at 90% 70%,
+      rgba(190, 255, 120, 0.18) 0,
+      transparent 50%
+    ),
+    radial-gradient(
+      circle at 50% 50%,
+      rgba(140, 210, 70, 0.25) 0,
+      transparent 60%
+    );
 
   background-repeat: no-repeat;
   background-size: cover;

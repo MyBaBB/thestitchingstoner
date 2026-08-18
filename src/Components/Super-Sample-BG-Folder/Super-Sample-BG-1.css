@@ -5,14 +5,12 @@
   height: 100%;
   z-index: 0; /* or 1 */
   pointer-events: none;
-  
 }
-
 
 canvas {
   display: block;
   position: absolute;
   inset: 0;
   pointer-events: none;
-  opacity:.2 ; 
+  opacity: 0.2;
 }
