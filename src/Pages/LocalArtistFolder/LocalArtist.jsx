@@ -96,7 +96,11 @@ const LocalArtistFolder = () => {
         {/* COPYRIGHT + HYBRID TOOLTIP */}
         
         <div className="relative"> 
-          <span className="absolute bottom-[-5.8rem] left-4 z-0 w-10 h-10 bg-transparent ">< Copyright /> </span>
+
+         <a href="https://mybabb.com/youtubepageserious" />
+          <span className="absolute bottom-[-5.8rem] left-4 z-0 w-10 h-10 bg-transparent ">< Copyright /> 
+          </span>
+
         {/* CONTACT ASIDE */}
         <aside className="contact-aside relative">
           <span className="absolute bottom-[-4.5rem] right-4 z-50">
