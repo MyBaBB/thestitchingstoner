@@ -82,7 +82,10 @@ export default function RandomYouTubePlayer() {
     // Cleanup when component unmounts
     return () => {
       isSubscribed = false;
-      if (playerRef.current && typeof playerRef.current.destroy === "function") {
+      if (
+        playerRef.current &&
+        typeof playerRef.current.destroy === "function"
+      ) {
         playerRef.current.destroy();
         playerRef.current = null;
       }
@@ -91,7 +94,10 @@ export default function RandomYouTubePlayer() {
 
   // Handle switching videos when currentVideo state changes
   useEffect(() => {
-    if (playerRef.current && typeof playerRef.current.loadVideoById === "function") {
+    if (
+      playerRef.current &&
+      typeof playerRef.current.loadVideoById === "function"
+    ) {
       playerRef.current.loadVideoById(currentVideo);
     }
   }, [currentVideo]);

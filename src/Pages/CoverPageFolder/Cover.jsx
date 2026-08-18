@@ -14,8 +14,8 @@ import SpecialEventButton from "../../Components/ButtonsFolder/SpecialEventButto
 import CoolBG from "../../Components/Super_BG_Cover_Folder/Super_BG_Cover.jsx";
 import HippieFootprints from "../../Components/HippieFootprintsFolder/HippieFootprints.jsx";
 import { FaRegCopyright } from "react-icons/fa";
-import { PiCrossThin } from "react-icons/pi";
-import { IoMdArrowDropright } from "react-icons/io";
+
+ 
 
 
  export default function LandingPage() {
@@ -59,7 +59,7 @@ import { IoMdArrowDropright } from "react-icons/io";
     "skyblue",
     "#4B0082",
     "#9400D3",
-  ];
+  ]; 
   const [index, setIndex] = useState(0);
   const [exiting, setExiting] = useState(false);
   useEffect(() => {
@@ -163,17 +163,14 @@ import { IoMdArrowDropright } from "react-icons/io";
         <span className="inline-block text-orange-300/40 ">
         </span>
                
-                <span className="absolute left-4 top-[50%] transform -translate-y-1/2 text-orange-300/80 ">
+                <span className="copyrightCool absolute left-4 top-[50%] transform -translate-y-1/2  ">
                   < FaRegCopyright  size={11}/>
                 </span>
 
-              <span className="inline-block font-Itim-Regular   text-[8px] text-white/80  ">
-                  Brett&apos;s&nbsp;Web&nbsp;Development  
+              <span className="noLeftBorder inline-block font-Itim-Regular text-[8px]  ">
+                    Brett&apos;s&nbsp;Web&nbsp;Development  
               </span>
-                 <span className="absolute right-3 top-[50%] transform -translate-y-1/2 text-orange-300/80 ">
-               
-                <   IoMdArrowDropright  size={20}/>
-                </span>
+                 
           </div>   
           </a>
 </footer>

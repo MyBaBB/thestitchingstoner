@@ -1,4 +1,3 @@
-
 /* Title */
 .specialEventTitle {
   font-family: "EmilysCandy-Regular";
@@ -12,10 +11,9 @@
     font-size: 1.5rem;
   }
 }
- 
- /* VanBounce.css */
+
+/* VanBounce.css */
 .vanBounce {
- 
   display: inline-block;
   animation: vanSlideIn 1.8s ease-out forwards;
   transform-origin: center;
@@ -46,7 +44,7 @@
 .sessionBump {
   display: inline-block;
   animation: sessionBump 1.8s ease-out forwards;
-  animation-delay: .5s; /* sync with van arrival */
+  animation-delay: 0.5s; /* sync with van arrival */
   transform-origin: left center;
 }
 
@@ -67,8 +65,8 @@
 
 .yarnWiggle {
   display: inline-block;
-  animation: yarnWiggle 1.6s ease-in-out ;
-  animation-delay: .5s; /* adjust this however you want */
+  animation: yarnWiggle 1.6s ease-in-out;
+  animation-delay: 0.5s; /* adjust this however you want */
   transform-origin: center;
 }
 
@@ -98,7 +96,7 @@
 .crochetRotate {
   display: inline-block;
   animation: crochetRotate 1.4s ease-out forwards;
-  animation-delay: .5s; /* adjust this however you want */
+  animation-delay: 0.5s; /* adjust this however you want */
   transform-origin: right bottom;
 }
 

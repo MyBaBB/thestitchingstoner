@@ -1,4 +1,3 @@
-
 // eslint-disable-next-line no-unused-vars
 import React from "react";
 import { Link } from "react-router-dom";
@@ -16,10 +15,11 @@ const Footer = () => {
         </div>
 
         <Link to="/localartist">
-          <div className="footer-right footer-right_Tooltip flex flex-col opacity-80"
-          data-tool-tip=" 🌈 This Website Chooses Real Art 🎨 ">
+          <div
+            className="footer-right footer-right_Tooltip flex flex-col opacity-80"
+            data-tool-tip=" 🌈 This Website Chooses Real Art 🎨 "
+          >
             <NotRobot />
-          
           </div>
         </Link>
       </div>

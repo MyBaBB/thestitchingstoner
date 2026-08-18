@@ -6,7 +6,7 @@
 .GotoWebTooltip::before {
   content: attr(data-tooltip);
   position: absolute;
-  bottom: 5.4rem;     /* BELOW the button */
+  bottom: 5.4rem; /* BELOW the button */
   left: -4rem;
   transform: translateY(10px) scale(0);
   transform-origin: bottom center;
