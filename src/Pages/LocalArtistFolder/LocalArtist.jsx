@@ -110,16 +110,8 @@ const LocalArtistFolder = () => {
             <a href="https://mybabb.com/youtubepageecho " >
 
           <div
-            className="copyRightAnchorTag2 "                  
-              data-tooltip="⚡ Instinct in the Mind — Tech in the Hands  ">
-                <div className="tooltipTextLayer">
-               Instinct in the Mind — Tech in the Hands</div>
-                <div className="tooltipTextLayer2">
-               Hybrid WebCrafter — Soul in the Code
-                </div>
-                <div className="tooltipTextLayer3">
-                  Where Creativity Walks Barefoot
-                </div>
+            className="copyRightAnchorTag2 "   >               
+             
 
 
 

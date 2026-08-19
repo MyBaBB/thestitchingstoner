@@ -204,7 +204,8 @@
   content: "";
   position: absolute;
   bottom: 120%;
-  left: 50%;
+  left: 9rem;
+  transform: translate(-50%, 40px)  scale(0.4) rotate(-5deg);
   opacity: 0;
   pointer-events: none;
   
@@ -219,7 +220,7 @@
   z-index: 999;
   
   /* Initial default transform state before hover */
-  transform: translate(-50%, 40px) scale(0.4) rotate(-5deg);
+ 
 }
 
 /* Trigger animation ONLY on hover */
@@ -243,52 +244,47 @@
 }
 
 
-
-/* Animated Down Arrow pointing to the trigger */
+/* Downward-moving arrow that still points DOWN */
+/* Downward-moving arrow that still points DOWN */
 .hybridTooltip1:hover::after {
   content: "";
   position: absolute;
-  /* Positions arrow directly under the tooltip image */
-  bottom: calc(120% - 10px);
-  left: 7.9rem;
-  
-  /* Creates arrow shape using CSS borders */
+
+  /* ARROW STARTS BEHIND THE IMAGE */
+  top: -1.2rem; /* hides arrow behind the image */
+  left: 50%;
+  transform: translateX(-50%);
+
   width: 0;
   height: 0;
+
+  /* ARROW STILL POINTS DOWN */
   border-left: 8px solid transparent;
   border-right: 8px solid transparent;
-  border-top: 10px solid #adff2f; /* Limegreen glow accent */
-  
+  border-top: 10px solid #adff2f;
+
   filter: drop-shadow(0px 0px 4px #adff2fbf);
   z-index: 1;
-  
-  /* Synchronized bounce animation */
-  animation: arrowBounce 3.1s cubic-bezier(0.25, 1.25, 0.25, 1) forwards;
+
+  animation: arrowDrop 0.9s ease-out forwards;
+  animation-delay:  0s;
 }
 
-@keyframes arrowBounce {
+@keyframes arrowDrop {
   0% {
     opacity: 0;
-    transform: translate(60px, 100px) scale(0.2);
+    transform: translate(-50%, -20px) scale(0.6); /* ABOVE + hidden */
   }
   60% {
-    opacity: 0;
-    transform: translate(-50%, -15px) scale(1.2);
+    opacity: 1;
+    transform: translate(-50%, 5px) scale(1.1); /* dropping DOWN */
   }
   100% {
     opacity: 1;
-    transform: translate(-50%, 0) scale(1);
+    transform: translate(-50%, 12px) scale(1); /* final DOWN position */
   }
 }
-/* ============================================
-   MOBILE: HIDE TOOLTIP
-   ============================================ */
-@media (max-width: 685px) {
-  .hybridTooltip1::before,
-  .hybridTooltip1::after {
-    display: none;
-  }
-}
+
 
  
  
