@@ -51,9 +51,10 @@ export default function SpecialEventPage() {
 
             <YouTubePlayer />
           </div>
-            <a href="https://mybabb.com/youtubepageserious"> 
-               < Copyright />
-            </a>
+           {/* Wrap anchor inline-block with w-fit to prevent layout stretching */}
+<a href="https://mybabb.com/youtubepageserious" className="inline-block w-fit"> 
+  <Copyright />
+</a>
           <Footer />
         </div>
       </div>
