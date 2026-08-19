@@ -251,13 +251,13 @@
   position: absolute;
 
   /* ARROW STARTS BEHIND THE IMAGE */
-  top: -1.2rem; /* hides arrow behind the image */
+  top: -1.40rem; /* hides arrow behind the image */
   left: 50%;
   transform: translateX(-50%);
 
   width: 0;
   height: 0;
-
+  transform-origin: top center;
   /* ARROW STILL POINTS DOWN */
   border-left: 8px solid transparent;
   border-right: 8px solid transparent;
@@ -265,18 +265,22 @@
 
   filter: drop-shadow(0px 0px 4px #adff2fbf);
   z-index: 1;
-
-  animation: arrowDrop 0.9s ease-out forwards;
-  animation-delay:  0s;
+  opacity: 0;
+  animation: arrowDrop 2.75s ease-out forwards;
+  animation-delay:  0.1s;
 }
 
 @keyframes arrowDrop {
   0% {
     opacity: 0;
-    transform: translate(-50%, -20px) scale(0.6); /* ABOVE + hidden */
+    transform: translate(-50%, 0px) scale(0.6); /* ABOVE + hidden */
   }
   60% {
-    opacity: 1;
+    opacity: 0;
+    transform: translate(-50%, 5px) scale(1.1); /* dropping DOWN */
+  }
+  90% {
+    opacity: 0;
     transform: translate(-50%, 5px) scale(1.1); /* dropping DOWN */
   }
   100% {
