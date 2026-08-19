@@ -65,7 +65,7 @@ const LocalArtistFolder = () => {
 
           <ul className="groovy-list mt-4">
             <div className="items-enter relative flex w-full justify-center">
-              <p className="traditionalSwapBlock traditionalWord">
+              <div className="traditionalSwapBlock traditionalWord">
                 <div className="quoteLeft absolute left-2 top-[50%] -translate-y-1/2 scale-x-[-1] transform text-base xs:text-lg md:text-2xl">
                   <ImEarth color="limegreen " />
                 </div>
@@ -75,7 +75,7 @@ const LocalArtistFolder = () => {
                 <div className="quoteRight absolute right-2 top-[50%] -translate-y-1/2 transform text-base xs:text-lg md:text-2xl">
                   <ImEarth color="limegreen" />
                 </div>
-              </p>
+              </div>
             </div>
 
             <li>🎨 Handmade art and illustration</li>

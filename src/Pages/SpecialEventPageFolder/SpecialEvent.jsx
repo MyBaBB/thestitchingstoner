@@ -51,9 +51,9 @@ export default function SpecialEventPage() {
 
             <YouTubePlayer />
           </div>
-          <a href="https://mybabb.com/youtubepageserious"> 
-          < Copyright />
-           </a>
+            <a href="https://mybabb.com/youtubepageserious"> 
+               < Copyright />
+            </a>
           <Footer />
         </div>
       </div>

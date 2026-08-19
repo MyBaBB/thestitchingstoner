@@ -231,6 +231,8 @@
   margin-bottom: 15px;
   margin-top: 15px;
 }
+
+
 .hrNoZoneTop {
   border: 1px solid rgba(46, 90, 44, 0.63); /* Forest Service Green */
   border-radius: 8px;
@@ -339,40 +341,42 @@
 }
 
 /* The animated text */
-.traditionalWordVapor::after {
-  content: "Traditional Style";
-  animation: hippieSwap 10s infinite ease-in-out;
+/* Animated word container */
+.traditionalWordVapor {
+  position: relative;
+  display: inline-block;
 }
 
-/* Swap animation */
-@keyframes hippieSwap {
-  0%,
-  40% {
-    content: "Traditional Style";
+.traditionalWordVapor::after {
+  content: "Traditional Style";
+  display: inline-block;
+  animation: hippieFadeSwap 10s infinite ease-in-out;
+}
+
+@keyframes hippieFadeSwap {
+  0%, 40% {
     opacity: 1;
-    transform: scale(1);
+    transform: translateY(0);
   }
   45% {
     opacity: 0;
-    transform: scale(0.9);
+    transform: translateY(-4px);
   }
-  50%,
-  90% {
-    content: "Selected";
+  50%, 90% {
     opacity: 1;
-    transform: scale(1);
+    transform: translateY(0);
+    content: "Selected"; /* Modern Chromium, Firefox, and WebKit handle text swap with opacity zeroed out */
   }
   95% {
     opacity: 0;
-    transform: scale(0.9);
+    transform: translateY(4px);
   }
   100% {
-    content: "Traditional Style";
     opacity: 1;
-    transform: scale(1);
+    transform: translateY(0);
+    content: "Traditional Style";
   }
 }
-
 
 
 .copyRightAnchorTag2 {
@@ -458,20 +462,80 @@
 .hybridTooltip2::before {
   content: "";
   position: absolute;
-  top: -16.4rem;
-  right: -27.5rem;
-  transform: translate(-50%, 120vh) scale(0);
+  bottom: 120%;
+  left: 50%;
   opacity: 0;
-  width: 400px;
-  height: 220px;
+  pointer-events: none;
+  
+  width: min(320px, 80vw);
+  height: 180px;
   background-image: url("../../Images/elvira220x400.webp");
   background-size: cover;
-  border-radius: 25px;
-  box-shadow: 0px 0px 5px 0px #adff2fbf;
+  background-position: center;
+  border-radius: 16px;
+  box-shadow: 0px 0px 12px rgba(173, 255, 47, 0.75);
+  border: 1px solid rgba(46, 90, 44, 0.63);
   z-index: 999;
+  
+  /* Initial default transform state before hover */
+  transform: translate(-50%, 40px) scale(0.4) rotate(-5deg);
 }
 
+/* Trigger animation ONLY on hover */
 .hybridTooltip2:hover::before {
-  opacity: 1;
-  animation: hybridArcLaunch 1.1s cubic-bezier(0.25, 1.25, 0.25, 1) forwards;
+  animation: hybridArcLaunch 0.8s cubic-bezier(0.25, 1.25, 0.25, 1) forwards;
+}
+
+@keyframes hybridArcLaunch {
+  0% {
+    opacity: 0;
+    transform: translate(-150%, 40px) scale(0.4) rotate(-5deg);
+  }
+  70% {
+    opacity: 1;
+    transform: translate(-1%, -10px) scale(1.05) rotate(1deg);
+  }
+  100% {
+    opacity: 1;
+    transform: translate(-1%, 0) scale(1) rotate(0deg);
+  }
+}
+
+
+
+/* Animated Down Arrow pointing to the trigger */
+.hybridTooltip2:hover::after {
+  content: "";
+  position: absolute;
+  /* Positions arrow directly under the tooltip image */
+  bottom: calc(120% - 10px);
+  left:12rem;
+  
+  /* Creates arrow shape using CSS borders */
+  width: 0;
+  height: 0;
+  border-left: 8px solid transparent;
+  border-right: 8px solid transparent;
+  border-top: 10px solid #adff2f; /* Limegreen glow accent */
+  
+  filter: drop-shadow(0px 0px 4px #adff2fbf);
+  z-index: 1;
+  
+  /* Synchronized bounce animation */
+  animation: arrowBounce 3.1s cubic-bezier(0.25, 1.25, 0.25, 1) forwards;
+}
+
+@keyframes arrowBounce {
+  0% {
+    opacity: 0;
+    transform: translate(60px, 100px) scale(0.2);
+  }
+  60% {
+    opacity: 0;
+    transform: translate(-50%, -15px) scale(1.2);
+  }
+  100% {
+    opacity: 1;
+    transform: translate(-50%, 0) scale(1);
+  }
 }
