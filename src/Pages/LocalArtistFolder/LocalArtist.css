@@ -450,12 +450,12 @@
     font-size 0.45s ease;
   z-index: 9999; 
   }
-.hybridTooltip {
+.hybridTooltip2 {
   position: relative;
   display: inline-block;
 }
 
-.hybridTooltip::before {
+.hybridTooltip2::before {
   content: "";
   position: absolute;
   top: -16.4rem;
@@ -471,7 +471,7 @@
   z-index: 999;
 }
 
-.hybridTooltip:hover::before {
+.hybridTooltip2:hover::before {
   opacity: 1;
   animation: hybridArcLaunch 1.1s cubic-bezier(0.25, 1.25, 0.25, 1) forwards;
 }
