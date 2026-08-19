@@ -1,3 +1,9 @@
+.tooltip-wrapper1 {
+  position: relative;
+  overflow: visible; /* important */
+}
+
+
 .page-content {
   position: relative;
   z-index: 10;
@@ -22,6 +28,7 @@
     radial-gradient(circle at 50% 80%, #ae811f, transparent 50%),
     linear-gradient(135deg, #1a0033, #001a1a);
   background-size: cover;
+  overflow: hidden;
   background-attachment: scroll; /* FIXED: mobile-safe */
   animation: hippieFlow 18s ease-in-out infinite;
   flex-wrap: wrap; /* FIXED: prevents overflow */

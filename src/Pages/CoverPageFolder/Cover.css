@@ -194,7 +194,7 @@
     right: 0;
   }
 }
-
+ 
 .hybridTooltip1 {
   position: relative;
   display: inline-block;
@@ -230,15 +230,15 @@
 @keyframes hybridArcLaunch {
   0% {
     opacity: 0;
-    transform: translate(-150%, 40px) scale(0.4) rotate(-5deg);
+    transform: translate(0%, 40px) scale(0.4) rotate(-5deg);
   }
   70% {
     opacity: 1;
-    transform: translate(-1%, -10px) scale(1.05) rotate(1deg);
+    transform: translate(1%, -10px) scale(1.05) rotate(1deg);
   }
   100% {
     opacity: 1;
-    transform: translate(-1%, 0) scale(1) rotate(0deg);
+    transform: translate(1%, 0) scale(1) rotate(0deg);
   }
 }
 
