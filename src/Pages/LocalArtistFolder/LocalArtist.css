@@ -522,7 +522,7 @@
   z-index: 1;
   
   /* Synchronized bounce animation */
-  animation: arrowBounce 3.1s cubic-bezier(0.25, 1.25, 0.25, 1) forwards;
+  animation: arrowBounce 3.2s cubic-bezier(0.25, 1.25, 0.25, 1) forwards;
 }
 
 @keyframes arrowBounce {
