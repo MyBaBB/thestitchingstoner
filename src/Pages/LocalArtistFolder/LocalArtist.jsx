@@ -31,14 +31,22 @@ const LocalArtistFolder = () => {
 
           <ReverseButton />
 
-          <div className="NotRobotGradient relative m-auto mb-2 mt-4 h-[100px] w-[100px]">
+          <div className="NotRobotGradient relative m-auto mb-2 mt-4 h-[100px] w-[100px]   ">
             <a
               href="https://mybabb.com"
-              className="not-robot-link relative flex"
+             className="not-robot-link absolute hybridTooltip2 "
             >
+
               <NotRobot />
+              <div className="tooltipTextLayer">Instinct in the Mind — Tech in the Hands</div>
+              <div className="tooltipTextLayer2">Hybrid WebCrafter — Soul in the Code</div>
+              <div className="tooltipTextLayer3">Where Creativity Walks Barefoot</div>
+
+
             </a>
           </div>
+
+
         </header>
 
         {/* MAIN CONTENT */}
@@ -98,22 +106,31 @@ const LocalArtistFolder = () => {
         <div className="relative"> 
              
           <span className="absolute bottom-[1.23rem] left-4 z-0 w-10 h-10 bg-transparent ">
-            <a href="https://mybabb.com/youtubepageecho">
+            <a href="https://mybabb.com/youtubepageecho " >
 
           <div
-            className="copyRightAnchorTag2 hybridTooltip2"
+            className="copyRightAnchorTag2 hybridTooltip2"                  
               data-tooltip="⚡ Instinct in the Mind — Tech in the Hands  ">
-              <div className="copyRightContainer2 flex flex-col px-8 py-4 items-center justify-center"
-              >
+                <div className="tooltipTextLayer">
+               Instinct in the Mind — Tech in the Hands</div>
+                <div className="tooltipTextLayer2">
+               Hybrid WebCrafter — Soul in the Code
+                </div>
+                <div className="tooltipTextLayer3">
+                  Where Creativity Walks Barefoot
+                </div>
+
+
+
+                <div className="copyRightContainer2 flex flex-col px-8 py-4 items-center justify-center">
                 
                 <span className=" copyRightCool2 absolute left-4 top-[50%] transform -translate-y-1/2">
                   <FaRegCopyright />
                 </span>
 
                 <span className="noLeftBorder2 inline-block font-Itim-Regular">
-                  <span className="webDevFancyWords2">Hybrid&nbsp;WebCrafter</span>
+                  <span className="webDevFancyWords2 whitespace-nowrap">Hybrid&nbsp;Web-Crafting</span>
                 </span>
-
               </div>
             </div>
                       
