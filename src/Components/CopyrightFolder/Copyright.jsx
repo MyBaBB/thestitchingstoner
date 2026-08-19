@@ -21,7 +21,7 @@ const Copyright = () => {
       </span>
 
       <span className="noLeftBorder1 inline-block font-Itim-Regular">
-        <span className="webDevFancyWords">Hybrid&nbsp;WebCrafter</span>
+        <span className="webDevFancyWords whitespace-nowrap">Hybrid&nbsp;Web-Craft</span>
       </span>
 
     </div>
