@@ -38,9 +38,10 @@ const LocalArtistFolder = () => {
             >
 
               <NotRobot />
-              <div className="tooltipTextLayer">Instinct in the Mind — Tech in the Hands</div>
-              <div className="tooltipTextLayer2">Hybrid WebCrafter — Soul in the Code</div>
-              <div className="tooltipTextLayer3">Where Creativity Walks Barefoot</div>
+              <div className="tooltipTextLayer">Human Hands Craft 
+                Better Energy </div>
+              <div className="tooltipTextLayer2">Robot Art is Optional</div>
+              <div className="tooltipTextLayer3">It is Your Choice</div>
 
 
             </a>
@@ -68,20 +69,20 @@ const LocalArtistFolder = () => {
               </span>
             </h2>
 
-            <p>Support your Local Artist</p>
+            <p>Optional - Local Artist</p>
           </article>
 
           <ul className="groovy-list mt-4">
             <div className="items-enter relative flex w-full justify-center">
               <div className="traditionalSwapBlock traditionalWord">
                 <div className="quoteLeft absolute left-2 top-[50%] -translate-y-1/2 scale-x-[-1] transform text-base xs:text-lg md:text-2xl">
-                  <ImEarth color="limegreen " />
+                  ✌🏻
                 </div>
 
-                <span className="traditionalWordVapor whitespace-nowrap"> Traditional Style</span>
+                <span className="traditionalWordVapor whitespace-nowrap"> Welcome</span>
 
                 <div className="quoteRight absolute right-2 top-[50%] -translate-y-1/2 transform text-base xs:text-lg md:text-2xl">
-                  <ImEarth color="limegreen" />
+                   🛖
                 </div>
               </div>
             </div>
