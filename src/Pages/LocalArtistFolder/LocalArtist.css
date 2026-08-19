@@ -190,6 +190,7 @@
   }
 }
 .NotRobotGradient {
+  overflow:visible;
   border-radius: 100%;
   background: radial-gradient(
     rgba(70, 56, 47, 1) 0%,
@@ -231,6 +232,8 @@
   margin-bottom: 15px;
   margin-top: 15px;
 }
+
+
 .hrNoZoneTop {
   border: 1px solid rgba(46, 90, 44, 0.63); /* Forest Service Green */
   border-radius: 8px;
@@ -307,7 +310,7 @@
 .backToTopBtn:hover .tooltip {
   opacity: 1;
 }
-/* Animated Traditional Style ↔ Optional */
+ 
 /* Container */
 .traditionalSwapBlock {
   width: 20rem;
@@ -336,41 +339,6 @@
   color: #f9eaae;
   white-space: nowrap;
   margin: 0 auto;
-}
-
-/* The animated text */
-.traditionalWordVapor::after {
-  content: "Traditional Style";
-  animation: hippieSwap 10s infinite ease-in-out;
-}
-
-/* Swap animation */
-@keyframes hippieSwap {
-  0%,
-  40% {
-    content: "Traditional Style";
-    opacity: 1;
-    transform: scale(1);
-  }
-  45% {
-    opacity: 0;
-    transform: scale(0.9);
-  }
-  50%,
-  90% {
-    content: "Selected";
-    opacity: 1;
-    transform: scale(1);
-  }
-  95% {
-    opacity: 0;
-    transform: scale(0.9);
-  }
-  100% {
-    content: "Traditional Style";
-    opacity: 1;
-    transform: scale(1);
-  }
 }
 
 
@@ -450,28 +418,202 @@
     font-size 0.45s ease;
   z-index: 9999; 
   }
-.hybridTooltip {
+/* ============================================================
+   BASE TOOLTIP STRUCTURE
+   ============================================================ */
+.hybridTooltip2 {
   position: relative;
   display: inline-block;
 }
 
-.hybridTooltip::before {
+/* ============================================================
+   IMAGE ( ::before )
+   ============================================================ */
+.hybridTooltip2::before {
   content: "";
   position: absolute;
-  top: -16.4rem;
-  right: -27.5rem;
-  transform: translate(-50%, 120vh) scale(0);
+  top: 7rem;
+  bottom: auto;
+  left: 50%;
+  transform: translateX(-50%);
+  
   opacity: 0;
-  width: 400px;
-  height: 220px;
+  pointer-events: none;
+
+  width: min(320px, 80vw);
+  height: 180px;
   background-image: url("../../Images/elvira220x400.webp");
   background-size: cover;
-  border-radius: 25px;
-  box-shadow: 0px 0px 5px 0px #adff2fbf;
+  background-position: center;
+  border-radius: 16px;
+  box-shadow: 0px 0px 12px rgba(173, 255, 47, 0.75);
+  border: 1px solid rgba(46, 90, 44, 0.63);
   z-index: 999;
+
+ 
 }
 
-.hybridTooltip:hover::before {
-  opacity: 1;
-  animation: hybridArcLaunch 1.1s cubic-bezier(0.25, 1.25, 0.25, 1) forwards;
+.hybridTooltip2:hover::before {
+  animation: hybridArcLaunch 0.8s cubic-bezier(0.25, 1.25, 0.25, 1) forwards;
+}
+
+@keyframes hybridArcLaunch {
+  0% {
+    opacity: 0;
+    transform: translate(-50%, 40px) translateX(-100%) scale(0.4) rotate(-5deg);
+  }
+  70% {
+    opacity: 1;
+    transform: translate(-50%, -10px) scale(1.05) rotate(1deg);
+  }
+  100% {
+    opacity: 1;
+    transform: translate(-50%, 0) scale(1) rotate(0deg);
+  }
+}
+
+
+/* ============================================================
+   ARROW ( ::after )
+   ============================================================ */
+.hybridTooltip2:hover::after {
+  content: "";
+  position: absolute;
+  top: calc(120% - 19px);
+  left: 50%;
+
+  width: 0;
+  height: 0;
+  border-left: 8px solid transparent;
+  border-right: 8px solid transparent;
+  border-bottom: 10px solid #adff2f;
+ 
+  filter: drop-shadow(0px 0px 4px #adff2fbf);
+  z-index: 1;
+
+  animation: arrowBounce 3.2s cubic-bezier(0.25, 1.25, 0.25, 1) forwards;
+}
+
+@keyframes arrowBounce {
+  0% {
+    opacity: 0;
+    transform: translate(-50%, 40px) scale(0.2); /* start BELOW */
+  }
+  60% {
+    opacity: 1;
+    transform: translate(-50%, 10px) scale(1.2); /* rising up */
+  }
+  100% {
+    opacity: 1;
+    transform: translate(-50%, 0) scale(1); /* final position */
+  }
+}
+
+
+ 
+.tooltipTextLayer,
+.tooltipTextLayer2,
+.tooltipTextLayer3 {
+  position: absolute;
+  top: 19.05rem;
+  left: 50%;
+  transform: translateX(-50%);
+  width: min(320px, 80vw);
+  height: 4rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  font-family: "Itim-Regular";
+  font-size: 1.2rem;
+  color: rgb(116, 180, 248);
+  text-shadow: 0 0 3px black;
+
+  opacity: 0;
+  pointer-events: none;
+  z-index: 1000;
+  border: 2px solid rgba(46, 90, 44, 0.63); /* Forest Service Green */
+  border-radius: 16px;
+  background-color: rgba(70, 56, 47, 1);
+  box-shadow: 0px 0px 4px rgba(173, 255, 47, 0.75);
+}
+
+/* ============================================================
+   VERSE 1 — Fade In → Hang → Exit (2× slower)
+   ============================================================ */
+.hybridTooltip2:hover .tooltipTextLayer {
+  animation: verse1Sequence 8.4s ease-out forwards;
+}
+
+@keyframes verse1Sequence {
+  0% {
+    opacity: 0;
+    transform: translate(-50%, 20px) scale(0.8);
+  }
+  20% {
+    opacity: 1;
+    transform: translate(-50%, 0px) scale(1);
+  }
+  60% {
+    opacity: 1;
+    transform: translate(-50%, 0px) scale(1); /* LONG HANG TIME */
+  }
+  100% {
+    opacity: 0;
+    transform: translate(-50%, -200px) scale(0.8);
+  }
+}
+
+/* ============================================================
+   VERSE 2 — Enters After Verse 1 (2× slower)
+   ============================================================ */
+.hybridTooltip2:hover .tooltipTextLayer2 {
+  animation: verse2Sequence 8s ease-out forwards;
+  animation-delay: 8.4s; /* waits for verse 1 */
+}
+
+@keyframes verse2Sequence {
+  0% {
+    opacity: 0;
+    transform: translate(-50%, 20px) scale(0.8);
+  }
+  20% {
+    opacity: 1;
+    transform: translate(-50%, 0px) scale(1);
+  }
+  60% {
+    opacity: 1;
+    transform: translate(-50%, 0px) scale(1); /* LONG HANG TIME */
+  }
+  100% {
+    opacity: 0;
+    transform: translate(-50%, -200px) scale(0.8);
+  }
+}
+
+/* ============================================================
+   VERSE 3 — Enters After Verse 2 (2× slower) — STAYS VISIBLE
+   ============================================================ */
+.hybridTooltip2:hover .tooltipTextLayer3 {
+  animation: verse3Sequence 8s ease-out forwards;
+  animation-delay: 16.4s; /* waits for verse 1 + verse 2 */
+}
+
+@keyframes verse3Sequence {
+  0% {
+    opacity: 0;
+    transform: translate(-50%, 20px) scale(0.8);
+  }
+  20% {
+    opacity: 1;
+    transform: translate(-50%, 0px) scale(1);
+  }
+  60% {
+    opacity: 1;
+    transform: translate(-50%, 0px) scale(1); /* LONG HANG TIME */
+  }
+  100% {
+    opacity: 0;
+    transform: translate(-50%, -200px) scale(0.8);
+  }
 }

@@ -194,7 +194,101 @@
     right: 0;
   }
 }
+ 
+.hybridTooltip1 {
+  position: relative;
+  display: inline-block;
+}
 
+.hybridTooltip1::before {
+  content: "";
+  position: absolute;
+  bottom: 120%;
+  left: 50%;
+  opacity: 0;
+  pointer-events: none;
+  
+  width: min(320px, 80vw);
+  height: 180px;
+  background-image: url("../../Images/elvira220x400.webp");
+  background-size: cover;
+  background-position: center;
+  border-radius: 16px;
+  box-shadow: 0px 0px 12px rgba(173, 255, 47, 0.75);
+  border: 1px solid rgba(46, 90, 44, 0.63);
+  z-index: 999;
+  
+  /* Initial default transform state before hover */
+  transform: translate(-50%, 40px) scale(0.4) rotate(-5deg);
+}
+
+/* Trigger animation ONLY on hover */
+.hybridTooltip1:hover::before {
+  animation: hybridArcLaunch 0.8s cubic-bezier(0.25, 1.25, 0.25, 1) forwards;
+}
+
+@keyframes hybridArcLaunch {
+  0% {
+    opacity: 0;
+    transform: translate(0%, 40px) scale(0.4) rotate(-5deg);
+  }
+  70% {
+    opacity: 1;
+    transform: translate(1%, -10px) scale(1.05) rotate(1deg);
+  }
+  100% {
+    opacity: 1;
+    transform: translate(1%, 0) scale(1) rotate(0deg);
+  }
+}
+
+
+
+/* Animated Down Arrow pointing to the trigger */
+.hybridTooltip1:hover::after {
+  content: "";
+  position: absolute;
+  /* Positions arrow directly under the tooltip image */
+  bottom: calc(120% - 10px);
+  left: 7.9rem;
+  
+  /* Creates arrow shape using CSS borders */
+  width: 0;
+  height: 0;
+  border-left: 8px solid transparent;
+  border-right: 8px solid transparent;
+  border-top: 10px solid #adff2f; /* Limegreen glow accent */
+  
+  filter: drop-shadow(0px 0px 4px #adff2fbf);
+  z-index: 1;
+  
+  /* Synchronized bounce animation */
+  animation: arrowBounce 3.1s cubic-bezier(0.25, 1.25, 0.25, 1) forwards;
+}
+
+@keyframes arrowBounce {
+  0% {
+    opacity: 0;
+    transform: translate(60px, 100px) scale(0.2);
+  }
+  60% {
+    opacity: 0;
+    transform: translate(-50%, -15px) scale(1.2);
+  }
+  100% {
+    opacity: 1;
+    transform: translate(-50%, 0) scale(1);
+  }
+}
+/* ============================================
+   MOBILE: HIDE TOOLTIP
+   ============================================ */
+@media (max-width: 685px) {
+  .hybridTooltip1::before,
+  .hybridTooltip1::after {
+    display: none;
+  }
+}
 
  
  

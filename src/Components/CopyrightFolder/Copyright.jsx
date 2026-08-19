@@ -7,20 +7,20 @@ const Copyright = () => {
     <>
     
    <section
-  className="copyRightWrapper fixed z-10 bottom-2 left-5 tracking-wide hidden sm:block "
+  className="copyRightWrapper1 fixed z-10 bottom-2 left-5 tracking-wide hidden sm:block "
  
 >
   <div
-   className="copyRightAnchorTag hybridTooltip"
+   className="copyRightAnchorTag1 hybridTooltip1"
     data-tooltip="⚡ Instinct in the Mind — Tech in the Hands  ">
     <div className="copyRightContainer flex flex-col px-8 py-4 items-center justify-center"
     >
       
-      <span className=" copyRightCool absolute left-4 top-[50%] transform -translate-y-1/2">
+      <span className=" copyRightCool1 absolute left-4 top-[50%] transform -translate-y-1/2">
         <FaRegCopyright />
       </span>
 
-      <span className="noLeftBorder inline-block font-Itim-Regular">
+      <span className="noLeftBorder1 inline-block font-Itim-Regular">
         <span className="webDevFancyWords">Hybrid&nbsp;WebCrafter</span>
       </span>
 

@@ -10,11 +10,11 @@ import Copyright from "../../Components/CopyrightFolder/Copyright.jsx";
 export default function SpecialEventPage() {
   return (
     <>
-      <div className="page-content relative z-10 min-h-screen w-full overflow-y-auto overflow-x-hidden">
+      <div className="page-content ">
         <ReverseButton />
 
         <div className="specialEventPage">
-          <div className="specialEventContent relative flex flex-col items-center">
+          <div className="specialEventContent relative flex flex-col items-center  ">
             <VanSlideIn />
 
             <div className="flex flex-col items-center text-center font-Itim-Regular leading-relaxed">
@@ -51,9 +51,12 @@ export default function SpecialEventPage() {
 
             <YouTubePlayer />
           </div>
-          <a href="https://mybabb.com/youtubepageserious"> 
-          < Copyright />
-           </a>
+           {/* Wrap anchor inline-block with w-fit to prevent layout stretching */}
+<a href="https://mybabb.com/youtubepageserious" className="inline-block w-auto">
+      <div className="tooltip-wrapper1">
+          <Copyright />
+      </div>
+</a>
           <Footer />
         </div>
       </div>

@@ -8,7 +8,7 @@ import { ImEarth } from "react-icons/im";
 import { GiCampCookingPot, GiGoat } from "react-icons/gi";
 import { FaCampground} from "react-icons/fa";
 import HippieFootprints from "../../Components/HippieFootprintsFolder/HippieFootprints.jsx";
-import Copyright from "../../Components/CopyrightFolder/Copyright.jsx";
+import { FaRegCopyright } from "react-icons/fa"; // FaRegCopyright
 import "./LocalArtist.css";
 
 const LocalArtistFolder = () => {
@@ -31,14 +31,23 @@ const LocalArtistFolder = () => {
 
           <ReverseButton />
 
-          <div className="NotRobotGradient relative m-auto mb-2 mt-4 h-[100px] w-[100px]">
+          <div className="NotRobotGradient relative m-auto mb-2 mt-4 h-[100px] w-[100px]   ">
             <a
               href="https://mybabb.com"
-              className="not-robot-link relative flex"
+             className="not-robot-link absolute hybridTooltip2 "
             >
+
               <NotRobot />
+              <div className="tooltipTextLayer">Human Hands Craft 
+                Better Energy </div>
+              <div className="tooltipTextLayer2">Robot Art is Optional</div>
+              <div className="tooltipTextLayer3">It is Your Choice</div>
+
+
             </a>
           </div>
+
+
         </header>
 
         {/* MAIN CONTENT */}
@@ -60,22 +69,22 @@ const LocalArtistFolder = () => {
               </span>
             </h2>
 
-            <p>Support your Local Artist</p>
+            <p>Optional - Local Artist</p>
           </article>
 
           <ul className="groovy-list mt-4">
             <div className="items-enter relative flex w-full justify-center">
-              <p className="traditionalSwapBlock traditionalWord">
+              <div className="traditionalSwapBlock traditionalWord">
                 <div className="quoteLeft absolute left-2 top-[50%] -translate-y-1/2 scale-x-[-1] transform text-base xs:text-lg md:text-2xl">
-                  <ImEarth color="limegreen " />
+                  ✌🏻
                 </div>
 
-                <span className="traditionalWordVapor"></span>
+                <span className="traditionalWordVapor whitespace-nowrap"> Welcome</span>
 
                 <div className="quoteRight absolute right-2 top-[50%] -translate-y-1/2 transform text-base xs:text-lg md:text-2xl">
-                  <ImEarth color="limegreen" />
+                   🛖
                 </div>
-              </p>
+              </div>
             </div>
 
             <li>🎨 Handmade art and illustration</li>
@@ -97,8 +106,40 @@ const LocalArtistFolder = () => {
       
         <div className="relative"> 
              
-          <span className="absolute bottom-[-5.8rem] left-4 z-0 w-10 h-10 bg-transparent ">
-            <a href="https://mybabb.com/youtubepageecho">< Copyright /></a> 
+          <span className="absolute bottom-[1.23rem] left-4 z-0 w-10 h-10 bg-transparent ">
+            <a href="https://mybabb.com/youtubepageecho " >
+
+          <div
+            className="copyRightAnchorTag2 "                  
+              data-tooltip="⚡ Instinct in the Mind — Tech in the Hands  ">
+                <div className="tooltipTextLayer">
+               Instinct in the Mind — Tech in the Hands</div>
+                <div className="tooltipTextLayer2">
+               Hybrid WebCrafter — Soul in the Code
+                </div>
+                <div className="tooltipTextLayer3">
+                  Where Creativity Walks Barefoot
+                </div>
+
+
+
+                <div className="copyRightContainer2 flex flex-col px-8 py-4 items-center justify-center">
+                
+                <span className=" copyRightCool2 absolute left-4 top-[50%] transform -translate-y-1/2">
+                  <FaRegCopyright />
+                </span>
+
+                <span className="noLeftBorder2 inline-block font-Itim-Regular">
+                  <span className="webDevFancyWords2 whitespace-nowrap">Hybrid&nbsp;Web-Crafting</span>
+                </span>
+              </div>
+            </div>
+                      
+                      
+            
+            
+            
+            </a> 
           </span>
              
         {/* CONTACT ASIDE */}
