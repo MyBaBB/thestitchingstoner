@@ -10,7 +10,7 @@ import Copyright from "../../Components/CopyrightFolder/Copyright.jsx";
 export default function SpecialEventPage() {
   return (
     <>
-      <div className="page-content relative z-10 min-h-screen w-full overflow-y-auto overflow-x-hidden">
+      <div className="page-content">
         <ReverseButton />
 
         <div className="specialEventPage">
