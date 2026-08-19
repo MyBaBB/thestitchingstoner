@@ -78,7 +78,7 @@ const LocalArtistFolder = () => {
                   <ImEarth color="limegreen " />
                 </div>
 
-                <span className="traditionalWordVapor"></span>
+                <span className="traditionalWordVapor whitespace-nowrap"> Traditional Style</span>
 
                 <div className="quoteRight absolute right-2 top-[50%] -translate-y-1/2 transform text-base xs:text-lg md:text-2xl">
                   <ImEarth color="limegreen" />
@@ -109,7 +109,7 @@ const LocalArtistFolder = () => {
             <a href="https://mybabb.com/youtubepageecho " >
 
           <div
-            className="copyRightAnchorTag2 hybridTooltip2"                  
+            className="copyRightAnchorTag2 "                  
               data-tooltip="⚡ Instinct in the Mind — Tech in the Hands  ">
                 <div className="tooltipTextLayer">
                Instinct in the Mind — Tech in the Hands</div>

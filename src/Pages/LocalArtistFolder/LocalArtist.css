@@ -310,7 +310,7 @@
 .backToTopBtn:hover .tooltip {
   opacity: 1;
 }
-/* Animated Traditional Style ↔ Optional */
+ 
 /* Container */
 .traditionalSwapBlock {
   width: 20rem;
@@ -341,43 +341,6 @@
   margin: 0 auto;
 }
 
-/* The animated text */
-/* Animated word container */
-.traditionalWordVapor {
-  position: relative;
-  display: inline-block;
-}
-
-.traditionalWordVapor::after {
-  content: "Traditional Style";
-  display: inline-block;
-  animation: hippieFadeSwap 10s infinite ease-in-out;
-}
-
-@keyframes hippieFadeSwap {
-  0%, 40% {
-    opacity: 1;
-    transform: translateY(0);
-  }
-  45% {
-    opacity: 0;
-    transform: translateY(-4px);
-  }
-  50%, 90% {
-    opacity: 1;
-    transform: translateY(0);
-    content: "Selected"; /* Modern Chromium, Firefox, and WebKit handle text swap with opacity zeroed out */
-  }
-  95% {
-    opacity: 0;
-    transform: translateY(4px);
-  }
-  100% {
-    opacity: 1;
-    transform: translateY(0);
-    content: "Traditional Style";
-  }
-}
 
 
 .copyRightAnchorTag2 {
@@ -552,26 +515,27 @@
 .tooltipTextLayer2,
 .tooltipTextLayer3 {
   position: absolute;
-  top:11.25rem;
-  
+  top: 19.05rem;
   left: 50%;
   transform: translateX(-50%);
   width: min(320px, 80vw);
-  height: 180px;
-
+  height: 4rem;
   display: flex;
   align-items: center;
   justify-content: center;
   text-align: center;
-
   font-family: "Itim-Regular";
   font-size: 1.2rem;
-  color: #adff2f;
-  text-shadow: 0 0 8px black;
+  color: rgb(116, 180, 248);
+  text-shadow: 0 0 3px black;
 
   opacity: 0;
   pointer-events: none;
   z-index: 1000;
+  border: 2px solid rgba(46, 90, 44, 0.63); /* Forest Service Green */
+  border-radius: 16px;
+  background-color: rgba(70, 56, 47, 1);
+  box-shadow: 0px 0px 4px rgba(173, 255, 47, 0.75);
 }
 
 /* ============================================================
@@ -644,8 +608,12 @@
     opacity: 1;
     transform: translate(-50%, 0px) scale(1);
   }
-  100% {
+  60% {
     opacity: 1;
-    transform: translate(-50%, 0px) scale(1); /* stays visible */
+    transform: translate(-50%, 0px) scale(1); /* LONG HANG TIME */
+  }
+  100% {
+    opacity: 0;
+    transform: translate(-50%, -200px) scale(0.8);
   }
 }
