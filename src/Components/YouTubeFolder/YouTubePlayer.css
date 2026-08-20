@@ -1,6 +1,8 @@
 /* Responsive YouTube container */
 .yt-responsive-container {
   position: relative;
+  overflow: hidden;
+  border-radius: 1rem;
   width: 100%;
   max-width: 700px;
   margin: 0 auto;
@@ -13,6 +15,7 @@
   left: 0;
   width: 100% !important;
   height: 100% !important;
+  border: none;
 }
 
 /* Wrapper spacing */
@@ -25,16 +28,28 @@
   margin-top: 1.5rem;
 }
 
-/* Spin Again button */
-.spinAgainButton {
+ .spinAgainButton {
+  display: inline-flex;  /* Perfect alignment for icons + text */
+  align-items: center;
+  justify-content: center;
   background: rgba(0, 0, 0, 0.45);
   border: 2px dashed #ffeb99;
   padding: 0.75rem 1.5rem;
   border-radius: 0.75rem;
   cursor: pointer;
-  transition: 0.2s ease;
+  transition: transform 0.2s ease, background-color 0.2s ease, box-shadow 0.2s ease;
+  -webkit-user-select: none; /* Safari / Chrome */
+  -moz-user-select: none;    /* Firefox */
+  user-select: none;         /* Standard */
+
+}
+.spinAgainButton:hover {
+  background-color: rgba(255, 255, 255, 0.15);
+  transform: translateY(-2px); /* Soft lift on hover */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
 }
 
-.spinAgainButton:hover {
-  background: rgba(255, 255, 255, 0.15);
+.spinAgainButton:active {
+  transform: translateY(0) scale(0.98); /* Tactile press feedback */
 }
+

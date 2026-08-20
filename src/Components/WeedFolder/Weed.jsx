@@ -7,7 +7,7 @@ const Weed = () => {
     <>
       <div className="weed-leaf">
         <img src={weedGif} alt="weed gif" className="object-contain" />
-        <div className="pointer-events-none absolute inset-0 bg-black/40"></div>
+        <div className="pointer-events-none absolute inset-0 bg-black/20"></div>
       </div>
       <div></div>
     </>

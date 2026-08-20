@@ -23,14 +23,14 @@ const ReverseButton = () => {
         >
           <span className="absolute left-[50px] top-[50px] opacity-70">
             <span className="spiralRotate">
-              <SiDreamstime size={50} />
+              <SiDreamstime size={53} />
             </span>
           </span>
 
           {/* REAL JSX TOOLTIP */}
           <div className="tooltipReact">
             <span className="spiralRotate">
-              <SiDreamstime size={50} />
+              <SiDreamstime size={53} />
             </span>
           </div>
         </button>

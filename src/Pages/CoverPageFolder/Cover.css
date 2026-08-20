@@ -1,4 +1,6 @@
-/* SMOKE ANIMATION */
+/* ============================
+   SMOKE ANIMATION & CIPHER
+   ============================ */
 .stoner-cipher {
   position: relative;
   display: inline-block;
@@ -23,9 +25,7 @@
   0% {
     clip-path: inset(0 50% 0 50%);
   }
-  38% {
-    clip-path: inset(0 0 0 0);
-  }
+  38%,
   90% {
     clip-path: inset(0 0 0 0);
   }
@@ -34,7 +34,9 @@
   }
 }
 
-/* DREAMY LANDING */
+/* ============================
+   DREAMY LANDING
+   ============================ */
 .dreamyLanding {
   position: relative;
   opacity: 0;
@@ -66,7 +68,10 @@
 }
 
 @keyframes cloudFloat {
-  0% {
+  0%,
+  50%,
+  75%,
+  100% {
     transform: translateY(0) rotate(0) scale(1.1);
   }
   25% {
@@ -78,12 +83,11 @@
   75% {
     transform: translateY(0) rotate(1deg) scale(1.1);
   }
-  100% {
-    transform: translateY(0) rotate(0) scale(1.1);
-  }
 }
 
-/* SMOKE TEXT */
+/* ============================
+   SMOKE TEXT ROTATION
+   ============================ */
 .smokeText {
   display: inline-block;
   transition:
@@ -104,48 +108,52 @@
   transform: translate(0, -180px) scale(0.7);
 }
 
-/* MERMAID IMAGE WRAPPER — FIXED HEIGHT REMOVED */
+/* ============================
+   MERMAID FEATURED IMAGE WRAPPER
+   ============================ */
 .mermaidImageWrapper {
+  position: relative;
   width: 100%;
   max-width: 800px;
   overflow: hidden;
   border-radius: 0.75rem;
   border: 1px solid #404040;
   box-shadow: 0 10px 25px rgba(0, 0, 0, 0.6);
-  position: relative;
 }
 
 .mermaidFeaturedImage {
+  display: block;
   width: 100%;
   height: auto;
   object-fit: cover;
   object-position: center;
-  display: block;
 }
 
-/* XS */
+/* ============================
+   RESPONSIVE BREAKPOINTS
+   ============================ */
+/* Mobile hide */
 @media (max-width: 382px) {
   .specialEventInstaller {
     display: none;
   }
 }
 
-/* SM–XL */
-@media (min-width: 382px) and (max-width: 1550px) {
+/* Tablet & Standard Desktop */
+@media (min-width: 382px) and (max-width: 1549px) {
   .mermaidImageWrapper {
     max-width: 501px;
   }
 }
 
-/* XXL */
+/* XXL Screens */
 @media (min-width: 1550px) {
   .mermaidImageWrapper {
-    max-width: 800px; /* current */
-    /* Add XXL-specific rules here */
+    max-width: 800px;
   }
 }
 
-/* LANDSCAPE FIX — MERGED */
+/* Landscape Mobile Fixes */
 @media screen and (orientation: landscape) and (max-height: 550px) {
   .mermaidImageWrapper {
     max-width: 600px;
@@ -158,25 +166,18 @@
   }
 }
 
-/* BUTTON WRAPPER */
+/* ============================
+   BUTTONS & LOGO WRAPPER
+   ============================ */
 .reverseButtonInstaller {
   position: relative;
 }
 
-/* Hidden by default */
 .logoWrapper {
   display: none;
 }
 
-/* Hide below 500px */
-@media screen and (max-width: 500px) {
-  .logoWrapper {
-    display: none !important;
-  }
-}
-
-/* Show between 501px and 951px */
-@media screen and (min-width: 501px) and (max-width: 1550px) {
+@media screen and (min-width: 501px) {
   .logoWrapper {
     display: block;
     position: absolute;
@@ -185,16 +186,9 @@
   }
 }
 
-/* Show above 951px */
-@media screen and (min-width: 1550px) {
-  .logoWrapper {
-    display: block;
-    position: absolute;
-    bottom: 0;
-    right: 0;
-  }
-}
- 
+/* ============================
+   HYBRID TOOLTIP & ANIMATIONS
+   ============================ */
 .hybridTooltip1 {
   position: relative;
   display: inline-block;
@@ -205,25 +199,20 @@
   position: absolute;
   bottom: 120%;
   left: 9rem;
-  transform: translate(-50%, 40px)  scale(0.4) rotate(-5deg);
+  transform: translate(-50%, 40px) scale(0.4) rotate(-5deg);
   opacity: 0;
   pointer-events: none;
-  
   width: min(320px, 80vw);
   height: 180px;
   background-image: url("../../Images/elvira220x400.webp");
   background-size: cover;
   background-position: center;
   border-radius: 16px;
-  box-shadow: 0px 0px 12px rgba(173, 255, 47, 0.75);
+  box-shadow: 0 0 12px rgba(173, 255, 47, 0.75);
   border: 1px solid rgba(46, 90, 44, 0.63);
   z-index: 999;
-  
-  /* Initial default transform state before hover */
- 
 }
 
-/* Trigger animation ONLY on hover */
 .hybridTooltip1:hover::before {
   animation: hybridArcLaunch 0.8s cubic-bezier(0.25, 1.25, 0.25, 1) forwards;
 }
@@ -243,52 +232,36 @@
   }
 }
 
-
-/* Downward-moving arrow that still points DOWN */
-/* Downward-moving arrow that still points DOWN */
 .hybridTooltip1:hover::after {
   content: "";
   position: absolute;
-
-  /* ARROW STARTS BEHIND THE IMAGE */
-  top: -1.40rem; /* hides arrow behind the image */
+  top: -1.4rem;
   left: 50%;
   transform: translateX(-50%);
-
   width: 0;
   height: 0;
   transform-origin: top center;
-  /* ARROW STILL POINTS DOWN */
   border-left: 8px solid transparent;
   border-right: 8px solid transparent;
   border-top: 10px solid #adff2f;
-
-  filter: drop-shadow(0px 0px 4px #adff2fbf);
+  filter: drop-shadow(0 0 4px #adff2fbf);
   z-index: 1;
   opacity: 0;
   animation: arrowDrop 2.75s ease-out forwards;
-  animation-delay:  0.1s;
+  animation-delay: 0.1s;
 }
 
 @keyframes arrowDrop {
-  0% {
-    opacity: 0;
-    transform: translate(-50%, 0px) scale(0.6); /* ABOVE + hidden */
-  }
-  60% {
-    opacity: 0;
-    transform: translate(-50%, 5px) scale(1.1); /* dropping DOWN */
-  }
+  0%,
   90% {
     opacity: 0;
-    transform: translate(-50%, 5px) scale(1.1); /* dropping DOWN */
+    transform: translate(-50%, 5px) scale(1.1);
+  }
+  0% {
+    transform: translate(-50%, 0) scale(0.6);
   }
   100% {
     opacity: 1;
-    transform: translate(-50%, 12px) scale(1); /* final DOWN position */
+    transform: translate(-50%, 13px) scale(1);
   }
 }
-
-
- 
- 
