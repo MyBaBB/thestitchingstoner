@@ -4,9 +4,9 @@ import { GiHemp } from "react-icons/gi";
 import { MdOutlineForest, MdQueueMusic, MdClose } from "react-icons/md";
 import "./YouTubePlayer.css";
 
-// Formatted playlist object with Video IDs and Track Titles
 const VIDEO_LIST = [
   { id: "kH5oJYh6f8w", title: "Hookahville" },
+  { id: "2z9aDUK7QFI", title: "Loner" },
   { id: "5xOZ43vdEUI", title: "Roll The Dice" },
   { id: "QwzT17V82UU", title: "Music" },
   { id: "S2_u5-Nt6Tg", title: "SpringTime Again" },
@@ -19,7 +19,6 @@ const VIDEO_LIST = [
   { id: "79pyb_83FrY", title: "Another Good Man Gone" },
   { id: "y7hHyFk6xgk", title: "Schwa" },
   { id: "im0vrCjzCTQ", title: "Backwoods Rose" },
-  { id: "2z9aDUK7QFI", title: "Loner" },
   { id: "wSqYybyib-A", title: "Pylons" },
 ];
 
@@ -30,6 +29,23 @@ export default function RandomYouTubePlayer() {
   const playerRef = useRef(null);
   const [currentVideo, setCurrentVideo] = useState(getRandomVideo);
   const [isDrawerOpen, setIsDrawerOpen] = useState(false);
+
+  // Close drawer on Escape key press
+  useEffect(() => {
+    const handleKeyDown = (e) => {
+      if (e.key === "Escape" || e.key === "Esc") {
+        setIsDrawerOpen(false);
+      }
+    };
+
+    if (isDrawerOpen) {
+      window.addEventListener("keydown", handleKeyDown);
+    }
+
+    return () => {
+      window.removeEventListener("keydown", handleKeyDown);
+    };
+  }, [isDrawerOpen]);
 
   useEffect(() => {
     let isSubscribed = true;
@@ -92,7 +108,6 @@ export default function RandomYouTubePlayer() {
     };
   }, []);
 
-  // Helper to load selected video ID
   const playVideo = (videoId) => {
     setCurrentVideo(videoId);
     if (
@@ -103,7 +118,13 @@ export default function RandomYouTubePlayer() {
     }
   };
 
- 
+  const playAnother = () => {
+    let nextVideo = getRandomVideo();
+    while (nextVideo === currentVideo && VIDEO_LIST.length > 1) {
+      nextVideo = getRandomVideo();
+    }
+    playVideo(nextVideo);
+  };
 
   return (
     <div className="youtubePlayerWrapper">
@@ -111,9 +132,10 @@ export default function RandomYouTubePlayer() {
         <div id="random-yt-player"></div>
       </div>
 
-      {/* Button Controls Group */}
-      <div className="flex flex-wrap items-center justify-center ">
-        {/* Fancy Playlist Drawer Trigger */}
+      {/* Button Controls */}
+      <div className="flex flex-wrap items-center justify-center gap-3">
+         
+
         <button
           className="spinAgainButton whitespace-nowrap"
           onClick={() => setIsDrawerOpen(true)}
@@ -130,7 +152,7 @@ export default function RandomYouTubePlayer() {
         </button>
       </div>
 
-      {/* Dark Overlay Backdrop */}
+      {/* Overlay */}
       {isDrawerOpen && (
         <div
           className="fixed inset-0 z-40 bg-black/60 backdrop-blur-sm transition-opacity"
@@ -138,13 +160,12 @@ export default function RandomYouTubePlayer() {
         />
       )}
 
-      {/* Slide-Up Bottom Drawer */}
+      {/* Centered 50% Width Drawer */}
       <div
-        className={`fixed bottom-0 left-0 right-0 z-50 flex max-h-[70vh] flex-col rounded-t-2xl border-t border-amber-200/30 bg-neutral-900/95 p-5 text-amber-100 shadow-2xl transition-transform duration-300 ease-out ${
+        className={`fixed bottom-0 left-1/2 z-50 flex max-h-[70vh] w-[90%] md:w-[50%] -translate-x-1/2 flex-col rounded-t-2xl border-t border-amber-200/30 bg-neutral-900/95 p-5 text-amber-100 shadow-2xl transition-transform duration-300 ease-out ${
           isDrawerOpen ? "translate-y-0" : "translate-y-full"
         }`}
       >
-        {/* Drawer Header */}
         <div className="mb-4 flex items-center justify-between border-b border-amber-200/20 pb-3">
           <div className="flex items-center gap-2">
             <MdQueueMusic className="text-2xl text-amber-200" />
@@ -161,7 +182,6 @@ export default function RandomYouTubePlayer() {
           </button>
         </div>
 
-        {/* Scrollable Song List */}
         <div className="overflow-y-auto pr-1">
           <ul className="flex flex-col gap-2">
             {VIDEO_LIST.map((video, index) => {
@@ -171,11 +191,11 @@ export default function RandomYouTubePlayer() {
                   <button
                     onClick={() => {
                       playVideo(video.id);
-                      setIsDrawerOpen(false); // Close drawer on selection
+                      setIsDrawerOpen(false);
                     }}
                     className={`flex w-full items-center justify-between rounded-xl px-4 py-3 text-left transition-colors ${
                       isSelected
-                        ? "border border-amber-300/40 bg-amber-400/20 text-amber-200 font-bold"
+                        ? "border border-amber-300/40 bg-amber-400/20 font-bold text-amber-200"
                         : "bg-white/5 text-amber-100/80 hover:bg-white/10 hover:text-amber-200"
                     }`}
                   >
@@ -183,7 +203,7 @@ export default function RandomYouTubePlayer() {
                       {index + 1}. {video.title}
                     </span>
                     {isSelected && (
-                      <span className="text-xs tracking-wider text-amber-300 uppercase">
+                      <span className="text-xs uppercase tracking-wider text-amber-300">
                         Playing
                       </span>
                     )}

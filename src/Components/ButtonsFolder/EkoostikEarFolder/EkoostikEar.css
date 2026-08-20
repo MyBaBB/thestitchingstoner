@@ -7,12 +7,9 @@
   right: 2rem;
   z-index: 9999;
 }
+ 
 
-@media (max-width: 380px) {
-  .ekoostikEarButtonWrapper {
-    display: none;
-  }
-}
+
 
 /* ============================
    BUTTON STYLE
@@ -31,15 +28,20 @@
   font-size: 3rem;
   border: none;
   cursor: pointer;
-  transition:
-    transform 0.2s ease,
-    box-shadow 0.2s ease;
+  transition: transform 0.2s ease, box-shadow 0.2s ease, color 0.2s ease;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  user-select: none;
 }
 
 .ekoostikEarButton:hover {
   transform: scale(1.08);
   box-shadow: 0 0 18px rgba(84, 225, 84, 0.625);
   color: rgba(84, 225, 84, 1);
+}
+
+.ekoostikEarButton:active {
+  transform: scale(0.96);
 }
 
 /* ============================
@@ -57,11 +59,11 @@
   border: 1px solid #d9c7a3;
   border-radius: 10px;
   padding: 0.35rem 1rem;
-  font-family: "Itim-Regular";
+  font-family: "Itim-Regular", sans-serif;
   font-size: 0.9rem;
   white-space: nowrap;
   opacity: 0;
-  transition: 0.25s ease-in-out;
+  transition: transform 0.25s ease-in-out, opacity 0.25s ease-in-out;
   z-index: 999;
 }
 
@@ -77,7 +79,7 @@
   background-color: #d9c7a3;
   clip-path: polygon(100% 50%, 0 0, 0 100%);
   opacity: 0;
-  transition: 0.25s ease-in-out;
+  transition: transform 0.25s ease-in-out, opacity 0.25s ease-in-out;
   z-index: 998;
 }
 
@@ -93,5 +95,17 @@
   .ekoostikEarTooltip::before,
   .ekoostikEarTooltip::after {
     display: none;
+  }
+}
+
+/* ============================
+   MOBILE: CENTER AT BOTTOM
+   ============================ */
+@media (max-width: 685px) {
+  .ekoostikEarButtonWrapper {
+    top: auto;
+    bottom: 1.5rem;
+    right: 50%;
+    transform: translateX(50%);
   }
 }

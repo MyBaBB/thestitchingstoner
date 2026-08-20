@@ -52,11 +52,11 @@ export default function SpecialEventPage() {
             <YouTubePlayer />
           </div>
            {/* Wrap anchor inline-block with w-fit to prevent layout stretching */}
-<a href="https://mybabb.com/youtubepageserious" className="inline-block w-auto">
-      <div className="tooltip-wrapper1">
-          <Copyright />
-      </div>
-</a>
+      <a href="https://mybabb.com/youtubepageserious" className="inline-block w-auto">
+            <div className="tooltip-wrapper1">
+                <Copyright />
+            </div>
+      </a>
           <Footer />
         </div>
       </div>
