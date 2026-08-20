@@ -1,34 +1,35 @@
-
 // eslint-disable-next-line no-unused-vars
 import React, { useEffect, useRef, useState } from "react";
 import { GiHemp } from "react-icons/gi";
-import { MdOutlineForest } from "react-icons/md";
+import { MdOutlineForest, MdQueueMusic, MdClose } from "react-icons/md";
 import "./YouTubePlayer.css";
 
+// Formatted playlist object with Video IDs and Track Titles
 const VIDEO_LIST = [
-  "kH5oJYh6f8w",
-  "5xOZ43vdEUI",
-  "QwzT17V82UU",
-  "S2_u5-Nt6Tg",
-  "l668SIWPZBo",
-  "nhDHQQfrZug",
-  "OLCa-mS0SCY",
-  "3YQtEKiI124",
-  "e9ZtQsviCz0",
-  "r-zV_rUGku0",
-  "79pyb_83FrY",
-  "y7hHyFk6xgk",
-  "im0vrCjzCTQ",
-  "2z9aDUK7QFI",
-  "wSqYybyib-A",
+  { id: "kH5oJYh6f8w", title: "Hookahville" },
+  { id: "5xOZ43vdEUI", title: "Roll The Dice" },
+  { id: "QwzT17V82UU", title: "Music" },
+  { id: "S2_u5-Nt6Tg", title: "SpringTime Again" },
+  { id: "l668SIWPZBo", title: "Octofrye" },
+  { id: "nhDHQQfrZug", title: "Dragonfly" },
+  { id: "OLCa-mS0SCY", title: "Smile and Sing" },
+  { id: "3YQtEKiI124", title: "Ecstasy" },
+  { id: "e9ZtQsviCz0", title: "Ragin River" },
+  { id: "r-zV_rUGku0", title: "Mississippi Steamboat" },
+  { id: "79pyb_83FrY", title: "Another Good Man Gone" },
+  { id: "y7hHyFk6xgk", title: "Schwa" },
+  { id: "im0vrCjzCTQ", title: "Backwoods Rose" },
+  { id: "2z9aDUK7QFI", title: "Loner" },
+  { id: "wSqYybyib-A", title: "Pylons" },
 ];
 
 const getRandomVideo = () =>
-  VIDEO_LIST[Math.floor(Math.random() * VIDEO_LIST.length)];
+  VIDEO_LIST[Math.floor(Math.random() * VIDEO_LIST.length)].id;
 
 export default function RandomYouTubePlayer() {
   const playerRef = useRef(null);
   const [currentVideo, setCurrentVideo] = useState(getRandomVideo);
+  const [isDrawerOpen, setIsDrawerOpen] = useState(false);
 
   useEffect(() => {
     let isSubscribed = true;
@@ -41,25 +42,25 @@ export default function RandomYouTubePlayer() {
       }
 
       playerRef.current = new window.YT.Player("random-yt-player", {
-  host: "https://www.youtube-nocookie.com",
-  videoId: currentVideo,
-  playerVars: {
-    autoplay: 1,
-    controls: 1,
-    modestbranding: 1,
-    rel: 0,
-  },
-  events: {
-    onReady: (event) => {
-      event.target.setVolume(50); // Change 50 to whatever level you prefer (0-100)
-    },
-    onStateChange: (event) => {
-      if (event.data === window.YT.PlayerState.ENDED) {
-        window.location.href = "/specialevent";
-      }
-    },
-  },
-});
+        host: "https://www.youtube-nocookie.com",
+        videoId: currentVideo,
+        playerVars: {
+          autoplay: 1,
+          controls: 1,
+          modestbranding: 1,
+          rel: 0,
+        },
+        events: {
+          onReady: (event) => {
+            event.target.setVolume(50);
+          },
+          onStateChange: (event) => {
+            if (event.data === window.YT.PlayerState.ENDED) {
+              window.location.href = "/specialevent";
+            }
+          },
+        },
+      });
     };
 
     if (window.YT && window.YT.Player) {
@@ -91,20 +92,18 @@ export default function RandomYouTubePlayer() {
     };
   }, []);
 
-  const playAnother = () => {
-    let nextVideo = getRandomVideo();
-    while (nextVideo === currentVideo && VIDEO_LIST.length > 1) {
-      nextVideo = getRandomVideo();
-    }
-    setCurrentVideo(nextVideo);
-
+  // Helper to load selected video ID
+  const playVideo = (videoId) => {
+    setCurrentVideo(videoId);
     if (
       playerRef.current &&
       typeof playerRef.current.loadVideoById === "function"
     ) {
-      playerRef.current.loadVideoById(nextVideo);
+      playerRef.current.loadVideoById(videoId);
     }
   };
+
+ 
 
   return (
     <div className="youtubePlayerWrapper">
@@ -112,20 +111,89 @@ export default function RandomYouTubePlayer() {
         <div id="random-yt-player"></div>
       </div>
 
-      <button
-        className="spinAgainButton whitespace-nowrap"
-        onClick={playAnother}
+      {/* Button Controls Group */}
+      <div className="flex flex-wrap items-center justify-center ">
+        {/* Fancy Playlist Drawer Trigger */}
+        <button
+          className="spinAgainButton whitespace-nowrap"
+          onClick={() => setIsDrawerOpen(true)}
+        >
+         <span className="inline-block text-sm text-amber-200 xs:text-xl">
+            <MdOutlineForest />
+          </span>
+          <span className="inline-block font-Itim-Regular text-sm text-amber-200 xs:text-base">
+            &nbsp;&nbsp;Spin Again&nbsp;&nbsp;
+          </span>
+          <span className="inline-block text-sm text-amber-200 xs:text-xl">
+            <GiHemp />
+          </span>
+        </button>
+      </div>
+
+      {/* Dark Overlay Backdrop */}
+      {isDrawerOpen && (
+        <div
+          className="fixed inset-0 z-40 bg-black/60 backdrop-blur-sm transition-opacity"
+          onClick={() => setIsDrawerOpen(false)}
+        />
+      )}
+
+      {/* Slide-Up Bottom Drawer */}
+      <div
+        className={`fixed bottom-0 left-0 right-0 z-50 flex max-h-[70vh] flex-col rounded-t-2xl border-t border-amber-200/30 bg-neutral-900/95 p-5 text-amber-100 shadow-2xl transition-transform duration-300 ease-out ${
+          isDrawerOpen ? "translate-y-0" : "translate-y-full"
+        }`}
       >
-        <span className="inline-block text-sm text-amber-200 xs:text-xl">
-          <MdOutlineForest />
-        </span>
-        <span className="inline-block font-Itim-Regular text-sm text-amber-200 xs:text-base">
-          &nbsp;&nbsp;Spin Again&nbsp;&nbsp;
-        </span>
-        <span className="inline-block text-sm text-amber-200 xs:text-xl">
-          <GiHemp />
-        </span>
-      </button>
+        {/* Drawer Header */}
+        <div className="mb-4 flex items-center justify-between border-b border-amber-200/20 pb-3">
+          <div className="flex items-center gap-2">
+            <MdQueueMusic className="text-2xl text-amber-200" />
+            <h3 className="font-Itim-Regular text-lg font-semibold tracking-wide text-amber-200">
+              Select a Track
+            </h3>
+          </div>
+          <button
+            onClick={() => setIsDrawerOpen(false)}
+            className="rounded-lg p-1 text-amber-200 hover:bg-white/10"
+            aria-label="Close Playlist"
+          >
+            <MdClose className="text-2xl" />
+          </button>
+        </div>
+
+        {/* Scrollable Song List */}
+        <div className="overflow-y-auto pr-1">
+          <ul className="flex flex-col gap-2">
+            {VIDEO_LIST.map((video, index) => {
+              const isSelected = video.id === currentVideo;
+              return (
+                <li key={video.id}>
+                  <button
+                    onClick={() => {
+                      playVideo(video.id);
+                      setIsDrawerOpen(false); // Close drawer on selection
+                    }}
+                    className={`flex w-full items-center justify-between rounded-xl px-4 py-3 text-left transition-colors ${
+                      isSelected
+                        ? "border border-amber-300/40 bg-amber-400/20 text-amber-200 font-bold"
+                        : "bg-white/5 text-amber-100/80 hover:bg-white/10 hover:text-amber-200"
+                    }`}
+                  >
+                    <span className="text-sm xs:text-base">
+                      {index + 1}. {video.title}
+                    </span>
+                    {isSelected && (
+                      <span className="text-xs tracking-wider text-amber-300 uppercase">
+                        Playing
+                      </span>
+                    )}
+                  </button>
+                </li>
+              );
+            })}
+          </ul>
+        </div>
+      </div>
     </div>
   );
 }
