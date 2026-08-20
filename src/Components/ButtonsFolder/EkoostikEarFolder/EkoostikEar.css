@@ -104,7 +104,7 @@
 @media (max-width: 685px) {
   .ekoostikEarButtonWrapper {
     top: auto;
-    bottom: 1.5rem;
+    bottom: .67rem;
     right: 50%;
     transform: translateX(50%);
   }
