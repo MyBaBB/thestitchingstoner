@@ -33,7 +33,7 @@ const LocalArtistFolder = () => {
 
           <div className="NotRobotGradient relative m-auto mb-2 mt-4 h-[100px] w-[100px]   ">
             <a
-              href="https://mybabb.com"
+              href="https://about.us.mybabb.com/aboutuspage#"
              className="not-robot-link absolute hybridTooltip2 "
             >
 
@@ -122,7 +122,7 @@ const LocalArtistFolder = () => {
                 </span>
 
                 <span className="noLeftBorder2 inline-block font-Itim-Regular">
-                  <span className="webDevFancyWords2 whitespace-nowrap">Hybrid&nbsp;Web-Crafting</span>
+                  <span className="webDevFancyWords2 whitespace-nowrap">Hybrid&nbsp;Web-Craft</span>
                 </span>
               </div>
             </div>
