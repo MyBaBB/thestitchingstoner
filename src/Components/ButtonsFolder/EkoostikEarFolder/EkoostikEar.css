@@ -3,7 +3,7 @@
    ============================ */
 .ekoostikEarButtonWrapper {
   position: absolute;
-  top: 2.2rem;
+  top: 2rem;
   right: 2rem;
   z-index: 9999;
 }

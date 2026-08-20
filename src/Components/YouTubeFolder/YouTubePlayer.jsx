@@ -1,3 +1,5 @@
+
+// eslint-disable-next-line no-unused-vars
 import React, { useEffect, useRef, useState } from "react";
 import { GiHemp } from "react-icons/gi";
 import { MdOutlineForest } from "react-icons/md";
@@ -26,51 +28,49 @@ const getRandomVideo = () =>
 
 export default function RandomYouTubePlayer() {
   const playerRef = useRef(null);
-  const containerRef = useRef(null);
   const [currentVideo, setCurrentVideo] = useState(getRandomVideo);
 
   useEffect(() => {
     let isSubscribed = true;
 
-    // Helper to instantiate the player
     const initPlayer = () => {
       if (!isSubscribed || !window.YT || !window.YT.Player) return;
 
-      // Destroy old instance if re-initializing
       if (playerRef.current) {
         playerRef.current.destroy();
       }
 
       playerRef.current = new window.YT.Player("random-yt-player", {
-        videoId: currentVideo,
-        playerVars: {
-          autoplay: 1,
-          controls: 1,
-          modestbranding: 1,
-          rel: 0,
-        },
-        events: {
-          onStateChange: (event) => {
-            if (event.data === window.YT.PlayerState.ENDED) {
-              window.location.href = "/specialevent";
-            }
-          },
-        },
-      });
+  host: "https://www.youtube-nocookie.com",
+  videoId: currentVideo,
+  playerVars: {
+    autoplay: 1,
+    controls: 1,
+    modestbranding: 1,
+    rel: 0,
+  },
+  events: {
+    onReady: (event) => {
+      event.target.setVolume(50); // Change 50 to whatever level you prefer (0-100)
+    },
+    onStateChange: (event) => {
+      if (event.data === window.YT.PlayerState.ENDED) {
+        window.location.href = "/specialevent";
+      }
+    },
+  },
+});
     };
 
-    // Case 1: YT API is already fully loaded
     if (window.YT && window.YT.Player) {
       initPlayer();
     } else {
-      // Case 2: Attach to global callback or chain onto existing one
       const previousCallback = window.onYouTubeIframeAPIReady;
       window.onYouTubeIframeAPIReady = () => {
         if (previousCallback) previousCallback();
         initPlayer();
       };
 
-      // Case 3: Script tag isn't added yet
       if (!document.getElementById("youtube-iframe-api")) {
         const tag = document.createElement("script");
         tag.id = "youtube-iframe-api";
@@ -79,7 +79,6 @@ export default function RandomYouTubePlayer() {
       }
     }
 
-    // Cleanup when component unmounts
     return () => {
       isSubscribed = false;
       if (
@@ -90,25 +89,21 @@ export default function RandomYouTubePlayer() {
         playerRef.current = null;
       }
     };
-  }, []); // Run once on mount
-
-  // Handle switching videos when currentVideo state changes
-  useEffect(() => {
-    if (
-      playerRef.current &&
-      typeof playerRef.current.loadVideoById === "function"
-    ) {
-      playerRef.current.loadVideoById(currentVideo);
-    }
-  }, [currentVideo]);
+  }, []);
 
   const playAnother = () => {
     let nextVideo = getRandomVideo();
-    // Avoid picking the exact same video twice in a row
     while (nextVideo === currentVideo && VIDEO_LIST.length > 1) {
       nextVideo = getRandomVideo();
     }
     setCurrentVideo(nextVideo);
+
+    if (
+      playerRef.current &&
+      typeof playerRef.current.loadVideoById === "function"
+    ) {
+      playerRef.current.loadVideoById(nextVideo);
+    }
   };
 
   return (
