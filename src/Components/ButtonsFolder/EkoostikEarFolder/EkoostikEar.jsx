@@ -6,9 +6,9 @@ import "./EkoostikEar.css";
 export default function EkoostikEar() {
   return (
     <div className="ekoostikEarButtonWrapper">
-      <Link 
-        to="/specialevent" 
-        tabIndex={-1} 
+      <Link
+        to="/specialevent"
+        tabIndex={-1}
         aria-label="Hookahville 62 Special Event"
       >
         <button

@@ -134,13 +134,11 @@ export default function RandomYouTubePlayer() {
 
       {/* Button Controls */}
       <div className="flex flex-wrap items-center justify-center gap-3">
-         
-
         <button
           className="spinAgainButton whitespace-nowrap"
           onClick={() => setIsDrawerOpen(true)}
         >
-         <span className="inline-block text-sm text-amber-200 xs:text-xl">
+          <span className="inline-block text-sm text-amber-200 xs:text-xl">
             <MdOutlineForest />
           </span>
           <span className="inline-block font-Itim-Regular text-sm text-amber-200 xs:text-base">
@@ -162,7 +160,7 @@ export default function RandomYouTubePlayer() {
 
       {/* Centered 50% Width Drawer */}
       <div
-        className={`fixed bottom-0 left-1/2 z-50 flex max-h-[70vh] w-[90%] md:w-[50%] -translate-x-1/2 flex-col rounded-t-2xl border-t border-amber-200/30 bg-neutral-900/95 p-5 text-amber-100 shadow-2xl transition-transform duration-300 ease-out ${
+        className={`fixed bottom-0 left-1/2 z-50 flex max-h-[70vh] w-[90%] -translate-x-1/2 flex-col rounded-t-2xl border-t border-amber-200/30 bg-neutral-900/95 p-5 text-amber-100 shadow-2xl transition-transform duration-300 ease-out md:w-[50%] ${
           isDrawerOpen ? "translate-y-0" : "translate-y-full"
         }`}
       >
