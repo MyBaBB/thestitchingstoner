@@ -7,6 +7,7 @@ import AnimatedDetails from "../../Components/AnimatedDetailsFolder/AnimatedDeta
 import VanSlideIn from "../../Components/VanSlideInFolder/VanSlideIn.jsx";
 import Copyright from "../../Components/CopyrightFolder/Copyright.jsx";
 import "./SpecialEvent.css";
+import "../../Components/AnimatedDetailsFolder/AnimatedDetails.jsx";
 
 export default function SpecialEventPage() {
   return (

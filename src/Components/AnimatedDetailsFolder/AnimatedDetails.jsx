@@ -1,13 +1,15 @@
 // AnimatedDetails.jsx
 import React, { useState, useEffect } from "react";
-import "./AnimatedDetails.css";
+import "./AnimatedDetails.css"; 
+import img1 from "./Zombies600x400.webp";
+import img2 from "./Zombies5-600x400.webp";
+import img3 from "./Zombies-4600x400.webp";
+import img4 from "./Zombies3-600x400.webp";
+import img5 from "./Zombies2-600x400.webp";
 
-const IMAGES = [
-  "https://picsum.photos/600/400?random=1",
-  "https://picsum.photos/600/400?random=2",
-  "https://picsum.photos/600/400?random=3",
-  "https://picsum.photos/600/400?random=4"
-];
+const IMAGES = [img1, img2, img3, img4, img5];
+
+ 
 
 const AnimatedDetails = () => {
   const [currentImageIndex, setCurrentImageIndex] = useState(null);
