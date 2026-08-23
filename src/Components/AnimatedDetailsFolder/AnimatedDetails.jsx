@@ -33,7 +33,7 @@ const AnimatedDetails = () => {
 
         <p 
           className="stonerLine line4 font-semibold" 
-          data-text="🌼 Creative flow session begins soon ✨"
+          data-text="🌼 Creative session begins soon ✨"
         >
           <span className="inline-block whitespace-nowrap"><span className="emoji">🧶</span> Creative&nbsp;</span>
           <span className="whitespace-nowrap">Yarn Sessions <span className="emoji ">🌻</span></span>
