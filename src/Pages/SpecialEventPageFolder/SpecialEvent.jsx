@@ -18,6 +18,9 @@ export default function SpecialEventPage() {
         <div className="specialEventPage">
           <div className="specialEventContent relative flex flex-col items-center  ">
             <VanSlideIn />
+               
+
+
             < AnimatedDetails />
             <YouTubePlayer />
           </div>

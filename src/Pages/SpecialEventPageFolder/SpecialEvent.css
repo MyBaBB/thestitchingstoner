@@ -21,19 +21,30 @@
   align-items: flex-start;
   text-align: center;
   color: white;
+  overflow: hidden;
+  flex-wrap: wrap;
+  position: relative; /* Container for absolute background */
+  z-index: 0;
+}
+
+/* Isolated Trippy Shifting Background Layer */
+.specialEventPage::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1; /* Keeps background behind content */
   background:
     radial-gradient(circle at 20% 20%, #a5298c, transparent 40%),
     radial-gradient(circle at 80% 30%, #44a8b1, transparent 45%),
     radial-gradient(circle at 50% 80%, #ae811f, transparent 50%),
     linear-gradient(135deg, #1a0033, #001a1a);
   background-size: cover;
-  overflow: hidden;
-  background-attachment: scroll; /* FIXED: mobile-safe */
-  animation: hippieFlow 18s ease-in-out infinite;
-  flex-wrap: wrap; /* FIXED: prevents overflow */
+  background-attachment: scroll;
+  /* Hue-rotate ONLY runs on this background layer now */
+  animation: hippieFlow 18s ease-in-out infinite; 
 }
 
-/* Trippy shifting background */
+/* Trippy shifting animation */
 @keyframes hippieFlow {
   0% {
     filter: hue-rotate(0deg) saturate(1.2);
@@ -45,7 +56,6 @@
     filter: hue-rotate(360deg) saturate(1.2);
   }
 }
-
 @keyframes cloudLanding {
   0% {
     color: #1c2830;
