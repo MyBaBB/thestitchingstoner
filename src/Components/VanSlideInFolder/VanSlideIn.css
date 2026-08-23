@@ -1,9 +1,10 @@
 /* Title */
 .specialEventTitle {
-  font-family: "EmilysCandy-Regular";
+  font-family: "Itim", cursive;
   font-size: 1rem;
   margin-bottom: 1.5rem;
-  text-shadow: 0 0 12px #ff8bd8;
+  text-shadow: 0 0 8px #ff8bd8;
+  color:greenyellow;
 }
 
 @media (min-width: 440px) {
