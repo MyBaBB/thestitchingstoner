@@ -28,8 +28,8 @@
   margin-top: 1.5rem;
 }
 
- .spinAgainButton {
-  display: inline-flex;  /* Perfect alignment for icons + text */
+.spinAgainButton {
+  display: inline-flex; /* Perfect alignment for icons + text */
   align-items: center;
   justify-content: center;
   background: rgba(0, 0, 0, 0.45);
@@ -37,11 +37,13 @@
   padding: 0.75rem 1.5rem;
   border-radius: 0.75rem;
   cursor: pointer;
-  transition: transform 0.2s ease, background-color 0.2s ease, box-shadow 0.2s ease;
+  transition:
+    transform 0.2s ease,
+    background-color 0.2s ease,
+    box-shadow 0.2s ease;
   -webkit-user-select: none; /* Safari / Chrome */
-  -moz-user-select: none;    /* Firefox */
-  user-select: none;         /* Standard */
-
+  -moz-user-select: none; /* Firefox */
+  user-select: none; /* Standard */
 }
 .spinAgainButton:hover {
   background-color: rgba(255, 255, 255, 0.15);
@@ -52,4 +54,3 @@
 .spinAgainButton:active {
   transform: translateY(0) scale(0.98); /* Tactile press feedback */
 }
-

@@ -7,9 +7,6 @@
   right: 2rem;
   z-index: 9999;
 }
- 
-
-
 
 /* ============================
    BUTTON STYLE
@@ -28,7 +25,10 @@
   font-size: 3rem;
   border: none;
   cursor: pointer;
-  transition: transform 0.2s ease, box-shadow 0.2s ease, color 0.2s ease;
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease,
+    color 0.2s ease;
   -webkit-user-select: none;
   -moz-user-select: none;
   user-select: none;
@@ -63,7 +63,9 @@
   font-size: 0.9rem;
   white-space: nowrap;
   opacity: 0;
-  transition: transform 0.25s ease-in-out, opacity 0.25s ease-in-out;
+  transition:
+    transform 0.25s ease-in-out,
+    opacity 0.25s ease-in-out;
   z-index: 999;
 }
 
@@ -79,7 +81,9 @@
   background-color: #d9c7a3;
   clip-path: polygon(100% 50%, 0 0, 0 100%);
   opacity: 0;
-  transition: transform 0.25s ease-in-out, opacity 0.25s ease-in-out;
+  transition:
+    transform 0.25s ease-in-out,
+    opacity 0.25s ease-in-out;
   z-index: 998;
 }
 
@@ -104,7 +108,7 @@
 @media (max-width: 685px) {
   .ekoostikEarButtonWrapper {
     top: auto;
-    bottom: .67rem;
+    bottom: 0.67rem;
     right: 50%;
     transform: translateX(50%);
   }

@@ -190,7 +190,7 @@
   }
 }
 .NotRobotGradient {
-  overflow:visible;
+  overflow: visible;
   border-radius: 100%;
   background: radial-gradient(
     rgba(70, 56, 47, 1) 0%,
@@ -232,7 +232,6 @@
   margin-bottom: 15px;
   margin-top: 15px;
 }
-
 
 .hrNoZoneTop {
   border: 1px solid rgba(46, 90, 44, 0.63); /* Forest Service Green */
@@ -310,7 +309,7 @@
 .backToTopBtn:hover .tooltip {
   opacity: 1;
 }
- 
+
 /* Container */
 .traditionalSwapBlock {
   width: 20rem;
@@ -341,12 +340,9 @@
   margin: 0 auto;
 }
 
-
-
 .copyRightAnchorTag2 {
   display: inline-block;
   z-index: 9999;
-  
 }
 
 .copyRightContainer2 {
@@ -360,7 +356,10 @@
 .copyRightCool2 {
   font-size: 0.75rem;
   color: rgba(253, 230, 138, 1);
-  transition: font-size 0.4s ease, color 0.4s ease, filter 0.4s ease;
+  transition:
+    font-size 0.4s ease,
+    color 0.4s ease,
+    filter 0.4s ease;
   z-index: 9999;
 }
 
@@ -372,17 +371,17 @@
   border-top: none;
   padding-right: 0.25rem;
   padding-bottom: 0.15rem;
-  padding-left: .25rem;
+  padding-left: 0.25rem;
   color: rgba(253, 230, 138, 1);
   font-size: 0.75rem;
-  transition: 
+  transition:
     font-size 0.4s ease,
     letter-spacing 0.4s ease,
     color 0.4s ease,
     border-color 0.4s ease,
     filter 0.4s ease;
   z-index: 9999;
-  }
+}
 
 /* ============================
    HIPPIE BLOOM HOVER EFFECT
@@ -397,13 +396,13 @@
 .copyRightAnchorTag2:hover .noLeftBorder2 {
   font-size: 1.15rem;
   letter-spacing: 0.03rem;
-  margin-left: .5rem;
-  padding-right: .5rem;  
+  margin-left: 0.5rem;
+  padding-right: 0.5rem;
   color: aliceblue;
-  border-color:   rgba(253, 230, 138, 1);
+  border-color: rgba(253, 230, 138, 1);
   border-radius: 0px 2px 8px 2px;
   filter: drop-shadow(0 0 3px rgba(253, 186, 116, 0.5));
-  z-index: 9999; 
+  z-index: 9999;
 }
 
 .copyRightAnchorTag2:hover .copyRightContainer2 {
@@ -412,12 +411,12 @@
 }
 .webDevFancyWords2 {
   display: inline-block;
-  transition: 
+  transition:
     transform 0.45s ease,
     letter-spacing 0.45s ease,
     font-size 0.45s ease;
-  z-index: 9999; 
-  }
+  z-index: 9999;
+}
 /* ============================================================
    BASE TOOLTIP STRUCTURE
    ============================================================ */
@@ -436,7 +435,7 @@
   bottom: auto;
   left: 50%;
   transform: translateX(-50%);
-  
+
   opacity: 0;
   pointer-events: none;
 
@@ -449,8 +448,6 @@
   box-shadow: 0px 0px 12px rgba(173, 255, 47, 0.75);
   border: 1px solid rgba(46, 90, 44, 0.63);
   z-index: 999;
-
- 
 }
 
 .hybridTooltip2:hover::before {
@@ -472,7 +469,6 @@
   }
 }
 
-
 /* ============================================================
    ARROW ( ::after )
    ============================================================ */
@@ -487,7 +483,7 @@
   border-left: 8px solid transparent;
   border-right: 8px solid transparent;
   border-bottom: 10px solid #adff2f;
- 
+
   filter: drop-shadow(0px 0px 4px #adff2fbf);
   z-index: 1;
 
@@ -509,8 +505,6 @@
   }
 }
 
-
- 
 .tooltipTextLayer,
 .tooltipTextLayer2,
 .tooltipTextLayer3 {

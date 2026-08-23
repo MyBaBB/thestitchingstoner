@@ -6,7 +6,7 @@ import Weed from "../../Images/The_Stitching_Stoner/favicon.png";
 import { TbCamper } from "react-icons/tb";
 import { ImEarth } from "react-icons/im";
 import { GiCampCookingPot, GiGoat } from "react-icons/gi";
-import { FaCampground} from "react-icons/fa";
+import { FaCampground } from "react-icons/fa";
 import HippieFootprints from "../../Components/HippieFootprintsFolder/HippieFootprints.jsx";
 import { FaRegCopyright } from "react-icons/fa"; // FaRegCopyright
 import "./LocalArtist.css";
@@ -18,7 +18,7 @@ const LocalArtistFolder = () => {
 
   return (
     <>
-      <div className="relative local-artist-wrapper">
+      <div className="local-artist-wrapper relative">
         {/* HEADER */}
         <header className="local-artist-header relative">
           <a href="/" className="home-link">
@@ -31,23 +31,19 @@ const LocalArtistFolder = () => {
 
           <ReverseButton />
 
-          <div className="NotRobotGradient relative m-auto mb-2 mt-4 h-[100px] w-[100px]   ">
+          <div className="NotRobotGradient relative m-auto mb-2 mt-4 h-[100px] w-[100px]">
             <a
               href="https://about.us.mybabb.com/aboutuspage#"
-             className="not-robot-link absolute hybridTooltip2 "
+              className="not-robot-link hybridTooltip2 absolute"
             >
-
               <NotRobot />
-              <div className="tooltipTextLayer">Human Hands Craft 
-                Better Energy </div>
+              <div className="tooltipTextLayer">
+                Human Hands Craft Better Energy{" "}
+              </div>
               <div className="tooltipTextLayer2">Robot Art is Optional</div>
               <div className="tooltipTextLayer3">It is Your Choice</div>
-
-
             </a>
           </div>
-
-
         </header>
 
         {/* MAIN CONTENT */}
@@ -79,10 +75,13 @@ const LocalArtistFolder = () => {
                   ✌🏻
                 </div>
 
-                <span className="traditionalWordVapor whitespace-nowrap"> Welcome</span>
+                <span className="traditionalWordVapor whitespace-nowrap">
+                  {" "}
+                  Welcome
+                </span>
 
                 <div className="quoteRight absolute right-2 top-[50%] -translate-y-1/2 transform text-base xs:text-lg md:text-2xl">
-                   🛖
+                  🛖
                 </div>
               </div>
             </div>
@@ -103,62 +102,49 @@ const LocalArtistFolder = () => {
         </main>
 
         {/* COPYRIGHT + HYBRID TOOLTIP */}
-      
-        <div className="relative"> 
-             
-          <span className="absolute bottom-[1.23rem] left-4 z-0 w-10 h-10 bg-transparent ">
-            <a href="https://mybabb.com/youtubepageecho " >
 
-          <div
-            className="copyRightAnchorTag2 "   >               
-             
+        <div className="relative">
+          <span className="absolute bottom-[1.23rem] left-4 z-0 h-10 w-10 bg-transparent">
+            <a href="https://mybabb.com/youtubepageecho ">
+              <div className="copyRightAnchorTag2">
+                <div className="copyRightContainer2 flex flex-col items-center justify-center px-8 py-4">
+                  <span className="copyRightCool2 absolute left-4 top-[50%] -translate-y-1/2 transform">
+                    <FaRegCopyright />
+                  </span>
 
-
-
-                <div className="copyRightContainer2 flex flex-col px-8 py-4 items-center justify-center">
-                
-                <span className=" copyRightCool2 absolute left-4 top-[50%] transform -translate-y-1/2">
-                  <FaRegCopyright />
-                </span>
-
-                <span className="noLeftBorder2 inline-block font-Itim-Regular">
-                  <span className="webDevFancyWords2 whitespace-nowrap">Hybrid&nbsp;Web-Craft</span>
-                </span>
+                  <span className="noLeftBorder2 inline-block font-Itim-Regular">
+                    <span className="webDevFancyWords2 whitespace-nowrap">
+                      Hybrid&nbsp;Web-Craft
+                    </span>
+                  </span>
+                </div>
               </div>
-            </div>
-                      
-                      
-            
-            
-            
-            </a> 
+            </a>
           </span>
-             
-        {/* CONTACT ASIDE */}
-        <aside className="contact-aside relative">
-          <span className="absolute bottom-[-4.5rem] right-4 z-50">
-            <BatSignal />
-          </span>
-        </aside>
-     
-    
-        {/* FOOTER */}
-        <footer className="badge relative m-auto mb-4 mt-4 w-fit whitespace-nowrap text-amber-200">
-          <button
-            className="backToTopBtn"
-            onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
-          >
-            <GiGoat size={50} />
-            <span className="tooltip hidden sm:block">Back to Top</span>
-          </button>
-        </footer>
 
-        <div className="absolute bottom-0 z-50">
-          <HippieFootprints />
+          {/* CONTACT ASIDE */}
+          <aside className="contact-aside relative">
+            <span className="absolute bottom-[-4.5rem] right-4 z-50">
+              <BatSignal />
+            </span>
+          </aside>
+
+          {/* FOOTER */}
+          <footer className="badge relative m-auto mb-4 mt-4 w-fit whitespace-nowrap text-amber-200">
+            <button
+              className="backToTopBtn"
+              onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
+            >
+              <GiGoat size={50} />
+              <span className="tooltip hidden sm:block">Back to Top</span>
+            </button>
+          </footer>
+
+          <div className="absolute bottom-0 z-50">
+            <HippieFootprints />
+          </div>
         </div>
       </div>
-    </div>
-   
     </>
   );
 };
