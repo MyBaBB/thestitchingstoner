@@ -21,7 +21,7 @@ export default function SpecialEventPage() {
   <div className="three-column-layout">
 
     {/* LEFT COLUMN */}
-  <div className="side-column left-column   w-[33.33%]  ">
+  <div className="side-column left-column    ">
   
      <div className="absolute top-4 left-4" > <ReverseButton />
      </div>
@@ -44,7 +44,7 @@ export default function SpecialEventPage() {
     </div>
 
     {/* RIGHT COLUMN */}
-    <div className="side-column right-column   w-[33.33%]">
+    <div className="side-column right-column   ">
       
       <a href="https://mybabb.com/youtubepageserious" className="absolute right-4 bottom-4">
         <div className="tooltip-wrapper1">
