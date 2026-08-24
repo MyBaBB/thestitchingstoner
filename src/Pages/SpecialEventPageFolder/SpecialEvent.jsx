@@ -2,9 +2,11 @@
 // eslint-disable-next-line no-unused-vars
 import React from "react";
 import ReverseButton from "../../Components/ButtonsFolder/ReverseButton/ReverseButton.jsx";
+import HippieFootprints from "../../Components/HippieFootprintsFolder/HippieFootprints.jsx";
 import NotRobot from "../../Components/NotRobotFolder/NotRobot.jsx"; 
 import YouTubePlayer from "../../Components/YouTubeFolder/YouTubePlayer.jsx";
 import AnimatedDetails from "../../Components/AnimatedDetailsFolder/AnimatedDetails.jsx";
+
 import VanSlideIn from "../../Components/VanSlideInFolder/VanSlideIn.jsx";
 import Copyright from "../../Components/CopyrightFolder/Copyright.jsx";
 import "./SpecialEvent.css";
@@ -15,7 +17,7 @@ export default function SpecialEventPage() {
 <>
  
     <div className="special-event-bg-wrapper ">
-
+    < HippieFootprints />
   <div className="three-column-layout">
 
     {/* LEFT COLUMN */}
