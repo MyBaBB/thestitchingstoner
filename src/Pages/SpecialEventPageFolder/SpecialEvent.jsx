@@ -6,7 +6,7 @@ import HippieFootprints from "../../Components/HippieFootprintsFolder/HippieFoot
 import NotRobot from "../../Components/NotRobotFolder/NotRobot.jsx"; 
 import YouTubePlayer from "../../Components/YouTubeFolder/YouTubePlayer.jsx";
 import AnimatedDetails from "../../Components/AnimatedDetailsFolder/AnimatedDetails.jsx";
-
+import { Link } from "react-router-dom";
 import VanSlideIn from "../../Components/VanSlideInFolder/VanSlideIn.jsx";
 import Copyright from "../../Components/CopyrightFolder/Copyright.jsx";
 import "./SpecialEvent.css";
@@ -46,12 +46,13 @@ export default function SpecialEventPage() {
     {/* RIGHT COLUMN */}
     <div className="side-column right-column   ">
       
-      <a href="https://mybabb.com/youtubepageserious" className="absolute right-4 bottom-4">
-        <div className="tooltip-wrapper1">
-          
+      <Link to="/localartist" className="absolute right-4 bottom-4">
+        <div className="footer-right_Tooltip"
+         data-tool-tip=" 🌈 This Website Chooses Real Art 🎨 ">
+                 
             < NotRobot />
         </div>
-      </a>
+      </Link>
     </div>
 
   </div>
