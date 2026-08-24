@@ -5,7 +5,7 @@ import "./EkoostikEar.css";
 
 export default function EkoostikEar() {
   return (
-    <div className="ekoostikEarButtonWrapper">
+    <div className="ekoostikEarButtonWrapper  ">
       <Link
         to="/specialevent"
         tabIndex={-1}
