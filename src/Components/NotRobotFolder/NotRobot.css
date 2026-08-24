@@ -8,23 +8,12 @@
 }
 @media screen and (min-width: 400px) {
   .not-robot-img {
-    width: 155px;
+    width: 100px;
     height: auto;
     margin: 0 auto;
   }
 }
 
-.notrobot-zone {
-  position: relative;
-  display: flex;
-  margin-top: -14rem;
-  width: 100vw;
-  bottom: 0;
-  left: 0;
-  pointer-events: none; /* optional */
-}
+ 
 
-.notrobot-wrapper {
-  background: transparent;
-  isolation: isolate; /* THIS is the magic */
-}
+ 

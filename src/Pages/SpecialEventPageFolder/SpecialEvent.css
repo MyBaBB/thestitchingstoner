@@ -2,10 +2,16 @@
 
 .special-event-bg-wrapper {
   position: relative;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
   width: 100%;
   min-height: 100vh;
   background: #080314;
   overflow: hidden;
+  z-index: 1;
+
 }
 
 /* Deep Space Mesh Gradient Backdrop */
@@ -24,9 +30,10 @@
 }
 
 /* Make sure inner content renders above the ambient background */
-.special-event-bg-wrapper .page-content {
+  .middle-content {
   position: relative;
   z-index: 1;
+ 
 }
 
 @keyframes auraRotate {
@@ -34,3 +41,43 @@
   50% { transform: rotate(180deg) scale(1.15); }
   100% { transform: rotate(360deg) scale(1); }
 }
+
+/* 3-column wrapper */
+.three-column-layout {
+  display: flex;
+  flex-direction: column; /* mobile default */
+  width: 100%;
+  max-width: 1600px;
+  margin: 0 auto;
+}
+
+/* Side columns (hidden on mobile) */
+.side-column {
+  display: none; /* hide on mobile */
+  min-height: 100%;
+}
+
+/* Desktop layout */
+@media (min-width: 900px) {
+  .three-column-layout {
+    flex-direction: row; /* 3 columns */
+    gap: 1rem;
+  }
+
+  .side-column {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    width: 33.33%; /* left & right columns */
+    min-height: 100vh;
+    background: rgba(0,0,0,0.3);
+  }
+
+  .middle-content {
+    width: 33.33%; /* center column */
+  }
+}
+

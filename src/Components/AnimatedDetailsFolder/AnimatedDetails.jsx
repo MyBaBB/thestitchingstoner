@@ -43,7 +43,7 @@ const AnimatedDetails = () => {
         </div>
 
         <p className="stonerLine line1 font-semibold" data-text="High‑vibe Stitching for Classes">
-          <span className="inline-block whitespace-nowrap">
+          <span className="inline-block whitespace-nowrap z-1">
             <span className="emoji">🧘🏼‍♂️</span> High‑vibe&nbsp;
           </span>
           Stitching <span>Classes <span className="emoji">🧶</span></span>
