@@ -16,8 +16,8 @@ const Footer = () => {
 
         <Link to="/localartist">
           <div
-            className="footer-right footer-right_Tooltip flex flex-col opacity-80"
-            data-tool-tip=" 🌈 This Website Chooses Real Art 🎨 "
+            className="footer-right flex flex-col opacity-80"
+           
           >
             <NotRobot />
           </div>

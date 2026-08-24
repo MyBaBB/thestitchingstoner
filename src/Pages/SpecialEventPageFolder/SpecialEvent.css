@@ -84,3 +84,67 @@
     align-items: center;
   }
 }
+.footer-right_Tooltip {
+  position: relative;
+}
+
+/* ============================
+   TOOLTIP BUBBLE (BOTTOM RIGHT)
+   ============================ */
+.footer-right_Tooltip::before {
+  content: attr(data-tool-tip);
+  position: absolute;
+  bottom: 14.8rem; /* below the element */
+  right: 3.5rem; /* align to bottom-right */
+  transform: translateY(10px) scale(0);
+  transform-origin: bottom right;
+  background: radial-gradient(#6b4f3f, #3e2c25);
+  color: #fbf39a;
+  border: 1px solid #d9c7a3;
+  border-radius: 10px;
+  padding: 0.35rem 1rem;
+  font-family: "Itim-Regular";
+  font-size: 1rem;
+  white-space: nowrap;
+  opacity: 0;
+  transition: 0.25s ease-in-out;
+  z-index: 999;
+}
+
+/* ============================
+   TOOLTIP POINTER (RIGHT)
+   ============================ */
+.footer-right_Tooltip::after {
+  content: "";
+  position: absolute;
+  bottom: 13.5rem; /* just above bubble */
+  right: 4.5rem; /* bottom-right origin */
+  width: 30px;
+  height: 24px;
+  background-color: #d9c7a3;
+  clip-path: polygon(50% 100%, 0 0, 100% 0);
+  opacity: 0;
+  transform: translateY(10px) scale(0);
+  transform-origin: bottom right;
+  transition: 0.25s ease-in-out;
+  z-index: 998;
+}
+
+/* ============================
+   SHOW TOOLTIP ON HOVER
+   ============================ */
+.footer-right_Tooltip:hover::before,
+.footer-right_Tooltip:hover::after {
+  opacity: 1;
+  transform: translateY(0) scale(1);
+}
+
+/* ============================
+   MOBILE: HIDE TOOLTIP
+   ============================ */
+@media (max-width: 685px) {
+  .footer-right_Tooltip::before,
+  .footer-right_Tooltip::after {
+    display: none;
+  }
+}
