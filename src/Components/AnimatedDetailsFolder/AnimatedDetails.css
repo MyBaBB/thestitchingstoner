@@ -130,6 +130,7 @@
   background-size: 200% auto;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+  z-index: -1;
 }
 
 .line2 {
@@ -138,6 +139,7 @@
   background-size: 200% auto;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+  z-index: -1;
 }
 
 .line3 {
@@ -146,6 +148,7 @@
   background-size: 200% auto;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+  z-index: -1;
 }
 
 .line4 {
@@ -154,6 +157,7 @@
   background-size: 200% auto;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+  z-index: -1;
 }
 
 /* Hover */
@@ -262,3 +266,6 @@
     object-fit: cover;
   }
 }
+
+
+ 

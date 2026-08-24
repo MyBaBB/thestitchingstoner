@@ -9,9 +9,10 @@
 
 @media (min-width: 440px) {
   .specialEventTitle {
-    font-size: 1.5rem;
+    font-size: 1.9rem;
   }
 }
+
 
 /* VanBounce.css */
 .vanBounce {
@@ -116,5 +117,10 @@
   }
   100% {
     transform: rotate(0deg);
+  }
+}
+@media  screen and  (min-width: 900px) {
+  .hookahMobile {
+    display: none;
   }
 }
