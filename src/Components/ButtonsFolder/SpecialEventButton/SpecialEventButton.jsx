@@ -5,11 +5,11 @@ import "./SpecialEventButton.css";
 const SpecialEventButton = () => {
   return (
     <Link
-      to="/specialevent"
+      to="/specialevent2"
       className="special-event-btn"
       data-tool-tip="🌈 Hookahville 62 Crochet Classes ✌🏼"
     >
-      Special Event
+      Sep. 11th
     </Link>
   );
 };
