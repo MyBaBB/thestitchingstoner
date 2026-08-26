@@ -42,43 +42,43 @@ const AnimatedDetails = () => {
             />
           )}
         </div>
+     < div className="stonerText   ">
+            <p className="stonerLine2   line11 font-semibold" data-text="High‑vibe Stitching for Classes">
+              <span className="inline-block whitespace-nowrap z-1">
+                <span className="emoji">🧘🏼‍♂️</span> High‑vibe&nbsp;
+              </span>
+              Stitching <span>Classes <span className="emoji">🧶</span></span>
+            </p>
 
-        <p className="stonerLine2 line1 font-semibold" data-text="High‑vibe Stitching for Classes">
-          <span className="inline-block whitespace-nowrap z-1">
-            <span className="emoji">🧘🏼‍♂️</span> High‑vibe&nbsp;
-          </span>
-          Stitching <span>Classes <span className="emoji">🧶</span></span>
-        </p>
+            <p className="stonerLine2 line22 font-semibold" data-text="Psychedelic chill zone">
+              <span className="inline-block whitespace-nowrap">
+                <span className="emoji">🌈</span> Psychedelic&nbsp;
+              </span>
+              chill zone{" "}
+              <span className="whitespace-nowrap">
+                <span className="emoji2 rotate-[45deg]">🌚</span>
+              </span>
+            </p>
 
-        <p className="stonerLine2 line2 font-semibold" data-text="Psychedelic chill zone">
-          <span className="inline-block whitespace-nowrap">
-            <span className="emoji">🌈</span> Psychedelic&nbsp;
-          </span>
-          chill zone{" "}
-          <span className="whitespace-nowrap">
-            <span className="emoji2 rotate-[45deg]">🌚</span>
-          </span>
-        </p>
+            <p className="stonerLine2 line33 font-semibold" data-text="Tap in — Before Full">
+              <span className="inline-block whitespace-nowrap">
+                <span className="emoji2 scale-x-[-1] rotate-[-15deg]">🚐</span> Tap in&nbsp;
+              </span>
+              —{" "}
+              <span className="whitespace-nowrap">
+                Before Full <span className="emoji2">🛖</span>
+              </span>
+            </p>
 
-        <p className="stonerLine2 line3 font-semibold" data-text="Tap in — Before Full">
-          <span className="inline-block whitespace-nowrap">
-            <span className="emoji2 scale-x-[-1] rotate-[-15deg]">🚐</span> Tap in&nbsp;
-          </span>
-          —{" "}
-          <span className="whitespace-nowrap">
-            Before Full <span className="emoji">🛖</span>
-          </span>
-        </p>
-
-        <p className="stonerLine2 line4 font-semibold" data-text="Creative Yarn Sessions">
-          <span className="inline-block whitespace-nowrap">
-            <span className="emoji2">🧶</span> Creative&nbsp;
-          </span>
-          <span className="whitespace-nowrap">
-            Yarn Sessions <span className="emoji2">🌻</span>
-          </span>
-        </p>
-
+            <p className="stonerLine2 line4 font-semibold" data-text="Creative Yarn Sessions">
+              <span className="inline-block whitespace-nowrap">
+                <span className="emoji2">🧶</span> Creative&nbsp;
+              </span>
+              <span className="whitespace-nowrap">
+                Yarn Sessions <span className="emoji2">🌻</span>
+              </span>
+          </p>
+       </div>
       </div>
     </div>
   );

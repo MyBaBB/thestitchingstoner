@@ -8,20 +8,24 @@
 .trippy-card2 {
   position: relative;
   z-index: 1;
-  
   backdrop-filter: blur(0px);
   -webkit-backdrop-filter: blur(0px);
-  
   border-radius: 1.25rem;
   padding: 2.5rem 2rem;
-  
-
-  /* 🔥 FIX: Steady width */
   width: 100%;
   max-width: 560px;
   margin: 0 auto;
+  cursor: pointer;
+  z-index: 9999999999;
+  }
+  
+.stonerText {
+  background-color: rgba(3, 34, 7, 0.9);
+  border:2px solid rgba(46, 90, 44, 0.63); /* Forest Service Green */
+  border-radius: 28px;
+  z-index: -1;
+  padding: 12px 0px
 }
-
 /* Stable Image Area */
 .image-display-wrapper2 {
   perspective: 1000px;
@@ -32,6 +36,7 @@
   align-items: center;
   overflow: visible; /* Prevents edge clipping during scale(1.06) */
   margin-bottom: 1rem;
+  
 }
 
 /* Image Animation */
@@ -126,7 +131,7 @@
 /* Gradients — UNTOUCHED */
 .line11 {
   animation-delay: 0.2s, 0s;
-  background: linear-gradient(135deg, #ff007f, #ffaa00, #ff007f);
+  background-color:  #ffaa00;
   background-size: 200% auto;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -135,7 +140,7 @@
 
 .line22 {
   animation-delay: 0.5s, 0.8s;
-  background: linear-gradient(135deg, #9d00ff, #00f3ff, #9d00ff);
+  background-color:  #00f3ff ;
   background-size: 200% auto;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -253,6 +258,7 @@
     margin: 0;
     padding: 0;
     border-radius: 0;
+ 
   }
 
   .image-display-wrapper2 {

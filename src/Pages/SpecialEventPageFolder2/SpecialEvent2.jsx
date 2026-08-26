@@ -2,24 +2,19 @@
 import React, { useState, useEffect } from "react";
 import ReverseButton from "../../Components/ButtonsFolder/ReverseButton/ReverseButton.jsx";
 import HippieFootprints from "../../Components/HippieFootprintsFolder/HippieFootprints.jsx";
-import NotRobot from "../../Components/NotRobotFolder/NotRobot.jsx"; 
+ 
 import AnimatedDetails2 from "../../Components/AnimatedDetailsFolder/AnimatedDetails2.jsx";
-import { Link } from "react-router-dom";
-import VanSlideIn from "../../Components/VanSlideInFolder/VanSlideIn.jsx";
+ 
+import VanSlideIn2 from "../../Components/VanSlideInFolder/VanSlideIn2.jsx";
 import Copyright from "../../Components/CopyrightFolder/Copyright.jsx";
 import Banner2 from "../../Images/1207px1212banner.png";
 import "./SpecialEvent2.css";
 
 export default function SpecialEvent2() {
-  const [showRobot, setShowRobot] = useState(true);
+  
+ 
 
-  useEffect(() => {
-    const timer = setTimeout(() => {
-      setShowRobot(false);
-    }, 14000);
-
-    return () => clearTimeout(timer);
-  }, []);
+  
 
   return (
     <>
@@ -28,7 +23,7 @@ export default function SpecialEvent2() {
         style={{
           backgroundImage: `url(${Banner2})`,
           backgroundSize: "cover",
-          backgroundPosition: "center -2.75rem",
+          backgroundPosition: "center -1.75rem",
           backgroundRepeat: "no-repeat",
         }}
       >
@@ -44,11 +39,19 @@ export default function SpecialEvent2() {
               <Copyright />
             </a>
           </div>
-
+ 
+        
+              <a href="https://thestitchingstoner.square.site/product/crochet-101-the-basics/FR5XDEGDJ3HEPOUPPTVS2BNP" className="vanSlideInstaller2 z-10" >
+                <div className="   "> 
+            <VanSlideIn2 />
+            
+          </div>
+</a>
           {/* MIDDLE COLUMN */}
           <div className="middle-content2">
+
             <div className="specialEvent2Content relative flex flex-col items-center text-white">
-              <VanSlideIn />
+              
               <AnimatedDetails2 />
             </div>
           </div>

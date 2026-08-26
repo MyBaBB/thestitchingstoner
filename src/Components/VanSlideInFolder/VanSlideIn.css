@@ -6,9 +6,48 @@
   text-shadow: 0 0 8px #ff8bd8;
   color:greenyellow;
 }
+.specialEventTitle2 {
+  font-family: "Itim", cursive;
+  font-size: 2.25rem; /* Upgraded size for impact */
+  color: #fff;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  
+  /* Multilayered neon glow */
+  text-shadow: 
+    0 0 5px #fff,
+    0 0 10px #ff007f,
+    0 0 20px #ff007f,
+    0 0 40px #7928ca,
+    0 0 80px #7928ca;
+
+  /* Continuous pulse animation */
+  animation: neonPulse 1.8s infinite alternate ease-in-out;
+}
+
+@keyframes neonPulse {
+  0% {
+    transform: scale(1);
+    text-shadow: 
+      0 0 4px #fff,
+      0 0 8px #ff007f,
+      0 0 18px #ff007f,
+      0 0 35px #7928ca;
+  }
+  100% {
+    transform: scale(1.06);
+    text-shadow: 
+      0 0 8px #fff,
+      0 0 15px #00f2fe,
+      0 0 30px #00f2fe,
+      0 0 60px #4facfe,
+      0 0 100px #4facfe;
+  }
+}
 
 @media (min-width: 440px) {
-  .specialEventTitle {
+  .specialEventTitle, .specialEventTitle2 {
     font-size: 1.97rem;
   }
 }
