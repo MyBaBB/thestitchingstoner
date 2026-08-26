@@ -11,7 +11,7 @@ const VanSlideIn = () => {
           <span className="vanBounce scale-x-[-1]  ">🚐</span>
           &nbsp;
           <span className="sessionBump  ">
-            <span className="crochetRotate">Yarn</span> Sessions
+            <span className="crochetRotate ">Yarn</span> Sessions
           </span>
           <span className="yarnWiggle ">🧶</span>
         </h1>
