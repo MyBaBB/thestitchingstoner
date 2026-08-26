@@ -7,7 +7,7 @@ import AnimatedDetails2 from "../../Components/AnimatedDetailsFolder/AnimatedDet
  
 import VanSlideIn2 from "../../Components/VanSlideInFolder/VanSlideIn2.jsx";
 import Copyright from "../../Components/CopyrightFolder/Copyright.jsx";
-import Banner2 from "../../Images/1207px1212banner.png";
+import Banner2 from "../../Images/1207px1212banner.webp";
 import "./SpecialEvent2.css";
 
 export default function SpecialEvent2() {
