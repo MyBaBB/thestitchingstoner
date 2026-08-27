@@ -23,6 +23,7 @@
   padding: 12px 18px;
   margin: auto;
   margin-bottom: 2.15rem;
+  box-shadow: 0px 0px 0px 5px black;
 }
 /* Decorative Outer Glow via Pseudo-element */
 .fancyDarkOuter {
@@ -34,7 +35,7 @@
   position: absolute;
   inset: 0;
   border-radius: inherit; /* Matches parent border-radius automatically */
-  box-shadow: 0px 0px 35px 30px rgba(185, 245, 6, 0.2);
+  box-shadow: 0px 0px 5px 20px rgba(185, 245, 6, .25);
   z-index: -1; /* Sits behind parent content */
   pointer-events: none; /* Allows clicks to pass through to underlying elements */
   will-change: transform; /* Promotes layer to GPU hardware acceleration */
