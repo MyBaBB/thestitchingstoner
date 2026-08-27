@@ -5,7 +5,7 @@ import "./Copyright.css";
 const Copyright = () => {
   return (
     <>
-      <section className="copyRightWrapper1 z-10  tracking-wide  ">
+      <section className="copyRightWrapper1 z-10 tracking-wide">
         <div
           className="copyRightAnchorTag1 hybridTooltip1"
           data-tooltip="⚡ Instinct in the Mind — Tech in the Hands  "

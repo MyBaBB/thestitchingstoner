@@ -8,13 +8,13 @@
 .trippy-card {
   position: relative;
   z-index: 1;
-  
+
   backdrop-filter: blur(16px);
   -webkit-backdrop-filter: blur(16px);
-  
+
   border-radius: 1.25rem;
   padding: 2.5rem 2rem;
-  
+
   /* 🔥 FIX: Steady width */
   width: 100%;
   max-width: 560px;
@@ -31,7 +31,7 @@
   align-items: center;
   overflow: visible; /* Prevents edge clipping during scale(1.06) */
   margin-bottom: 1rem;
-  z-index:11;
+  z-index: 11;
 }
 
 /* Image Animation - Slowed to 8s with Dynamic Variable Injection */
@@ -57,18 +57,20 @@
     filter: brightness(1);
   }
   /* Settles into normal size for steady viewing */
-  25% { 
-    transform: scale(1) rotate(0deg); 
+  25% {
+    transform: scale(1) rotate(0deg);
   }
   /* Subtle dynamic jiggle mid-view */
-  45% { 
-    transform: scale(1.02) rotate(var(--pop-rot, -2deg)) skewX(var(--skew-1, -1deg)); 
+  45% {
+    transform: scale(1.02) rotate(var(--pop-rot, -2deg))
+      skewX(var(--skew-1, -1deg));
   }
-  55% { 
-    transform: scale(0.98) rotate(var(--start-rot, 2deg)) skewX(var(--skew-2, 1deg)); 
+  55% {
+    transform: scale(0.98) rotate(var(--start-rot, 2deg))
+      skewX(var(--skew-2, 1deg));
   }
-  65% { 
-    transform: scale(1) rotate(0deg); 
+  65% {
+    transform: scale(1) rotate(0deg);
   }
   /* Holds still so the viewer can absorb it */
   85% {
@@ -182,27 +184,57 @@
 }
 
 @keyframes liquidFloat {
-  0% { transform: translateY(0px) rotate(0deg); }
-  50% { transform: translateY(-8px) rotate(0.5deg); }
-  100% { transform: translateY(4px) rotate(-0.5deg); }
+  0% {
+    transform: translateY(0px) rotate(0deg);
+  }
+  50% {
+    transform: translateY(-8px) rotate(0.5deg);
+  }
+  100% {
+    transform: translateY(4px) rotate(-0.5deg);
+  }
 }
 
 @keyframes prismGlitchLeft {
-  0% { transform: translate(-50%, 0); }
-  20% { transform: translate(calc(-50% - 2px), 1px); }
-  40% { transform: translate(calc(-50% - 1px), -1px); }
-  60% { transform: translate(calc(-50% - 3px), 0); }
-  80% { transform: translate(calc(-50% - 1px), 2px); }
-  100% { transform: translate(-50%, 0); }
+  0% {
+    transform: translate(-50%, 0);
+  }
+  20% {
+    transform: translate(calc(-50% - 2px), 1px);
+  }
+  40% {
+    transform: translate(calc(-50% - 1px), -1px);
+  }
+  60% {
+    transform: translate(calc(-50% - 3px), 0);
+  }
+  80% {
+    transform: translate(calc(-50% - 1px), 2px);
+  }
+  100% {
+    transform: translate(-50%, 0);
+  }
 }
 
 @keyframes prismGlitchRight {
-  0% { transform: translate(-50%, 0); }
-  20% { transform: translate(calc(-50% + 2px), -1px); }
-  40% { transform: translate(calc(-50% + 1px), 1px); }
-  60% { transform: translate(calc(-50% + 3px), 0); }
-  80% { transform: translate(calc(-50% + 1px), -2px); }
-  100% { transform: translate(-50%, 0); }
+  0% {
+    transform: translate(-50%, 0);
+  }
+  20% {
+    transform: translate(calc(-50% + 2px), -1px);
+  }
+  40% {
+    transform: translate(calc(-50% + 1px), 1px);
+  }
+  60% {
+    transform: translate(calc(-50% + 3px), 0);
+  }
+  80% {
+    transform: translate(calc(-50% + 1px), -2px);
+  }
+  100% {
+    transform: translate(-50%, 0);
+  }
 }
 
 /* Emoji */
@@ -211,7 +243,9 @@
   -webkit-background-clip: border-box !important;
   background-clip: border-box !important;
   background: none !important;
-  font-family: "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji", sans-serif !important;
+  font-family:
+    "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol",
+    "Noto Color Emoji", sans-serif !important;
   color: initial !important;
   text-shadow: none !important;
   display: inline-block;
@@ -266,4 +300,3 @@
     object-fit: cover;
   }
 }
-

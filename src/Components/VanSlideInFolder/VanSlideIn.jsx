@@ -4,17 +4,14 @@ const VanSlideIn = () => {
   return (
     <div>
       <a href="https://thestitchingstoner.square.site/product/crochet-101-the-basics/FR5XDEGDJ3HEPOUPPTVS2BNP">
-        <h1 className="specialEventTitle text-center m-0 ">
-         
-        
-          <span className="vanBounce scale-x-[-1] ">🚐</span>
+        <h1 className="specialEventTitle m-0 text-center">
+          <span className="vanBounce scale-x-[-1]">🚐</span>
           &nbsp;
-          <span className="sessionBump  ">
+          <span className="sessionBump">
             <span className="crochetRotate">Yarn</span> Sessions
           </span>
           <span className="yarnWiggle">🧶</span>
         </h1>
-
       </a>
     </div>
   );

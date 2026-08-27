@@ -15,10 +15,9 @@
   letter-spacing: 2px;
   background-color: rgba(0, 0, 0, 0.85);
   padding: 5px;
-  border-radius: 20px; 
+  border-radius: 20px;
   margin-bottom: 1rem;
   /* Multilayered neon glow */
-
 
   /* Continuous pulse animation */
   animation: neonPulse2 1.8s infinite alternate ease-in-out;
@@ -27,37 +26,38 @@
 @keyframes neonPulse2 {
   0% {
     opacity: 0.9;
-    text-shadow: 
+    text-shadow:
       0 0 4px #ff007f,
       0 0 10px rgba(121, 40, 202, 0.6);
   }
   100% {
     opacity: 1;
-    text-shadow: 
+    text-shadow:
       0 0 6px #00f2fe,
       0 0 14px rgba(79, 172, 254, 0.6);
   }
-}@keyframes neonPulse {
+}
+@keyframes neonPulse {
   0% {
     opacity: 0.9;
-    text-shadow: 
+    text-shadow:
       0 0 4px #ff007f,
       0 0 10px rgba(121, 40, 202, 0.6);
   }
   100% {
     opacity: 1;
-    text-shadow: 
+    text-shadow:
       0 0 6px #00f2fe,
       0 0 14px rgba(79, 172, 254, 0.6);
   }
 }
 
 @media (min-width: 440px) {
-  .specialEventTitle, .specialEventTitle2 {
+  .specialEventTitle,
+  .specialEventTitle2 {
     font-size: 1.97rem;
   }
 }
-
 
 /* VanBounce.css */
 .vanBounce {
@@ -164,7 +164,7 @@
     transform: rotate(0deg);
   }
 }
-@media  screen and  (min-width: 900px) {
+@media screen and (min-width: 900px) {
   .hookahMobile {
     display: none;
   }
