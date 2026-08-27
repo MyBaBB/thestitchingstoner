@@ -13,7 +13,7 @@ const IMAGES = [img11, img22, img33, img44, img55];
 const AnimatedDetails = () => {
   const [currentImageIndex, setCurrentImageIndex] = useState(null);
 
-  useEffect(() => {
+  useEffect(() => { 
     const interval = setInterval(() => {
       setCurrentImageIndex((prev) =>
         prev === null ? 0 : (prev + 1) % IMAGES.length

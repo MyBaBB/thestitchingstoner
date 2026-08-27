@@ -40,7 +40,9 @@ export default function SpecialEventPage() {
           {/* MIDDLE COLUMN */}
           <div className="middle-content">
             <div className="specialEventContent relative flex flex-col items-center">
-              <VanSlideIn />
+                <span  className="text-amber-200 mt-4 font-Iceberg-Regular text-2xl xs:text-3xl md:text-4xl  ">
+                  ✌🏼 Hookahville 62 🌻
+                </span>
               <AnimatedDetails />
               <YouTubePlayer />
             </div>

@@ -9,7 +9,7 @@ import AnimatedDetails2 from "../../Components/AnimatedDetailsFolder/AnimatedDet
 import Copyright from "../../Components/CopyrightFolder/Copyright.jsx";
 import Banner2 from "../../Images/1207px1212banner.webp";
 import "./SpecialEvent2.css";
-
+ 
 export default function SpecialEvent2() {
   
  
@@ -41,7 +41,7 @@ export default function SpecialEvent2() {
              </div>
              
              
-               
+                
 
           {/* MIDDLE COLUMN */}
           <div className="middle-content2">

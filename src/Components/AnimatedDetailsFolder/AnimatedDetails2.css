@@ -117,7 +117,24 @@
     lineEntrance2 0.8s cubic-bezier(0.215, 0.61, 0.355, 1) forwards,
     liquidFloat2 5s ease-in-out infinite alternate;
 }
- 
+ .vanSlideInstaller2 {
+  position: absolute;
+  top: 0.5rem;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: rgb(2, 22, 22);
+  width: fit-content;
+  height: fit-content;
+  border-radius: 16px;
+  padding: 0.2rem 0.5rem;
+  color: lime !important;
+  font-size: 1.15rem;
+  font-weight: 600;
+  letter-spacing: 1px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  overflow: hidden;
+  z-index: -1;
+}
 /* RGB Glitch Layers */
 .stonerLine2::before,
 .stonerLine2::after {
@@ -296,7 +313,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-  }
+  }  
 
   .trippy-card2 {
     width: 100vw;
