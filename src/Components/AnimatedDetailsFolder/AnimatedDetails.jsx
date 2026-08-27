@@ -66,7 +66,7 @@ const AnimatedDetails = () => {
           <br />
           <p className="stonerLine line2" data-text="Psychedelic chill zone">
             <span className="inline-block whitespace-nowrap">
-              <span className="emoji">🌈</span> Psychedelic&nbsp;
+              <span className="emoji">✌🏼</span> Psychedelic&nbsp;
             </span>
 
             <span className="whitespace-nowrap">
