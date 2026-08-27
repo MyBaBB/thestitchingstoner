@@ -15,10 +15,7 @@ const Footer = () => {
         </div>
 
         <Link to="/localartist">
-          <div
-            className="footer-right flex flex-col opacity-80"
-           
-          >
+          <div className="footer-right flex flex-col opacity-80">
             <NotRobot />
           </div>
         </Link>

@@ -2,7 +2,7 @@
 import React, { useState, useEffect } from "react";
 import ReverseButton from "../../Components/ButtonsFolder/ReverseButton/ReverseButton.jsx";
 import HippieFootprints from "../../Components/HippieFootprintsFolder/HippieFootprints.jsx";
-import NotRobot from "../../Components/NotRobotFolder/NotRobot.jsx"; 
+import NotRobot from "../../Components/NotRobotFolder/NotRobot.jsx";
 import YouTubePlayer from "../../Components/YouTubeFolder/YouTubePlayer.jsx";
 import AnimatedDetails from "../../Components/AnimatedDetailsFolder/AnimatedDetails.jsx";
 import { Link } from "react-router-dom";
@@ -23,13 +23,12 @@ export default function SpecialEventPage() {
 
   return (
     <>
-      <div className="special-event-bg-wrapper ">
+      <div className="special-event-bg-wrapper">
         <HippieFootprints />
         <div className="three-column-layout">
-
           {/* LEFT COLUMN */}
           <div className="side-column left-column">
-            <div className="absolute top-4 left-4">
+            <div className="absolute left-4 top-4">
               <ReverseButton />
             </div>
             <a href="https://mybabb.com" className="absolute bottom-4 left-4">
@@ -40,7 +39,9 @@ export default function SpecialEventPage() {
           {/* MIDDLE COLUMN */}
           <div className="middle-content">
             <div className="specialEventContent relative flex flex-col items-center">
-              <VanSlideIn />
+              <span className="mt-4 font-Iceberg-Regular text-2xl text-amber-200 xs:text-3xl md:text-4xl">
+                ✌🏼 Hookahville 62 🌻
+              </span>
               <AnimatedDetails />
               <YouTubePlayer />
             </div>
@@ -49,7 +50,7 @@ export default function SpecialEventPage() {
           {/* RIGHT COLUMN */}
           <div className="side-column right-column">
             {showRobot && (
-              <Link to="/localartist" className="absolute right-4 bottom-4">
+              <Link to="/localartist" className="absolute bottom-4 right-4">
                 <div
                   className="footer-right_Tooltip"
                   data-tool-tip=" 🌈 This Website Chooses Real Art 🎨 "
@@ -59,7 +60,6 @@ export default function SpecialEventPage() {
               </Link>
             )}
           </div>
-
         </div>
       </div>
     </>
