@@ -7,7 +7,7 @@ import img22 from "./Zombies5-600x400.webp";
 import img33 from "./Zombies-4600x400.webp";
 import img44 from "./Zombies3-600x400.webp";
 import img55 from "./Zombies2-600x400.webp";
-
+import VanSlideIn2 from "../../Components/VanSlideInFolder/VanSlideIn2.jsx";
 const IMAGES = [img11, img22, img33, img44, img55];
 
 const AnimatedDetails = () => {
@@ -25,14 +25,15 @@ const AnimatedDetails = () => {
     return () => {
       clearInterval(interval);
       clearTimeout(initialTimeout);
-    };
+    }; 
   }, []);
 
   return (
-    <div className="trippy-stage2">
-      <div className="trippy-card2 flex flex-col items-center text-center font-Itim-Regular leading-relaxed ">
+    <>
+    <div className="trippy-stage2 ">
+      <div className="trippy-card2 flex flex-col items-center text-center font-Itim-Regular leading-relaxed  ">
 
-        <div className="image-display-wrapper2">
+        <div className="image-display-wrapper2 ">
           {currentImageIndex !== null && (
             <img
               key={currentImageIndex}
@@ -42,25 +43,30 @@ const AnimatedDetails = () => {
             />
           )}
         </div>
-     < div className="stonerText   ">
-            <p className="stonerLine2   line11 font-semibold" data-text="High‑vibe Stitching for Classes">
-              <span className="inline-block whitespace-nowrap z-1">
-                <span className="emoji">🧘🏼‍♂️</span> High‑vibe&nbsp;
-              </span>
-              Stitching <span>Classes <span className="emoji">🧶</span></span>
-            </p>
+     
+       <a href="https://thestitchingstoner.square.site/product/crochet-101-the-basics/FR5XDEGDJ3HEPOUPPTVS2BNP" className="hover:opacity-90 hover:scale-105 ">
+       < VanSlideIn2 />
+       </a>
 
-            <p className="stonerLine2 line22 font-semibold" data-text="Psychedelic chill zone">
+     < div className="stonerText  border-4 border-blue-500 ">
+            <p className="stonerLine2   line11 " data-text="High‑vibe Stitching for Classes">
+              <span className="inline-block whitespace-nowrap z-1">
+                <span className="emoji">🧘🏼‍♂️</span> &nbsp;
+              </span>
+              Stitching <span className="whitespace-nowrap">Classes <span className="emoji">🧶</span></span>
+            </p>
+<br />
+            <p className="stonerLine2 line22  " data-text="Psychedelic chill zone">
               <span className="inline-block whitespace-nowrap">
                 <span className="emoji">🌈</span> Psychedelic&nbsp;
               </span>
-              chill zone{" "}
-              <span className="whitespace-nowrap">
-                <span className="emoji2 rotate-[45deg]">🌚</span>
+             
+              <span className="whitespace-nowrap"> chill zone 
+                <span className="emoji2 rotate-[45deg]">&nbsp;🌚</span>
               </span>
             </p>
-
-            <p className="stonerLine2 line33 font-semibold" data-text="Tap in — Before Full">
+<br />
+            <p className="stonerLine2 line33  " data-text="Tap in — Before Full">
               <span className="inline-block whitespace-nowrap">
                 <span className="emoji2 scale-x-[-1] rotate-[-15deg]">🚐</span> Tap in&nbsp;
               </span>
@@ -69,18 +75,19 @@ const AnimatedDetails = () => {
                 Before Full <span className="emoji2">🛖</span>
               </span>
             </p>
-
-            <p className="stonerLine2 line4 font-semibold" data-text="Creative Yarn Sessions">
+<br />
+            <p className="stonerLine2 line44  " data-text="Creative Yarn Sessions">
               <span className="inline-block whitespace-nowrap">
-                <span className="emoji2">🧶</span> Creative&nbsp;
+                <span className="emoji2">🧶</span> Get&nbsp;
               </span>
               <span className="whitespace-nowrap">
-                Yarn Sessions <span className="emoji2">🌻</span>
+                Hooked Up <span className="emoji2">🌻</span>
               </span>
           </p>
        </div>
       </div>
     </div>
+    </>
   );
 };
 
