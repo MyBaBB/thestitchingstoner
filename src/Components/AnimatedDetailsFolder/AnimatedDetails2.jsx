@@ -58,7 +58,7 @@ const AnimatedDetails = () => {
               <span className="z-1 inline-block whitespace-nowrap">
                 <span className="emoji">🧘🏼‍♂️</span> &nbsp;
               </span>
-              Stitching{" "}
+              Stitching 
               <span className="whitespace-nowrap">
                 Classes <span className="emoji">🧶</span>
               </span>
@@ -69,22 +69,22 @@ const AnimatedDetails = () => {
               data-text="Psychedelic chill zone"
             >
               <span className="inline-block whitespace-nowrap">
-                <span className="emoji">🌈</span> Psychedelic&nbsp;
+                <span className="emoji">✌🏼</span> Psychedelic&nbsp;
               </span>
 
               <span className="whitespace-nowrap">
-                {" "}
+             
                 chill zone
-                <span className="emoji2 rotate-[45deg]">&nbsp;🌚</span>
+                <span className="emoji2 ">&nbsp;🌚</span>
               </span>
             </p>
             <br />
             <p className="stonerLine2 line33" data-text="Tap in — Before Full">
               <span className="inline-block whitespace-nowrap">
-                <span className="emoji2 rotate-[-15deg] scale-x-[-1]">🚐</span>{" "}
+                <span className="emoji2  ">🪷</span> 
                 Tap in&nbsp;
               </span>
-              —{" "}
+              —
               <span className="whitespace-nowrap">
                 Before Full <span className="emoji2">🛖</span>
               </span>
