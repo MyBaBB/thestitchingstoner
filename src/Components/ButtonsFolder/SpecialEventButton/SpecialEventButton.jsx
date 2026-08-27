@@ -7,7 +7,7 @@ const SpecialEventButton = () => {
     <Link
       to="/specialevent2"
       className="special-event-btn"
-      data-tool-tip="🌈 Hookahville 62 Crochet Classes ✌🏼"
+      data-tool-tip="Good People ✌🏼 Good Times  "
     >
       Sep. 11th
     </Link>
