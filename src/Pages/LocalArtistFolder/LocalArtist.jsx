@@ -76,7 +76,7 @@ const LocalArtistFolder = () => {
                 </div>
 
                 <span className="traditionalWordVapor whitespace-nowrap">
-                  {" "}
+                
                   Welcome
                 </span>
 

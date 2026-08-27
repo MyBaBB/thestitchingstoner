@@ -78,7 +78,7 @@ const AnimatedDetails = () => {
           <br />
           <p className="stonerLine line3" data-text="Tap in — Before Full">
             <span className="inline-block whitespace-nowrap">
-              <span className="emoji rotate-[-15deg] scale-x-[-1]">🚐</span> Tap
+              <span className="emoji ">👉🏼</span> Tap
               in&nbsp;
             </span>
             —{" "}
