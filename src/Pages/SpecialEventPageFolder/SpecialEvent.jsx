@@ -6,7 +6,7 @@ import NotRobot from "../../Components/NotRobotFolder/NotRobot.jsx";
 import YouTubePlayer from "../../Components/YouTubeFolder/YouTubePlayer.jsx";
 import AnimatedDetails from "../../Components/AnimatedDetailsFolder/AnimatedDetails.jsx";
 import { Link } from "react-router-dom";
-import VanSlideIn from "../../Components/VanSlideInFolder/VanSlideIn.jsx";
+ 
 import Copyright from "../../Components/CopyrightFolder/Copyright.jsx";
 import "./SpecialEvent.css";
 

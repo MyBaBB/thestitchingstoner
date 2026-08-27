@@ -50,7 +50,7 @@ const AnimatedDetails = () => {
             <VanSlideIn2 />
           </a>
 
-          <div className="stonerText border-4 border-blue-500">
+          <div className="stonerText fancyDarkOuter">
             <p
               className="stonerLine2 line11"
               data-text="High‑vibe Stitching for Classes"
@@ -58,7 +58,7 @@ const AnimatedDetails = () => {
               <span className="z-1 inline-block whitespace-nowrap">
                 <span className="emoji">🧘🏼‍♂️</span> &nbsp;
               </span>
-              Stitching 
+              Stitching&nbsp; 
               <span className="whitespace-nowrap">
                 Classes <span className="emoji">🧶</span>
               </span>
