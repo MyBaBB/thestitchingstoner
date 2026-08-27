@@ -4,45 +4,51 @@
   font-size: 1rem;
   margin-bottom: 1.5rem;
   text-shadow: 0 0 8px #ff8bd8;
-  color:greenyellow;
+  color: white;
 }
 .specialEventTitle2 {
   font-family: "Itim", cursive;
   font-size: 2.25rem; /* Upgraded size for impact */
-  color: #fff;
+  color: limegreen;
   text-align: center;
   text-transform: uppercase;
   letter-spacing: 2px;
-  
+  background-color: rgba(0, 0, 0, 0.85);
+  padding: 5px;
+  border-radius: 20px; 
+  margin-bottom: 1rem;
   /* Multilayered neon glow */
-  text-shadow: 
-    0 0 5px #fff,
-    0 0 10px #ff007f,
-    0 0 20px #ff007f,
-    0 0 40px #7928ca,
-    0 0 80px #7928ca;
+
 
   /* Continuous pulse animation */
-  animation: neonPulse 1.8s infinite alternate ease-in-out;
+  animation: neonPulse2 1.8s infinite alternate ease-in-out;
 }
 
-@keyframes neonPulse {
+@keyframes neonPulse2 {
   0% {
-    transform: scale(1);
+    opacity: 0.9;
     text-shadow: 
-      0 0 4px #fff,
-      0 0 8px #ff007f,
-      0 0 18px #ff007f,
-      0 0 35px #7928ca;
+      0 0 4px #ff007f,
+      0 0 10px rgba(121, 40, 202, 0.6);
   }
   100% {
-    transform: scale(1.06);
+    opacity: 1;
     text-shadow: 
-      0 0 8px #fff,
-      0 0 15px #00f2fe,
-      0 0 30px #00f2fe,
-      0 0 60px #4facfe,
-      0 0 100px #4facfe;
+      0 0 6px #00f2fe,
+      0 0 14px rgba(79, 172, 254, 0.6);
+  }
+}@keyframes neonPulse {
+  0% {
+    opacity: 0.9;
+    text-shadow: 
+      0 0 4px #ff007f,
+      0 0 10px rgba(121, 40, 202, 0.6);
+  }
+  100% {
+    opacity: 1;
+    text-shadow: 
+      0 0 6px #00f2fe,
+      0 0 14px rgba(79, 172, 254, 0.6);
   }
 }
 

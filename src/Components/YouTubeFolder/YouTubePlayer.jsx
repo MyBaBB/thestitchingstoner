@@ -61,7 +61,7 @@ export default function RandomYouTubePlayer() {
         host: "https://www.youtube-nocookie.com",
         videoId: currentVideo,
         playerVars: {
-          autoplay: 0,
+          autoplay: 1,
           controls: 1,
           modestbranding: 1,
           rel: 0,

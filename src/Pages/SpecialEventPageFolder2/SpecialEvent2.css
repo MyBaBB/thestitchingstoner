@@ -3,7 +3,7 @@
   width: 100%;
   min-height: 100vh;
   background-size: cover;
-  background-position: center -3rem; /* Horizontally centered, shifted UP by 3rem */
+  background-position: center -1.75rem;
   background-repeat: no-repeat;
   overflow: hidden;
   z-index: 1;
@@ -30,25 +30,22 @@
   display: flex;
   justify-content: center;
   align-items: center;
-   
- 
 }
-
 
 /* CONTENT INSIDE CENTER COLUMN */
 .specialEvent2Content {
   position: relative;
   width: 100%;
-  max-width: 900px;
-  padding: 2rem;
+  max-width: 560px; /* Aligned with max-width of trippy-card2 */
+  padding: 1.5rem;
   z-index: 2;
 }
 
-/* DESKTOP MODE */
+/* DESKTOP MODE (Fixed side columns prevent middle column width collapse) */
 @media (min-width: 900px) {
   .three-column-layout2 {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: 200px 1fr 200px; /* Fixed sides give the middle column stable width */
   }
 
   .side-column2 {
@@ -75,7 +72,7 @@
   border: 1px solid #d9c7a3;
   border-radius: 10px;
   padding: 0.35rem 1rem;
-  font-family: "Itim-Regular";
+  font-family: "Itim-Regular", sans-serif;
   font-size: 1rem;
   white-space: nowrap;
   opacity: 0;

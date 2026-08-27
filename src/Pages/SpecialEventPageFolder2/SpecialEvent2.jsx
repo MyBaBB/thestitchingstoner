@@ -5,7 +5,7 @@ import HippieFootprints from "../../Components/HippieFootprintsFolder/HippieFoot
  
 import AnimatedDetails2 from "../../Components/AnimatedDetailsFolder/AnimatedDetails2.jsx";
  
-import VanSlideIn2 from "../../Components/VanSlideInFolder/VanSlideIn2.jsx";
+ 
 import Copyright from "../../Components/CopyrightFolder/Copyright.jsx";
 import Banner2 from "../../Images/1207px1212banner.webp";
 import "./SpecialEvent2.css";
@@ -38,19 +38,16 @@ export default function SpecialEvent2() {
             <a href="https://mybabb.com" className="absolute bottom-4 left-4">
               <Copyright />
             </a>
-          </div>
- 
-        
-              <a href="https://thestitchingstoner.square.site/product/crochet-101-the-basics/FR5XDEGDJ3HEPOUPPTVS2BNP" className="vanSlideInstaller2 z-10" >
-                <div className="   "> 
-            <VanSlideIn2 />
-            
-          </div>
-</a>
+             </div>
+             
+             
+               
+
           {/* MIDDLE COLUMN */}
           <div className="middle-content2">
+               
 
-            <div className="specialEvent2Content relative flex flex-col items-center text-white">
+            <div className="specialEvent2Content relative flex flex-col items-center text-white ">
               
               <AnimatedDetails2 />
             </div>
@@ -65,6 +62,7 @@ export default function SpecialEvent2() {
           </div>
 
         </div>
+        
       </div>
     </>
   );

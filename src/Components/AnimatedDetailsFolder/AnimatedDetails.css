@@ -276,15 +276,14 @@
   height: fit-content;
   border-radius: 16px;
   padding: .2rem .5rem;
-  color: white !important;
+  color: lime !important;
   font-size: 1.15rem;
   font-weight: 600;
   letter-spacing: 1px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-
-
   overflow: hidden;
   z-index: -1;
+   
 }
 
  
