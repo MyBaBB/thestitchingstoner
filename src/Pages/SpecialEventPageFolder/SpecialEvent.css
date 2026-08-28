@@ -74,13 +74,23 @@
   width: 100%;
 }
 
+/* Side Column Image Placement */
+.side-column-img {
+  width: 100%;
+  max-width: 90%;
+  height: auto;
+  max-height: 400px;
+  object-fit: contain;
+  border-radius: 8px;
+}
+
 /* Desktop & XL Screens (900px and up) */
 @media (min-width: 900px) {
   .three-column-layout {
     display: grid;
     /* Exactly 3 equal columns across full width without scrollbar conflicts */
-    grid-template-columns: repeat(3, 1fr);
-    width: 100%; /* 🔥 FIX: Changed 100vw to 100% */
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr) minmax(0, 1fr);
+    width: 100%;
     min-height: 100vh;
   }
 
@@ -93,15 +103,18 @@
     width: 100%;
     min-height: 100vh;
     background: rgba(0, 0, 0, 0.3);
+    overflow: hidden;
   }
 
   .middle-content {
     width: 100%;
+    min-width: 0;
     display: flex;
     justify-content: center;
     align-items: center;
   }
 }
+
 .footer-right_Tooltip {
   position: relative;
 }
