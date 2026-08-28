@@ -2,11 +2,12 @@
 import React, { useState, useEffect } from "react";
 import ReverseButton from "../../Components/ButtonsFolder/ReverseButton/ReverseButton.jsx";
 import HippieFootprints from "../../Components/HippieFootprintsFolder/HippieFootprints.jsx";
-
+ import { Link } from "react-router-dom";
 import AnimatedDetails2 from "../../Components/AnimatedDetailsFolder/AnimatedDetails2.jsx";
-
+import StonerLogo from "../../Images/Logo300x300-2.webp";
 import Copyright from "../../Components/CopyrightFolder/Copyright.jsx";
 import Banner2 from "../../Images/1207px1212banner.webp";
+
 import "./SpecialEvent2.css";
 
 export default function SpecialEvent2() {
@@ -42,6 +43,11 @@ export default function SpecialEvent2() {
 
           <div className="side-column2 right-column2">
             {/*Enter RIGHT COLUMN Stuff*/}
+               <Link to="/coverpage" className="absolute top-4 right-4 z-10" >
+                <img src={StonerLogo}
+                 alt="" className="h-[120px] w-[120px] " />
+               </Link>
+
           </div>
         </div>
       </div>

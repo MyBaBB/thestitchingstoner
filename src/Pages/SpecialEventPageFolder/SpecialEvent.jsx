@@ -9,6 +9,7 @@ import { Link } from "react-router-dom";
 import HookahCamp from "./hookahville-Camp-600x400.webp";
 import HookahConcert from "./hookahville-600x400.webp";
 import Copyright from "../../Components/CopyrightFolder/Copyright.jsx";
+import StonerLogo from "../../Images/Logo300x300-2.webp";
 import "./SpecialEvent.css";
 
 export default function SpecialEventPage() {
@@ -58,6 +59,11 @@ export default function SpecialEventPage() {
 
           {/* RIGHT COLUMN */}
           <div className="side-column right-column">
+               <Link to="/coverpage" className="absolute top-4 right-4 z-10" >
+                <img src={StonerLogo}
+                 alt="" className="h-[120px] w-[120px] " />
+               </Link>
+
             <img
               src={HookahCamp}
               alt="Right Placeholder"
