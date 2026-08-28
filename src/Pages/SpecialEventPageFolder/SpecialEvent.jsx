@@ -48,8 +48,8 @@ export default function SpecialEventPage() {
           {/* MIDDLE COLUMN */}
           <div className="middle-content">
             <div className="specialEventContent relative flex flex-col items-center">
-              <span className="mt-4 font-Iceberg-Regular text-2xl text-amber-200 xs:text-3xl md:text-4xl">
-                ✌🏼 Hookahville 62 🌻
+              <span className="mt-4 font-MetalMania-Regular text-2xl text-green-400 xs:text-3xl md:text-4xl whitespace-nowrap">
+                ✌🏼 Hookahville 62 🛖
               </span>
               <AnimatedDetails />
               <YouTubePlayer />
