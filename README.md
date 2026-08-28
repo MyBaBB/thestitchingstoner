@@ -112,7 +112,7 @@ Created by **Brett's Custom  Hybrid Web Development**
 
   
 ## Fonts used
-*   Iceberg-Regular.ttf
+*   MetalMania-Regular
 *   Itim-Regular.ttf
 *   NovaCut-Regular
 *   EmilysCandy-Regular
