@@ -118,13 +118,7 @@ export default function RandomYouTubePlayer() {
     }
   };
 
-  const playAnother = () => {
-    let nextVideo = getRandomVideo();
-    while (nextVideo === currentVideo && VIDEO_LIST.length > 1) {
-      nextVideo = getRandomVideo();
-    }
-    playVideo(nextVideo);
-  };
+  
 
   return (
     <div className="youtubePlayerWrapper">

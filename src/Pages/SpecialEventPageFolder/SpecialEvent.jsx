@@ -6,7 +6,8 @@ import NotRobot from "../../Components/NotRobotFolder/NotRobot.jsx";
 import YouTubePlayer from "../../Components/YouTubeFolder/YouTubePlayer.jsx";
 import AnimatedDetails from "../../Components/AnimatedDetailsFolder/AnimatedDetails.jsx";
 import { Link } from "react-router-dom";
- 
+import HookahCamp from "./hookahville-Camp-600x400.webp";
+import HookahConcert from "./hookahville-600x400.webp";
 import Copyright from "../../Components/CopyrightFolder/Copyright.jsx";
 import "./SpecialEvent.css";
 
@@ -16,9 +17,9 @@ export default function SpecialEventPage() {
   useEffect(() => {
     const timer = setTimeout(() => {
       setShowRobot(false);
-    }, 14000); //  seconds
+    }, 14000);
 
-    return () => clearTimeout(timer); // Clean up timer on unmount
+    return () => clearTimeout(timer);
   }, []);
 
   return (
@@ -26,12 +27,20 @@ export default function SpecialEventPage() {
       <div className="special-event-bg-wrapper">
         <HippieFootprints />
         <div className="three-column-layout">
+          
           {/* LEFT COLUMN */}
           <div className="side-column left-column">
-            <div className="absolute left-4 top-4">
+            <div className="absolute left-4 top-4 z-10">
               <ReverseButton />
             </div>
-            <a href="https://mybabb.com" className="absolute bottom-4 left-4">
+
+            <img
+              src={HookahConcert}
+              alt="Left Placeholder"
+              className="side-column-img"
+            />
+
+            <a href="https://mybabb.com" className="absolute bottom-4 left-4 z-10">
               <Copyright />
             </a>
           </div>
@@ -49,8 +58,14 @@ export default function SpecialEventPage() {
 
           {/* RIGHT COLUMN */}
           <div className="side-column right-column">
+            <img
+              src={HookahCamp}
+              alt="Right Placeholder"
+              className="side-column-img"
+            />
+
             {showRobot && (
-              <Link to="/localartist" className="absolute bottom-4 right-4">
+              <Link to="/localartist" className="absolute bottom-4 right-4 z-10">
                 <div
                   className="footer-right_Tooltip"
                   data-tool-tip=" 🌈 This Website Chooses Real Art 🎨 "
@@ -60,6 +75,7 @@ export default function SpecialEventPage() {
               </Link>
             )}
           </div>
+
         </div>
       </div>
     </>

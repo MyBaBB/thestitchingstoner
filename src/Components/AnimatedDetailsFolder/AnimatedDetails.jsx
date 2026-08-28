@@ -50,7 +50,7 @@ const AnimatedDetails = () => {
           </div>
         </a>
 
-        <div className="stonerText border-4 border-blue-500">
+        <div className="stonerText ">
           <p
             className="stonerLine line11"
             data-text="High‑vibe Stitching for Classes"
