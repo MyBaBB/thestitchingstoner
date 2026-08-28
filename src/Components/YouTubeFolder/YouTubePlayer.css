@@ -10,7 +10,7 @@
   max-width: 300px;
   margin: 0 auto;
   aspect-ratio: 16 / 9;
-  border: 2px solid rgba(255, 255, 255, 1);
+  border: 2px dashed #b3982c;
 }
 
 .yt-responsive-container iframe {
@@ -36,7 +36,7 @@
   align-items: center;
   justify-content: center;
   background: rgba(0, 0, 0, 0.45);
-  border: 2px dashed #ffeb99;
+  border: 2px dashed #b3982c;
   padding: 0.75rem 1.5rem;
   border-radius: 0.75rem;
   cursor: pointer;

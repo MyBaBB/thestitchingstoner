@@ -6,7 +6,8 @@ import NotRobot from "../../Components/NotRobotFolder/NotRobot.jsx";
 import YouTubePlayer from "../../Components/YouTubeFolder/YouTubePlayer.jsx";
 import AnimatedDetails from "../../Components/AnimatedDetailsFolder/AnimatedDetails.jsx";
 import { Link } from "react-router-dom";
-
+import HookahCamp from "./hookahville-Camp-600x400.webp";
+import HookahConcert from "./hookahville-600x400.webp";
 import Copyright from "../../Components/CopyrightFolder/Copyright.jsx";
 import "./SpecialEvent.css";
 
@@ -34,7 +35,7 @@ export default function SpecialEventPage() {
             </div>
 
             <img
-              src="https://placehold.co/600x400"
+              src={HookahConcert}
               alt="Left Placeholder"
               className="side-column-img"
             />
@@ -58,7 +59,7 @@ export default function SpecialEventPage() {
           {/* RIGHT COLUMN */}
           <div className="side-column right-column">
             <img
-              src="https://placehold.co/600x400"
+              src={HookahCamp}
               alt="Right Placeholder"
               className="side-column-img"
             />
