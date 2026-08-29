@@ -1,13 +1,11 @@
 /* Title */
 .specialEventTitle {
- 
   font-size: 1rem;
   margin-bottom: 1.5rem;
   text-shadow: 0 0 8px #ff8bd8;
   color: white;
 }
 .specialEventTitle2 {
- 
   font-size: 2.25rem; /* Upgraded size for impact */
   color: rgba(246, 249, 51, 1);
   text-align: center;

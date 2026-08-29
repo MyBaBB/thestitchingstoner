@@ -146,7 +146,8 @@ export default function LandingPage() {
           <HippieFootprints />
         </main>
       </div>
-      <a href="https://about.us.mybabb.com/aboutuspage">
+      
+      <a href="https://about.us.mybabb.com/aboutuspage" className=" " >
         <Copyright />
       </a>
     </>
