@@ -38,4 +38,5 @@
   transition: transform 0.3s ease-in-out;
   transform: translateY(-2px);
   cursor: pointer;
+  z-index: 9999999999;
 }

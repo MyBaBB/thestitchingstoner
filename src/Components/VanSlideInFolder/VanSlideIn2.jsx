@@ -3,7 +3,7 @@ import "./VanSlideIn.css";
 const VanSlideIn = () => {
   return (
     <div>
-      <h1 className="specialEventTitle2 whitespace-nowrap text-center text-xs xs:text-lg md:text-2xl">
+      <h1 className="specialEventTitle2 whitespace-nowrap text-center text-xs xs:text-lg md:text-2xl font-Itim-Regular">
         <span className="vanBounce scale-x-[-1]">🚐</span>
         &nbsp;
         <span className="sessionBump">

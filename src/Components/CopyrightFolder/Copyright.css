@@ -14,7 +14,7 @@
   font-size: 0.75rem;
   color: rgba(253, 186, 116, 1);
   transition:
-    font-size 0.4s ease,
+    font-size 0.5s ease,
     color 0.4s ease,
     filter 0.4s ease;
   z-index: 9999;
