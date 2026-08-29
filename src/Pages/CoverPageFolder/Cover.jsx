@@ -126,13 +126,13 @@ export default function LandingPage() {
               </span>
             </p>
             {/* DESKTOP BUTTONS */}
-            <div className="nationalForestCollection m-auto hidden w-full max-w-[400px] flex-col items-center justify-between gap-4 md:flex md:flex-row">
+            <div className="nationalForestCollection  m-auto hidden w-full max-w-[400px] flex-col items-center justify-between gap-4 md:flex md:flex-row">
               <FacebookForestButton />
               <NationalForestButton />
               <InstagramForestButton />
             </div>
             {/* MOBILE BUTTONS */}
-            <div className="nationalForestCollection m-auto flex w-full max-w-[400px] flex-col items-center justify-between gap-4 md:hidden">
+            <div className="nationalForestCollection  m-auto flex w-full max-w-[400px] flex-col items-center justify-between gap-4 md:hidden">
               <NationalForestButton className="order-1 md:order-2" />
               <div className="order-2 flex flex-row gap-4 md:order-1 md:flex-col">
                 <FacebookForestButton />
@@ -147,7 +147,7 @@ export default function LandingPage() {
         </main>
       </div>
       
-      <a href="https://about.us.mybabb.com/aboutuspage" className=" " >
+      <a href="https://about.us.mybabb.com/aboutuspage" className="border-2" >
         <Copyright />
       </a>
     </>
