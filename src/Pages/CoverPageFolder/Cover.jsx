@@ -105,7 +105,7 @@ export default function LandingPage() {
                 alt="Featured embroidered stoner art"
                 className="mermaidFeaturedImage relative m-auto rounded-xl border-2 border-transparent"
               />
-              <div className="logoWrapper bottom-[-3rem] right-[-3rem] overflow-visible">
+              <div className="logoWrapper bottom-[-4rem] right-[-4rem] overflow-visible">
                 <StonerLogo />
               </div>
             </div>

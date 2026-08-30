@@ -1,6 +1,6 @@
 import React from "react";
 import "./StonerLogo.css";
-import StonerLogo from "../../Images/Logo300x300-2.webp";
+import StonerLogo from "../../Images/300x300-r.webp";
 
 const StonerLogo2 = () => {
   return (
