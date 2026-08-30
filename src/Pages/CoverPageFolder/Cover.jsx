@@ -69,15 +69,15 @@ export default function LandingPage() {
         <CoolBG />
       </div>
       {/* FIX: use min-h-[100svh] instead of h-screen */}
-      <div className="relative min-h-[100svh] flex-col items-center justify-center overflow-hidden text-2xl">
+      <div className="relative min-h-[100svh] flex-col items-center justify-center overflow-visible text-2xl">
         <EkoostikEar />
-        <span className="reverseButtonInstaller">
+        <span className="reverseButtonInstaller_Cover">
           <ReverseButton />
         </span>
         {/* FIX: remove overflow-visible */}
-        <main className="relative min-h-[100svh] overflow-hidden bg-black text-neutral-100">
+        <main className="relative min-h-[100svh] overflow-visible bg-black text-neutral-100">
           <Weed />
-          <div className="relative z-10 flex w-full flex-col items-start justify-center text-center">
+          <div className="relative z-10  flex w-full flex-col items-start justify-center text-center">
             <h1 className="z-20 m-auto -mb-2 bg-clip-text font-Itim-Regular text-4xl md:text-6xl">
               <span
                 className="stoner-cipher p-[.6rem]"

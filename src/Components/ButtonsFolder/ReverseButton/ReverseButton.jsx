@@ -21,14 +21,14 @@ const ReverseButton = () => {
           }`}
           onClick={() => window.history.back()}
         >
-          <span className="absolute left-[50px] top-[50px] opacity-70">
+          <span className="absolute left-[50px] top-[42.5px] opacity-70">
             <span className="spiralRotate">
               <SiDreamstime size={53} />
             </span>
           </span>
 
           {/* REAL JSX TOOLTIP */}
-          <div className="tooltipReact">
+          <div className="tooltipReact absolute left-[50px] top-[35px]">
             <span className="spiralRotate">
               <SiDreamstime size={53} />
             </span>
