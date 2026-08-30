@@ -10,6 +10,7 @@ import HookahCamp from "./hookahville-Camp-600x400.webp";
 import HookahConcert from "./hookahville-600x400.webp";
 import Copyright from "../../Components/CopyrightFolder/Copyright.jsx";
 import StonerLogo from "../../Images/300x300-r.webp";
+import EqualizerControl from "../../Components/EqualizerControlFolder/EqualizerControl.jsx";
 import "./SpecialEvent.css";
 
 export default function SpecialEventPage() {
@@ -27,6 +28,7 @@ export default function SpecialEventPage() {
     <>
       <div className="special-event-bg-wrapper">
         <HippieFootprints />
+        <EqualizerControl />
         <div className="three-column-layout">
           
           {/* LEFT COLUMN */}
