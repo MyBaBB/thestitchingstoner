@@ -56,23 +56,23 @@ const AnimatedDetails = () => {
             data-text="High‑vibe Stitching for Classes"
           >
             <span className="z-1 inline-block whitespace-nowrap">
-              <span className="emoji">🧘🏼‍♂️</span> &nbsp;
+              <span className="emoji">🌻</span> &nbsp;
             </span>
             Stitching{" "}
             <span className="whitespace-nowrap">
-              Classes <span className="emoji">🧶</span>
+              Classes <span className="emoji">🛖</span>
             </span>
           </p>
           <br />
           <p className="stonerLine line2" data-text="Psychedelic chill zone">
             <span className="inline-block whitespace-nowrap">
-              <span className="emoji">✌🏼</span> Psychedelic&nbsp;
+              <span className="emoji">🪅</span> Psychedelic&nbsp;
             </span>
 
             <span className="whitespace-nowrap">
               {" "}
               chill zone
-              <span className="emoji rotate-[45deg]">&nbsp;🌚</span>
+              <span className="emoji ">&nbsp;✌🏼</span>
             </span>
           </p>
           <br />
