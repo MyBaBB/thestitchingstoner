@@ -56,11 +56,11 @@ const AnimatedDetails = () => {
               data-text="High‑vibe Stitching for Classes"
             >
               <span className="z-1 inline-block whitespace-nowrap">
-                <span className="emoji">🧘🏼‍♂️</span> &nbsp;
+                <span className="emoji">🌻</span> &nbsp;
               </span>
               Stitching&nbsp; 
               <span className="whitespace-nowrap">
-                Classes <span className="emoji">🧶</span>
+                Classes <span className="emoji">🛖</span>
               </span>
             </p>
             <br />
@@ -69,24 +69,24 @@ const AnimatedDetails = () => {
               data-text="Psychedelic chill zone"
             >
               <span className="inline-block whitespace-nowrap">
-                <span className="emoji">✌🏼</span> Psychedelic&nbsp;
+                <span className="emoji">🪅</span> Psychedelic&nbsp;
               </span>
 
               <span className="whitespace-nowrap">
              
                 chill zone
-                <span className="emoji2 ">&nbsp;🌚</span>
+                <span className="emoji2 ">&nbsp;✌🏼</span>
               </span>
             </p>
             <br />
             <p className="stonerLine2 line33" data-text="Tap in — Before Full">
               <span className="inline-block whitespace-nowrap">
-                <span className="emoji2  ">🪷</span> 
+                <span className="emoji2  ">👉🏼</span> 
                 Tap in&nbsp;
               </span>
               —
               <span className="whitespace-nowrap">
-                Before Full <span className="emoji2">🛖</span>
+                Before Full <span className="emoji2">🍄‍🟫</span>
               </span>
             </p>
             <br />
@@ -95,10 +95,10 @@ const AnimatedDetails = () => {
               data-text="Creative Yarn Sessions"
             >
               <span className="inline-block whitespace-nowrap">
-                <span className="emoji2">🧶</span> Get&nbsp;
+                <span className="emoji2">👙</span> Get&nbsp;
               </span>
               <span className="whitespace-nowrap">
-                Hooked Up <span className="emoji2">🌻</span>
+                Hooked Up <span className="emoji2">👀</span>
               </span>
             </p>
           </div>
