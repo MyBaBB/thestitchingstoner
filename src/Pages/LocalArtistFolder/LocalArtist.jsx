@@ -4,7 +4,7 @@ import NotRobot from "../../Components/NotRobotFolder/NotRobot.jsx";
 import BatSignal from "../../Components/ContactMeFolder/ContactMe.jsx";
 import Weed from "../../Images/The_Stitching_Stoner/favicon.png";
 import { TbCamper } from "react-icons/tb";
-import { ImEarth } from "react-icons/im";
+
 import { GiCampCookingPot, GiGoat } from "react-icons/gi";
 import { FaCampground } from "react-icons/fa";
 import HippieFootprints from "../../Components/HippieFootprintsFolder/HippieFootprints.jsx";

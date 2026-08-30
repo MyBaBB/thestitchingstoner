@@ -9,7 +9,7 @@ import { Link } from "react-router-dom";
 import HookahCamp from "./hookahville-Camp-600x400.webp";
 import HookahConcert from "./hookahville-600x400.webp";
 import Copyright from "../../Components/CopyrightFolder/Copyright.jsx";
-import StonerLogo from "../../Images/Logo300x300-2.webp";
+import StonerLogo from "../../Images/300x300-r.webp";
 import "./SpecialEvent.css";
 
 export default function SpecialEventPage() {

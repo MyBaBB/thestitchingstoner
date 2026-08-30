@@ -4,7 +4,7 @@ import ReverseButton from "../../Components/ButtonsFolder/ReverseButton/ReverseB
 import HippieFootprints from "../../Components/HippieFootprintsFolder/HippieFootprints.jsx";
  import { Link } from "react-router-dom";
 import AnimatedDetails2 from "../../Components/AnimatedDetailsFolder/AnimatedDetails2.jsx";
-import StonerLogo from "../../Images/Logo300x300-2.webp";
+import StonerLogo from "../../Images/300x300-r.webp";
 import Copyright from "../../Components/CopyrightFolder/Copyright.jsx";
 import Banner2 from "../../Images/1207px1212banner.webp";
 
@@ -41,7 +41,7 @@ export default function SpecialEvent2() {
             </div>
           </div>
 
-          <div className="side-column2 right-column2">
+          <div className="side-column2 right-column2 ">
             {/*Enter RIGHT COLUMN Stuff*/}
                <Link to="/coverpage" className="absolute top-4 right-4 z-10" >
                 <img src={StonerLogo}
