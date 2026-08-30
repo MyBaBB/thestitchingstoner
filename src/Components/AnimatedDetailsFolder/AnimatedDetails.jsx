@@ -83,16 +83,16 @@ const AnimatedDetails = () => {
             </span>
             —{" "}
             <span className="whitespace-nowrap">
-              Before Full <span className="emoji">🛖</span>
+              Before Full <span className="emoji">🍄‍🟫</span>
             </span>
           </p>
           <br />
           <p className="stonerLine line4" data-text="Creative Yarn Sessions">
             <span className="inline-block whitespace-nowrap">
-              <span className="emoji">🧶</span> Get&nbsp;
+              <span className="emoji">👙</span> Get&nbsp;
             </span>
             <span className="whitespace-nowrap">
-              Hooked Up <span className="emoji">🌻</span>
+              Hooked Up <span className="emoji">👀</span>
             </span>
           </p>
         </div>
