@@ -14,11 +14,11 @@ const Footer = () => {
           <HippieFootprints />
         </div>
 
-        <Link to="/localartist">
+        <a href="https://ai.brainbuddys.com">
           <div className="footer-right flex flex-col opacity-80">
             <NotRobot />
           </div>
-        </Link>
+        </a>
       </div>
     </>
   );

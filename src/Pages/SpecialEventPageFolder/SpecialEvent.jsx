@@ -71,14 +71,14 @@ export default function SpecialEventPage() {
             />
 
             {showRobot && (
-              <Link to="/localartist" className="absolute bottom-4 right-4 z-10">
+              <a href="https://ai.brainbuddys.com" className="absolute bottom-4 right-4 z-10">
                 <div
                   className="footer-right_Tooltip"
                   data-tool-tip=" 🌈 This Website Chooses Real Art 🎨 "
                 >
                   <NotRobot />
                 </div>
-              </Link>
+              </a>
             )}
           </div>
 

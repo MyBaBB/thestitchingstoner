@@ -1,7 +1,7 @@
 import { Route, BrowserRouter as Router, Routes } from "react-router-dom";
 import CoverPage from "./Pages/CoverPageFolder/Cover.jsx";
 import SpecialEvent from "./Pages/SpecialEventPageFolder/SpecialEvent.jsx";
-import LocalArtist from "./Pages/LocalArtistFolder/LocalArtist.jsx";
+ 
 import SpecialEvent2 from "./Pages/SpecialEventPageFolder2/SpecialEvent2.jsx";
 import "./App.css";
 import Zenith from "./Pages/Zenith";
@@ -15,7 +15,7 @@ const App = () => {
           <Route path="/coverpage" element={<CoverPage />} />
           <Route path="/specialevent" element={<SpecialEvent />} />
           <Route path="/specialevent2" element={<SpecialEvent2 />} />
-          <Route path="/localartist" element={<LocalArtist />} />
+         
           <Route path="*" element={<Zenith />} />
         </Routes>
       </Router>

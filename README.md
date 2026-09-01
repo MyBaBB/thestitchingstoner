@@ -93,7 +93,7 @@ Minimal, year‑aware, brand‑consistent.
 - Mobile‑first layout  
 
 
-
+****
 ## 📸 Readme Image  
 ![The_Stitching_Stoner](Readme.webp) 
 
@@ -105,7 +105,7 @@ The Stitching Stoner blends craftsmanship with creativity — embroidered art, c
 
 ---
 
-## ❤️ Credits  
+**## ❤️ Credits  
 Created by **Brett's Custom  Hybrid Web Development**  
   High‑Vibe Creative Director
 
@@ -115,7 +115,7 @@ Created by **Brett's Custom  Hybrid Web Development**
 *   MetalMania-Regular
 *   Itim-Regular.ttf
 *   NovaCut-Regular
-*   EmilysCandy-Regular
+*   EmilysCandy-Regular**
 
  
 
