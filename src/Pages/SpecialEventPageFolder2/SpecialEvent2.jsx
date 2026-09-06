@@ -12,7 +12,7 @@ import "./SpecialEvent2.css";
 
 export default function SpecialEvent2() {
   return (
-    <>
+    <> 
       <div
         className="special-event2-bg-wrapper"
         style={{

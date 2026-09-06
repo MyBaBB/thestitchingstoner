@@ -27,12 +27,12 @@ const AnimatedDetails = () => {
       clearTimeout(initialTimeout);
     };
   }, []);
-
+ 
   return (
     <>
       <div className="trippy-stage2">
-        <div className="trippy-card2 flex flex-col items-center text-center font-Itim-Regular leading-relaxed">
-          <div className="image-display-wrapper2">
+        <div className="trippy-card2 flex flex-col items-center text-center font-Itim-Regular  leading-relaxed">
+          <div className="image-display-wrapper2 border-2 border-red-500">
             {currentImageIndex !== null && (
               <img
                 key={currentImageIndex}
