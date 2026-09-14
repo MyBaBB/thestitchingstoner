@@ -52,6 +52,8 @@ export default function SpecialEventPage() {
               <span className="mt-4 font-MetalMania-Regular text-2xl text-green-400 xs:text-3xl md:text-4xl whitespace-nowrap">
                 ✌🏼 Hookahville 62 🛖
               </span>
+            <span className="text-white font-MetalMania-Regular">
+              💃🏽&nbsp;Sept&nbsp;4-7th&nbsp;👀 </span>
               <AnimatedDetails />
               <YouTubePlayer />
             </div>
