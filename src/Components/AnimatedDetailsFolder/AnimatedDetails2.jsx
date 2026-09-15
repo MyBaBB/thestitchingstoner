@@ -61,11 +61,11 @@ const AnimatedDetails = () => {
           {/* Groovy Hippie Event Status Badge */}
           <div className="event-over-badge my-4 transform rounded-full border-2 border-dashed border-[#2e5a2c] bg-black px-6 py-2 shadow-[0_0_15px_rgba(185,245,6,0.4)] transition-all hover:scale-105">
             <span className="bg-gradient-to-r from-[#ffea00] to-[#00f3ff] bg-clip-text text-xl font-bold tracking-wider text-transparent">
-                 <span className="text-[#ffea00] inline-block">
+                 <span className="text-[#f5f0ba] inline-block">
                  <LiaHandPeace />
                </span>
                 &nbsp;- Onward to the next groove.-&nbsp;
-               <span className="text-[#ffea00] inline-block">
+               <span className="text-[#f5f0ba] inline-block">
                  <GiSurferVan />
                </span>
             </span>
