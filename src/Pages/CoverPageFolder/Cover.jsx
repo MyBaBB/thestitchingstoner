@@ -24,7 +24,7 @@ export default function LandingPage() {
     <>
       <span className="inline-block whitespace-nowrap">🧶 Hook</span> up your
       Hook at{" "}
-      <span className="inline-block whitespace-nowrap">Hookahville 62 🌻</span>
+      <span className="inline-block whitespace-nowrap">Yarn Sessions 🌻</span>
     </>,
     <>
       <span className="inline-block whitespace-nowrap">💃🏻 Dreamy</span> Crochet
@@ -33,7 +33,7 @@ export default function LandingPage() {
     </>,
     <>
       <span className="inline-block whitespace-nowrap">✌🏼 Sign</span> up for
-      Hookahville{" "}
+      Crochet{" "}
       <span className="inline-block whitespace-nowrap">Lessons! 🚌</span>
     </>,
     <>

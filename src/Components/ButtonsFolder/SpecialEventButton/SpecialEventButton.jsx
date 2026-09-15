@@ -19,7 +19,7 @@ const SpecialEventButton = () => {
     >
       {/* Main Trigger Button */}
       <button className="special-event-btn">
-        🌈 Yarn Gatherings 👀 
+        🌈 Gatherings 👀 
       </button>
 
       {/* Dropdown Accordion Menu */}
