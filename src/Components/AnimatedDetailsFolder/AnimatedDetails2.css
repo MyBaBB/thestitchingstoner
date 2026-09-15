@@ -1,8 +1,7 @@
-/* Glassmorphism Card Container */
+ 
 .trippy-card2 {
   position: relative;
   display: flex;
-  z-index: 1;
   border-radius: 1.25rem;
   padding: 2.5rem 2rem;
   width: 100%;
@@ -182,11 +181,19 @@ background: radial-gradient(
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   z-index: -1;
+}/* Color Gradient Variations for Festival Paragraph Lines */
+.line11 {
+  animation-delay: 0.2s, 0s;
+  background: linear-gradient(135deg, #ffaa00, #ff0055, #ffea00);
+  background-size: 200% auto;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  z-index: -1;
 }
 
 .line22 {
   animation-delay: 0.5s, 0.8s;
-  background-color: #00f3ff;
+  background: linear-gradient(135deg, #00f3ff, #00ff88, #00f3ff);
   background-size: 200% auto;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -195,7 +202,7 @@ background: radial-gradient(
 
 .line33 {
   animation-delay: 0.8s, 1.6s;
-  background: linear-gradient(135deg, #ffea00, #ff0055, #ffea00);
+  background: linear-gradient(135deg, #ffea00, #ff007f, #b9f506);
   background-size: 200% auto;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -204,13 +211,12 @@ background: radial-gradient(
 
 .line44 {
   animation-delay: 1.1s, 2.4s;
-  background: linear-gradient(135deg, #c7f359, #f3f4d2, #ffea00);
+  background: linear-gradient(135deg, #c7f359, #f3f4d2, #00f3ff);
   background-size: 200% auto;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   z-index: -1;
 }
-
 /* Hover */
 .stonerLine2:hover {
   filter: brightness(1.3) drop-shadow(0 0 15px currentColor);
@@ -295,7 +301,7 @@ background: radial-gradient(
   font-family:
     "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol",
     "Noto Color Emoji", sans-serif !important;
-  color: initial !important;
+  color: whitesmoke !important;
   text-shadow: none !important;
   display: inline-block;
 }
@@ -384,4 +390,15 @@ background: radial-gradient(
     max-height: 300px; /* Prevents oversized image from dominating short screens */
     margin-top: 2rem;  /* Reduces large top margin on mobile landscape */
   }
+}
+.react-Icon-Span {
+  color: #fadc79; /* Tailwind amber-300 */
+  font-size: clamp(.5rem, 2.5vw, 1.5rem);
+  -webkit-text-fill-color: initial; /* Overrides gradient text clip if parent uses background-clip */
+}
+
+.react-Icon-Span svg {
+  display: inline-block;
+  width: 1em;
+  height: 1em;
 }

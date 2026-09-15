@@ -129,7 +129,7 @@
 .stonerLine2 {
   position: relative;
   display: inline-block;
-  font-size: clamp(1rem, 2.5vw, 1.6rem);
+  font-size: clamp(.5rem, 2.5vw, 1.6rem);
   margin: 0.5rem 0;
   letter-spacing: 0.5px;
   cursor: pointer;
@@ -423,4 +423,20 @@
   .footer-right_Tooltip2::after {
     display: none !important;
   }
+}
+.bg-layer2 {
+  position: absolute;
+  inset: 0;
+  background-size: cover;
+  background-position: center -1.75rem;
+  background-repeat: no-repeat;
+  z-index: 0;
+}
+
+.bg-overlay2 {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.8);
+  z-index: 1;
+  pointer-events: none;
 }

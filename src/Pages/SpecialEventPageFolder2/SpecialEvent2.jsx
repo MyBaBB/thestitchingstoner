@@ -6,24 +6,21 @@ import { Link } from "react-router-dom";
 import AnimatedDetails2 from "../../Components/AnimatedDetailsFolder/AnimatedDetails2.jsx";
 import StonerLogo from "../../Images/300x300-r.webp";
 import Copyright from "../../Components/CopyrightFolder/Copyright.jsx";
-import Banner2 from "../../Images/1207px1212banner.webp";
+import Banner3 from "../../Images/goodPeople-goodTimes.webp";
 
 import "./SpecialEvent2.css";
 
 export default function SpecialEvent2() {
   return (
-    <> 
-      <div
-        className="special-event2-bg-wrapper"
-        style={{
-          backgroundImage: `url(${Banner2})`,
-          backgroundSize: "cover",
-          backgroundPosition: "center -1.75rem",
-          backgroundRepeat: "no-repeat",
-        }}
-      >
-        <HippieFootprints />
-        <div className="three-column-layout2">
+    <>
+    
+     <div className="special-event2-bg-wrapper relative">
+  <div className="bg-layer2" style={{ backgroundImage: `url(${Banner3})` }} />
+  <div className="bg-overlay2" />
+
+  {/* ALL your content stays bright */}
+  <HippieFootprints />
+  <div className="three-column-layout2 relative z-10">
           {/* LEFT COLUMN */}
           <div className="side-column2 left-column2">
             <div className="absolute left-4 top-4 z-20">
@@ -53,6 +50,7 @@ export default function SpecialEvent2() {
           </div>
         </div>
       </div>
+      
     </>
   );
 }
