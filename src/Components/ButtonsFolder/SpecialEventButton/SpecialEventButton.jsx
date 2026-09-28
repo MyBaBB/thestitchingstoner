@@ -66,6 +66,18 @@ const SpecialEventButton = () => {
             </button>
             {activeSection === "future" && (
               <div className="accordion-content">
+
+                <Link
+                  to="/gorilla"
+                  className="event-link"
+                  data-tool-tip="Click to view the Event "
+                >
+                 NEW STUFF
+                </Link>
+
+
+
+
                 <p className="no-events-text">
                   Stay tuned for upcoming grooves! 🌻
                 </p>
