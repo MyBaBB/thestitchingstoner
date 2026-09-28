@@ -20,7 +20,7 @@ const Gorilla = () => {
              bg-gradient-to-b from-sky-500 from-40% to-green-800 
              to-60% p-[2rem] text-center shadow-2xl sm:scale-[100%] xs:scale-[70%]"
         >
-          <p className="whitespace-nowrap font-BlackOpsOne text-3xl text-lime-400 ">
+          <p className="whitespace-nowrap font-BlackOpsOne-Regular text-3xl text-lime-400 ">
             This Region
           </p>
           <div className="relative flex   h-[115px] w-[280px]">
@@ -31,7 +31,7 @@ const Gorilla = () => {
               <img src={BananaTree} alt="Banana Tree" />
             </div>
           </div>
-          <p className="mt-8 whitespace-nowrap font-BlackOpsOne text-3xl text-lime-400">
+          <p className="mt-8 whitespace-nowrap font-BlackOpsOne-Regular text-3xl text-lime-400">
             Under Construction
             <hr className="hr4 mb-1  mt-1  " />
           </p>
