@@ -3,11 +3,13 @@
   position: absolute;
   bottom: -4.75rem;
   left: 10.5rem;
- 
-  
- 
   z-index: 999;
   display: inline-block;
+}
+@media (min-width: 1550px) {
+  .special-event-container {
+    left: 19.75rem
+  }
 }
 
 /* Main Trigger Button */
@@ -41,6 +43,11 @@
     display: none;
   }
 }
+ 
+ 
+
+
+
 .special-event-container:hover .special-event-btn {
   transform: scale(1.05);
   box-shadow:

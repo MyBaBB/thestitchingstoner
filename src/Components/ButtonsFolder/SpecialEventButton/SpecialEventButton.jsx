@@ -24,7 +24,7 @@ const SpecialEventButton = () => {
 
       {/* Dropdown Accordion Menu */}
       {isOpen && (
-        <div className="events-dropdown-menu">
+        <div className="events-dropdown-menu mt-[-4.5rem]">
           {/* Past Events Accordion */}
           <div className="accordion-item">
             <button
