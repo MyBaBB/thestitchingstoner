@@ -1,10 +1,10 @@
 import React from "react";
 import "./StonerLogo.css";
 import StonerLogo from "../../Images/300x300-r.webp";
-
+//     xxxxxxxx hidden page xxxxxxxxxxx
 const StonerLogo2 = () => {
   return (
-    <div className=" ">
+    <div className="hidden ">
       <a href="https://thestitchingstoner.square.site/the-stitching-who">
         <div
           className="stonerLogo stonerLogoTooltip h-[80px] w-[80px] md:h-[120px] md:w-[120px]"
