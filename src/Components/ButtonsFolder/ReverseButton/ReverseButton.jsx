@@ -14,7 +14,7 @@ const ReverseButton = () => {
 
   return (
     <>
-      <div className="reverseButtonWrapper relative z-50 w-fit">
+      <div className="reverseButtonWrapper relative z-50 w-fit ">
         <button
           className={`reverseButton dataToolTipTime z-50 hidden transform md:block ${
             noHistory ? "noHistoryOpacity" : ""

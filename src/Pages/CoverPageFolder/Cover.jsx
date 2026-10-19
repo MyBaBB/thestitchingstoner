@@ -1,6 +1,6 @@
 import "./Cover.css";
 import { useState, useEffect } from "react";
-import MermaidOgImage from "../../Images/shroom-site-version-2.webp";
+import MermaidOgImage from "../../Images/HorizontalStoner.webp";
 import Weed from "../../Components/WeedFolder/Weed.jsx";
 import ReverseButton from "../../Components/ButtonsFolder/ReverseButton/ReverseButton.jsx";
 import { PiQuotesThin } from "react-icons/pi";
@@ -95,16 +95,18 @@ export default function LandingPage() {
               </span>
             </p>
             {/* FIX: remove fixed height */}
+           
             <div className="mermaidImageWrapper relative m-auto overflow-visible">
-              <div className="specialEventInstaller">
+               <div className="specialEventInstaller  z-50">
                 <SpecialEventButton />
               </div>
-
+              
               <img
                 src={MermaidOgImage}
                 alt="Featured embroidered stoner art"
                 className="mermaidFeaturedImage relative m-auto rounded-xl border-2 border-transparent"
               />
+             
               <div className="logoWrapper bottom-[-4rem] right-[-4rem] overflow-visible">
                 <StonerLogo />
               </div>

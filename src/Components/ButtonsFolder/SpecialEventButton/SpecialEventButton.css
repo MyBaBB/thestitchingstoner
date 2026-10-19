@@ -1,15 +1,20 @@
 /* Container wrapper for positioning */
 .special-event-container {
   position: absolute;
-  top: 1rem;
-  left: 1rem;
+  bottom: -4.75rem;
+  left: 10rem;
+ 
+  
+ 
   z-index: 999;
   display: inline-block;
 }
 
 /* Main Trigger Button */
 .special-event-btn {
-  padding: 0.3rem 0.8rem;
+  position: absolute;
+  bottom: 4.5rem;
+  padding: 0rem 0.8rem;
   font-size: 1rem;
   font-family: "Itim-Regular", sans-serif;
   font-weight: 400;
@@ -31,7 +36,11 @@
   );
   transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
-
+@media screen and (max-width: 500px) {
+  .special-event-btn {
+    display: none;
+  }
+}
 .special-event-container:hover .special-event-btn {
   transform: scale(1.05);
   box-shadow:

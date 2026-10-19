@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import { FaChevronDown, FaChevronUp } from "react-icons/fa";
-import "./SpecialEventButton.css";
+import "./SpecialEventButton.css"; 
 
 const SpecialEventButton = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -18,7 +18,7 @@ const SpecialEventButton = () => {
       onMouseLeave={() => setIsOpen(false)}
     >
       {/* Main Trigger Button */}
-      <button className="special-event-btn">
+      <button className="special-event-btn  ">
         🌈 Gatherings 👀 
       </button>
 
