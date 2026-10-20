@@ -5,7 +5,7 @@ import Weed from "../../Components/WeedFolder/Weed.jsx";
 import ReverseButton from "../../Components/ButtonsFolder/ReverseButton/ReverseButton.jsx";
 import { PiQuotesThin } from "react-icons/pi";
 import StonerLogo from "../../Components/StonerLogoFolder/StonerLogo.jsx";
-import NationalForestButton from "../../Components/ButtonsFolder/NationalForestButton/NationalForestButton..jsx";
+import NationalForestButton from "../../Components/ButtonsFolder/NationalForestButton/NationalForestButton.jsx";
 import EkoostikEar from "../../Components/ButtonsFolder/EkoostikEarFolder/EkoostikEar.jsx";
 import FacebookForestButton from "../../Components/ButtonsFolder/NationalForestButton/FaceBookForestButton.jsx";
 import InstagramForestButton from "../../Components/ButtonsFolder/NationalForestButton/InstagramForestButton.jsx";
@@ -70,7 +70,9 @@ export default function LandingPage() {
       </div>
       {/* FIX: use min-h-[100svh] instead of h-screen */}
       <div className="relative min-h-[100svh] flex-col items-center justify-center overflow-visible text-2xl">
-        <EkoostikEar />
+               <div className="specialEventInstaller  z-50 ">
+                <SpecialEventButton />
+              </div>
         <span className="reverseButtonInstaller_Cover">
           <ReverseButton />
         </span>
@@ -97,9 +99,7 @@ export default function LandingPage() {
             {/* FIX: remove fixed height */}
            
             <div className="mermaidImageWrapper relative m-auto overflow-visible">
-               <div className="specialEventInstaller  z-50">
-                <SpecialEventButton />
-              </div>
+               
               
               <img
                 src={MermaidOgImage}

@@ -5,11 +5,12 @@ import "./Gorilla.css";
 import Gorilla2Banana from "./Gorilla2WithBanana100px.png";
 import BananaTree from "./BananaTree2.png";
 import HippieFootPrints from "../../Components/HippieFootprintsFolder/HippieFootprints";
+import ReverseButton from "../../Components/ButtonsFolder/ReverseButton/ReverseButton";
 const Gorilla = () => {
   return (
 
     <div className="relative flex justify-center items-center h-screen">
- 
+        <span className="absolute top-4 left-4">< ReverseButton /></span>
       <div
         className=" relative flex h-fit items-center 
                        justify-center  text-center "

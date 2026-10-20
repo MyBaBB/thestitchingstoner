@@ -1,11 +1,24 @@
-import React, { useState } from "react";
+import { useState, useRef } from "react";
 import { Link } from "react-router-dom";
 import { FaChevronDown, FaChevronUp } from "react-icons/fa";
 import "./SpecialEventButton.css"; 
 
 const SpecialEventButton = () => {
   const [isOpen, setIsOpen] = useState(false);
-  const [activeSection, setActiveSection] = useState("past");
+  const [activeSection, setActiveSection] = useState(null);
+  const timeoutRef = useRef(null);
+
+  const handleMouseEnter = () => {
+    if (timeoutRef.current) clearTimeout(timeoutRef.current);
+    setIsOpen(true);
+  };
+
+  const handleMouseLeave = () => {
+    // 750ms grace period to bridge the gap comfortably
+    timeoutRef.current = setTimeout(() => {
+      setIsOpen(false);
+    }, 750);
+  };
 
   const toggleSection = (section) => {
     setActiveSection(activeSection === section ? null : section);
@@ -14,17 +27,17 @@ const SpecialEventButton = () => {
   return (
     <div
       className="special-event-container"
-      onMouseEnter={() => setIsOpen(true)}
-      onMouseLeave={() => setIsOpen(false)}
+      onMouseEnter={handleMouseEnter}
+      onMouseLeave={handleMouseLeave}
     >
       {/* Main Trigger Button */}
-      <button className="special-event-btn  ">
+      <button className="special-event-btn">
         🌈 Gatherings 👀 
       </button>
 
-      {/* Dropdown Accordion Menu */}
+      {/* Dropdown Accordion Menu - Opens downward & extends to the left */}
       {isOpen && (
-        <div className="events-dropdown-menu mt-[-4.5rem]">
+        <div className="events-dropdown-menu">
           {/* Past Events Accordion */}
           <div className="accordion-item">
             <button
@@ -39,7 +52,7 @@ const SpecialEventButton = () => {
                 <Link
                   to="/specialEvent"
                   className="event-link"
-                  data-tool-tip="Click to view the Event "
+                  data-tool-tip="🔊 Hear Music !"
                 >
                   Sept 4-7th Hookahville 62
                 </Link>
@@ -47,7 +60,7 @@ const SpecialEventButton = () => {
                 <Link
                   to="/specialevent2"
                   className="event-link"
-                  data-tool-tip="Click to view the Event "
+                  data-tool-tip="Click to view the Event!"
                 >
                   9-11 Good People Good Times
                 </Link>
@@ -66,17 +79,13 @@ const SpecialEventButton = () => {
             </button>
             {activeSection === "future" && (
               <div className="accordion-content">
-
                 <Link
                   to="/gorilla"
                   className="event-link"
-                  data-tool-tip="Click to view the Event "
+                  data-tool-tip="Click to view the Event!"
                 >
-                 NEW STUFF
+                  🚀 NEW STUFF
                 </Link>
-
-
-
 
                 <p className="no-events-text">
                   Stay tuned for upcoming grooves! 🌻

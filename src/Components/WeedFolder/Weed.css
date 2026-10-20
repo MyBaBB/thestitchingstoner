@@ -1,9 +1,17 @@
-/* Base */
+/* Container wrapper - Centered on screen, always visible */
+.weed-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  position: relative;
+  margin-top: 1rem;
+}
+
+/* Base Weed Icon Button */
 .weed-leaf {
   position: relative;
   display: flex;
-  margin: auto;
-  margin-top: 1rem;
   background-color: transparent;
   width: fit-content;
   height: auto;
@@ -13,9 +21,13 @@
   border-radius: 50%;
   overflow: hidden;
   box-shadow: 0px 0px 3px 3.5px rgba(84, 225, 84, 0.2);
+  cursor: pointer;
+  transition: transform 0.15s ease;
 }
 
-
+.weed-leaf:active {
+  transform: scale(0.92);
+}
 
 .object-contain {
   height: 50px;
@@ -23,19 +35,116 @@
   z-index: -1;
 }
 
-/* Show at sm breakpoint */
-@media (min-width: 640px) {
-  .weed-leaf {
-    margin-top: 2rem;
+/* Dropdown Menu Box - Centered horizontally from top */
+.weed-dropdown-menu {
+  position: fixed;
+  top: 5rem;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 280px;
+  max-width: 90vw;
+  background: radial-gradient(circle at center, #7a5845, #2e1e17);
+  border: 3px solid #fbf39a;
+  border-radius: 16px;
+  padding: 0.6rem;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.6), inset 0 2px 6px rgba(255, 255, 255, 0.15);
+  z-index: 9999;
+  animation: cartoonyBounceDownCenter 0.35s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards;
+}
+
+/* Cartoony Bounce Keyframes */
+@keyframes cartoonyBounceDownCenter {
+  0% {
+    opacity: 0;
+    transform: translateX(-50%) scale(0.4) translateY(-25px);
   }
-  .weed-leaf {
-    display: block;
+  70% {
+    opacity: 1;
+    transform: translateX(-50%) scale(1.05) translateY(6px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(-50%) scale(1) translateY(0);
   }
 }
 
-/* Hide in landscape */
-@media screen and (orientation: landscape) and (max-width: 950px) and (max-height: 490px) {
+/* Accordion Section Items */
+.accordion-item {
+  border-bottom: 2px dashed rgba(251, 243, 154, 0.25);
+  margin-bottom: 0.2rem;
+}
+
+.accordion-item:last-child {
+  border-bottom: none;
+  margin-bottom: 0;
+}
+
+/* Accordion Header Toggle */
+.accordion-header {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: rgba(0, 0, 0, 0.15);
+  border: 1px solid rgba(251, 243, 154, 0.2);
+  border-radius: 8px;
+  color: #fbf39a;
+  font-family: "Itim-Regular", sans-serif;
+  font-size: 1rem;
+  padding: 0.45rem 0.6rem;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.accordion-header:hover {
+  background: rgba(227, 112, 168, 0.3);
+  color: #ffffff;
+  border-color: #fbf39a;
+}
+
+/* Accordion Body Content */
+.accordion-content {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+  padding: 0.4rem 0.2rem 0.5rem 0.4rem;
+}
+
+/* Event Link Buttons */
+.event-link {
+  position: relative;
+  color: #ffffff;
+  font-family: "Itim-Regular", sans-serif;
+  font-size: 0.9rem;
+  text-decoration: none;
+  background: rgba(0, 0, 0, 0.35);
+  padding: 0.4rem 0.7rem;
+  border-radius: 8px;
+  border: 1.5px solid rgba(251, 243, 154, 0.3);
+  transition: all 0.2s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+.event-link:hover {
+  background: #e370a8;
+  color: #ffffff;
+  border-color: #fbf39a;
+  transform: scale(1.02);
+  box-shadow: 0 4px 10px rgba(227, 112, 168, 0.4);
+}
+
+.no-events-text {
+  font-family: "Itim-Regular", sans-serif;
+  font-size: 0.85rem;
+  color: #fbf39a;
+  margin: 0.2rem 0;
+  font-style: italic;
+  text-align: center;
+}
+
+/* Disable clicks above 648px while keeping the icon visible and centered */
+@media (min-width: 648px) {
   .weed-leaf {
-    position: relative;
+    pointer-events: none;
+    cursor: default;
   }
 }
